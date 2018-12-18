@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jetset.model_manager &#8212; jetset 1.0.a documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0.a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_transp.png"></span>
+          JetSeT</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">JetSeT <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/user_guide.html#content">Content</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for jetset.model_manager</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module: model</span>
+<span class="sd">===================================================================</span>
+
+<span class="sd">This module contains all the classes necessary to build a SED model.</span>
+<span class="sd">A SED model can be built by creating a  :class:`.SEDmodel` object.</span>
+
+
+
+<span class="sd">Classes and Inheritance Structure</span>
+<span class="sd">----------------------------------------------</span>
+<span class="sd">.. inheritance-diagram:: BlazarSEDFit.model_manager</span>
+<span class="sd">    </span>
+<span class="sd">Classes relations</span>
+<span class="sd">----------------------------------------------</span>
+
+<span class="sd">.. figure::  classes_model_manager.png</span>
+<span class="sd">   :align:   center    </span>
+
+
+<span class="sd">      </span>
+<span class="sd">.. autosummary::</span>
+<span class="sd">   FitModel</span>
+<span class="sd">   </span>
+<span class="sd">   </span>
+<span class="sd">    </span>
+<span class="sd">Module API</span>
+<span class="sd">-------------------------------------------------------------------</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">from</span> <span class="nn">builtins</span> <span class="k">import</span> <span class="p">(</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">open</span><span class="p">,</span> <span class="nb">super</span><span class="p">,</span> <span class="nb">range</span><span class="p">,</span>
+                      <span class="nb">zip</span><span class="p">,</span> <span class="nb">round</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">pow</span><span class="p">,</span> <span class="nb">object</span><span class="p">,</span> <span class="nb">map</span><span class="p">,</span> <span class="nb">zip</span><span class="p">)</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Andrea Tramacere&quot;</span>
+
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span>  <span class="nn">.</span> <span class="k">import</span> <span class="n">minimizer</span>
+
+<span class="c1">#import sed_models_dic as Model_dic</span>
+
+<span class="kn">from</span> <span class="nn">.jet_model</span>  <span class="k">import</span> <span class="n">Jet</span>
+
+<span class="c1">#from template_model import Template</span>
+
+<span class="c1">#from output import WorkPlace</span>
+
+<span class="kn">from</span> <span class="nn">.model_parameters</span> <span class="k">import</span> <span class="n">ModelParameterArray</span>
+
+<span class="kn">from</span> <span class="nn">.spectral_shapes</span> <span class="k">import</span>  <span class="n">SED</span>
+   
+<span class="kn">from</span> <span class="nn">.base_model</span> <span class="k">import</span>  <span class="n">Model</span>
+
+
+
+<span class="n">__all__</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;FitModel&#39;</span><span class="p">]</span>
+
+
+
+<div class="viewcode-block" id="FitModel"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel">[docs]</a><span class="k">class</span> <span class="nc">FitModel</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd"> </span>
+<span class="sd">    This class creates an interface to handle  a fit Model. The relevant class members are </span>
+<span class="sd">    </span>
+<span class="sd">        - :class:`.SED` object storing the SED data points  </span>
+<span class="sd">        - `model_pars`, a :class:`.par_array_builder` object returned by the :class:`.SSC_param` constructor </span>
+<span class="sd">        - :class:`.jet_builder` object </span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    </span>
+<span class="sd">    :param jet: (:class:`.par_array_builder` object)</span>
+<span class="sd">     </span>
+<span class="sd">    :param elec_distr_type: (str)  name of the electron distribution model</span>
+<span class="sd">        </span>
+<span class="sd">    :param template: (:class:`.spectral_shapes.template` object)</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    Members</span>
+<span class="sd">    </span>
+<span class="sd">    :ivar SED: (:class:`.spectral_shapes.SED`) object to store the SED data points</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    :ivar model_pars: (:class:`.par_array_builder` object)</span>
+<span class="sd">     </span>
+
+<span class="sd">  </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">elec_distr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">jet</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;no-name&#39;</span><span class="p">,</span><span class="n">out_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">flag</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">template</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">loglog_poly</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">analytical</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">nu_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>  <span class="o">**</span><span class="n">keywords</span><span class="p">):</span>
+ 
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor</span>
+<span class="sd">        </span>
+<span class="sd">        args: </span>
+<span class="sd">           </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+       
+        <span class="nb">super</span><span class="p">(</span><span class="n">FitModel</span><span class="p">,</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>  <span class="o">**</span><span class="n">keywords</span><span class="p">)</span>
+       
+        <span class="k">if</span>  <span class="n">jet</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">elec_distr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1">#!! warning or error?</span>
+            
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;you can&#39;t provide both elec_distr and jet, only one&quot;</span><span class="p">)</span>
+            
+            <span class="k">raise</span> <span class="ne">RuntimeError</span>
+        
+          
+       
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">SEDdata</span><span class="o">=</span><span class="kc">None</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_min_fit</span><span class="o">=</span><span class="mf">1E6</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_max_fit</span><span class="o">=</span><span class="mf">1E30</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">fitname</span><span class="o">=</span><span class="kc">None</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="n">name</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="o">=</span><span class="n">SED</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_min</span><span class="o">=</span><span class="mf">1E6</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_max</span><span class="o">=</span><span class="mf">1E30</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_size</span><span class="o">=</span><span class="n">nu_size</span>
+    
+    
+        <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="o">=</span><span class="p">[]</span>    
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">=</span><span class="n">ModelParameterArray</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">elec_distr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">flag</span><span class="p">,</span> <span class="n">electron_distribution</span><span class="o">=</span><span class="n">elec_distr</span><span class="p">,</span> <span class="n">jet_workplace</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">jet</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">jet</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">jet</span><span class="p">)</span>
+            
+        
+        <span class="k">if</span> <span class="n">template</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">template</span><span class="p">)</span>
+           
+        
+        <span class="k">if</span> <span class="n">loglog_poly</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">loglog_poly</span><span class="p">)</span>
+        
+        
+        <span class="k">if</span> <span class="n">analytical</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">analytical</span><span class="p">)</span>
+        
+<div class="viewcode-block" id="FitModel.PlotModel"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.PlotModel">[docs]</a>    <span class="k">def</span> <span class="nf">PlotModel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">Plot</span><span class="p">,</span><span class="n">clean</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">autoscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">plot_components</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Plot</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">clean</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+                <span class="n">Plot</span><span class="o">.</span><span class="n">clean_model_lines</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">plot_components</span> <span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">model_comp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="c1">#print&quot;model name&quot;, model_comp.name</span>
+                        <span class="n">model_comp</span><span class="o">.</span><span class="n">PlotModel</span><span class="p">(</span><span class="n">Plot</span><span class="p">,</span><span class="n">autoscale</span><span class="o">=</span><span class="n">autoscale</span><span class="p">)</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="n">Plot</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="n">model_comp</span><span class="p">,</span><span class="n">autoscale</span><span class="o">=</span><span class="n">autoscale</span><span class="p">)</span>
+
+                    <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+            <span class="c1">#composite model</span>
+            <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+            <span class="n">Plot</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="p">,</span><span class="n">autoscale</span><span class="o">=</span><span class="n">autoscale</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+            
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;the plot window is not defined&quot;</span><span class="p">)</span></div>
+
+       
+            
+    
+<div class="viewcode-block" id="FitModel.set_nu_grid"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.set_nu_grid">[docs]</a>    <span class="k">def</span> <span class="nf">set_nu_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nu_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">nu_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">nu_size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nu_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nu_size</span><span class="o">=</span><span class="n">nu_size</span>
+        
+        <span class="k">if</span> <span class="n">nu_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nu_min</span><span class="o">=</span><span class="n">nu_min</span>
+        
+        <span class="k">if</span> <span class="n">nu_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nu_max</span><span class="o">=</span><span class="n">nu_max</span>
+        
+        <span class="k">for</span> <span class="n">model_comp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
+        
+            <span class="k">if</span> <span class="n">nu_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">model_comp</span><span class="o">.</span><span class="n">nu_size</span><span class="o">=</span><span class="n">nu_size</span>
+            
+            <span class="k">if</span> <span class="n">nu_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">model_comp</span><span class="o">.</span><span class="n">nu_min</span><span class="o">=</span><span class="n">nu_min</span>
+            
+            <span class="k">if</span> <span class="n">nu_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">model_comp</span><span class="o">.</span><span class="n">nu_max</span><span class="o">=</span><span class="n">nu_max</span></div>
+
+<div class="viewcode-block" id="FitModel.add_component"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.add_component">[docs]</a>    <span class="k">def</span> <span class="nf">add_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">moldel_comp</span><span class="p">):</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">moldel_comp</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="n">moldel_comp</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">par_array</span><span class="p">:</span>
+            
+            <span class="c1">#if moldel_comp.model_type==&#39;jet&#39;:</span>
+                
+            <span class="c1">#    fit_range=set_param_rage(par.name,par.val)</span>
+                
+            <span class="c1">#    par.set(fit_range=fit_range)</span>
+                
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">add_par</span><span class="p">(</span><span class="n">par</span><span class="p">)</span></div>
+        
+        
+    
+<div class="viewcode-block" id="FitModel.show_pars"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.show_pars">[docs]</a>    <span class="k">def</span> <span class="nf">show_pars</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        shows all the parameters of the fit_array</span>
+<span class="sd">        </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span></div>
+    
+    
+    
+<div class="viewcode-block" id="FitModel.set"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.set">[docs]</a>    <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">par_name</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        sets the value of a specific parameter of the parameter array</span>
+<span class="sd">        </span>
+<span class="sd">        :param par_name: </span>
+<span class="sd">        </span>
+<span class="sd">        .. note::</span>
+<span class="sd">            see  the documentation of :class:`.par_array_builder` for arguments and keywords</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#print &quot;Model in model manager&quot;,args,kw</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">)</span></div>
+  
+  
+<div class="viewcode-block" id="FitModel.get"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">par_name</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns the value of a specific keyword for a specific parameter of the parameter array</span>
+<span class="sd">        </span>
+<span class="sd">        :param par_name: </span>
+<span class="sd">        </span>
+<span class="sd">        .. note::</span>
+<span class="sd">            see  the documentation of :class:`.par_array_builder` for arguments and keywords</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#print &quot;Model in model manager&quot;,args,kw</span>
+        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></div>
+        
+        
+<div class="viewcode-block" id="FitModel.get_val"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.get_val">[docs]</a>    <span class="k">def</span> <span class="nf">get_val</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">par_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns  the value of a specific parameter of the parameter array</span>
+<span class="sd">        </span>
+<span class="sd">        :param par_name: </span>
+<span class="sd">        </span>
+<span class="sd">        .. note::</span>
+<span class="sd">            see  the documentation of :class:`.par_array_builder` for arguments and keywords</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#print &quot;Model in model manager&quot;,args,kw</span>
+        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="s1">&#39;val&#39;</span><span class="p">)</span></div>
+  
+  
+<div class="viewcode-block" id="FitModel.fit"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">SEDdata</span><span class="p">,</span><span class="n">nu_min</span><span class="p">,</span><span class="n">nu_max</span><span class="p">,</span><span class="n">fitname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        shortcut to call :func:`.minimizer.fit_SED` </span>
+<span class="sd">        </span>
+<span class="sd">        :param SEDdata: SEDdata object</span>
+<span class="sd">        :param nu_min: minimun frequency for the fit range interval</span>
+<span class="sd">        :param nu_max: maximum frequency for the fit range interval</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SEDdata</span><span class="o">=</span><span class="n">SEDdata</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_min_fit</span><span class="o">=</span><span class="n">nu_min</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_max_fit</span><span class="o">=</span><span class="n">nu_max</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">fitname</span><span class="o">=</span><span class="n">fitname</span>
+        
+        <span class="k">return</span> <span class="n">minimizer</span><span class="o">.</span><span class="n">fit_SED</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">SEDdata</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nu_min_fit</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nu_max_fit</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">fitname</span><span class="p">)</span></div>
+  
+
+<div class="viewcode-block" id="FitModel.get_conf_range"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.get_conf_range">[docs]</a>    <span class="k">def</span> <span class="nf">get_conf_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">par_name</span><span class="p">,</span><span class="n">frac_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        
+        <span class="n">init_val</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="s1">&#39;best_fit_val&#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">frac_range</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">init_err</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="s1">&#39;best_fit_err&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">init_err</span><span class="o">=</span><span class="n">init_val</span><span class="o">*</span><span class="n">frac_range</span>
+            
+        <span class="n">init_frozen</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="s1">&#39;frozen&#39;</span><span class="p">)</span>
+        
+        <span class="n">val_grid</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">init_val</span><span class="o">-</span><span class="n">init_err</span><span class="p">,</span> <span class="n">init_val</span><span class="o">+</span><span class="n">init_err</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="s1">&#39;frozen&#39;</span><span class="p">)</span>
+        
+        <span class="n">chi_red</span><span class="o">=</span><span class="p">[]</span>
+        <span class="n">par_val</span><span class="o">=</span><span class="p">[]</span>
+        
+        <span class="k">for</span>  <span class="n">val_test</span> <span class="ow">in</span> <span class="n">val_grid</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="n">val_test</span><span class="p">)</span>
+            <span class="n">chi_red</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">minimizer</span><span class="o">.</span><span class="n">fit_SED</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">SEDdata</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_min_fit</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_max_fit</span><span class="p">,</span><span class="n">get_conf_int</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">fitname</span><span class="o">=</span><span class="s1">&#39;err_estimate&#39;</span><span class="p">))</span>
+            <span class="n">par_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val_test</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">show_best_fit_pars</span><span class="p">()</span>
+
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;par=</span><span class="si">%f</span><span class="s2">, chi_red=</span><span class="si">%f</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">par_val</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">chi_red</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])()</span>
+ 
+        <span class="k">if</span> <span class="n">init_frozen</span><span class="o">==</span><span class="kc">False</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="s1">&#39;free&#39;</span><span class="p">)</span>
+    
+        <span class="k">return</span> <span class="n">chi_red</span><span class="p">,</span><span class="n">par_val</span></div>
+    
+    
+    
+<div class="viewcode-block" id="FitModel.eval"><a class="viewcode-back" href="../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel.eval">[docs]</a>    <span class="k">def</span> <span class="nf">eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">fill_SED</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">get_model</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">plot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">phys_output</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        evaluates the SED for the current parameters and fills the :class:`.SED` member</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        
+        <span class="k">if</span> <span class="n">nu</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1">#print (&quot;---&gt;&quot;, self.nu_min,self.nu_max,self.nu_size)</span>
+            
+            <span class="n">x1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_min</span><span class="p">)</span>
+
+            <span class="n">x2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_max</span><span class="p">)</span>
+            
+            <span class="n">lin_nu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_size</span><span class="p">)</span>
+
+            <span class="n">log_nu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">lin_nu</span><span class="p">)</span>
+            
+            <span class="n">model</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">lin_nu</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+                 
+          
+        <span class="k">else</span><span class="p">:</span>
+            
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">nu</span><span class="p">)</span><span class="o">==</span><span class="p">():</span>
+ 
+                <span class="n">nu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">nu</span><span class="p">])</span>
+            
+            <span class="k">if</span> <span class="n">loglog</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+                <span class="n">lin_nu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mf">10.</span><span class="p">,</span><span class="n">nu</span><span class="p">)</span>
+                <span class="n">log_nu</span><span class="o">=</span><span class="n">nu</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">log_nu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">nu</span><span class="p">)</span>
+                <span class="n">lin_nu</span><span class="o">=</span><span class="n">nu</span>
+        
+            
+            
+        <span class="c1">#print lin_nu </span>
+        <span class="n">model</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">lin_nu</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        
+        
+        
+        <span class="k">for</span> <span class="n">model_comp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
+            
+            <span class="c1">#print &quot;model&quot;,model_comp.name</span>
+            
+            <span class="k">if</span> <span class="n">loglog</span><span class="o">==</span><span class="kc">False</span><span class="p">:</span>
+                <span class="n">model</span><span class="o">+=</span> <span class="n">model_comp</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="n">lin_nu</span><span class="p">,</span><span class="n">fill_SED</span><span class="o">=</span><span class="n">fill_SED</span><span class="p">,</span><span class="n">get_model</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="n">loglog</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">model</span><span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mf">10.</span><span class="p">,</span><span class="n">model_comp</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="n">log_nu</span><span class="p">,</span><span class="n">fill_SED</span><span class="o">=</span><span class="n">fill_SED</span><span class="p">,</span><span class="n">get_model</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="n">loglog</span><span class="p">))</span>
+         
+        
+    
+        <span class="k">if</span> <span class="n">fill_SED</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+ 
+            <span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="n">lin_nu</span><span class="p">,</span><span class="n">nuFnu</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+            
+        <span class="k">if</span> <span class="n">plot</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">label</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+                
+            <span class="bp">self</span><span class="o">.</span><span class="n">PlotModel</span><span class="p">(</span><span class="n">plot</span><span class="p">,</span> <span class="n">clean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+           
+            
+        <span class="k">if</span> <span class="n">get_model</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+            
+            <span class="k">if</span> <span class="n">loglog</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+                <span class="n">model</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+                    
+            
+            <span class="k">return</span> <span class="n">model</span>        
+        
+        <span class="k">else</span><span class="p">:</span>
+            
+            <span class="k">return</span> <span class="kc">None</span></div></div>
+
+
+
+
+<span class="c1"># #!! aggiornare con i buoundaries di jet_paramter   </span>
+<span class="c1"># def set_param_rage(par_name,par_val):</span>
+<span class="c1">#     </span>
+<span class="c1">#     print &quot;setting range for&quot;, par_name</span>
+<span class="c1">#     </span>
+<span class="c1">#     if par_name==&#39;z_cosm&#39;:</span>
+<span class="c1">#         val_min=par_val*0.8</span>
+<span class="c1">#         val_max=par_val*1.2</span>
+<span class="c1">#     </span>
+<span class="c1">#     if par_name==&#39;R&#39;:</span>
+<span class="c1">#         val_min=par_val/10</span>
+<span class="c1">#         val_max=par_val*2</span>
+<span class="c1"># </span>
+<span class="c1">#     if par_name==&#39;N&#39;:</span>
+<span class="c1">#         val_min=par_val/100</span>
+<span class="c1">#         val_max=par_val*100</span>
+<span class="c1">#     </span>
+<span class="c1">#     if par_name==&#39;beam_obj&#39;:</span>
+<span class="c1">#         val_min=par_val-5</span>
+<span class="c1">#         if val_min&lt;1.0:</span>
+<span class="c1">#             val_min=1.0</span>
+<span class="c1">#             </span>
+<span class="c1">#         val_max=par_val+5</span>
+<span class="c1">#         </span>
+<span class="c1">#     if par_name==&#39;B&#39;:</span>
+<span class="c1">#         val_min=par_val/2</span>
+<span class="c1">#         val_max=par_val*2</span>
+<span class="c1"># </span>
+<span class="c1">#     if par_name==&#39;gmin&#39;:</span>
+<span class="c1">#         val_min=par_val/10</span>
+<span class="c1">#         if val_min&lt;1.0:</span>
+<span class="c1">#             val_min=1.0</span>
+<span class="c1">#             </span>
+<span class="c1">#         val_max=par_val*10</span>
+<span class="c1">#     </span>
+<span class="c1">#     if par_name==&#39;gmax&#39;:</span>
+<span class="c1">#         val_min=par_val/10</span>
+<span class="c1">#         val_max=par_val*10</span>
+<span class="c1">#     </span>
+<span class="c1">#     if par_name in  par_name in Model_dic.s_dic.values() or par_name in Model_dic.s1_dic.values():</span>
+<span class="c1">#         val_min=par_val*0.8</span>
+<span class="c1">#         val_max=par_val*1.2</span>
+<span class="c1">#     </span>
+<span class="c1">#     if par_name in Model_dic.r_dic.values():</span>
+<span class="c1">#         val_min=par_val*0.5</span>
+<span class="c1">#         val_max=par_val*1.5</span>
+<span class="c1">#     </span>
+<span class="c1">#     if par_name in Model_dic.gamma_cut_dic.values() or par_name in Model_dic.gamma_3p_dic.values() :</span>
+<span class="c1">#         val_min=par_val*0.1</span>
+<span class="c1">#         val_max=par_val*10</span>
+<span class="c1">#     </span>
+<span class="c1">#     return val_min,val_max</span>
+<span class="c1">#     </span>
+<span class="c1"># </span>
+
+
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, andrea tramacere.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
