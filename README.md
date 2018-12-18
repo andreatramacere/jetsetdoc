@@ -1,3 +1,5 @@
+![img](./docs/_images/logo_large.png)
+
 # jetsetdoc
 creat an empty .nojekyll in the docs direcotry
 
