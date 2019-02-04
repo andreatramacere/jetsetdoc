@@ -1,8 +1,0 @@
-<map id="inheritance49263625de" name="inheritance49263625de">
-<area shape="rect" id="node1" title="Class to handle log&#45;cubic model" alt="" coords="351,5,430,30"/>
-<area shape="rect" id="node3" title="Class to handle log&#45;linear model" alt="" coords="350,54,431,79"/>
-<area shape="rect" id="node5" title="Class to handle log&#45;parabolic model" alt="" coords="334,103,447,129"/>
-<area shape="rect" id="node6" title="Class to handle a log&#45;par + pl model" alt="" coords="334,153,447,178"/>
-<area shape="rect" id="node7" title="This class is the base class for models parameters. The following keywords " alt="" coords="5,30,125,55"/>
-<area shape="rect" id="node8" title="This class is a subclass of the :class:`.ModelParameter` class," alt="" coords="174,30,285,55"/>
-</map>
