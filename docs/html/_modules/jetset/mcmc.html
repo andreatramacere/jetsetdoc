@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jetset.mcmc &#8212; jetset  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href=" https://github.com/andreatramacere/jetset"
+     class="visible-desktop hidden-xs"><img
+    id="gh-banner"
+    style="position: absolute; top: 50px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
+          JetSeT doc</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">JetSeT <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><!--
+<ul class="globaltoc"
+><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+//-->
+
+
+<html style="height:100%">
+    <body style="height:100%">
+      <div class="sidebar-block">
+        <div class="sidebar-wrapper">
+          <h2></h2>
+        </div>
+        <div class="sidebar-toc">
+
+          
+          
+            <p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">code documentation (API)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+</ul>
+
+          
+
+        </div>
+
+      </div>
+    </body>
+</html>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <h1>Source code for jetset.mcmc</h1><div class="highlight"><pre>
+<span></span><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Andrea Tramacere&quot;</span>
+
+<span class="kn">from</span> <span class="nn">.minimizer</span> <span class="kn">import</span>  <span class="n">_eval_res</span>
+
+<span class="kn">import</span> <span class="nn">emcee</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
+
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">corner</span>
+<span class="kn">import</span> <span class="nn">dill</span> <span class="k">as</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">cpu_count</span><span class="p">,</span> <span class="n">Pool</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span>  <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">from</span> <span class="nn">.plot_sedfit</span> <span class="kn">import</span>  <span class="n">plt</span><span class="p">,</span> <span class="n">PlotSED</span><span class="p">,</span> <span class="n">set_mpl</span>
+
+<span class="n">__all__</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;McmcSampler&#39;</span><span class="p">]</span>
+
+
+
+<span class="k">class</span> <span class="nc">Counter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">count_tot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count_OK</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count_tot</span> <span class="o">=</span> <span class="n">count_tot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_iter</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">([</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">])</span>
+
+
+<span class="k">class</span> <span class="nc">RunThread</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_class</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_class</span> <span class="o">=</span> <span class="n">target_class</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_class</span><span class="o">.</span><span class="n">model</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">target_class</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_class</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">run_mcmc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_class</span><span class="o">.</span><span class="n">_pos</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_class</span><span class="o">.</span><span class="n">_npernode</span><span class="p">,</span> <span class="n">rstate0</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">get_state</span><span class="p">(),</span> <span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">store</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="McmcSampler"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler">[docs]</a><span class="k">class</span> <span class="nc">McmcSampler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">model_minimizer</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model_minimizer</span><span class="o">.</span><span class="n">fit_model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">model_minimizer</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fit_par_free</span> <span class="o">=</span> <span class="n">model_minimizer</span><span class="o">.</span><span class="n">fit_par_free</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_iter</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">([</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">])</span>
+
+
+
+<div class="viewcode-block" id="McmcSampler.run_sampler"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.run_sampler">[docs]</a>    <span class="k">def</span> <span class="nf">run_sampler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">nwalkers</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+                    <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                    <span class="n">pos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">burnin</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+                    <span class="n">use_UL</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">bound</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                    <span class="n">bound_rel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">threads</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">walker_start_bound</span><span class="o">=</span><span class="mf">0.002</span><span class="p">,</span>
+                    <span class="n">use_labels_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">loglog</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                    <span class="n">progress</span><span class="o">=</span><span class="s1">&#39;notebook&#39;</span><span class="p">):</span>
+
+        <span class="n">counter</span><span class="o">=</span><span class="n">Counter</span><span class="p">(</span><span class="n">nwalkers</span><span class="o">*</span><span class="n">steps</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calls</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calls_OK</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_UL</span> <span class="o">=</span> <span class="n">use_UL</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">pos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nwalkers</span> <span class="o">=</span> <span class="n">nwalkers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">steps</span> <span class="o">=</span> <span class="n">steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calls_tot</span> <span class="o">=</span> <span class="n">nwalkers</span> <span class="o">*</span> <span class="n">steps</span>
+
+        <span class="k">if</span> <span class="n">use_labels_dict</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">fit_par_free</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">par</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span> <span class="o">=</span> <span class="p">[</span><span class="n">par</span><span class="o">.</span><span class="n">units</span> <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels_start_val</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">best_fit_val</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">=</span><span class="p">[]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="o">=</span><span class="p">[]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span><span class="o">=</span><span class="p">[]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels_start_val</span><span class="o">=</span><span class="p">[]</span>
+            <span class="k">for</span> <span class="n">model_name</span> <span class="ow">in</span> <span class="n">use_labels_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">par_name</span> <span class="ow">in</span> <span class="n">use_labels_dict</span><span class="p">[</span><span class="n">model_name</span><span class="p">]:</span>
+                    <span class="n">p</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">get_par_by_name</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span><span class="n">par_name</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">p</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">labels_start_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">best_fit_val</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;par </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">par_name</span><span class="o">+</span><span class="s1">&#39; not present in model, will be sckipped&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">par_array_best_fit</span><span class="o">=</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">emcee</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">sample_ball</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span><span class="o">.</span><span class="n">best_fit_val</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">]),</span>
+                                          <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span><span class="o">.</span><span class="n">best_fit_val</span> <span class="o">*</span> <span class="n">walker_start_bound</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">]),</span>
+                                          <span class="n">nwalkers</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_build_bounds</span><span class="p">(</span><span class="n">bound</span><span class="o">=</span><span class="n">bound</span><span class="p">,</span><span class="n">bound_rel</span><span class="o">=</span><span class="n">bound_rel</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">emcee</span><span class="o">.</span><span class="n">__version__</span> <span class="o">&lt;</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Please update to emcee v&gt;=3.0.0&#39;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mcmc run starting&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">progress</span> <span class="o">==</span> <span class="s1">&#39;notebook&#39;</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">if</span> <span class="n">progress</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">tqdm</span><span class="o">=</span><span class="kc">None</span>
+
+
+        <span class="k">if</span> <span class="n">threads</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">threads</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># if threads &gt; cpu_count():</span>
+            <span class="c1">#     threads = cpu_count()</span>
+            <span class="c1">#     warnings.warn(&#39;number of threads has been reduced to cpu_count=%d&#39;%cpu_count())</span>
+            <span class="c1">#</span>
+
+
+            <span class="c1"># with Pool(processes=threads) as pool:</span>
+            <span class="c1">#</span>
+            <span class="c1">#     self.sampler = emcee.EnsembleSampler(nwalkers, self.ndim, log_prob, threads=threads,</span>
+            <span class="c1">#                                          args=(self.model, self.data, use_UL, counter,self._bounds, self.par_array, loglog),pool=pool)</span>
+            <span class="c1">#     self.sampler.run_mcmc(pos, steps, progress=True)</span>
+
+
+
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;multithreadign not implemented yet&#39;</span><span class="p">)</span>
+            <span class="n">threads</span><span class="o">=</span><span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sampler</span> <span class="o">=</span> <span class="n">emcee</span><span class="o">.</span><span class="n">EnsembleSampler</span><span class="p">(</span><span class="n">nwalkers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">log_prob</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">use_UL</span><span class="p">,</span> <span class="n">counter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bounds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">,</span> <span class="n">loglog</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">run_mcmc</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">threads</span><span class="o">=</span><span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sampler</span> <span class="o">=</span> <span class="n">emcee</span><span class="o">.</span><span class="n">EnsembleSampler</span><span class="p">(</span><span class="n">nwalkers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">log_prob</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">use_UL</span><span class="p">,</span> <span class="n">counter</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_bounds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">,</span> <span class="n">loglog</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">run_mcmc</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">)</span>
+
+
+
+        <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">comp_time</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mcmc run done, with </span><span class="si">%d</span><span class="s2"> threads took </span><span class="si">%2.2f</span><span class="s2"> seconds&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">threads</span><span class="p">,</span><span class="n">comp_time</span><span class="p">))</span>
+
+        <span class="c1">#self.samples = self.sampler.chain[:, burnin:, :].reshape((-1, self.ndim))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">get_chain</span><span class="p">(</span><span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">discard</span><span class="o">=</span><span class="n">burnin</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samples_log_prob</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">get_log_prob</span><span class="p">(</span><span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">discard</span><span class="o">=</span><span class="n">burnin</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">acceptance_fraction</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">acceptance_fraction</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_to_best_fit</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="McmcSampler.get_par_quantiles"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.get_par_quantiles">[docs]</a>    <span class="k">def</span> <span class="nf">get_par_quantiles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">quantiles</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.84</span><span class="p">)):</span>
+        <span class="n">_d</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_par</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">_d</span><span class="p">,</span><span class="n">quantiles</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="McmcSampler.reset_to_best_fit"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.reset_to_best_fit">[docs]</a>    <span class="k">def</span> <span class="nf">reset_to_best_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">par</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">):</span>
+            <span class="n">par</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array_best_fit</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">.</span><span class="n">val</span></div>
+
+    <span class="k">def</span> <span class="nf">_build_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">bound_rel</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bounds</span><span class="o">=</span><span class="p">[]</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bound</span><span class="p">)</span> <span class="o">==</span> <span class="p">():</span>
+            <span class="n">bound</span><span class="o">=</span><span class="p">[</span><span class="n">bound</span><span class="p">,</span><span class="n">bound</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bound</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">2</span><span class="p">,):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;bound shape&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bound</span><span class="p">),</span> <span class="s1">&#39;it is wrong, has to be scalare or (2,)&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">:</span>
+            <span class="k">if</span>  <span class="n">bound_rel</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">par</span><span class="o">.</span><span class="n">best_fit_err</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+                <span class="c1">#_min =  par.best_fit_val - par.best_fit_err * bound[0]</span>
+                <span class="c1">#_max =  par.best_fit_val + par.best_fit_err * bound[1]</span>
+                <span class="n">delta_p</span> <span class="o">=</span> <span class="n">par</span><span class="o">.</span><span class="n">best_fit_err</span> <span class="o">*</span> <span class="n">bound</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">delta_m</span> <span class="o">=</span> <span class="n">par</span><span class="o">.</span><span class="n">best_fit_err</span> <span class="o">*</span> <span class="n">bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">delta_p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">par</span><span class="o">.</span><span class="n">best_fit_val</span><span class="p">)</span><span class="o">*</span><span class="n">bound</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">delta_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">par</span><span class="o">.</span><span class="n">best_fit_val</span><span class="p">)</span><span class="o">*</span><span class="n">bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="c1">#_min = par.best_fit_val * (1.0  - bound[0])</span>
+                <span class="c1">#_max = par.best_fit_val * (1.0  + bound[1])</span>
+
+            <span class="n">_min</span> <span class="o">=</span> <span class="n">par</span><span class="o">.</span><span class="n">best_fit_val</span> <span class="o">-</span> <span class="n">delta_m</span>
+            <span class="n">_max</span> <span class="o">=</span> <span class="n">par</span><span class="o">.</span><span class="n">best_fit_val</span> <span class="o">+</span> <span class="n">delta_p</span>
+
+
+            <span class="k">if</span> <span class="n">par</span><span class="o">.</span><span class="n">fit_range_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">_min</span><span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">_min</span><span class="p">,</span> <span class="n">par</span><span class="o">.</span><span class="n">fit_range_min</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">par</span><span class="o">.</span><span class="n">fit_range_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">_max</span><span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">_max</span><span class="p">,</span> <span class="n">par</span><span class="o">.</span><span class="n">fit_range_max</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bounds</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">_min</span><span class="p">,</span> <span class="n">_max</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="McmcSampler.show_pars"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.show_pars">[docs]</a>    <span class="k">def</span> <span class="nf">show_pars</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="McmcSampler.corner_plot"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.corner_plot">[docs]</a>    <span class="k">def</span> <span class="nf">corner_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">quantiles</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.16</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.84</span><span class="p">),</span> <span class="n">levels</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">title_kwargs</span> <span class="o">=</span> <span class="p">{}):</span>
+        <span class="n">_id</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">labels</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">labels</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">:</span>
+            <span class="n">_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+
+        <span class="n">f</span> <span class="o">=</span> <span class="n">corner</span><span class="o">.</span><span class="n">corner</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">[:,</span> <span class="n">_id</span><span class="p">],</span>
+                          <span class="n">quantiles</span><span class="o">=</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">_id</span><span class="p">],</span>
+                          <span class="n">truths</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">labels_start_val</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">_id</span><span class="p">],</span>
+                          <span class="n">title_kwargs</span><span class="o">=</span><span class="n">title_kwargs</span><span class="p">,</span><span class="n">show_titles</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                          <span class="n">levels</span> <span class="o">=</span> <span class="n">levels</span><span class="p">)</span>
+
+        <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;quantiles =&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">quantiles</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span></div>
+
+<div class="viewcode-block" id="McmcSampler.get_par"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.get_par">[docs]</a>    <span class="k">def</span> <span class="nf">get_par</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;paramter p&#39;</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="s1">&#39;not found&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;label id larger then labels size&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">[:,</span> <span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">p</span></div>
+
+
+<div class="viewcode-block" id="McmcSampler.plot_chain"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.plot_chain">[docs]</a>    <span class="k">def</span> <span class="nf">plot_chain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">log_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">_d</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_par</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="n">traces</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">chain</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">idx</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">+=</span> <span class="s1">&#39; (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="n">alpha_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">_d</span><span class="p">)</span>
+
+        <span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">log_plot</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="s1">&#39;log10(</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="n">n</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">_d</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">RuntimeWarning</span><span class="p">(</span><span class="s1">&#39;negative values in p&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">traces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">traces</span><span class="p">)</span>
+                <span class="n">alpha_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">alpha_true</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">traces</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">alpha_true</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;steps&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span></div>
+
+<div class="viewcode-block" id="McmcSampler.plot_par"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.plot_par">[docs]</a>    <span class="k">def</span> <span class="nf">plot_par</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">nbins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">log_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">quantiles</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.84</span><span class="p">),</span><span class="n">figsize</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">set_mpl</span><span class="p">()</span>
+
+        <span class="n">_d</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_par</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+        <span class="n">par_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="n">x_name</span> <span class="o">=</span> <span class="n">par_name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="p">:</span>
+                <span class="n">x_name</span> <span class="o">+=</span> <span class="s1">&#39; (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_units</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">log_plot</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">x_name</span> <span class="o">=</span> <span class="s1">&#39;log10(</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">x_name</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">_d</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">RuntimeWarning</span><span class="p">(</span><span class="s1">&#39;negative values in p&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">_d</span><span class="p">)</span>
+
+        <span class="n">q_vals</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_par_quantiles</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">quantiles</span><span class="o">=</span><span class="n">quantiles</span><span class="p">)</span>
+
+        <span class="n">q_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">q_vals</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">_d</span><span class="p">,</span>
+                <span class="n">bins</span><span class="o">=</span><span class="n">nbins</span><span class="p">,</span>
+                <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> = $</span><span class="si">%.3e</span><span class="s1">^{+</span><span class="si">%.3e</span><span class="s1">}_{-</span><span class="si">%.3e</span><span class="s1">} $&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">par_name</span><span class="p">,</span><span class="n">q_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">q_diff</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">q_diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+        <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">q_vals</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">log_plot</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">q</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">x_name</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;quantiles = </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="nb">str</span><span class="p">(</span><span class="n">quantiles</span><span class="p">))</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">f</span></div>
+
+<div class="viewcode-block" id="McmcSampler.plot_model"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fit_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="c1">#if labels is None:</span>
+        <span class="c1">#    labels = self.labels</span>
+        <span class="k">if</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sed_data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sed_data</span>
+
+        <span class="k">if</span> <span class="n">fit_range</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fit_range</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">nu_min_fit</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">nu_max_fit</span><span class="p">]</span>
+
+        <span class="n">p</span> <span class="o">=</span> <span class="n">PlotSED</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">and</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">z_sed_data</span> <span class="o">=</span> <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span>
+            <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">get_par_by_type</span><span class="p">(</span><span class="s1">&#39;redshift&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">val</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="n">add_data_plot</span><span class="p">(</span><span class="n">sed_data</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_to_best_fit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">fill_SED</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">get_model_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
+        <span class="c1">#if density is True:</span>
+        <span class="c1">#    y=y-x</span>
+
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">ID_rand</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)):</span>
+
+            <span class="k">for</span> <span class="n">ID_par</span><span class="p">,</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">):</span>
+                <span class="n">pi</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_par</span><span class="p">(</span><span class="n">ID_par</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="n">ID_rand</span><span class="p">])</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">fill_SED</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">get_model_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">density</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">-</span><span class="n">x</span>
+        <span class="n">y_min</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">y_max</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_max</span><span class="p">,</span><span class="n">y_min</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;mcmc model range&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_to_best_fit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">fill_SED</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">p</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">fit_range</span> <span class="o">=</span> <span class="n">fit_range</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sed_data</span><span class="p">,</span> <span class="n">fit_range</span> <span class="o">=</span>  <span class="n">fit_range</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">and</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z_sed_data</span>
+
+        <span class="k">return</span> <span class="n">p</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_progess_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">calls</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">calls</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2"> progress=</span><span class="si">%3.3f%%</span><span class="s2"> calls=</span><span class="si">%d</span><span class="s2"> accepted=</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_progress_iter</span><span class="p">),</span><span class="nb">float</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">calls</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">calls_tot</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">calls</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">calls_OK</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="McmcSampler.save"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="McmcSampler.load"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.load">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">input</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span></div></div>
+
+
+
+<span class="k">def</span> <span class="nf">emcee_log_like</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">fit_model</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">use_UL</span><span class="p">,</span><span class="n">par_array</span><span class="p">,</span><span class="n">loglog</span><span class="p">):</span>
+    <span class="n">_warn</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">theta</span><span class="p">)):</span>
+        <span class="n">par_array</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">theta</span><span class="p">[</span><span class="n">pi</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">theta</span><span class="p">[</span><span class="n">pi</span><span class="p">]):</span>
+            <span class="n">_warn</span><span class="o">=</span><span class="kc">True</span>
+
+    <span class="n">_m</span> <span class="o">=</span> <span class="n">fit_model</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">fill_SED</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">get_model</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loglog</span><span class="o">=</span><span class="n">loglog</span><span class="p">)</span>
+
+    <span class="n">_res_sum</span><span class="p">,</span> <span class="n">_res</span><span class="p">,</span> <span class="n">_res_UL</span> <span class="o">=</span> <span class="n">_eval_res</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
+                                        <span class="n">_m</span><span class="p">,</span>
+                                        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;dy&#39;</span><span class="p">],</span>
+                                        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;UL&#39;</span><span class="p">],</span>
+                                        <span class="n">use_UL</span><span class="o">=</span><span class="n">use_UL</span><span class="p">)</span>
+    <span class="c1">#_progess_bar(counter)</span>
+    <span class="k">return</span>  <span class="n">_res_sum</span> <span class="o">*-</span><span class="mf">0.5</span>
+
+
+<span class="k">def</span> <span class="nf">_progess_bar</span><span class="p">(</span><span class="n">counter</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">counter</span><span class="o">.</span><span class="n">count</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2"> progress=</span><span class="si">%3.3f%%</span><span class="s2"> calls=</span><span class="si">%d</span><span class="s2"> accepted=</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">next</span><span class="p">(</span> <span class="n">counter</span><span class="o">.</span><span class="n">_progress_iter</span><span class="p">),</span><span class="nb">float</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span> <span class="n">counter</span><span class="o">.</span><span class="n">count</span><span class="p">)</span><span class="o">/</span><span class="p">(</span> <span class="n">counter</span><span class="o">.</span><span class="n">count_tot</span><span class="p">),</span><span class="n">counter</span><span class="o">.</span><span class="n">count</span><span class="p">,</span><span class="n">counter</span><span class="o">.</span><span class="n">count_OK</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+
+
+<span class="k">def</span> <span class="nf">log_prob</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">fit_model</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">use_UL</span><span class="p">,</span><span class="n">counter</span><span class="p">,</span><span class="n">bounds</span><span class="p">,</span><span class="n">par_array</span><span class="p">,</span><span class="n">loglog</span><span class="p">):</span>
+    <span class="n">lp</span> <span class="o">=</span> <span class="n">log_prior</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">bounds</span><span class="p">)</span>
+    <span class="n">counter</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">lp</span><span class="p">):</span>
+        <span class="n">lp</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lp</span> <span class="o">+=</span> <span class="n">emcee_log_like</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">fit_model</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">use_UL</span><span class="p">,</span><span class="n">par_array</span><span class="p">,</span><span class="n">loglog</span><span class="p">)</span>
+    <span class="n">counter</span><span class="o">.</span><span class="n">count_OK</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">lp</span>
+
+
+
+
+<span class="k">def</span> <span class="nf">log_prior</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="n">bounds</span><span class="p">):</span>
+    <span class="n">_r</span><span class="o">=</span><span class="mf">0.</span>
+    <span class="c1">#bounds = [(par.fit_range_min, par.fit_range_max) for par in model_minimizer.fit_par_free]</span>
+    <span class="c1">#skip=False</span>
+    <span class="k">for</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">theta</span><span class="p">)):</span>
+
+        <span class="k">if</span> <span class="n">bounds</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">theta</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">&gt;</span><span class="n">bounds</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">_r</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+
+        <span class="k">if</span> <span class="n">bounds</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">theta</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">&lt;</span><span class="n">bounds</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="n">_r</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+
+
+    <span class="c1">#if skip is True:</span>
+    <span class="c1">#_r=-np.inf</span>
+    <span class="c1">#print(theta[pi],bounds)</span>
+    <span class="k">return</span> <span class="n">_r</span>
+
+
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, andrea tramacere.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composite Models and depending pars &#8212; jetset  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Depending parameters" href="../depending_pars/depending_pars.html" />
+    <link rel="prev" title="advanced features" href="../../model_advanced.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href=" https://github.com/andreatramacere/jetset"
+     class="visible-desktop hidden-xs"><img
+    id="gh-banner"
+    style="position: absolute; top: 50px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
+          JetSeT doc</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">JetSeT <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Composite Models and depending pars</a><ul>
+<li><a class="reference internal" href="#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li><a class="reference internal" href="#setting-parameters">Setting parameters</a></li>
+<li><a class="reference internal" href="#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../../model_advanced.html" title="Previous Chapter: advanced features"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; advanced features</span>
+    </a>
+  </li>
+  <li>
+    <a href="../depending_pars/depending_pars.html" title="Next Chapter: Depending parameters"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Depending parameters &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/composite_model/Composite_model.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><!--
+<ul class="globaltoc"
+><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+//-->
+
+
+<html style="height:100%">
+    <body style="height:100%">
+      <div class="sidebar-block">
+        <div class="sidebar-wrapper">
+          <h2></h2>
+        </div>
+        <div class="sidebar-toc">
+
+          
+          
+            <p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../model_advanced.html">model advanced features</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> composite models  *New (v1.2.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../depending_pars/depending_pars.html"> depending parameters  *New (v1.2.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html"> jet model custom  emitters distributions *New (v1.2.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../EBL/EBL.html"> EBL models  *New (v1.2.0)*</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+</ul>
+
+          
+
+        </div>
+
+      </div>
+    </body>
+</html>
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/composite_model/Composite_model.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="composite-models-and-depending-pars">
+<span id="composite-models"></span><h1>Composite Models and depending pars<a class="headerlink" href="#composite-models-and-depending-pars" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
+<span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span>
+<span class="kn">from</span> <span class="nn">jetset.model_manager</span> <span class="kn">import</span> <span class="n">FitModel</span>
+</pre></div>
+</div>
+<p>Composite models allow to combine together different models, such as Jet, and templates, including additive or multiplicative models, and give to the user the possibility to define the functional form of the model composition using a very simple and intuitive form such as:
+.. code-block:: python</p>
+<blockquote>
+<div><p>‘jet1+jet2’<a href="#id1"><span class="problematic" id="id2">*</span></a>Franceschini_2008</p>
+</div></blockquote>
+<p>that sums two jet models SEDs, and apply to both of them the <cite>Franceschini_2008</cite> EBL absorption.</p>
+<p>Building composite models it is very easy. Composite models are handled by   the <a class="reference internal" href="../../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel" title="jetset.model_manager.FitModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">FitModel</span></code></a> class, as shown by the following examples.</p>
+<div class="section" id="combine-a-jet-model-with-the-ebl-model-multiplicative-case">
+<h2>Combine a Jet model with the EBL model (Multiplicative case)<a class="headerlink" href="#combine-a-jet-model-with-the-ebl-model-multiplicative-case" title="Permalink to this headline">¶</a></h2>
+<p>We start by combining a Jet model with the EBL absorption model, i.e. a
+multiplicative model. First, we define our Jet model</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
+<span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;jet_flaring&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Second, we define the EBL model, and we use in this case the <cite>Franceschini_2008</cite> model ( read the section <a class="reference internal" href="../EBL/EBL.html#ebl-model"><span class="std std-ref">EBL</span></a>  for more info regarding the EBL models)</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.template_2Dmodel</span> <span class="kn">import</span> <span class="n">EBLAbsorptionTemplate</span>
+<span class="n">ebl_franceschini</span><span class="o">=</span><span class="n">EBLAbsorptionTemplate</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we add the components models to the the <a class="reference internal" href="../../../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel" title="jetset.model_manager.FitModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">FitModel</span></code></a> class, using the <code class="xref py py-class docutils literal notranslate"><span class="pre">FitModel.add_component()</span></code> method</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">=</span><span class="n">FitModel</span><span class="p">(</span><span class="n">nu_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;EBL corrected&#39;</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">my_jet</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">ebl_franceschini</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">model_manager</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">147</span><span class="p">:</span> <span class="ne">UserWarning</span><span class="p">:</span> <span class="n">no</span> <span class="n">cosmology</span> <span class="n">defined</span><span class="p">,</span> <span class="n">using</span> <span class="n">default</span> <span class="n">FlatLambdaCDM</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Planck13&quot;</span><span class="p">,</span> <span class="n">H0</span><span class="o">=</span><span class="mf">67.8</span> <span class="n">km</span> <span class="o">/</span> <span class="p">(</span><span class="n">Mpc</span> <span class="n">s</span><span class="p">),</span> <span class="n">Om0</span><span class="o">=</span><span class="mf">0.307</span><span class="p">,</span> <span class="n">Tcmb0</span><span class="o">=</span><span class="mf">2.725</span> <span class="n">K</span><span class="p">,</span> <span class="n">Neff</span><span class="o">=</span><span class="mf">3.05</span><span class="p">,</span> <span class="n">m_nu</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">0.06</span><span class="p">]</span> <span class="n">eV</span><span class="p">,</span> <span class="n">Ob0</span><span class="o">=</span><span class="mf">0.0483</span><span class="p">)</span>
+  <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;no cosmology defined, using default </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>the waring message is just telling that you are not passing any specific
+cosmology model to the <code class="docutils literal notranslate"><span class="pre">FitModel</span></code> class, so it is using a default one</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span>
+</pre></div>
+</div>
+<i>Table length=12</i>
+<table id="table140657529666912-374034" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_flaring</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>Franceschini_2008</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140657529666912-374034').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140657529666912-374034').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><p>Since, both the Jet model the EBL share the same parameter, i.e. the
+redshift, we link the two parameters</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">link_par</span><span class="p">(</span><span class="n">par_name</span><span class="o">=</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="n">from_model</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">],</span><span class="n">to_model</span><span class="o">=</span><span class="s1">&#39;jet_flaring&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">Franceschini_2008</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">jet_flaring</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span>
+</pre></div>
+</div>
+<i>Table length=12</i>
+<table id="table140657529666720-615225" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_flaring</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>Franceschini_2008</td><td>z_cosm(L,jet_flaring)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140657529666720-615225').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140657529666720-615225').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><p>As you can see, now the paramter <code class="docutils literal notranslate"><span class="pre">z_cosm</span></code> in <code class="docutils literal notranslate"><span class="pre">jet_flaring</span></code> is the
+<code class="docutils literal notranslate"><span class="pre">master</span></code> parameter (flagged by the M in parenthesis), and the one
+belonging to the <code class="docutils literal notranslate"><span class="pre">Franceschini_2008</span></code> component is the linked one
+(flagged by the L in parenthesis).</p>
+</div>
+<div class="section" id="setting-parameters">
+<h2>Setting parameters<a class="headerlink" href="#setting-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>with the new implementation of composite model  (<cite>FitModel</cite> class) to set parameters you have to specify the model component, this is different from versions&lt;1.2.0</p>
+</div>
+<p>These methods are alternative and equivalent ways to set a parameter in
+a composite model:</p>
+<ol class="loweralpha simple">
+<li><p>accessing the model component member of the</p></li>
+<li><p>using <code class="docutils literal notranslate"><span class="pre">set_par</span></code> and passing as first argument the model component
+name</p></li>
+<li><p>using <code class="docutils literal notranslate"><span class="pre">set_par</span></code> and passing as first argument the model component
+object</p></li>
+</ol>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#a</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">jet_flaring</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.1</span>
+<span class="c1">#b</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;jet_flaring&#39;</span><span class="p">,</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="c1">#c</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And now, we can define the functional form of the model composition,
+just by writing the mathematical expression as a string, using the model
+names reported in the model description table, and that’s it!</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">show_model_components</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">Composite</span> <span class="n">model</span> <span class="n">description</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">EBL</span> <span class="n">corrected</span>
+<span class="nb">type</span><span class="p">:</span> <span class="n">composite_model</span>
+<span class="n">components</span> <span class="n">models</span><span class="p">:</span>
+ <span class="o">-</span><span class="n">model</span> <span class="n">name</span><span class="p">:</span> <span class="n">jet_flaring</span> <span class="n">model</span> <span class="nb">type</span><span class="p">:</span> <span class="n">jet</span>
+ <span class="o">-</span><span class="n">model</span> <span class="n">name</span><span class="p">:</span> <span class="n">Franceschini_2008</span> <span class="n">model</span> <span class="nb">type</span><span class="p">:</span> <span class="n">table2D</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">composite_expr</span><span class="o">=</span><span class="s1">&#39;jet_flaring*Franceschini_2008&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">jet_flaring</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">150</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">p</span><span class="o">=</span><span class="n">composite_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Composite_model_24_0.png" src="../../../_images/Composite_model_24_0.png" />
+</div>
+<div class="section" id="sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">
+<h2>Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)<a class="headerlink" href="#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive" title="Permalink to this headline">¶</a></h2>
+<p>Assume that now we want to sum to jet models (a steady and flaring
+component) and apply to both of them the EBL absorption.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">=</span><span class="n">FitModel</span><span class="p">(</span><span class="n">nu_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;EBL corrected flaring+steady&#39;</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">my_jet</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">ebl_franceschini</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">model_manager</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">147</span><span class="p">:</span> <span class="ne">UserWarning</span><span class="p">:</span> <span class="n">no</span> <span class="n">cosmology</span> <span class="n">defined</span><span class="p">,</span> <span class="n">using</span> <span class="n">default</span> <span class="n">FlatLambdaCDM</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Planck13&quot;</span><span class="p">,</span> <span class="n">H0</span><span class="o">=</span><span class="mf">67.8</span> <span class="n">km</span> <span class="o">/</span> <span class="p">(</span><span class="n">Mpc</span> <span class="n">s</span><span class="p">),</span> <span class="n">Om0</span><span class="o">=</span><span class="mf">0.307</span><span class="p">,</span> <span class="n">Tcmb0</span><span class="o">=</span><span class="mf">2.725</span> <span class="n">K</span><span class="p">,</span> <span class="n">Neff</span><span class="o">=</span><span class="mf">3.05</span><span class="p">,</span> <span class="n">m_nu</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">0.06</span><span class="p">]</span> <span class="n">eV</span><span class="p">,</span> <span class="n">Ob0</span><span class="o">=</span><span class="mf">0.0483</span><span class="p">)</span>
+  <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;no cosmology defined, using default </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">steady_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;plc&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;steady_jet&#39;</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">steady_jet</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">show_model_components</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">Composite</span> <span class="n">model</span> <span class="n">description</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">EBL</span> <span class="n">corrected</span> <span class="n">flaring</span><span class="o">+</span><span class="n">steady</span>
+<span class="nb">type</span><span class="p">:</span> <span class="n">composite_model</span>
+<span class="n">components</span> <span class="n">models</span><span class="p">:</span>
+ <span class="o">-</span><span class="n">model</span> <span class="n">name</span><span class="p">:</span> <span class="n">jet_flaring</span> <span class="n">model</span> <span class="nb">type</span><span class="p">:</span> <span class="n">jet</span>
+ <span class="o">-</span><span class="n">model</span> <span class="n">name</span><span class="p">:</span> <span class="n">Franceschini_2008</span> <span class="n">model</span> <span class="nb">type</span><span class="p">:</span> <span class="n">table2D</span>
+ <span class="o">-</span><span class="n">model</span> <span class="n">name</span><span class="p">:</span> <span class="n">steady_jet</span> <span class="n">model</span> <span class="nb">type</span><span class="p">:</span> <span class="n">jet</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<p>now we link the same parameter <code class="docutils literal notranslate"><span class="pre">z_cosm</span></code> from the <code class="docutils literal notranslate"><span class="pre">steady_jet</span></code> to the
+same <code class="docutils literal notranslate"><span class="pre">master</span></code> parameter used for the <code class="docutils literal notranslate"><span class="pre">EBL</span></code> model, i.e. to the
+<code class="docutils literal notranslate"><span class="pre">jet_flaring</span></code> model</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">link_par</span><span class="p">(</span><span class="n">par_name</span><span class="o">=</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="n">from_model</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;steady_jet&#39;</span><span class="p">],</span><span class="n">to_model</span><span class="o">=</span><span class="s1">&#39;jet_flaring&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">steady_jet</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">jet_flaring</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span>
+</pre></div>
+</div>
+<i>Table length=22</i>
+<table id="table140657011807664-565188" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_flaring</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>Franceschini_2008</td><td>z_cosm(L,jet_flaring)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>steady_jet</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>steady_jet</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>z_cosm(L,jet_flaring)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>steady_jet</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140657011807664-565188').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140657011807664-565188').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">steady_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">150</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">composite_expr</span><span class="o">=</span><span class="s1">&#39;(jet_flaring + steady_jet) * Franceschini_2008&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">p</span><span class="o">=</span><span class="n">composite_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Composite_model_34_0.png" src="../../../_images/Composite_model_34_0.png" />
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, andrea tramacere.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

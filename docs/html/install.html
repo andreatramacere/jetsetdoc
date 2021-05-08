@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation &#8212; jetset  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="What’s new in version 1.2.0" href="new_release.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href=" https://github.com/andreatramacere/jetset"
+     class="visible-desktop hidden-xs"><img
+    id="gh-banner"
+    style="position: absolute; top: 50px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/logo_small_color_neg_transparent.png"></span>
+          JetSeT doc</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">JetSeT <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li><a class="reference internal" href="#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li><a class="reference internal" href="#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li><a class="reference internal" href="#install-the-jetset-from-source">Install the JetSeT from source</a><ul>
+<li><a class="reference internal" href="#download-the-code">Download the code</a></li>
+<li><a class="reference internal" href="#installation-from-source-using-anaconda">Installation from source using Anaconda</a></li>
+<li><a class="reference internal" href="#installation-from-source-using-pip">Installation from source using PIP</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: <no title>"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; <no title></span>
+    </a>
+  </li>
+  <li>
+    <a href="new_release.html" title="Next Chapter: What’s new in version 1.2.0"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">What’s new in... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/install.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><!--
+<ul class="globaltoc"
+><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+//-->
+
+
+<html style="height:100%">
+    <body style="height:100%">
+      <div class="sidebar-block">
+        <div class="sidebar-wrapper">
+          <h2></h2>
+        </div>
+        <div class="sidebar-toc">
+
+          
+          
+            <p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-jetset-from-source">Install the JetSeT from source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download-the-code">Download the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-from-source-using-anaconda">Installation from source using Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-from-source-using-pip">Installation from source using PIP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/user_guide.html">user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">code documentation (API)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+</ul>
+
+          
+
+        </div>
+
+      </div>
+    </body>
+</html>
+<div id="sourcelink">
+  <a href="_sources/install.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="installation">
+<span id="install-file"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Starting from version 1.1.0, python 2 is not supported anymore. Python &gt;=3.6 is suggested, older python 3 versions (&lt;3.6)  should work.</p>
+</div>
+<div class="section" id="windows-10-prerequisites">
+<h2>Windows 10 prerequisites<a class="headerlink" href="#windows-10-prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Install the Windows Subsystem for Linux: <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a></p>
+</div>
+<div class="section" id="install-jetset-from-anaconda">
+<h2>Install  JetSeT from Anaconda<a class="headerlink" href="#install-jetset-from-anaconda" title="Permalink to this headline">¶</a></h2>
+<p>I suggest to use anaconda and python3 (<a class="reference external" href="https://www.anaconda.com/download/">https://www.anaconda.com/download/</a>)</p>
+<ul>
+<li><p>create a virtual environment (not necessary, but suggested):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name jetset <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8 ipython jupyter
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate jetset
+</pre></div>
+</div>
+</li>
+<li><p>install the code</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c andreatramacere -c astropy -c conda-forge jetset
+</pre></div>
+</div>
+</li>
+<li><p>run the test</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest --disable-warnings --pyargs jetset.tests.test_users::test_short
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="install-jetset-from-pip">
+<h2>Install  JetSeT from pip<a class="headerlink" href="#install-jetset-from-pip" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>create a virtual environment (not necessary, but suggested):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install virtualenv
+
+virtualenv -p python3.8 jetset
+
+<span class="nb">source</span> jetset/bin/activate
+
+pip install ipython jupyter
+</pre></div>
+</div>
+</li>
+<li><p>install the code</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install jetset
+</pre></div>
+</div>
+</li>
+<li><p>run the test</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest --disable-warnings --pyargs jetset.tests.test_users::test_short
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="install-the-jetset-from-source">
+<h2>Install the JetSeT from source<a class="headerlink" href="#install-the-jetset-from-source" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="download-the-code">
+<h3>Download the code<a class="headerlink" href="#download-the-code" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Get the source code from: <a class="reference external" href="https://github.com/andreatramacere/jetset/archive/stable.tar.gz">https://github.com/andreatramacere/jetset/archive/stable.tar.gz</a></p></li>
+<li><p>Uncompress the  archive:  <cite>jetset-stable.tar.gz</cite></p></li>
+<li><p>cd to  the dir source code dir</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> jetset-stable
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="installation-from-source-using-anaconda">
+<h3>Installation from source using Anaconda<a class="headerlink" href="#installation-from-source-using-anaconda" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Install requirements, run on the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install --yes   swig<span class="s2">&quot;&gt;=3.0.0&quot;</span>
+
+conda install --yes   -c conda-forge emcee<span class="s2">&quot;&gt;=3.0.0&quot;</span>
+
+conda install --yes   -c astropy --file requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+<p>if anaconda fails to install swig, you can try one of the following alternative <span class="xref std std-ref">swig</span></p>
+<ul>
+<li><p>run on the command line</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py clean
+
+python setup.py install
+</pre></div>
+</div>
+</li>
+<li><p>run the test (<strong>run all the examples outside of the installation dir</strong>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/
+
+mkdir test_jetset
+
+<span class="nb">cd</span> test_jetset
+
+pytest --disable-warnings --pyargs jetset.tests.test_users::test_short
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="installation-from-source-using-pip">
+<h3>Installation from source using PIP<a class="headerlink" href="#installation-from-source-using-pip" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Install requirements, run on the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install swig&gt;<span class="o">=</span><span class="m">3</span>.0.0
+
+pip install -r requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+<p>if pip fails to install swig, you can try one of the following alternative <span class="xref std std-ref">swig</span></p>
+<ul>
+<li><p>Install JetSeT: run on the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py clean
+
+python setup.py install
+</pre></div>
+</div>
+</li>
+<li><p>run the test  (<strong>run all the examples outside of the installation dir</strong>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/
+mkdir test_jetset
+<span class="nb">cd</span> test_jetset
+pytest  --disable-warnings --pyargs jetset.tests.test_users::test_short
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>The following python packages are required:</dt><dd><ul class="simple">
+<li><p>python &gt;=3.6 (python &gt;=3.6 is suggested, older python 3 versions should  work, python 2 is not supported any more from version&gt;=1.1.0)</p></li>
+<li><p>setuptools</p></li>
+<li><p>scipy</p></li>
+<li><p>numpy</p></li>
+<li><p>astropy</p></li>
+<li><p>matplotlib</p></li>
+<li><p>swig</p></li>
+<li><p>future</p></li>
+<li><p>iminuit</p></li>
+<li><p>corner</p></li>
+<li><p>six</p></li>
+<li><p>emcee</p></li>
+<li><p>pyyaml</p></li>
+<li><p>numba</p></li>
+</ul>
+</dd>
+</dl>
+<p>A C compiler is also necessary, plus the SWIG wrapper generator.</p>
+<p>All the dependencies are installed following the Anaconda method <strong>OR</strong> the pip method, as described below.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, andrea tramacere.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

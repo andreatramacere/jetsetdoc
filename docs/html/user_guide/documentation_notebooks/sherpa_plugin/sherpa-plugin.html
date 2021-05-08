@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example to use the sherpa plugin &#8212; jetset  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href=" https://github.com/andreatramacere/jetset"
+     class="visible-desktop hidden-xs"><img
+    id="gh-banner"
+    style="position: absolute; top: 50px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
+          JetSeT doc</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">JetSeT <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Example to use the sherpa plugin</a><ul>
+<li><a class="reference internal" href="#loading-data">Loading data</a></li>
+<li><a class="reference internal" href="#phenomenological-model-constraining">phenomenological model constraining</a><ul>
+<li><a class="reference internal" href="#spectral-indices">spectral indices</a></li>
+<li><a class="reference internal" href="#sed-shaper">sed shaper</a></li>
+<li><a class="reference internal" href="#model-constraining">Model constraining</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><!--
+<ul class="globaltoc"
+><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+//-->
+
+
+<html style="height:100%">
+    <body style="height:100%">
+      <div class="sidebar-block">
+        <div class="sidebar-wrapper">
+          <h2></h2>
+        </div>
+        <div class="sidebar-toc">
+
+          
+          
+            <p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+</ul>
+
+          
+
+        </div>
+
+      </div>
+    </body>
+</html>
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="example-to-use-the-sherpa-plugin">
+<span id="sherpa-plugin"></span><h1>Example to use the sherpa plugin<a class="headerlink" href="#example-to-use-the-sherpa-plugin" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">jetset</span>
+<span class="kn">from</span> <span class="nn">jetset.test_data_helper</span> <span class="kn">import</span>  <span class="n">test_SEDs</span>
+<span class="kn">from</span> <span class="nn">jetset.data_loader</span> <span class="kn">import</span> <span class="n">ObsData</span><span class="p">,</span><span class="n">Data</span>
+<span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span>
+<span class="kn">from</span> <span class="nn">jetset.test_data_helper</span> <span class="kn">import</span>  <span class="n">test_SEDs</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_SEDs</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/test_data/SEDs_data/SED_3C345.ecsv&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/test_data/SEDs_data/SED_MW_Mrk421_EBL_DEABS.ecsv&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/test_data/SEDs_data/SED_MW_Mrk501_EBL_ABS.ecsv&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/test_data/SEDs_data/SED_MW_Mrk501_EBL_DEABS.ecsv&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="section" id="loading-data">
+<h2>Loading data<a class="headerlink" href="#loading-data" title="Permalink to this headline">¶</a></h2>
+<p>see the <span class="xref std std-ref">data_format</span> user guide for further information about loading data</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test_SEDs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">data</span><span class="o">=</span><span class="n">Data</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">test_SEDs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">test_data</span><span class="o">/</span><span class="n">SEDs_data</span><span class="o">/</span><span class="n">SED_MW_Mrk501_EBL_ABS</span><span class="o">.</span><span class="n">ecsv</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">sed_data</span><span class="o">=</span><span class="n">ObsData</span><span class="p">(</span><span class="n">data_table</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="n">sed_data</span><span class="o">.</span><span class="n">group_data</span><span class="p">(</span><span class="n">bin_width</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+<span class="n">sed_data</span><span class="o">.</span><span class="n">add_systematics</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,[</span><span class="mf">10.</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span><span class="mf">10.</span><span class="o">**</span><span class="mi">29</span><span class="p">])</span>
+<span class="n">p</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>*  binning data  *</strong>
+---&gt; N bins= 90
+---&gt; bin_widht= 0.2
+================================================================================</pre>
+<img alt="../../../_images/sherpa-plugin_7_1.png" src="../../../_images/sherpa-plugin_7_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;Mrk_501.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="phenomenological-model-constraining">
+<h2>phenomenological model constraining<a class="headerlink" href="#phenomenological-model-constraining" title="Permalink to this headline">¶</a></h2>
+<p>see the <a class="reference internal" href="../phen_constr/Jet_example_phenom_constr.html#phenom-constr"><span class="std std-ref">Phenomenological model constraining: application</span></a> user guide for further information about phenomenological constraining</p>
+<div class="section" id="spectral-indices">
+<h3>spectral indices<a class="headerlink" href="#spectral-indices" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.sed_shaper</span> <span class="kn">import</span>  <span class="n">SEDShape</span>
+<span class="n">my_shape</span><span class="o">=</span><span class="n">SEDShape</span><span class="p">(</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">my_shape</span><span class="o">.</span><span class="n">eval_indices</span><span class="p">(</span><span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">plot_indices</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>* evaluating spectral indices for data *</strong>
+================================================================================</pre>
+<img alt="../../../_images/sherpa-plugin_12_1.png" src="../../../_images/sherpa-plugin_12_1.png" />
+</div>
+<div class="section" id="sed-shaper">
+<h3>sed shaper<a class="headerlink" href="#sed-shaper" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="p">,</span><span class="n">best_fit</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">sync_fit</span><span class="p">(</span><span class="n">check_host_gal_template</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                  <span class="n">Ep_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                  <span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span>
+                  <span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                  <span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">10.</span><span class="p">,</span><span class="mf">21.</span><span class="p">])</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>* Log-Polynomial fitting of the synchrotron component *</strong>
+---&gt; first blind fit run,  fit range: [10.0, 21.0]
+---&gt; class:  HSP
+
+---&gt; class:  HSP</pre>
+<i>Table length=6</i>
+<table id="table140246293456064-979710" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
+<tr><td>LogCubic</td><td>b</td><td>-6.411144e-02</td><td>-6.411144e-02</td><td>7.838965e-03</td><td>--</td><td>-4.778764e-02</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>c</td><td>-1.751721e-03</td><td>-1.751721e-03</td><td>1.127030e-03</td><td>--</td><td>3.576201e-03</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Ep</td><td>1.703747e+01</td><td>1.703747e+01</td><td>9.437354e-02</td><td>--</td><td>1.626870e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Sp</td><td>-1.030068e+01</td><td>-1.030068e+01</td><td>1.884114e-02</td><td>--</td><td>-1.025412e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+<tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>-1.006557e+01</td><td>-1.006557e+01</td><td>5.462528e-02</td><td>--</td><td>-1.025412e+01</td><td>-1.225412e+01</td><td>-8.254123e+00</td><td>False</td></tr>
+<tr><td>host_galaxy</td><td>nu_scale</td><td>1.730764e-02</td><td>1.730764e-02</td><td>3.694887e-03</td><td>--</td><td>0.000000e+00</td><td>-5.000000e-01</td><td>5.000000e-01</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140246293456064-979710').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140246293456064-979710').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [2, 3, 4, 5, 6, 7, 8], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span> <span class="n">sync</span>       <span class="n">nu_p</span><span class="o">=+</span><span class="mf">1.703747e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">9.437354e-02</span><span class="p">)</span>  <span class="n">nuFnu_p</span><span class="o">=-</span><span class="mf">1.030068e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">1.884114e-02</span><span class="p">)</span> <span class="n">curv</span><span class="o">.=-</span><span class="mf">6.411144e-02</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">7.838965e-03</span><span class="p">)</span>
+<span class="o">================================================================================</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_shape</span><span class="o">.</span><span class="n">IC_fit</span><span class="p">(</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">23.</span><span class="p">,</span><span class="mf">29.</span><span class="p">],</span><span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;minuit&#39;</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">plot_shape_fit</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>* Log-Polynomial fitting of the IC component *</strong>
+---&gt; fit range: [23.0, 29.0]
+---&gt; LogCubic fit</pre>
+<i>Table length=4</i>
+<table id="table140246288857840-150460" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
+<tr><td>LogCubic</td><td>b</td><td>-1.310993e-01</td><td>-1.310993e-01</td><td>3.244188e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>c</td><td>-3.300446e-02</td><td>-3.300446e-02</td><td>2.072521e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Ep</td><td>2.549603e+01</td><td>2.549603e+01</td><td>2.235473e-01</td><td>--</td><td>2.556357e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Sp</td><td>-1.057945e+01</td><td>-1.057945e+01</td><td>4.332978e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140246288857840-150460').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140246288857840-150460').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [2, 3, 4, 5, 6, 7, 8], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span> <span class="n">IC</span>         <span class="n">nu_p</span><span class="o">=+</span><span class="mf">2.549603e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">2.235473e-01</span><span class="p">)</span>  <span class="n">nuFnu_p</span><span class="o">=-</span><span class="mf">1.057945e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">4.332978e-02</span><span class="p">)</span> <span class="n">curv</span><span class="o">.=-</span><span class="mf">1.310993e-01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">3.244188e-02</span><span class="p">)</span>
+<span class="o">================================================================================</span>
+</pre></div>
+</div>
+<img alt="../../../_images/sherpa-plugin_15_3.png" src="../../../_images/sherpa-plugin_15_3.png" />
+</div>
+<div class="section" id="model-constraining">
+<h3>Model constraining<a class="headerlink" href="#model-constraining" title="Permalink to this headline">¶</a></h3>
+<p>In this step we are not fitting the model, we are just obtaining the
+phenomenological <code class="docutils literal notranslate"><span class="pre">pre_fit</span></code> model, that will be fitted in using minuit
+ore least-square bound, as shown below</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.obs_constrain</span> <span class="kn">import</span> <span class="n">ObsConstrain</span>
+<span class="kn">from</span> <span class="nn">jetset.model_manager</span> <span class="kn">import</span>  <span class="n">FitModel</span>
+<span class="n">sed_obspar</span><span class="o">=</span><span class="n">ObsConstrain</span><span class="p">(</span><span class="n">beaming</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
+                        <span class="n">B_range</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span>
+                        <span class="n">distr_e</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span>
+                        <span class="n">t_var_sec</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">86400</span><span class="p">,</span>
+                        <span class="n">nu_cut_IR</span><span class="o">=</span><span class="mf">1E12</span><span class="p">,</span>
+                        <span class="n">SEDShape</span><span class="o">=</span><span class="n">my_shape</span><span class="p">)</span>
+
+
+<span class="n">prefit_jet</span><span class="o">=</span><span class="n">sed_obspar</span><span class="o">.</span><span class="n">constrain_SSC_model</span><span class="p">(</span><span class="n">electron_distribution_log_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">prefit_jet</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;prefit_jet.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>*  constrains parameters from observable *</strong></pre>
+<i>Table length=11</i>
+<table id="table140246293705056-205166" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.046299e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>2.500000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.360000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.703917e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>2.310708e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>7.305900e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.045843e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.248787e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>3.205572e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140246293705056-205166').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140246293705056-205166').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">================================================================================</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span><span class="o">=</span><span class="n">prefit_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">prefit_jet</span><span class="p">,</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">29</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/sherpa-plugin_19_0.png" src="../../../_images/sherpa-plugin_19_0.png" />
+</div>
+</div>
+<div class="section" id="model-fitting-with-sherpa">
+<h2>Model fitting with Sherpa<a class="headerlink" href="#model-fitting-with-sherpa" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.sherpa_plugin</span> <span class="kn">import</span> <span class="n">JetsetSherpaModel</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.template_2Dmodel</span> <span class="kn">import</span> <span class="n">EBLAbsorptionTemplate</span>
+<span class="n">ebl_franceschini</span><span class="o">=</span><span class="n">EBLAbsorptionTemplate</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
+<span class="n">prefit_jet</span><span class="o">=</span><span class="n">Jet</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;prefit_jet.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<i>Table length=11</i>
+<table id="table140246291439920-188043" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.703917e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>2.310708e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>7.305900e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.045843e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.248787e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>3.205572e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.046299e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>2.500000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.360000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140246291439920-188043').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140246291439920-188043').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model_jet</span><span class="o">=</span><span class="n">JetsetSherpaModel</span><span class="p">(</span><span class="n">prefit_jet</span><span class="p">)</span>
+<span class="n">sherpa_model_gal</span><span class="o">=</span><span class="n">JetsetSherpaModel</span><span class="p">(</span><span class="n">my_shape</span><span class="o">.</span><span class="n">host_gal</span><span class="p">)</span>
+<span class="n">sherpa_model_ebl</span><span class="o">=</span><span class="n">JetsetSherpaModel</span><span class="p">(</span><span class="n">ebl_franceschini</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jetset</span> <span class="n">model</span> <span class="n">name</span> <span class="n">R</span> <span class="n">renamed</span> <span class="n">to</span>  <span class="n">R_sh</span> <span class="n">due</span> <span class="n">to</span> <span class="n">sherpa</span> <span class="n">internal</span> <span class="n">naming</span> <span class="n">convention</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model</span><span class="o">=</span><span class="p">(</span><span class="n">sherpa_model_jet</span><span class="o">+</span><span class="n">sherpa_model_gal</span><span class="p">)</span><span class="o">*</span><span class="n">sherpa_model_ebl</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model</span>
+</pre></div>
+</div>
+<style>/*
+Copyright (C) 2020  Smithsonian Astrophysical Observatory
+
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+*/
+
+:root {
+  --sherpa-border-color: var(--jp-border-color2, #e0e0e0);
+  --sherpa-background-color: var(--jp-layout-color0, white);
+  --sherpa-background-color-row-even: var(--jp-layout-color1, white);
+  --sherpa-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+
+  /* https://medium.com/ge-design/iot-cool-gray-is-a-great-background-color-for-data-visualization-ebf18c318418 */
+  --sherpa-background-color-dark1: #EBEFF2;
+  --sherpa-background-color-dark2: #D8E0E5;
+}
+
+div.sherpa-text-fallback {
+    display: none;
+}
+
+div.sherpa {
+    display: block;
+}
+
+div.sherpa details summary {
+    display: list-item;  /* needed for notebook, not lab */
+    font-size: larger;
+}
+
+div.sherpa details div.datavals {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 0.5em;
+}
+
+div.sherpa div.dataname {
+    font-weight: bold;
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa div.dataval { }
+
+div.sherpa div.datavals div:nth-child(4n + 1) ,
+div.sherpa div.datavals div:nth-child(4n + 2) {
+    background: var(--sherpa-background-color-row-odd);
+}
+
+div.sherpa table.model tbody {
+    border-bottom: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model tr.block {
+    border-top: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd ,
+div.sherpa table.model th.model-even {
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd {
+    background: var(--sherpa-background-color-dark1);
+}
+
+div.sherpa table.model th.model-even {
+    background: var(--sherpa-background-color-dark2);
+}
+
+div.sherpa .failed {
+    background: orange;
+    font-size: large;
+    padding: 1em;
+}
+</style><div class="sherpa-text-fallback">&lt;BinaryOpModel model instance &#x27;((jet_leptonic + host_galaxy) * Franceschini_2008)&#x27;&gt;</div><div hidden class="sherpa"><details open><summary>Model</summary><table class="model"><caption>Expression: (jet_leptonic + host_galaxy) * Franceschini_2008</caption><thead><tr><th>Component</th><th>Parameter</th><th>Thawed</th><th>Value</th><th>Min</th><th>Max</th><th>Units</th></tr></thead><tbody><tr><th class="model-odd" scope="rowgroup" rowspan=11>jet_leptonic</th><td>gmin</td><td><input disabled type="checkbox" checked></input></td><td>470.39174855643597</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>gmax</td><td><input disabled type="checkbox" checked></input></td><td>2310708.197406515</td><td>1.0</td><td>1000000000000000.0</td><td>lorentz-factor*</td></tr><tr><td>N</td><td><input disabled type="checkbox" checked></input></td><td>7.305900046565794</td><td>0.0</td><td>MAX</td><td>1 / cm3</td></tr><tr><td>gamma0_log_parab</td><td><input disabled type="checkbox" checked></input></td><td>10458.433237258416</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>s</td><td><input disabled type="checkbox" checked></input></td><td>2.2487867709713574</td><td>-10.0</td><td>10.0</td><td></td></tr><tr><td>r</td><td><input disabled type="checkbox" checked></input></td><td>0.32055721323507314</td><td>-15.0</td><td>15.0</td><td></td></tr><tr><td>R_sh</td><td><input disabled type="checkbox" checked></input></td><td>1.046298751763524e+16</td><td>1000.0</td><td>1e+30</td><td>cm</td></tr><tr><td>R_H</td><td><input disabled type="checkbox" checked></input></td><td>1e+17</td><td>0.0</td><td>MAX</td><td>cm</td></tr><tr><td>B</td><td><input disabled type="checkbox" checked></input></td><td>0.0505</td><td>0.0</td><td>MAX</td><td>gauss</td></tr><tr><td>beam_obj</td><td><input disabled type="checkbox" checked></input></td><td>25.0</td><td>0.0001</td><td>MAX</td><td>lorentz-factor*</td></tr><tr><td>z_cosm</td><td><input disabled type="checkbox" checked></input></td><td>0.0336</td><td>0.0</td><td>MAX</td><td></td></tr><tr class="block"><th class="model-even" scope="rowgroup" rowspan=2>host_galaxy</th><td>nuFnu_p_host</td><td><input disabled type="checkbox" checked></input></td><td>-10.065573840795157</td><td>-20.0</td><td>20.0</td><td>erg / (cm2 s)</td></tr><tr><td>nu_scale</td><td><input disabled type="checkbox" checked></input></td><td>0.01730764400081941</td><td>-2.0</td><td>2.0</td><td>Hz</td></tr><tr class="block"><th class="model-odd" scope="rowgroup" rowspan=1>Franceschini_2008</th><td>z_cosm</td><td><input disabled type="checkbox" checked></input></td><td>1.0</td><td>0.0</td><td>MAX</td><td></td></tr></tbody></table></details></div><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model_ebl</span><span class="o">.</span><span class="n">z_cosm</span>  <span class="o">=</span> <span class="n">sherpa_model_jet</span><span class="o">.</span><span class="n">z_cosm</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model</span>
+</pre></div>
+</div>
+<style>/*
+Copyright (C) 2020  Smithsonian Astrophysical Observatory
+
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+*/
+
+:root {
+  --sherpa-border-color: var(--jp-border-color2, #e0e0e0);
+  --sherpa-background-color: var(--jp-layout-color0, white);
+  --sherpa-background-color-row-even: var(--jp-layout-color1, white);
+  --sherpa-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+
+  /* https://medium.com/ge-design/iot-cool-gray-is-a-great-background-color-for-data-visualization-ebf18c318418 */
+  --sherpa-background-color-dark1: #EBEFF2;
+  --sherpa-background-color-dark2: #D8E0E5;
+}
+
+div.sherpa-text-fallback {
+    display: none;
+}
+
+div.sherpa {
+    display: block;
+}
+
+div.sherpa details summary {
+    display: list-item;  /* needed for notebook, not lab */
+    font-size: larger;
+}
+
+div.sherpa details div.datavals {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 0.5em;
+}
+
+div.sherpa div.dataname {
+    font-weight: bold;
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa div.dataval { }
+
+div.sherpa div.datavals div:nth-child(4n + 1) ,
+div.sherpa div.datavals div:nth-child(4n + 2) {
+    background: var(--sherpa-background-color-row-odd);
+}
+
+div.sherpa table.model tbody {
+    border-bottom: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model tr.block {
+    border-top: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd ,
+div.sherpa table.model th.model-even {
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd {
+    background: var(--sherpa-background-color-dark1);
+}
+
+div.sherpa table.model th.model-even {
+    background: var(--sherpa-background-color-dark2);
+}
+
+div.sherpa .failed {
+    background: orange;
+    font-size: large;
+    padding: 1em;
+}
+</style><div class="sherpa-text-fallback">&lt;BinaryOpModel model instance &#x27;((jet_leptonic + host_galaxy) * Franceschini_2008)&#x27;&gt;</div><div hidden class="sherpa"><details open><summary>Model</summary><table class="model"><caption>Expression: (jet_leptonic + host_galaxy) * Franceschini_2008</caption><thead><tr><th>Component</th><th>Parameter</th><th>Thawed</th><th>Value</th><th>Min</th><th>Max</th><th>Units</th></tr></thead><tbody><tr><th class="model-odd" scope="rowgroup" rowspan=11>jet_leptonic</th><td>gmin</td><td><input disabled type="checkbox" checked></input></td><td>470.39174855643597</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>gmax</td><td><input disabled type="checkbox" checked></input></td><td>2310708.197406515</td><td>1.0</td><td>1000000000000000.0</td><td>lorentz-factor*</td></tr><tr><td>N</td><td><input disabled type="checkbox" checked></input></td><td>7.305900046565794</td><td>0.0</td><td>MAX</td><td>1 / cm3</td></tr><tr><td>gamma0_log_parab</td><td><input disabled type="checkbox" checked></input></td><td>10458.433237258416</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>s</td><td><input disabled type="checkbox" checked></input></td><td>2.2487867709713574</td><td>-10.0</td><td>10.0</td><td></td></tr><tr><td>r</td><td><input disabled type="checkbox" checked></input></td><td>0.32055721323507314</td><td>-15.0</td><td>15.0</td><td></td></tr><tr><td>R_sh</td><td><input disabled type="checkbox" checked></input></td><td>1.046298751763524e+16</td><td>1000.0</td><td>1e+30</td><td>cm</td></tr><tr><td>R_H</td><td><input disabled type="checkbox" checked></input></td><td>1e+17</td><td>0.0</td><td>MAX</td><td>cm</td></tr><tr><td>B</td><td><input disabled type="checkbox" checked></input></td><td>0.0505</td><td>0.0</td><td>MAX</td><td>gauss</td></tr><tr><td>beam_obj</td><td><input disabled type="checkbox" checked></input></td><td>25.0</td><td>0.0001</td><td>MAX</td><td>lorentz-factor*</td></tr><tr><td>z_cosm</td><td><input disabled type="checkbox" checked></input></td><td>0.0336</td><td>0.0</td><td>MAX</td><td></td></tr><tr class="block"><th class="model-even" scope="rowgroup" rowspan=2>host_galaxy</th><td>nuFnu_p_host</td><td><input disabled type="checkbox" checked></input></td><td>-10.065573840795157</td><td>-20.0</td><td>20.0</td><td>erg / (cm2 s)</td></tr><tr><td>nu_scale</td><td><input disabled type="checkbox" checked></input></td><td>0.01730764400081941</td><td>-2.0</td><td>2.0</td><td>Hz</td></tr><tr class="block"><th class="model-odd" scope="rowgroup" rowspan=1>Franceschini_2008</th><td>z_cosm</td><td>linked</td><td>0.0336</td><td colspan=2>&#8656; jet_leptonic.z_cosm</td><td></td></tr></tbody></table></details></div><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model_jet</span><span class="o">.</span><span class="n">R_H</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
+<span class="n">sherpa_model_jet</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model</span>
+</pre></div>
+</div>
+<style>/*
+Copyright (C) 2020  Smithsonian Astrophysical Observatory
+
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+*/
+
+:root {
+  --sherpa-border-color: var(--jp-border-color2, #e0e0e0);
+  --sherpa-background-color: var(--jp-layout-color0, white);
+  --sherpa-background-color-row-even: var(--jp-layout-color1, white);
+  --sherpa-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+
+  /* https://medium.com/ge-design/iot-cool-gray-is-a-great-background-color-for-data-visualization-ebf18c318418 */
+  --sherpa-background-color-dark1: #EBEFF2;
+  --sherpa-background-color-dark2: #D8E0E5;
+}
+
+div.sherpa-text-fallback {
+    display: none;
+}
+
+div.sherpa {
+    display: block;
+}
+
+div.sherpa details summary {
+    display: list-item;  /* needed for notebook, not lab */
+    font-size: larger;
+}
+
+div.sherpa details div.datavals {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 0.5em;
+}
+
+div.sherpa div.dataname {
+    font-weight: bold;
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa div.dataval { }
+
+div.sherpa div.datavals div:nth-child(4n + 1) ,
+div.sherpa div.datavals div:nth-child(4n + 2) {
+    background: var(--sherpa-background-color-row-odd);
+}
+
+div.sherpa table.model tbody {
+    border-bottom: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model tr.block {
+    border-top: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd ,
+div.sherpa table.model th.model-even {
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd {
+    background: var(--sherpa-background-color-dark1);
+}
+
+div.sherpa table.model th.model-even {
+    background: var(--sherpa-background-color-dark2);
+}
+
+div.sherpa .failed {
+    background: orange;
+    font-size: large;
+    padding: 1em;
+}
+</style><div class="sherpa-text-fallback">&lt;BinaryOpModel model instance &#x27;((jet_leptonic + host_galaxy) * Franceschini_2008)&#x27;&gt;</div><div hidden class="sherpa"><details open><summary>Model</summary><table class="model"><caption>Expression: (jet_leptonic + host_galaxy) * Franceschini_2008</caption><thead><tr><th>Component</th><th>Parameter</th><th>Thawed</th><th>Value</th><th>Min</th><th>Max</th><th>Units</th></tr></thead><tbody><tr><th class="model-odd" scope="rowgroup" rowspan=11>jet_leptonic</th><td>gmin</td><td><input disabled type="checkbox" checked></input></td><td>470.39174855643597</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>gmax</td><td><input disabled type="checkbox" checked></input></td><td>2310708.197406515</td><td>1.0</td><td>1000000000000000.0</td><td>lorentz-factor*</td></tr><tr><td>N</td><td><input disabled type="checkbox" checked></input></td><td>7.305900046565794</td><td>0.0</td><td>MAX</td><td>1 / cm3</td></tr><tr><td>gamma0_log_parab</td><td><input disabled type="checkbox" checked></input></td><td>10458.433237258416</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>s</td><td><input disabled type="checkbox" checked></input></td><td>2.2487867709713574</td><td>-10.0</td><td>10.0</td><td></td></tr><tr><td>r</td><td><input disabled type="checkbox" checked></input></td><td>0.32055721323507314</td><td>-15.0</td><td>15.0</td><td></td></tr><tr><td>R_sh</td><td><input disabled type="checkbox" checked></input></td><td>1.046298751763524e+16</td><td>1000.0</td><td>1e+30</td><td>cm</td></tr><tr><td>R_H</td><td><input disabled type="checkbox"></input></td><td>1e+17</td><td>0.0</td><td>MAX</td><td>cm</td></tr><tr><td>B</td><td><input disabled type="checkbox" checked></input></td><td>0.0505</td><td>0.0</td><td>MAX</td><td>gauss</td></tr><tr><td>beam_obj</td><td><input disabled type="checkbox" checked></input></td><td>25.0</td><td>0.0001</td><td>MAX</td><td>lorentz-factor*</td></tr><tr><td>z_cosm</td><td><input disabled type="checkbox"></input></td><td>0.0336</td><td>0.0</td><td>MAX</td><td></td></tr><tr class="block"><th class="model-even" scope="rowgroup" rowspan=2>host_galaxy</th><td>nuFnu_p_host</td><td><input disabled type="checkbox" checked></input></td><td>-10.065573840795157</td><td>-20.0</td><td>20.0</td><td>erg / (cm2 s)</td></tr><tr><td>nu_scale</td><td><input disabled type="checkbox" checked></input></td><td>0.01730764400081941</td><td>-2.0</td><td>2.0</td><td>Hz</td></tr><tr class="block"><th class="model-odd" scope="rowgroup" rowspan=1>Franceschini_2008</th><td>z_cosm</td><td>linked</td><td>0.0336</td><td colspan=2>&#8656; jet_leptonic.z_cosm</td><td></td></tr></tbody></table></details></div><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sherpa</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span> <span class="nn">sherpa.fit</span> <span class="kn">import</span> <span class="n">Fit</span>
+<span class="kn">from</span> <span class="nn">sherpa.stats</span> <span class="kn">import</span> <span class="n">Chi2</span>
+<span class="kn">from</span> <span class="nn">sherpa.optmethods</span> <span class="kn">import</span> <span class="n">LevMar</span><span class="p">,</span> <span class="n">NelderMead</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">Data1D</span><span class="p">(</span><span class="s2">&quot;sed&quot;</span><span class="p">,</span> <span class="n">sed_data</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;nu_data&#39;</span><span class="p">],</span> <span class="n">sed_data</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;nuFnu_data&#39;</span><span class="p">],</span> <span class="n">staterror</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;dnuFnu_data&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fitter</span> <span class="o">=</span> <span class="n">Fit</span><span class="p">(</span><span class="n">sherpa_data</span><span class="p">,</span> <span class="n">sherpa_model</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">Chi2</span><span class="p">(),</span> <span class="n">method</span><span class="o">=</span><span class="n">LevMar</span><span class="p">())</span>
+<span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">1e11</span><span class="p">,</span><span class="mf">1e29</span><span class="p">]</span>
+
+<span class="n">sherpa_data</span><span class="o">.</span><span class="n">notice</span><span class="p">(</span><span class="n">fit_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fit_range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">fitter</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- fit succesful?&quot;</span><span class="p">,</span> <span class="n">results</span><span class="o">.</span><span class="n">succeeded</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">format</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-- fit succesful? True
+Method                = levmar
+Statistic             = chi2
+Initial fit statistic = 159.009
+Final fit statistic   = 12.8563 at function evaluation 379
+Data points           = 31
+Degrees of freedom    = 20
+Probability [Q-value] = 0.883462
+Reduced statistic     = 0.642817
+Change in statistic   = 146.152
+   jet_leptonic.gmin   161.587      +/- 537.608
+   jet_leptonic.gmax   2.6044e+06   +/- 0
+   jet_leptonic.N   12.4908      +/- 49.9373
+   jet_leptonic.gamma0_log_parab   12476.6      +/- 0
+   jet_leptonic.s   2.22409      +/- 0.0334469
+   jet_leptonic.r   0.246937     +/- 0.0213915
+   jet_leptonic.R_sh   1.69738e+16  +/- 0
+   jet_leptonic.B   0.00724202   +/- 0.00193696
+   jet_leptonic.beam_obj   48.2305      +/- 6.91246
+   host_galaxy.nuFnu_p_host   -10.0495     +/- 0.0846434
+   host_galaxy.nu_scale   0.0235454    +/- 0.00763641
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sherpa_model</span>
+</pre></div>
+</div>
+<style>/*
+Copyright (C) 2020  Smithsonian Astrophysical Observatory
+
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+*/
+
+:root {
+  --sherpa-border-color: var(--jp-border-color2, #e0e0e0);
+  --sherpa-background-color: var(--jp-layout-color0, white);
+  --sherpa-background-color-row-even: var(--jp-layout-color1, white);
+  --sherpa-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+
+  /* https://medium.com/ge-design/iot-cool-gray-is-a-great-background-color-for-data-visualization-ebf18c318418 */
+  --sherpa-background-color-dark1: #EBEFF2;
+  --sherpa-background-color-dark2: #D8E0E5;
+}
+
+div.sherpa-text-fallback {
+    display: none;
+}
+
+div.sherpa {
+    display: block;
+}
+
+div.sherpa details summary {
+    display: list-item;  /* needed for notebook, not lab */
+    font-size: larger;
+}
+
+div.sherpa details div.datavals {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 0.5em;
+}
+
+div.sherpa div.dataname {
+    font-weight: bold;
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa div.dataval { }
+
+div.sherpa div.datavals div:nth-child(4n + 1) ,
+div.sherpa div.datavals div:nth-child(4n + 2) {
+    background: var(--sherpa-background-color-row-odd);
+}
+
+div.sherpa table.model tbody {
+    border-bottom: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model tr.block {
+    border-top: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd ,
+div.sherpa table.model th.model-even {
+    border-right: 1px solid var(--sherpa-border-color);
+}
+
+div.sherpa table.model th.model-odd {
+    background: var(--sherpa-background-color-dark1);
+}
+
+div.sherpa table.model th.model-even {
+    background: var(--sherpa-background-color-dark2);
+}
+
+div.sherpa .failed {
+    background: orange;
+    font-size: large;
+    padding: 1em;
+}
+</style><div class="sherpa-text-fallback">&lt;BinaryOpModel model instance &#x27;((jet_leptonic + host_galaxy) * Franceschini_2008)&#x27;&gt;</div><div hidden class="sherpa"><details open><summary>Model</summary><table class="model"><caption>Expression: (jet_leptonic + host_galaxy) * Franceschini_2008</caption><thead><tr><th>Component</th><th>Parameter</th><th>Thawed</th><th>Value</th><th>Min</th><th>Max</th><th>Units</th></tr></thead><tbody><tr><th class="model-odd" scope="rowgroup" rowspan=11>jet_leptonic</th><td>gmin</td><td><input disabled type="checkbox" checked></input></td><td>161.58718772367948</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>gmax</td><td><input disabled type="checkbox" checked></input></td><td>2604402.6487550396</td><td>1.0</td><td>1000000000000000.0</td><td>lorentz-factor*</td></tr><tr><td>N</td><td><input disabled type="checkbox" checked></input></td><td>12.490793758971192</td><td>0.0</td><td>MAX</td><td>1 / cm3</td></tr><tr><td>gamma0_log_parab</td><td><input disabled type="checkbox" checked></input></td><td>12476.58647443473</td><td>1.0</td><td>1000000000.0</td><td>lorentz-factor*</td></tr><tr><td>s</td><td><input disabled type="checkbox" checked></input></td><td>2.2240928430873117</td><td>-10.0</td><td>10.0</td><td></td></tr><tr><td>r</td><td><input disabled type="checkbox" checked></input></td><td>0.24693749268885934</td><td>-15.0</td><td>15.0</td><td></td></tr><tr><td>R_sh</td><td><input disabled type="checkbox" checked></input></td><td>1.6973782230807432e+16</td><td>1000.0</td><td>1e+30</td><td>cm</td></tr><tr><td>R_H</td><td><input disabled type="checkbox"></input></td><td>1e+17</td><td>0.0</td><td>MAX</td><td>cm</td></tr><tr><td>B</td><td><input disabled type="checkbox" checked></input></td><td>0.00724201775285936</td><td>0.0</td><td>MAX</td><td>gauss</td></tr><tr><td>beam_obj</td><td><input disabled type="checkbox" checked></input></td><td>48.23048000534593</td><td>0.0001</td><td>MAX</td><td>lorentz-factor*</td></tr><tr><td>z_cosm</td><td><input disabled type="checkbox"></input></td><td>0.0336</td><td>0.0</td><td>MAX</td><td></td></tr><tr class="block"><th class="model-even" scope="rowgroup" rowspan=2>host_galaxy</th><td>nuFnu_p_host</td><td><input disabled type="checkbox" checked></input></td><td>-10.04953502514069</td><td>-20.0</td><td>20.0</td><td>erg / (cm2 s)</td></tr><tr><td>nu_scale</td><td><input disabled type="checkbox" checked></input></td><td>0.02354535123290668</td><td>-2.0</td><td>2.0</td><td>Hz</td></tr><tr class="block"><th class="model-odd" scope="rowgroup" rowspan=1>Franceschini_2008</th><td>z_cosm</td><td>linked</td><td>0.0336</td><td colspan=2>&#8656; jet_leptonic.z_cosm</td><td></td></tr></tbody></table></details></div><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.sherpa_plugin</span> <span class="kn">import</span> <span class="n">plot_sherpa_model</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_sherpa_model</span><span class="p">(</span><span class="n">sherpa_model</span><span class="p">,</span> <span class="n">fit_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_range</span><span class="o">=</span><span class="p">[</span><span class="mf">1E10</span><span class="p">,</span> <span class="mf">1E30</span><span class="p">],</span> <span class="n">nu_grid_size</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">add_res</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">plot_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">model_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">model_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">nu_grid_size</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">sherpa_model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">plot_obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">plot_obj</span> <span class="o">=</span> <span class="n">PlotSED</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_xy_plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="n">line_style</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">add_res</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">fit_range</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">nufnu_res</span> <span class="o">=</span> <span class="n">sherpa_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;nu_data&#39;</span><span class="p">])</span>
+        <span class="n">y_res</span> <span class="o">=</span> <span class="p">(</span><span class="n">sed_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;nuFnu_data&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">nufnu_res</span><span class="p">)</span> <span class="o">/</span> <span class="n">sed_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;dnuFnu_data&#39;</span><span class="p">]</span>
+        <span class="n">x_res</span> <span class="o">=</span> <span class="n">sed_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;nu_data&#39;</span><span class="p">]</span>
+        <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_xy_residual_plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x_res</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">y_res</span><span class="p">,</span> <span class="n">fit_range</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">([</span><span class="n">fit_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fit_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
+
+    <span class="k">return</span>  <span class="n">plot_obj</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">plot_sherpa_model</span><span class="p">(</span><span class="n">sherpa_model</span><span class="o">=</span><span class="n">sherpa_model</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="n">fit_range</span><span class="p">,</span><span class="n">add_res</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;(SSC+host gal)*ebl&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">plot_sherpa_model</span><span class="p">(</span><span class="n">sherpa_model_jet</span><span class="p">,</span><span class="n">plot_obj</span><span class="o">=</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;SSC&#39;</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">plot_sherpa_model</span><span class="p">(</span><span class="n">sherpa_model_gal</span><span class="p">,</span><span class="n">plot_obj</span><span class="o">=</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;host gal&#39;</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/sherpa-plugin_38_0.png" src="../../../_images/sherpa-plugin_38_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sherpa.plot</span> <span class="kn">import</span> <span class="n">IntervalProjection</span>
+<span class="n">iproj</span> <span class="o">=</span> <span class="n">IntervalProjection</span><span class="p">()</span>
+<span class="n">iproj</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">fac</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">nloop</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">iproj</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">fitter</span><span class="p">,</span> <span class="n">sherpa_model</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="n">iproj</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../../_images/sherpa-plugin_39_0.png" src="../../../_images/sherpa-plugin_39_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sherpa.sim</span> <span class="kn">import</span> <span class="n">MCMC</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span> <span class="o">=</span> <span class="n">MCMC</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span><span class="o">.</span><span class="n">get_sampler_name</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;MetropolisMH&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fitter</span><span class="o">.</span><span class="n">estmethod</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Covariance</span> <span class="n">error</span><span class="o">-</span><span class="n">estimation</span> <span class="n">method</span> <span class="n">instance</span> <span class="s1">&#39;covariance&#39;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eres</span> <span class="o">=</span> <span class="n">fitter</span><span class="o">.</span><span class="n">est_errors</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">minimum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">gmax</span>
+<span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">maximum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">gmax</span>
+<span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">minimum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">beam_obj</span>
+<span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">maximum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">beam_obj</span>
+<span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">minimum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">host_galaxy</span><span class="o">.</span><span class="n">nuFnu_p_host</span>
+<span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">maximum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">host_galaxy</span><span class="o">.</span><span class="n">nuFnu_p_host</span>
+<span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">minimum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">host_galaxy</span><span class="o">.</span><span class="n">nu_scale</span>
+<span class="n">WARNING</span><span class="p">:</span> <span class="n">hard</span> <span class="n">maximum</span> <span class="n">hit</span> <span class="k">for</span> <span class="n">parameter</span> <span class="n">host_galaxy</span><span class="o">.</span><span class="n">nu_scale</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">eres</span><span class="o">.</span><span class="n">format</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Confidence</span> <span class="n">Method</span>     <span class="o">=</span> <span class="n">covariance</span>
+<span class="n">Iterative</span> <span class="n">Fit</span> <span class="n">Method</span>  <span class="o">=</span> <span class="kc">None</span>
+<span class="n">Fitting</span> <span class="n">Method</span>        <span class="o">=</span> <span class="n">levmar</span>
+<span class="n">Statistic</span>             <span class="o">=</span> <span class="n">chi2</span>
+<span class="n">covariance</span> <span class="mi">1</span><span class="o">-</span><span class="n">sigma</span> <span class="p">(</span><span class="mf">68.2689</span><span class="o">%</span><span class="p">)</span> <span class="n">bounds</span><span class="p">:</span>
+   <span class="n">Param</span>            <span class="n">Best</span><span class="o">-</span><span class="n">Fit</span>  <span class="n">Lower</span> <span class="n">Bound</span>  <span class="n">Upper</span> <span class="n">Bound</span>
+   <span class="o">-----</span>            <span class="o">--------</span>  <span class="o">-----------</span>  <span class="o">-----------</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">gmin</span>      <span class="mf">161.587</span>     <span class="o">-</span><span class="mf">17.2539</span>      <span class="mf">17.2539</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">gmax</span>   <span class="mf">2.6044e+06</span>        <span class="o">-----</span>        <span class="o">-----</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">N</span>      <span class="mf">12.4908</span>     <span class="o">-</span><span class="mf">2.43741</span>      <span class="mf">2.43741</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">gamma0_log_parab</span>      <span class="mf">12476.6</span>     <span class="o">-</span><span class="mf">1835.53</span>      <span class="mf">1835.53</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">s</span>      <span class="mf">2.22409</span>    <span class="o">-</span><span class="mf">0.018924</span>     <span class="mf">0.018924</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">r</span>     <span class="mf">0.246937</span>   <span class="o">-</span><span class="mf">0.0231805</span>    <span class="mf">0.0231805</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">R_sh</span>  <span class="mf">1.69738e+16</span> <span class="o">-</span><span class="mf">1.54339e+15</span>  <span class="mf">1.54339e+15</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">B</span>   <span class="mf">0.00724202</span> <span class="o">-</span><span class="mf">0.000565301</span>  <span class="mf">0.000565301</span>
+   <span class="n">jet_leptonic</span><span class="o">.</span><span class="n">beam_obj</span>      <span class="mf">48.2305</span>        <span class="o">-----</span>        <span class="o">-----</span>
+   <span class="n">host_galaxy</span><span class="o">.</span><span class="n">nuFnu_p_host</span>     <span class="o">-</span><span class="mf">10.0495</span>        <span class="o">-----</span>        <span class="o">-----</span>
+   <span class="n">host_galaxy</span><span class="o">.</span><span class="n">nu_scale</span>    <span class="mf">0.0235454</span>        <span class="o">-----</span>        <span class="o">-----</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cmatrix</span> <span class="o">=</span> <span class="n">eres</span><span class="o">.</span><span class="n">extra_output</span>
+<span class="n">pnames</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">eres</span><span class="o">.</span><span class="n">parnames</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cmatrix</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pnames</span><span class="p">)),</span> <span class="n">pnames</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pnames</span><span class="p">)),</span> <span class="n">pnames</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">colorbar</span><span class="o">.</span><span class="n">Colorbar</span> <span class="n">at</span> <span class="mh">0x7f8d86c26700</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/sherpa-plugin_46_1.png" src="../../../_images/sherpa-plugin_46_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">draws</span> <span class="o">=</span> <span class="n">mcmc</span><span class="o">.</span><span class="n">get_draws</span><span class="p">(</span><span class="n">fitter</span><span class="p">,</span> <span class="n">cmatrix</span><span class="p">,</span> <span class="n">niter</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="ne">ValueError</span>                                <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">40</span><span class="o">-</span><span class="n">e4874d746f87</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">draws</span> <span class="o">=</span> <span class="n">mcmc</span><span class="o">.</span><span class="n">get_draws</span><span class="p">(</span><span class="n">fitter</span><span class="p">,</span> <span class="n">cmatrix</span><span class="p">,</span> <span class="n">niter</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+
+<span class="o">~/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">sherpa</span><span class="o">/</span><span class="n">sim</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">get_draws</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">niter</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span>
+    <span class="mi">685</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    686         if not isinstance(fit.stat, (Cash, CStat, WStat)):</span>
+<span class="s2">--&gt; 687             raise ValueError(&quot;Fit statistic must be cash, cstat or &quot; +</span>
+<span class="s2">    688                              &quot;wstat, not </span><span class="si">%s</span><span class="s2">&quot; </span><span class="si">% f</span><span class="s2">it.stat.name)</span>
+<span class="s2">    689</span>
+
+
+<span class="s2">ValueError: Fit statistic must be cash, cstat or wstat, not chi2</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, andrea tramacere.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

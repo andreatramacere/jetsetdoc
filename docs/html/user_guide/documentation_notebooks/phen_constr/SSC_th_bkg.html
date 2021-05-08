@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phenomenological model constraining: SSC theory &#8212; jetset  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Phenomenological model constraining: application" href="Jet_example_phenom_constr.html" />
+    <link rel="prev" title="Data format and SED data" href="../load_data/Jet_example_load_data.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href=" https://github.com/andreatramacere/jetset"
+     class="visible-desktop hidden-xs"><img
+    id="gh-banner"
+    style="position: absolute; top: 50px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
+          JetSeT doc</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">JetSeT <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Phenomenological model constraining: SSC theory</a><ul>
+<li><a class="reference internal" href="#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a><ul>
+<li><a class="reference internal" href="#synchrotron-trend-for-gamma-min">Synchrotron trend for <span class="math notranslate nohighlight">\(\gamma_{min}\)</span></a></li>
+<li><a class="reference internal" href="#synchrotron-trend-for-the-low-energy-spectral-slope">Synchrotron trend for the low-energy spectral slope</a></li>
+<li><a class="reference internal" href="#change-in-the-peak-frequency-of-the-sed">Change in the peak frequency of the SED</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a><ul>
+<li><a class="reference internal" href="#changing-gamma-min">Changing <span class="math notranslate nohighlight">\(\gamma_{min}\)</span></a></li>
+<li><a class="reference internal" href="#changing-the-turn-over-energy">Changing the turn-over energy</a></li>
+<li><a class="reference internal" href="#the-ic-redistribution-function">The IC redistribution function</a></li>
+<li><a class="reference internal" href="#transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-curvature-in-the-high-enegy-branch-of-the-emitters">Transition from TH to KN regime for the IC emission: changing the curvature in the high-enegy branch of the emitters</a></li>
+<li><a class="reference internal" href="#transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-turnover-energy">Transition from TH to KN regime for the IC emission: changing the turnover energy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../load_data/Jet_example_load_data.html" title="Previous Chapter: Data format and SED data"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Data format a...</span>
+    </a>
+  </li>
+  <li>
+    <a href="Jet_example_phenom_constr.html" title="Next Chapter: Phenomenological model constraining: application"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Phenomenologi... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><!--
+<ul class="globaltoc"
+><p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+//-->
+
+
+<html style="height:100%">
+    <body style="height:100%">
+      <div class="sidebar-block">
+        <div class="sidebar-wrapper">
+          <h2></h2>
+        </div>
+        <div class="sidebar-toc">
+
+          
+          
+            <p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../load_data/Jet_example_load_data.html"> data format</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> phenomenological model constraining: theoretical background on SSC  *New (v1.2.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Jet_example_phenom_constr.html"> phenomenological model constraining: application</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synchrotron-trend-for-gamma-min">Synchrotron trend for <span class="math notranslate nohighlight">\(\gamma_{min}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synchrotron-trend-for-the-low-energy-spectral-slope">Synchrotron trend for the low-energy spectral slope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-in-the-peak-frequency-of-the-sed">Change in the peak frequency of the SED</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changing-gamma-min">Changing <span class="math notranslate nohighlight">\(\gamma_{min}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-turn-over-energy">Changing the turn-over energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-ic-redistribution-function">The IC redistribution function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-curvature-in-the-high-enegy-branch-of-the-emitters">Transition from TH to KN regime for the IC emission: changing the curvature in the high-enegy branch of the emitters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-turnover-energy">Transition from TH to KN regime for the IC emission: changing the turnover energy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+</ul>
+
+          
+
+        </div>
+
+      </div>
+    </body>
+</html>
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="phenomenological-model-constraining-ssc-theory">
+<span id="ssc-th-bkg"></span><h1>Phenomenological model constraining: SSC theory<a class="headerlink" href="#phenomenological-model-constraining-ssc-theory" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jetset</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span><span class="n">rc4</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">mcolors</span>
+
+<span class="n">font</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;family&#39;</span> <span class="p">:</span> <span class="s1">&#39;sans-serif&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;weight&#39;</span> <span class="p">:</span> <span class="s1">&#39;normal&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;size&#39;</span>   <span class="p">:</span> <span class="mi">18</span><span class="p">}</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+
+
+<span class="n">colors</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">mcolors</span><span class="o">.</span><span class="n">TABLEAU_COLORS</span><span class="p">)</span>
+
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.poly_fit_tools</span> <span class="kn">import</span> <span class="n">get_SED_pl_fit</span><span class="p">,</span> <span class="n">get_SED_log_par_fit</span><span class="p">,</span> <span class="n">get_nu_p_S_delta_approx</span><span class="p">,</span> <span class="n">get_n_gamma_log_par_fit</span><span class="p">,</span> <span class="n">get_nu_p_S_delta_approx</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">n_distr_plot</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">gmin</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="o">.</span><span class="n">gamma_e</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="o">.</span><span class="n">n_gamma_e</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">gmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ymax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">ymin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="c1">#print(&#39;ymax&#39;,ymax)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">gmin</span><span class="p">),</span><span class="n">ymin</span><span class="o">=</span><span class="n">ymin</span><span class="p">,</span><span class="n">ymax</span><span class="o">=</span><span class="n">ymax</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">ID</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This section is based on the work presented in</p>
+<ul class="simple">
+<li><p>Tramacere et al. (2009) <a class="reference internal" href="../../../references.html#tramacere2009" id="id1"><span>[Tramacere2009]</span></a></p></li>
+<li><p>Massaro et al. (2006) <a class="reference internal" href="../../../references.html#massaro2006" id="id2"><span>[Massaro2006]</span></a></p></li>
+<li><p>Jones (1968) <a class="reference internal" href="../../../references.html#jones1968" id="id3"><span>[Jones1968]</span></a></p></li>
+<li><p>Blumenthal &amp; Gould (1970) <a class="reference internal" href="../../../references.html#bg1970" id="id4"><span>[BG1970]</span></a></p></li>
+<li><p>Rybicki &amp; Lightman (1986) <a class="reference internal" href="../../../references.html#rl1986" id="id5"><span>[RL1986]</span></a></p></li>
+</ul>
+<div class="figure align-default" id="id6">
+<img alt="image.png" src="../../../_images/jetset_slides.007.png" />
+<p class="caption"><span class="caption-text">image.png</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span><span class="p">,</span><span class="n">PlotPdistr</span><span class="p">,</span><span class="n">PlotSpecComp</span>
+<span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">jet</span> <span class="n">model</span> <span class="n">description</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">jet_leptonic</span>
+
+<span class="n">electrons</span> <span class="n">distribution</span><span class="p">:</span>
+ <span class="nb">type</span><span class="p">:</span> <span class="n">lppl</span>
+ <span class="n">gamma</span> <span class="n">energy</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">201</span>
+ <span class="n">gmin</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">2.000000e+00</span>
+ <span class="n">gmax</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">1.000000e+06</span>
+ <span class="n">normalization</span>  <span class="kc">True</span>
+ <span class="n">log</span><span class="o">-</span><span class="n">values</span>  <span class="kc">False</span>
+
+<span class="n">radiative</span> <span class="n">fields</span><span class="p">:</span>
+ <span class="n">seed</span> <span class="n">photons</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
+ <span class="n">IC</span> <span class="n">emission</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
+ <span class="n">source</span> <span class="n">emissivity</span> <span class="n">lower</span> <span class="n">bound</span> <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+ <span class="n">spectral</span> <span class="n">components</span><span class="p">:</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">Sum</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">Sync</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="bp">self</span><span class="o">-</span><span class="nb">abs</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">SSC</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
+<span class="n">external</span> <span class="n">fields</span> <span class="n">transformation</span> <span class="n">method</span><span class="p">:</span> <span class="n">blob</span>
+
+<span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
+ <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
+ <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
+ <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
+
+<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<i>Table length=11</i>
+<table id="table140561271651872-509181" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>1.000000e+00</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140561271651872-509181').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140561271651872-509181').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;gamma0_log_parab&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">5E3</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;gmin&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E2</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;gmax&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E8</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E15</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E3</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\gamma_0$&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7fd6fd2fafa0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_11_1.png" src="../../../_images/SSC_th_bkg_11_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="o">.</span><span class="n">plot3p</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\gamma_0$&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7fd6fd827f10</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_12_1.png" src="../../../_images/SSC_th_bkg_12_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">11</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mf">17.5</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_13_0.png" src="../../../_images/SSC_th_bkg_13_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;src&#39;</span><span class="p">)</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_max</span><span class="o">=</span><span class="mi">44</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mi">38</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_14_0.png" src="../../../_images/SSC_th_bkg_14_0.png" />
+<div class="section" id="synchrotron-trends-full-computation-and-delta-approx-comparison">
+<h2>Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison<a class="headerlink" href="#synchrotron-trends-full-computation-and-delta-approx-comparison" title="Permalink to this headline">¶</a></h2>
+<p><img alt="image.png" src="../../../_images/jetset_slides.008.png" /> <img alt="image1" src="../../../_images/jetset_slides.009.png" /> <img alt="image2" src="../../../_images/jetset_slides.010.png" /> <img alt="image3" src="../../../_images/jetset_slides.011.png" /> <img alt="image4" src="../../../_images/jetset_slides.014.png" /></p>
+<div class="section" id="synchrotron-trend-for-gamma-min">
+<h3>Synchrotron trend for <span class="math notranslate nohighlight">\(\gamma_{min}\)</span><a class="headerlink" href="#synchrotron-trend-for-gamma-min" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#matplotlib.rc(&#39;font&#39;, **font)</span>
+<span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">p</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1E7</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">2.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.05</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">nu_grid_size</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">size</span><span class="o">=</span><span class="mi">10</span>
+
+
+<span class="c1">#Synch</span>
+<span class="n">nu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nuFnu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+
+
+<span class="n">S_index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">S_index_err</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+<span class="c1">#Switch off SSC emission</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">spectral_components</span><span class="o">.</span><span class="n">SSC</span><span class="o">.</span><span class="n">state</span><span class="o">=</span><span class="s1">&#39;off&#39;</span>
+
+<span class="c1">#Switch off sych self-abs</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">spectral_components</span><span class="o">.</span><span class="n">Sync</span><span class="o">.</span><span class="n">state</span><span class="o">=</span><span class="s1">&#39;on&#39;</span>
+
+<span class="n">gmin_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+
+
+
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">gmin</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">gmin_values</span><span class="p">):</span>
+
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmin</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">gmin</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_N_from_nuFnu</span><span class="p">(</span><span class="n">nu_obs</span><span class="o">=</span><span class="mf">1E18</span><span class="p">,</span><span class="n">nuFnu_obs</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">get_component_peak</span><span class="p">(</span><span class="s1">&#39;Sync&#39;</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">S_index</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">S_index_err</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">loglog_pl</span><span class="o">=</span><span class="n">get_SED_pl_fit</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;Sync&#39;</span><span class="p">,[</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">])</span>
+
+
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\gamma_</span><span class="si">{min}</span><span class="s1">$=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gmin</span>,color=colors[ID],auto_label=False,comp=&#39;Sync&#39;,line_style=&#39;--&#39;)
+    <span class="n">p</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="n">loglog_pl</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;pl fit for $\gamma_</span><span class="si">{min}</span><span class="s1">$=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gmin</span>,color=colors[ID],line_style=&#39;-&#39;)
+    <span class="n">n_distr_plot</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">gmin</span><span class="o">=</span><span class="n">gmin</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($\gamma$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log(n($\gamma$) $\gamma^3$)&#39;</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">axvline</span><span class="p">([</span><span class="mi">10</span><span class="p">],</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">axvline</span><span class="p">([</span><span class="mi">13</span><span class="p">],</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">nu_p_S</span><span class="p">,</span><span class="n">nuFnu_p_S</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">9</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_18_0.png" src="../../../_images/SSC_th_bkg_18_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_spectral_index</span><span class="o">=</span><span class="n">S_index</span><span class="o">-</span><span class="mi">1</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">gmin_values</span><span class="p">),</span><span class="n">S_spectral_index</span><span class="p">,</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Synch index from fit&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">gmin_values</span><span class="p">),</span> <span class="n">S_spectral_index</span> <span class="o">-</span> <span class="n">S_index_err</span><span class="p">,</span> <span class="n">S_spectral_index</span> <span class="o">+</span> <span class="n">S_index_err</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Synch index&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($\gamma_</span><span class="si">{min}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;-(s-1)/2 Synch. theory&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;1/3 Synch. theory asymp.&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7fd6fe335e20</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_19_1.png" src="../../../_images/SSC_th_bkg_19_1.png" />
+</div>
+<div class="section" id="synchrotron-trend-for-the-low-energy-spectral-slope">
+<h3>Synchrotron trend for the low-energy spectral slope<a class="headerlink" href="#synchrotron-trend-for-the-low-energy-spectral-slope" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id7">
+<img alt="image.png" src="../../../_images/jetset_slides.012.png" />
+<p class="caption"><span class="caption-text">image.png</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">p</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1E7</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmin</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">2.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.05</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">nu_grid_size</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">size</span><span class="o">=</span><span class="mi">10</span>
+
+
+<span class="c1">#Synch</span>
+<span class="n">nu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nuFnu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+
+
+<span class="n">S_index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">S_index_err</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+<span class="c1">#Switch off SSC emission</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">spectral_components</span><span class="o">.</span><span class="n">SSC</span><span class="o">.</span><span class="n">state</span><span class="o">=</span><span class="s1">&#39;off&#39;</span>
+
+<span class="c1">#Switch off sych self-abs</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">spectral_components</span><span class="o">.</span><span class="n">Sync</span><span class="o">.</span><span class="n">state</span><span class="o">=</span><span class="s1">&#39;on&#39;</span>
+
+<span class="n">s_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+
+
+
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s_values</span><span class="p">):</span>
+
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">s</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_N_from_nuFnu</span><span class="p">(</span><span class="n">nu_obs</span><span class="o">=</span><span class="mf">5E13</span><span class="p">,</span><span class="n">nuFnu_obs</span><span class="o">=</span><span class="mf">1E-11</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">get_component_peak</span><span class="p">(</span><span class="s1">&#39;Sync&#39;</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">S_index</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">S_index_err</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">loglog_pl</span><span class="o">=</span><span class="n">get_SED_pl_fit</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;Sync&#39;</span><span class="p">,[</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">])</span>
+
+
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\gamma_</span><span class="si">{min}</span><span class="s1">$=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gmin</span>,color=colors[ID],auto_label=False,comp=&#39;Sync&#39;,line_style=&#39;--&#39;)
+    <span class="n">p</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="n">loglog_pl</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;pl fit for $\gamma_</span><span class="si">{min}</span><span class="s1">$=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gmin</span>,color=colors[ID],line_style=&#39;-&#39;)
+    <span class="n">n_distr_plot</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">ID</span><span class="p">])</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($\gamma$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log(n($\gamma$) $\gamma^3$)&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">axvline</span><span class="p">([</span><span class="mi">10</span><span class="p">],</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">axvline</span><span class="p">([</span><span class="mi">13</span><span class="p">],</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">nu_p_S</span><span class="p">,</span><span class="n">nuFnu_p_S</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">9</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">34</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_22_0.png" src="../../../_images/SSC_th_bkg_22_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_spectral_index</span><span class="o">=</span><span class="n">S_index</span><span class="o">-</span><span class="mi">1</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s_values</span><span class="p">,</span><span class="n">S_spectral_index</span><span class="p">,</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Synch index from fit&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">s_values</span><span class="p">,</span> <span class="n">S_spectral_index</span> <span class="o">-</span> <span class="n">S_index_err</span><span class="p">,</span> <span class="n">S_spectral_index</span> <span class="o">+</span> <span class="n">S_index_err</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Synch index&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s_values</span><span class="p">,</span><span class="o">-</span><span class="p">(</span><span class="n">s_values</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;-(s-1)/2 Synch. theory&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7fd6e05c1610</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_23_1.png" src="../../../_images/SSC_th_bkg_23_1.png" />
+</div>
+<div class="section" id="change-in-the-peak-frequency-of-the-sed">
+<h3>Change in the peak frequency of the SED<a class="headerlink" href="#change-in-the-peak-frequency-of-the-sed" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id8">
+<img alt="image.png" src="../../../_images/jetset_slides.013.png" />
+<p class="caption"><span class="caption-text">image.png</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">p</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1E8</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">2.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.05</span>
+
+
+<span class="n">size</span><span class="o">=</span><span class="mi">10</span>
+
+
+<span class="c1">#Synch</span>
+<span class="n">nu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nuFnu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nu_p_S_delta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+
+<span class="c1">#e- distr</span>
+<span class="n">g_p_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">n3g_p_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+
+<span class="c1">#Switch off SSC emission</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">spectral_components</span><span class="o">.</span><span class="n">SSC</span><span class="o">.</span><span class="n">state</span><span class="o">=</span><span class="s1">&#39;off&#39;</span>
+
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">gamma0_log_parab</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">size</span><span class="p">)):</span>
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">nu_grid_size</span><span class="o">=</span><span class="mi">100</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gamma0_log_parab</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">gamma0_log_parab</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">get_component_peak</span><span class="p">(</span><span class="s1">&#39;Sync&#39;</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">nu_p_S</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">nuFnu_p_S</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">_</span><span class="p">),</span><span class="n">err</span><span class="o">=</span><span class="n">get_SED_log_par_fit</span><span class="p">(</span><span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="p">,</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;Sync&#39;</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+    <span class="n">pars</span><span class="p">,</span><span class="n">err</span><span class="o">=</span><span class="n">get_n_gamma_log_par_fit</span><span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="p">,</span><span class="n">power</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">delta_p</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">])</span>
+    <span class="n">g_p_e</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">pars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">n3g_p_e</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">pars</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">nu_p_S_delta</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">=</span><span class="n">get_nu_p_S_delta_approx</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="n">g_p_e</span><span class="p">[</span><span class="n">ID</span><span class="p">])</span>
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\gamma 0$=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gamma0_log_parab</span>,color=colors[ID],auto_label=False,comp=&#39;Sync&#39;)
+
+    <span class="n">n_distr_plot</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">ID</span><span class="p">])</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($\gamma$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log(n($\gamma$) $\gamma^3$)&#39;</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">nu_p_S</span><span class="p">,</span><span class="n">nuFnu_p_S</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">g_p_e</span><span class="p">,</span><span class="n">n3g_p_e</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">8.9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_26_1.png" src="../../../_images/SSC_th_bkg_26_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">nu_p_S</span><span class="p">,</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">nu_p_S</span> <span class="o">-</span> <span class="n">nu_p_S_delta</span><span class="p">),</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\nu_p$ S from $\delta$-approx / $\nu_p$ S peak from SED fit&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;ratio&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($\gamma_</span><span class="si">{3p}</span><span class="s1">$ e-)&#39;</span><span class="p">)</span>
+<span class="c1">#ax.axvline(4.0,ls=&#39;--&#39;,c=&#39;black&#39;)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_27_1.png" src="../../../_images/SSC_th_bkg_27_1.png" />
+</div>
+</div>
+<div class="section" id="trends-for-the-inverse-compton-and-synchrotron-emission">
+<h2>Trends for the inverse Compton and synchrotron emission<a class="headerlink" href="#trends-for-the-inverse-compton-and-synchrotron-emission" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id9">
+<img alt="image.png" src="../../../_images/jetset_slides.015.png" />
+<p class="caption"><span class="caption-text">image.png</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="changing-gamma-min">
+<h3>Changing <span class="math notranslate nohighlight">\(\gamma_{min}\)</span><a class="headerlink" href="#changing-gamma-min" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+
+
+<span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">)</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1E8</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1.0</span>
+
+
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">gmin</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">]):</span>
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmin</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">gmin</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_N_from_nuFnu</span><span class="p">(</span><span class="n">nu_obs</span><span class="o">=</span><span class="mf">1E17</span><span class="p">,</span><span class="n">nuFnu_obs</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;gmin=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gmin</span>,color=colors[ID])
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_31_0.png" src="../../../_images/SSC_th_bkg_31_0.png" />
+</div>
+<div class="section" id="changing-the-turn-over-energy">
+<h3>Changing the turn-over energy<a class="headerlink" href="#changing-the-turn-over-energy" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">)</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1E8</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">2.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.05</span>
+
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">nu_grid_size</span><span class="o">=</span><span class="mi">1000</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">gamma0_log_parab</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)):</span>
+
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gamma0_log_parab</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">gamma0_log_parab</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;gammma_0=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gamma0_log_parab</span>,color=colors[ID])
+
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_33_0.png" src="../../../_images/SSC_th_bkg_33_0.png" />
+</div>
+<div class="section" id="the-ic-redistribution-function">
+<h3>The IC redistribution function<a class="headerlink" href="#the-ic-redistribution-function" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id10">
+<img alt="image.png" src="../../../_images/jetset_slides.016.png" />
+<p class="caption"><span class="caption-text">image.png</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jetkernel</span> <span class="kn">import</span> <span class="n">jetkernel</span>
+
+<span class="k">def</span> <span class="nf">eval_nu_min_max</span><span class="p">(</span><span class="n">nu_compton_0</span><span class="p">,</span><span class="n">g</span><span class="p">):</span>
+    <span class="n">epsilon_0</span> <span class="o">=</span> <span class="n">jetkernel</span><span class="o">.</span><span class="n">HPLANCK</span> <span class="o">*</span> <span class="n">nu_compton_0</span><span class="o">*</span><span class="n">jetkernel</span><span class="o">.</span><span class="n">one_by_MEC2</span>
+    <span class="n">nu_1_max</span> <span class="o">=</span> <span class="mf">4.0</span> <span class="o">*</span> <span class="n">nu_compton_0</span> <span class="o">*</span> <span class="n">g</span><span class="o">*</span><span class="n">g</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">epsilon_0</span><span class="p">)</span>
+    <span class="n">nu_1_min</span> <span class="o">=</span> <span class="n">nu_compton_0</span><span class="o">/</span><span class="p">(</span><span class="mf">4.0</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">Gamma</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">nu_0</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">jetkernel</span><span class="o">.</span><span class="n">one_by_MEC2</span><span class="o">*</span><span class="n">jetkernel</span><span class="o">.</span><span class="n">HPLANCK</span>
+    <span class="k">return</span> <span class="n">nu_1_min</span><span class="p">,</span> <span class="n">nu_1_max</span><span class="p">,</span><span class="n">Gamma</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare with fig. 4 in BLUMENTHAL, GEORGE R. GOULD, ROBERT J. 1970</span>
+<span class="c1"># https://ui.adsabs.harvard.edu/abs/1970RvMP...42..237B/abstract</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">()</span>
+<span class="n">nu_0</span><span class="o">=</span><span class="mf">1E15</span>
+<span class="n">size</span><span class="o">=</span><span class="mi">1000</span>
+
+<span class="n">rate</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">do_IC_down_scattering</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1E1</span><span class="p">,</span><span class="mf">1E4</span><span class="p">,</span><span class="mf">1E5</span><span class="p">,</span><span class="mf">3E5</span><span class="p">,</span><span class="mf">3E6</span><span class="p">]:</span>
+    <span class="n">nu_1_min</span><span class="p">,</span><span class="n">nu_1_max</span><span class="p">,</span><span class="n">Gamma</span><span class="o">=</span><span class="n">eval_nu_min_max</span><span class="p">(</span><span class="n">nu_0</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">nu_1_range</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="n">nu_1_min</span> <span class="p">,</span> <span class="n">nu_1_max</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">rate</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">nu_1</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nu_1_range</span><span class="p">):</span>
+        <span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">nu_compton_0</span><span class="o">=</span><span class="n">nu_0</span>
+        <span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">nu_1</span><span class="o">=</span><span class="n">nu_1</span>
+        <span class="n">rate</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">=</span><span class="n">jetkernel</span><span class="o">.</span><span class="n">f_compton_K1</span><span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
+
+    <span class="n">x</span><span class="o">=</span><span class="n">nu_1_range</span><span class="o">/</span><span class="n">nu_1_max</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">rate</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">rate</span><span class="o">/</span><span class="n">c</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\Gamma=</span><span class="si">%2.2e</span><span class="s1">$&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">Gamma</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\nu_</span><span class="si">{out}</span><span class="s1">/\nu_{out max}$&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$Fc(\nu_</span><span class="si">{out}</span><span class="s1">,\nu_</span><span class="si">{in}</span><span class="s1">,\gamma)$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_37_0.png" src="../../../_images/SSC_th_bkg_37_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">_</span><span class="o">=</span><span class="n">eval_nu_min_max</span><span class="p">(</span><span class="mf">1E15</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">jetkernel</span><span class="o">.</span><span class="n">HPLANCK</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">jetkernel</span><span class="o">.</span><span class="n">one_by_MEC2</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\gamma_e}$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\frac{h\nu_</span><span class="si">{out}</span><span class="s1">}{\gamma_e m_ec^2}$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">Text(0, 0.5, '$\frac{h\nu_{out}}{\gamma_e m_ec^2}$')</pre>
+<img alt="../../../_images/SSC_th_bkg_38_1.png" src="../../../_images/SSC_th_bkg_38_1.png" />
+</div>
+<div class="section" id="transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-curvature-in-the-high-enegy-branch-of-the-emitters">
+<h3>Transition from TH to KN regime for the IC emission: changing the curvature in the high-enegy branch of the emitters<a class="headerlink" href="#transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-curvature-in-the-high-enegy-branch-of-the-emitters" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id11">
+<img alt="image.png" src="../../../_images/jetset_slides.018.png" />
+<p class="caption"><span class="caption-text">image.png</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">)</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+<span class="n">pe</span><span class="o">=</span><span class="n">PlotPdistr</span><span class="p">()</span>
+<span class="n">pe</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1E8</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gamma0_log_parab</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">5E3</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">val</span><span class="o">=.</span><span class="mi">5</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">nu_max</span><span class="o">=</span><span class="mf">1E30</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">size</span><span class="o">=</span><span class="mi">10</span>
+
+<span class="n">nu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nu_p_IC</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nuFnu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nuFnu_p_IC</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_S_err</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_IC</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_IC_err</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_values</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+
+
+
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">r</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">r_values</span><span class="p">):</span>
+
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">r</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_N_from_nuFnu</span><span class="p">(</span><span class="n">nu_obs</span><span class="o">=</span><span class="mf">1E10</span><span class="p">,</span><span class="n">nuFnu_obs</span><span class="o">=</span><span class="mf">1E-14</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;r=</span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">r</span>,color=colors[ID])
+    <span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">get_component_peak</span><span class="p">(</span><span class="s1">&#39;Sync&#39;</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">nu_p_S</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">nuFnu_p_S</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">r_S</span><span class="p">[</span><span class="n">ID</span><span class="p">]),</span><span class="n">err</span><span class="o">=</span><span class="n">get_SED_log_par_fit</span><span class="p">(</span><span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="p">,</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;Sync&#39;</span><span class="p">,</span><span class="n">delta_p</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">r_S_err</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">=</span><span class="n">err</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">get_component_peak</span><span class="p">(</span><span class="s1">&#39;SSC&#39;</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">nu_p_IC</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">nuFnu_p_IC</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">r_IC</span><span class="p">[</span><span class="n">ID</span><span class="p">]),</span><span class="n">err</span><span class="o">=</span><span class="n">get_SED_log_par_fit</span><span class="p">(</span><span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="p">,</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;SSC&#39;</span><span class="p">,</span><span class="n">delta_p</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">r_IC_err</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">=</span><span class="n">err</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="o">.</span><span class="n">plot3p</span><span class="p">(</span><span class="n">pe</span><span class="p">)</span>
+
+
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">14</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mf">10.5</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">29</span><span class="p">)</span>
+<span class="n">pe</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_41_0.png" src="../../../_images/SSC_th_bkg_41_0.png" />
+<img alt="../../../_images/SSC_th_bkg_41_1.png" src="../../../_images/SSC_th_bkg_41_1.png" />
+<p>the following plot shows the trend for the S curvature (b) and the IC
+curvature (both measured over one decade starting from the peak) versus
+the curvature of the electron distribution (r)</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span><span class="n">r_S</span><span class="p">,</span><span class="n">yerr</span><span class="o">=</span><span class="n">r_S_err</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;S curvature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">-</span> <span class="n">r_S_err</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">+</span> <span class="n">r_S_err</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span><span class="n">r_IC</span><span class="p">,</span><span class="n">yerr</span><span class="o">=</span><span class="n">r_IC_err</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;IC curvature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span> <span class="n">r_IC</span> <span class="o">-</span> <span class="n">r_IC_err</span><span class="p">,</span> <span class="n">r_IC</span> <span class="o">+</span> <span class="n">r_IC_err</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span><span class="o">-</span><span class="n">r_values</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;b = r/5&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;spectral curvature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;e- curvature r&#39;</span><span class="p">)</span>
+<span class="c1">#ax.axvline(,ls=&#39;--&#39;,c=&#39;black&#39;)</span>
+<span class="c1">#ax.axhline(-0.2,ls=&#39;--&#39;,c=&#39;red&#39;,label=&#39;sync theor. b~r/5&#39;)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7fd6fd8b8640</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_43_1.png" src="../../../_images/SSC_th_bkg_43_1.png" />
+</div>
+<div class="section" id="transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-turnover-energy">
+<h3>Transition from TH to KN regime for the IC emission: changing the turnover energy<a class="headerlink" href="#transition-from-th-to-kn-regime-for-the-ic-emission-changing-the-turnover-energy" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id12">
+<img alt="image.png" src="../../../_images/jetset_slides.019.png" />
+<p class="caption"><span class="caption-text">image.png</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">)</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+
+<span class="n">size</span><span class="o">=</span><span class="mi">10</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1E8</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">2.0</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.05</span>
+
+<span class="n">my_jet</span><span class="o">.</span><span class="n">nu_grid_size</span><span class="o">=</span><span class="mi">200</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="n">nu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nu_p_IC</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nuFnu_p_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">nuFnu_p_IC</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_S_err</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_IC</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">r_IC_err</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">g_p_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="n">n3g_p_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+<span class="c1">#colors=list(mcolors.CSS4_COLORS)</span>
+
+
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">gamma0_log_parab</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">size</span><span class="p">)):</span>
+
+
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gamma0_log_parab</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">gamma0_log_parab</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">comp</span><span class="o">=</span><span class="s1">&#39;Sum&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$\gamma0$_log_parab = </span><span class="si">%2.2e</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">gamma0_log_parab</span>)
+    <span class="c1">#with log_log=True, the values are already logarthmic</span>
+    <span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">get_component_peak</span><span class="p">(</span><span class="s1">&#39;Sync&#39;</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">nu_p_S</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">nuFnu_p_S</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">r_S</span><span class="p">[</span><span class="n">ID</span><span class="p">]),</span><span class="n">err</span><span class="o">=</span><span class="n">get_SED_log_par_fit</span><span class="p">(</span><span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="p">,</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;Sync&#39;</span><span class="p">,</span> <span class="n">delta_p</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">r_S_err</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">=</span><span class="n">err</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">get_component_peak</span><span class="p">(</span><span class="s1">&#39;SSC&#39;</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">nu_p_IC</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">nuFnu_p_IC</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span><span class="n">r_IC</span><span class="p">[</span><span class="n">ID</span><span class="p">]),</span><span class="n">err</span><span class="o">=</span><span class="n">get_SED_log_par_fit</span><span class="p">(</span><span class="n">x_p</span><span class="p">,</span><span class="n">y_p</span><span class="p">,</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;SSC&#39;</span><span class="p">,</span> <span class="n">delta_p</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">r_IC_err</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">=</span><span class="n">err</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">pars</span><span class="p">,</span><span class="n">err</span><span class="o">=</span><span class="n">get_n_gamma_log_par_fit</span><span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">electron_distribution</span><span class="p">,</span><span class="n">power</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">delta_p</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
+    <span class="n">g_p_e</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">pars</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">n3g_p_e</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">pars</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mf">11.5</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">nu_p_S</span><span class="p">,</span><span class="n">nuFnu_p_S</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">nu_p_IC</span><span class="p">,</span><span class="n">nuFnu_p_IC</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">collections</span><span class="o">.</span><span class="n">PathCollection</span> <span class="n">at</span> <span class="mh">0x7fd6dfa16c40</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_46_1.png" src="../../../_images/SSC_th_bkg_46_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">g_p_e</span><span class="p">,(</span><span class="n">nu_p_IC</span><span class="o">-</span><span class="n">nu_p_S</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">g_p_e</span><span class="p">,</span><span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($ \frac{(\nu_p^</span><span class="si">{IC}</span><span class="s1"> / \nu_p^</span><span class="si">{S}</span><span class="s1">)}{\gamma_</span><span class="si">{3p}</span><span class="s1">^2} $)&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($\gamma_</span><span class="si">{3p}</span><span class="s1">$ e-)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$ \frac{(\nu_p^</span><span class="si">{IC}</span><span class="s2"> / \nu_p^</span><span class="si">{S}</span><span class="s2">)}{\gamma_</span><span class="si">{3p}</span><span class="s2">^2} =4/3 $&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7fd6fd4d5460</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_47_1.png" src="../../../_images/SSC_th_bkg_47_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">g_p_e</span><span class="p">,</span><span class="n">r_S</span><span class="p">,</span><span class="n">yerr</span><span class="o">=</span><span class="n">r_S_err</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">g_p_e</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">-</span> <span class="n">r_S_err</span><span class="p">,</span> <span class="n">r_S</span> <span class="o">+</span> <span class="n">r_S_err</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">g_p_e</span><span class="p">,</span><span class="n">r_IC</span><span class="p">,</span><span class="n">yerr</span><span class="o">=</span><span class="n">r_IC_err</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;IC&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">g_p_e</span><span class="p">,</span> <span class="n">r_IC</span> <span class="o">-</span> <span class="n">r_IC_err</span><span class="p">,</span> <span class="n">r_IC</span> <span class="o">+</span> <span class="n">r_IC_err</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;spectral curvature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($\gamma_</span><span class="si">{3p}</span><span class="s1">$ e-)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;sync theor. b~r/5&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7fd6fec64490</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/SSC_th_bkg_48_1.png" src="../../../_images/SSC_th_bkg_48_1.png" />
+</div>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>derive the trend for the Compton dominance (CD) as a function of N a
+gamma0_log_parab</p>
+<p>hint: use the get_component_peak to extract the peak of the SED for each
+component</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, andrea tramacere.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
