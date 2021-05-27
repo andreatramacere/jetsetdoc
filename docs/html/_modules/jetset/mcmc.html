@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc7</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -80,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -252,7 +252,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -386,7 +386,7 @@
             <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">code documentation (API)</a></li>
 </ul>
@@ -759,10 +759,16 @@
         <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">get_model_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
         <span class="c1">#if density is True:</span>
         <span class="c1">#    y=y-x</span>
+        <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span>
+            <span class="n">ID_mcmc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">size</span><span class="p">))</span>
+            <span class="n">ID_mcmc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
 
         <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
 
-        <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">ID_rand</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samples</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">ID_rand</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ID_mcmc</span><span class="p">):</span>
 
             <span class="k">for</span> <span class="n">ID_par</span><span class="p">,</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">par_array</span><span class="p">):</span>
                 <span class="n">pi</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_par</span><span class="p">(</span><span class="n">ID_par</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="n">ID_rand</span><span class="p">])</span>
@@ -774,12 +780,13 @@
             <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">-</span><span class="n">x</span>
         <span class="n">y_min</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
         <span class="n">y_max</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_max</span><span class="p">,</span><span class="n">y_min</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;mcmc model range&#39;</span><span class="p">)</span>
+        <span class="n">msk</span> <span class="o">=</span> <span class="n">y_min</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">msk</span><span class="p">],</span><span class="n">y_max</span><span class="p">[</span><span class="n">msk</span><span class="p">],</span><span class="n">y_min</span><span class="p">[</span><span class="n">msk</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;mcmc model range&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_to_best_fit</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">fill_SED</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-        <span class="n">p</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">fit_range</span> <span class="o">=</span> <span class="n">fit_range</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">fit_range</span> <span class="o">=</span> <span class="n">fit_range</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span><span class="n">flim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">)</span>
         <span class="n">p</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sed_data</span><span class="p">,</span> <span class="n">fit_range</span> <span class="o">=</span>  <span class="n">fit_range</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 
 

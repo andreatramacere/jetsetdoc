@@ -58,7 +58,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc7</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -82,7 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -274,7 +274,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -408,7 +408,7 @@
             <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../model_advanced.html">model advanced features</a><ul class="current">
@@ -501,7 +501,7 @@ cosmology model to the <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140657529666912-374034" class="table-striped table-bordered table-condensed">
+<table id="table140506217147840-923437" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -538,14 +538,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140657529666912-374034').dataTable()");
+    console.log("$('#table140506217147840-923437').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140657529666912-374034').dataTable({
+    $('#table140506217147840-923437').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -555,30 +555,30 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 });
 </script><p>Since, both the Jet model the EBL share the same parameter, i.e. the
 redshift, we link the two parameters</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">link_par</span><span class="p">(</span><span class="n">par_name</span><span class="o">=</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="n">from_model</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">],</span><span class="n">to_model</span><span class="o">=</span><span class="s1">&#39;jet_flaring&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">link_par</span><span class="p">(</span><span class="n">par_name</span><span class="o">=</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span> <span class="n">from_model</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">to_model</span><span class="o">=</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">Franceschini_2008</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">jet_flaring</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">jet_flaring</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">Franceschini_2008</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span>
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140657529666720-615225" class="table-striped table-bordered table-condensed">
+<table id="table140506229390304-803823" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_flaring</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_flaring</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>z_cosm(L,Franceschini_2008)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_flaring</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>Franceschini_2008</td><td>z_cosm(L,jet_flaring)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>Franceschini_2008</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -602,14 +602,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140657529666720-615225').dataTable()");
+    console.log("$('#table140506229390304-803823').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140657529666720-615225').dataTable({
+    $('#table140506229390304-803823').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -638,11 +638,11 @@ name</p></li>
 object</p></li>
 </ol>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#a</span>
-<span class="n">composite_model</span><span class="o">.</span><span class="n">jet_flaring</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.1</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">Franceschini_2008</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">0.1</span>
 <span class="c1">#b</span>
-<span class="n">composite_model</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;jet_flaring&#39;</span><span class="p">,</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">,</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="c1">#c</span>
-<span class="n">composite_model</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="n">my_jet</span><span class="p">,</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">composite_model</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="n">ebl_franceschini</span><span class="p">,</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>And now, we can define the functional form of the model composition,
@@ -673,6 +673,13 @@ names reported in the model description table, and that’s it!</p>
 </pre></div>
 </div>
 <img alt="../../../_images/Composite_model_24_0.png" src="../../../_images/Composite_model_24_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;composite.pkl&#39;</span><span class="p">)</span>
+<span class="n">cm</span><span class="o">=</span><span class="n">FitModel</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;composite.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">jet_flaring</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">Franceschini_2008</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">
 <h2>Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)<a class="headerlink" href="#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive" title="Permalink to this headline">¶</a></h2>
@@ -708,35 +715,35 @@ component) and apply to both of them the EBL absorption.</p>
 <p>now we link the same parameter <code class="docutils literal notranslate"><span class="pre">z_cosm</span></code> from the <code class="docutils literal notranslate"><span class="pre">steady_jet</span></code> to the
 same <code class="docutils literal notranslate"><span class="pre">master</span></code> parameter used for the <code class="docutils literal notranslate"><span class="pre">EBL</span></code> model, i.e. to the
 <code class="docutils literal notranslate"><span class="pre">jet_flaring</span></code> model</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">link_par</span><span class="p">(</span><span class="n">par_name</span><span class="o">=</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="n">from_model</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;steady_jet&#39;</span><span class="p">],</span><span class="n">to_model</span><span class="o">=</span><span class="s1">&#39;jet_flaring&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">link_par</span><span class="p">(</span><span class="n">par_name</span><span class="o">=</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="n">from_model</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;steady_jet&#39;</span><span class="p">],</span><span class="n">to_model</span><span class="o">=</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">steady_jet</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">jet_flaring</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">steady_jet</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">Franceschini_2008</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span>
 </pre></div>
 </div>
 <i>Table length=22</i>
-<table id="table140657011807664-565188" class="table-striped table-bordered table-condensed">
+<table id="table140506304324944-548612" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_flaring</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_flaring</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>z_cosm(L,Franceschini_2008)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_flaring</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>Franceschini_2008</td><td>z_cosm(L,jet_flaring)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>Franceschini_2008</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>steady_jet</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>steady_jet</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>steady_jet</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>steady_jet</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>steady_jet</td><td>z_cosm(L,jet_flaring)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>steady_jet</td><td>z_cosm(L,Franceschini_2008)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>steady_jet</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>steady_jet</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
 <tr><td>steady_jet</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -765,14 +772,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140657011807664-565188').dataTable()");
+    console.log("$('#table140506304324944-548612').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140657011807664-565188').dataTable({
+    $('#table140506304324944-548612').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -791,8 +798,84 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Composite_model_34_0.png" src="../../../_images/Composite_model_34_0.png" />
+<img alt="../../../_images/Composite_model_35_0.png" src="../../../_images/Composite_model_35_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;composite.pkl&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span><span class="o">=</span><span class="n">FitModel</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;composite.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">jet_flaring</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">Franceschini_2008</span>
+<span class="o">==&gt;</span> <span class="n">par</span><span class="p">:</span> <span class="n">z_cosm</span> <span class="kn">from</span> <span class="nn">model</span><span class="p">:</span> <span class="n">steady_jet</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">same</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">model</span> <span class="n">Franceschini_2008</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span>
+</pre></div>
+</div>
+<i>Table length=22</i>
+<table id="table140506304310144-989407" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_flaring</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_flaring</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_flaring</td><td>z_cosm(L,Franceschini_2008)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>Franceschini_2008</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>steady_jet</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>steady_jet</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>steady_jet</td><td>z_cosm(L,Franceschini_2008)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140506304310144-989407').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140506304310144-989407').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script></div>
 </div>
 
 

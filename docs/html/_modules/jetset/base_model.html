@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc7</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -80,7 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -252,7 +252,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -386,7 +386,7 @@
             <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">code documentation (API)</a></li>
 </ul>
@@ -675,9 +675,10 @@
 
     <span class="k">def</span> <span class="nf">_fix_par_dep_on_load</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
         <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">par_array</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">_is_dependent</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="c1">#print(&quot;==&gt; 1&quot;, p.name, p._master_par_list, p._depending_par_expr,p.model.name)</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">_is_dependent</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">p</span><span class="o">.</span><span class="n">_linked</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_is_dependent</span> <span class="o">=</span> <span class="kc">False</span>
-                <span class="c1">#print(&quot;==&gt;&quot;, p.name, p._master_par_list, p._depending_par_expr)</span>
+                <span class="c1">#print(&quot;==&gt; 2&quot;, p.name, p._master_par_list, p._depending_par_expr)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">_master_par_list</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">_depending_par_expr</span><span class="p">)</span>
 
     <span class="c1">#def _set_pars_dep(self):</span>

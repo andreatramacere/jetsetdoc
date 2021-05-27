@@ -58,7 +58,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc7</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -82,7 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -288,7 +288,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -422,7 +422,7 @@
             <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
@@ -559,7 +559,7 @@
 ---&gt; first blind fit run,  fit range: [10.0, 21.0]
 ---&gt; class:  HSP</pre>
 <i>Table length=4</i>
-<table id="table140463838139968-739008" class="table-striped table-bordered table-condensed">
+<table id="table140409502171728-223028" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-1.545300e-01</td><td>-1.545300e-01</td><td>9.534795e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>-1.023245e-02</td><td>-1.023245e-02</td><td>1.433073e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -588,14 +588,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463838139968-739008').dataTable()");
+    console.log("$('#table140409502171728-223028').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463838139968-739008').dataTable({
+    $('#table140409502171728-223028').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -618,7 +618,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 ---&gt; fit range: [23.0, 29.0]
 ---&gt; LogCubic fit</pre>
 <i>Table length=4</i>
-<table id="table140463837559248-286307" class="table-striped table-bordered table-condensed">
+<table id="table140409503090432-868182" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-2.098186e-01</td><td>-2.098186e-01</td><td>3.133032e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>-4.661868e-02</td><td>-4.661868e-02</td><td>2.178352e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -647,14 +647,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463837559248-286307').dataTable()");
+    console.log("$('#table140409503090432-868182').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463837559248-286307').dataTable({
+    $('#table140409503090432-868182').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -691,7 +691,7 @@ ore least-square bound, as shown below</p>
 
 <strong>*  constrains parameters from observable *</strong></pre>
 <i>Table length=11</i>
-<table id="table140463847371104-821688" class="table-striped table-bordered table-condensed">
+<table id="table140409521812720-389344" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.112712e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -727,14 +727,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463847371104-821688').dataTable()");
+    console.log("$('#table140409521812720-389344').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463847371104-821688').dataTable({
+    $('#table140409521812720-389344').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -755,7 +755,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 <div class="section" id="model-fitting-procedure">
 <h2>Model fitting procedure<a class="headerlink" href="#model-fitting-procedure" title="Permalink to this headline">¶</a></h2>
-<p>We remind that we can use different <code class="docutils literal notranslate"><span class="pre">minimizers</span></code> for the model fitting. In the following we will use the <code class="docutils literal notranslate"><span class="pre">minuit</span></code> minimizer and the <code class="docutils literal notranslate"><span class="pre">lsb</span></code> (least square bound scipy minimizer). Using <code class="docutils literal notranslate"><span class="pre">minuit</span></code> we notice that sometimes the fit will converge, but the quality  will not be enough (<code class="docutils literal notranslate"><span class="pre">valid==false</span></code>) to run <code class="docutils literal notranslate"><span class="pre">minos</span></code>. Anyhow, as shown in the <a class="reference internal" href="#mcmc-sampling"><span class="std std-ref">MCMC sampling</span></a>, it still possible to estimate asymmetric errors by means of MCMC sampling</p>
+<p>We remind that we can use different <code class="docutils literal notranslate"><span class="pre">minimizers</span></code> for the model fitting. In the following we will use the <code class="docutils literal notranslate"><span class="pre">minuit</span></code> minimizer and the <code class="docutils literal notranslate"><span class="pre">lsb</span></code> (least square bound scipy minimizer). Using <code class="docutils literal notranslate"><span class="pre">minuit</span></code> we notice that sometimes the fit will converge, but the quality  will not be enough (<code class="docutils literal notranslate"><span class="pre">valid==false</span></code>) to run <code class="docutils literal notranslate"><span class="pre">minos</span></code>. Anyhow, as shown in the <a class="reference internal" href="../model_fit_4/Jet_example_only_synchrotron.html#mcmc-sampling"><span class="std std-ref">MCMC sampling</span></a>, it still possible to estimate asymmetric errors by means of MCMC sampling</p>
 <p>We freeze some parameters, and we also set some <cite>fit_range</cite> values. Setting fit_range can speed-up the fit convergence but should be judged by the user each time according to the physics of the particular source.</p>
 <p>When using <code class="docutils literal notranslate"><span class="pre">minuit</span></code> the best strategy is to set the <cite>fit_range</cite> for most of the free parameters</p>
 <p>A good strategy is to run first a <cite>lsb</cite> fit and then, using the same <cite>fit_model</cite>, run a fit with <cite>minuit</cite></p>
@@ -775,7 +775,7 @@ allows you to save time) ad pass it to the <code class="docutils literal notrans
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140463861299856-160563" class="table-striped table-bordered table-condensed">
+<table id="table140409537851456-457236" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -811,14 +811,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463861299856-160563').dataTable()");
+    console.log("$('#table140409537851456-457236').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463861299856-160563').dataTable({
+    $('#table140409537851456-457236').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -935,7 +935,7 @@ fit run: 0</pre>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140463857699280-635507" class="table-striped table-bordered table-condensed">
+<table id="table140409538288368-894001" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.778915e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>9.191687e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -971,14 +971,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463857699280-635507').dataTable()");
+    console.log("$('#table140409538288368-894001').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463857699280-635507').dataTable({
+    $('#table140409538288368-894001').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1001,7 +1001,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140463860687008-260658" class="table-striped table-bordered table-condensed">
+<table id="table140409537745392-349898" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>4.778915e+02</td><td>4.778915e+02</td><td>2.699848e+02</td><td>--</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>9.191687e+05</td><td>9.191687e+05</td><td>1.495007e+05</td><td>--</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td></tr>
@@ -1037,14 +1037,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463860687008-260658').dataTable()");
+    console.log("$('#table140409537745392-349898').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463860687008-260658').dataTable({
+    $('#table140409537745392-349898').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1062,7 +1062,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140463857410304" class="table-striped table-bordered table-condensed">
+<table id="table140409537482224" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <thead><tr><th>str12</th><th>str16</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>4.778915e+02</td><td>4.778915e+02</td><td>2.699848e+02</td><td>--</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
@@ -1111,7 +1111,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140463837250512-118847" class="table-striped table-bordered table-condensed">
+<table id="table140409462792736-86692" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1147,14 +1147,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463837250512-118847').dataTable()");
+    console.log("$('#table140409462792736-86692').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463837250512-118847').dataTable({
+    $('#table140409462792736-86692').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1218,7 +1218,7 @@ fit run: 0</pre>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140463795159632-199965" class="table-striped table-bordered table-condensed">
+<table id="table140409463832336-863389" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.688283e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>9.028968e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1254,14 +1254,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463795159632-199965').dataTable()");
+    console.log("$('#table140409463832336-863389').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463795159632-199965').dataTable({
+    $('#table140409463832336-863389').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1538,7 +1538,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140463791585408-125216" class="table-striped table-bordered table-condensed">
+<table id="table140409460461968-261152" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>4.688283e+02</td><td>4.688283e+02</td><td>2.858882e+02</td><td>--</td><td>4.697542e+02</td><td>1.000000e+01</td><td>1.000000e+03</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>9.028968e+05</td><td>9.028968e+05</td><td>1.970066e+06</td><td>--</td><td>1.373160e+06</td><td>5.000000e+05</td><td>1.000000e+07</td><td>False</td></tr>
@@ -1574,14 +1574,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140463791585408-125216').dataTable()");
+    console.log("$('#table140409460461968-261152').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140463791585408-125216').dataTable({
+    $('#table140409460461968-261152').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1594,13 +1594,22 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="o">================================================================================</span>
 </pre></div>
 </div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">fit_model_minuit</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">p2</span><span class="o">=</span><span class="n">fit_model_minuit</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">p2</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">13</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">28.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Jet_example_model_fit_55_0.png" src="../../../_images/Jet_example_model_fit_55_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_fit_minuit</span><span class="o">.</span><span class="n">save_report</span><span class="p">(</span><span class="s1">&#39;SSC-best-fit-minuit.pkl&#39;</span><span class="p">)</span>
 <span class="n">model_minimizer_minuit</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;model_minimizer_minuit.pkl&#39;</span><span class="p">)</span>
 <span class="n">fit_model_minuit</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;fit_model_minuit.pkl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>for further information regardin minuit please refer to
-<a class="reference external" href="https://iminuit.readthedocs.io">https://iminuit.readthedocs.io</a></p>
+<p>You can obtain profile and contours, but this is typically time
+consuming. In any case, better results can be achieved using the MCMC
+approach (discussed in next section) For further information regardin
+minuit please refer to <a class="reference external" href="https://iminuit.readthedocs.io">https://iminuit.readthedocs.io</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#migrad profile</span>
 
 <span class="c1">#access the data</span>
@@ -1619,7 +1628,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <p>you can use also minos contour and profile, in this case the
-computational time is longer:</p>
+computational time is even longer:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">profile_migrad</span><span class="o">=</span><span class="n">model_minimizer_minuit</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">mnprofile</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
 <span class="n">profile_plot_migrad</span><span class="o">=</span><span class="n">model_minimizer_minuit</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">draw_mnprofile</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
 
@@ -1627,29 +1636,6 @@ computational time is longer:</p>
 <span class="n">contour_plot_migrad</span><span class="o">=</span><span class="n">model_minimizer_minuit</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">draw_mncontour</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="n">fit_model_minuit</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">p2</span><span class="o">=</span><span class="n">fit_model_minuit</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
-<span class="n">p2</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">13</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">28.5</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_model_fit_61_0.png" src="../../../_images/Jet_example_model_fit_61_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span>
-<span class="n">fit_model_minuit</span><span class="o">.</span><span class="n">set_nu_grid</span><span class="p">(</span><span class="mf">1E6</span><span class="p">,</span><span class="mf">1E30</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">set_nu_grid</span><span class="p">(</span><span class="mf">1E6</span><span class="p">,</span><span class="mf">1E30</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">fit_model_minuit</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">p2</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">()</span>
-<span class="n">p2</span><span class="o">.</span><span class="n">add_data_plot</span><span class="p">(</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span> <span class="mf">11.</span><span class="p">,</span><span class="mf">29.</span><span class="p">])</span>
-<span class="n">p2</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="n">fit_model_minuit</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">p2</span><span class="o">.</span><span class="n">add_residual_plot</span><span class="p">(</span><span class="n">fit_model_minuit</span><span class="p">,</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span> <span class="mf">11.</span><span class="p">,</span><span class="mf">29.</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">p2</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="n">fit_model_lsb</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">p2</span><span class="o">.</span><span class="n">add_residual_plot</span><span class="p">(</span><span class="n">fit_model_lsb</span><span class="p">,</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span> <span class="mf">11.</span><span class="p">,</span><span class="mf">29.</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">p2</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">13</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">28.5</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_model_fit_62_0.png" src="../../../_images/Jet_example_model_fit_62_0.png" />
 </div>
 <div class="section" id="mcmc-sampling">
 <h2>MCMC sampling<a class="headerlink" href="#mcmc-sampling" title="Permalink to this headline">¶</a></h2>
@@ -1702,44 +1688,44 @@ the full set of free parameters will be used</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0%|          | 0/50 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span> <span class="n">run</span> <span class="n">done</span><span class="p">,</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">threads</span> <span class="n">took</span> <span class="mf">261.29</span> <span class="n">seconds</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span> <span class="n">run</span> <span class="n">done</span><span class="p">,</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">threads</span> <span class="n">took</span> <span class="mf">440.64</span> <span class="n">seconds</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mcmc</span><span class="o">.</span><span class="n">acceptance_fraction</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.5634375</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.5682812500000001</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">11.</span><span class="p">,</span><span class="mf">27.4</span><span class="p">],</span><span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">11.</span><span class="p">,</span><span class="mf">27.4</span><span class="p">],</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">13</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">28.5</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_68_0.png" src="../../../_images/Jet_example_model_fit_68_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_67_0.png" src="../../../_images/Jet_example_model_fit_67_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">plot_chain</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="n">log_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_69_0.png" src="../../../_images/Jet_example_model_fit_69_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_68_0.png" src="../../../_images/Jet_example_model_fit_68_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">corner_plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_70_0.png" src="../../../_images/Jet_example_model_fit_70_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_69_0.png" src="../../../_images/Jet_example_model_fit_69_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span><span class="o">.</span><span class="n">get_par</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">array</span><span class="p">([</span><span class="mf">0.86246008</span><span class="p">,</span> <span class="mf">0.87506864</span><span class="p">,</span> <span class="mf">0.84815237</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">0.76724456</span><span class="p">,</span> <span class="mf">0.7106772</span> <span class="p">,</span>
-        <span class="mf">0.82823656</span><span class="p">]),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7859291</span> <span class="p">,</span> <span class="mf">0.79163223</span><span class="p">,</span> <span class="mf">0.79426161</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">0.71884984</span><span class="p">,</span> <span class="mf">0.91441707</span><span class="p">,</span>
+        <span class="mf">0.64133518</span><span class="p">]),</span>
  <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">plot_par</span><span class="p">(</span><span class="s1">&#39;beam_obj&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_72_0.png" src="../../../_images/Jet_example_model_fit_72_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_71_0.png" src="../../../_images/Jet_example_model_fit_71_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">plot_par</span><span class="p">(</span><span class="s1">&#39;gamma0_log_parab&#39;</span><span class="p">,</span><span class="n">log_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_73_0.png" src="../../../_images/Jet_example_model_fit_73_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_72_0.png" src="../../../_images/Jet_example_model_fit_72_0.png" />
 </div>
 <div class="section" id="save-and-reuse-mcmc">
 <h2>Save and reuse MCMC<a class="headerlink" href="#save-and-reuse-mcmc" title="Permalink to this headline">¶</a></h2>
@@ -1762,27 +1748,27 @@ the full set of free parameters will be used</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;SSC-best-fit-minuit&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">ms</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">11.</span><span class="p">,</span> <span class="mf">27.4</span><span class="p">],</span><span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">ms</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">11.</span><span class="p">,</span> <span class="mf">27.4</span><span class="p">],</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">13</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">28.5</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_78_0.png" src="../../../_images/Jet_example_model_fit_78_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_77_0.png" src="../../../_images/Jet_example_model_fit_77_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">ms</span><span class="o">.</span><span class="n">plot_par</span><span class="p">(</span><span class="s1">&#39;beam_obj&#39;</span><span class="p">,</span><span class="n">log_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_79_0.png" src="../../../_images/Jet_example_model_fit_79_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_78_0.png" src="../../../_images/Jet_example_model_fit_78_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">ms</span><span class="o">.</span><span class="n">plot_par</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="n">log_plot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_80_0.png" src="../../../_images/Jet_example_model_fit_80_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_79_0.png" src="../../../_images/Jet_example_model_fit_79_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">ms</span><span class="o">.</span><span class="n">plot_chain</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="n">log_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_81_0.png" src="../../../_images/Jet_example_model_fit_81_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_80_0.png" src="../../../_images/Jet_example_model_fit_80_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">ms</span><span class="o">.</span><span class="n">corner_plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_model_fit_82_0.png" src="../../../_images/Jet_example_model_fit_82_0.png" />
+<img alt="../../../_images/Jet_example_model_fit_81_0.png" src="../../../_images/Jet_example_model_fit_81_0.png" />
 </div>
 </div>
 

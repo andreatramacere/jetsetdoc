@@ -58,7 +58,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc7</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -82,7 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -273,7 +273,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
@@ -407,7 +407,7 @@
             <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../model_advanced.html">model advanced features</a><ul class="current">
@@ -462,7 +462,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span><span class="n">rc4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span><span class="n">rc6</span>
 </pre></div>
 </div>
 <p>EBL models are implemented using a 2D interpolation where the x and y axes represent the redshift and the frequency, and the z axes represents the value of <span class="math notranslate nohighlight">\(e^{-\tau}\)</span></p>
@@ -557,8 +557,6 @@
 <span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;jet_leptonic&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<pre class="literal-block">/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/minimizer.py:24: TqdmExperimentalWarning: Using <cite>tqdm.autonotebook.tqdm</cite> in notebook mode. Use <cite>tqdm.tqdm</cite> instead to force console mode (e.g. in jupyter console)
-  from tqdm.autonotebook import tqdm</pre>
 <p>As second step, we define the EBL model, and we use in this case the <cite>Franceschini_2008</cite> model</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.template_2Dmodel</span> <span class="kn">import</span> <span class="n">EBLAbsorptionTemplate</span>
 <span class="n">ebl_franceschini</span><span class="o">=</span><span class="n">EBLAbsorptionTemplate</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">)</span>
@@ -578,7 +576,7 @@
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140686192205008-110577" class="table-striped table-bordered table-condensed">
+<table id="table140222438775968-441872" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -615,14 +613,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140686192205008-110577').dataTable()");
+    console.log("$('#table140222438775968-441872').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140686192205008-110577').dataTable({
+    $('#table140222438775968-441872').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -646,7 +644,7 @@ redshift, we link the two parameters</p>
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140686139055600-756682" class="table-striped table-bordered table-condensed">
+<table id="table140222416365696-266604" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -683,14 +681,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140686139055600-756682').dataTable()");
+    console.log("$('#table140222416365696-266604').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140686139055600-756682').dataTable({
+    $('#table140222416365696-266604').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -744,7 +742,7 @@ and that’s it!</p>
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140686192204000-282465" class="table-striped table-bordered table-condensed">
+<table id="table140222416365696-998612" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -781,14 +779,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140686192204000-282465').dataTable()");
+    console.log("$('#table140222416365696-998612').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140686192204000-282465').dataTable({
+    $('#table140222416365696-998612').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -843,13 +841,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
-<pre class="literal-block">/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/minimizer.py:24: TqdmExperimentalWarning: Using <cite>tqdm.autonotebook.tqdm</cite> in notebook mode. Use <cite>tqdm.tqdm</cite> instead to force console mode (e.g. in jupyter console)
-  from tqdm.autonotebook import tqdm</pre>
 <pre class="literal-block">================================================================================
 
 <strong>* evaluating spectral indices for data *</strong>
 ================================================================================</pre>
-<img alt="../../../_images/EBL_42_2.png" src="../../../_images/EBL_42_2.png" />
+<img alt="../../../_images/EBL_42_1.png" src="../../../_images/EBL_42_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="p">,</span><span class="n">best_fit</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">sync_fit</span><span class="p">(</span><span class="n">check_host_gal_template</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                   <span class="n">Ep_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                   <span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span>
@@ -865,7 +861,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 ---&gt; class:  HSP</pre>
 <i>Table length=6</i>
-<table id="table140200984706016-835098" class="table-striped table-bordered table-condensed">
+<table id="table140222424046896-184794" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-6.411144e-02</td><td>-6.411144e-02</td><td>7.838965e-03</td><td>--</td><td>-4.778764e-02</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>-1.751721e-03</td><td>-1.751721e-03</td><td>1.127030e-03</td><td>--</td><td>3.576201e-03</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -896,14 +892,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140200984706016-835098').dataTable()");
+    console.log("$('#table140222424046896-184794').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140200984706016-835098').dataTable({
+    $('#table140222424046896-184794').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -929,8 +925,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 Fit report
 
 Model: IC-shape-fit</pre>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">minimizer</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">847</span><span class="p">:</span> <span class="n">IMinuitWarning</span><span class="p">:</span> <span class="n">errordef</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">,</span> <span class="n">using</span> <span class="mi">1</span> <span class="p">(</span><span class="n">appropriate</span> <span class="k">for</span> <span class="n">least</span><span class="o">-</span><span class="n">squares</span><span class="p">)</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">mesg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">migrad</span><span class="p">(</span><span class="n">ncall</span><span class="o">=</span><span class="n">max_ev</span><span class="p">)</span>
+</pre></div>
+</div>
 <i>Table length=4</i>
-<table id="table140200988152784-448657" class="table-striped table-bordered table-condensed">
+<table id="table140222888986848-341758" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>curvature</td><td></td><td>-1.565399e-01</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>third-degree</td><td></td><td>-4.351917e-02</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
@@ -959,14 +959,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140200988152784-448657').dataTable()");
+    console.log("$('#table140222888986848-341758').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140200988152784-448657').dataTable({
+    $('#table140222888986848-341758').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -975,18 +975,18 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     });
 });
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">converged</span><span class="o">=</span><span class="kc">True</span>
-<span class="n">calls</span><span class="o">=</span><span class="mi">54</span>
+<span class="n">calls</span><span class="o">=</span><span class="mi">50</span>
 <span class="n">mesg</span><span class="o">=</span>
 </pre></div>
 </div>
 <table>
     <tr>
         <td colspan="2" style="text-align:left" title="Minimum value of function"> FCN = 2.632 </td>
-        <td colspan="3" style="text-align:center" title="No. of calls in last algorithm and total number of calls"> Ncalls = 54 (54 total) </td>
+        <td colspan="3" style="text-align:center" title="No. of function evaluations in last call and total number"> Nfcn = 50 </td>
     </tr>
     <tr>
         <td colspan="2" style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 1.7e-06 (Goal: 0.0002) </td>
-        <td colspan="3" style="text-align:center" title="Increase in FCN which corresponds to 1 standard deviation"> up = 1.0 </td>
+        <td colspan="3" style="text-align:center" title="No. of gradient evaluations in last call and total number">  </td>
     </tr>
     <tr>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
@@ -998,8 +998,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         <td colspan="3" style="text-align:center;background-color:#92CCA6;color:black"> Below call limit </td>
     </tr>
     <tr>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Covariance </td>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Hesse ok </td>
-        <td style="text-align:center;background-color:#92CCA6;color:black"> Has Covariance </td>
         <td style="text-align:center;background-color:#92CCA6;color:black" title="Is covariance matrix accurate?"> Accurate </td>
         <td style="text-align:center;background-color:#92CCA6;color:black" title="Is covariance matrix positive definite?"> Pos. def. </td>
         <td style="text-align:center;background-color:#92CCA6;color:black" title="Was positive definiteness enforced by Minuit?"> Not forced </td>
@@ -1060,6 +1060,42 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         <td> 0 </td>
         <td>  </td>
     </tr>
+</table><table>
+    <tr>
+        <td></td>
+        <th> par_0 </th>
+        <th> par_1 </th>
+        <th> par_2 </th>
+        <th> par_3 </th>
+    </tr>
+    <tr>
+        <th> par_0 </th>
+        <td> 0.000651 </td>
+        <td style="background-color:rgb(250,155,155);color:black"> 0.00033 <strong>(0.636)</strong> </td>
+        <td style="background-color:rgb(169,169,250);color:black"> -0.00289 <strong>(-0.622)</strong> </td>
+        <td style="background-color:rgb(240,240,250);color:black"> -9.45e-05 <strong>(-0.073)</strong> </td>
+    </tr>
+    <tr>
+        <th> par_1 </th>
+        <td style="background-color:rgb(250,155,155);color:black"> 0.00033 <strong>(0.636)</strong> </td>
+        <td> 0.000413 </td>
+        <td style="background-color:rgb(128,128,250);color:black"> -0.00348 <strong>(-0.942)</strong> </td>
+        <td style="background-color:rgb(250,165,165);color:black"> 0.000582 <strong>(0.567)</strong> </td>
+    </tr>
+    <tr>
+        <th> par_2 </th>
+        <td style="background-color:rgb(169,169,250);color:black"> -0.00289 <strong>(-0.622)</strong> </td>
+        <td style="background-color:rgb(128,128,250);color:black"> -0.00348 <strong>(-0.942)</strong> </td>
+        <td> 0.033 </td>
+        <td style="background-color:rgb(163,163,250);color:black"> -0.00612 <strong>(-0.667)</strong> </td>
+    </tr>
+    <tr>
+        <th> par_3 </th>
+        <td style="background-color:rgb(240,240,250);color:black"> -9.45e-05 <strong>(-0.073)</strong> </td>
+        <td style="background-color:rgb(250,165,165);color:black"> 0.000582 <strong>(0.567)</strong> </td>
+        <td style="background-color:rgb(163,163,250);color:black"> -0.00612 <strong>(-0.667)</strong> </td>
+        <td> 0.00255 </td>
+    </tr>
 </table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dof</span><span class="o">=</span><span class="mi">7</span>
 <span class="n">chisq</span><span class="o">=</span><span class="mf">2.631978</span><span class="p">,</span> <span class="n">chisq</span><span class="o">/</span><span class="n">red</span><span class="o">=</span><span class="mf">0.375997</span> <span class="n">null</span> <span class="n">hypothesis</span> <span class="n">sig</span><span class="o">=</span><span class="mf">0.916836</span>
 
@@ -1072,12 +1108,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=4</i>
-<table id="table140200988548832-298941" class="table-striped table-bordered table-condensed">
+<table id="table140222424976544-759539" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-1.565399e-01</td><td>-1.565399e-01</td><td>2.551779e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
-<tr><td>LogCubic</td><td>c</td><td>-4.351917e-02</td><td>-4.351917e-02</td><td>2.032065e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
-<tr><td>LogCubic</td><td>Ep</td><td>2.529709e+01</td><td>2.529709e+01</td><td>1.817240e-01</td><td>--</td><td>2.536916e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
-<tr><td>LogCubic</td><td>Sp</td><td>-1.058825e+01</td><td>-1.058825e+01</td><td>5.046949e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>c</td><td>-4.351917e-02</td><td>-4.351917e-02</td><td>2.032066e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Ep</td><td>2.529709e+01</td><td>2.529709e+01</td><td>1.817241e-01</td><td>--</td><td>2.536916e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Sp</td><td>-1.058825e+01</td><td>-1.058825e+01</td><td>5.046950e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -1101,14 +1137,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140200988548832-298941').dataTable()");
+    console.log("$('#table140222424976544-759539').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140200988548832-298941').dataTable({
+    $('#table140222424976544-759539').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1120,12 +1156,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=4</i>
-<table id="table140200988548928-226516" class="table-striped table-bordered table-condensed">
+<table id="table140222425040544-164517" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-1.565399e-01</td><td>-1.565399e-01</td><td>2.551779e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
-<tr><td>LogCubic</td><td>c</td><td>-4.351917e-02</td><td>-4.351917e-02</td><td>2.032065e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
-<tr><td>LogCubic</td><td>Ep</td><td>2.529709e+01</td><td>2.529709e+01</td><td>1.817240e-01</td><td>--</td><td>2.536916e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
-<tr><td>LogCubic</td><td>Sp</td><td>-1.058825e+01</td><td>-1.058825e+01</td><td>5.046949e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>c</td><td>-4.351917e-02</td><td>-4.351917e-02</td><td>2.032066e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Ep</td><td>2.529709e+01</td><td>2.529709e+01</td><td>1.817241e-01</td><td>--</td><td>2.536916e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Sp</td><td>-1.058825e+01</td><td>-1.058825e+01</td><td>5.046950e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -1149,14 +1185,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140200988548928-226516').dataTable()");
+    console.log("$('#table140222425040544-164517').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140200988548928-226516').dataTable({
+    $('#table140222425040544-164517').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1164,11 +1200,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         columnDefs: [{targets: [2, 3, 4, 5, 6, 7, 8], type: "optionalnum"}]
     });
 });
-</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span> <span class="n">IC</span>         <span class="n">nu_p</span><span class="o">=+</span><span class="mf">2.529709e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">1.817240e-01</span><span class="p">)</span>  <span class="n">nuFnu_p</span><span class="o">=-</span><span class="mf">1.058825e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">5.046949e-02</span><span class="p">)</span> <span class="n">curv</span><span class="o">.=-</span><span class="mf">1.565399e-01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">2.551779e-02</span><span class="p">)</span>
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span> <span class="n">IC</span>         <span class="n">nu_p</span><span class="o">=+</span><span class="mf">2.529709e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">1.817241e-01</span><span class="p">)</span>  <span class="n">nuFnu_p</span><span class="o">=-</span><span class="mf">1.058825e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">5.046950e-02</span><span class="p">)</span> <span class="n">curv</span><span class="o">.=-</span><span class="mf">1.565399e-01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">2.551779e-02</span><span class="p">)</span>
 <span class="o">================================================================================</span>
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_44_9.png" src="../../../_images/EBL_44_9.png" />
+<img alt="../../../_images/EBL_44_10.png" src="../../../_images/EBL_44_10.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.obs_constrain</span> <span class="kn">import</span> <span class="n">ObsConstrain</span>
 <span class="kn">from</span> <span class="nn">jetset.model_manager</span> <span class="kn">import</span>  <span class="n">FitModel</span>
 <span class="n">sed_obspar</span><span class="o">=</span><span class="n">ObsConstrain</span><span class="p">(</span><span class="n">beaming</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
@@ -1191,7 +1227,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140200988165888-221444" class="table-striped table-bordered table-condensed">
+<table id="table140222418459328-942250" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.057083e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1227,14 +1263,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140200988165888-221444').dataTable()");
+    console.log("$('#table140222418459328-942250').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140200988165888-221444').dataTable({
+    $('#table140222418459328-942250').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1255,7 +1291,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
   <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;no cosmology defined, using default </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f83173ac430</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f8813d10820</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../_images/EBL_46_2.png" src="../../../_images/EBL_46_2.png" />
@@ -1297,7 +1333,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=2</i>
-<table id="table140200988039392-908002" class="table-striped table-bordered table-condensed">
+<table id="table140222424947392-169954" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>nuFnu-scale</td><td>erg / (cm2 s)</td><td>-1.006557e+01</td><td>-2.000000e+01</td><td>2.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>host_galaxy</td><td>nu_scale</td><td>nu-scale</td><td>Hz</td><td>1.730764e-02</td><td>-2.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
@@ -1324,14 +1360,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140200988039392-908002').dataTable()");
+    console.log("$('#table140222424947392-169954').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140200988039392-908002').dataTable({
+    $('#table140222424947392-169954').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1370,13 +1406,13 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
-<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-30</span>
 
 <span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140201010673456-5000" class="table-striped table-bordered table-condensed">
+<table id="table140222929629248-490921" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.057083e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1412,14 +1448,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140201010673456-5000').dataTable()");
+    console.log("$('#table140222929629248-490921').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140201010673456-5000').dataTable({
+    $('#table140222929629248-490921').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1439,7 +1475,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=1</i>
-<table id="table140201010710416-237250" class="table-striped table-bordered table-condensed">
+<table id="table140222885951568-84850" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>Franceschini_2008</td><td>z_cosm(L,jet_leptonic)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
@@ -1465,14 +1501,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140201010710416-237250').dataTable()");
+    console.log("$('#table140222885951568-84850').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140201010710416-237250').dataTable({
+    $('#table140222885951568-84850').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1488,7 +1524,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">composite_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f83174427f0</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f8813a04fd0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../_images/EBL_50_1.png" src="../../../_images/EBL_50_1.png" />
@@ -1524,23 +1560,26 @@ fit run: 0</pre>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.85630e+00</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.65708e+00</span>
+
 <span class="n">fit</span> <span class="n">run</span><span class="p">:</span> <span class="mi">1</span>
-<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.85630e+00</span>
+<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.65708e+00</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.81166e+00</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.65708e+00</span>
+
 <span class="n">fit</span> <span class="n">run</span><span class="p">:</span> <span class="mi">2</span>
-<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.81166e+00</span>
+<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.65708e+00</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.81166e+00</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">8.65708e+00</span>
+
 <span class="o">-------------------------------------------------------------------------</span>
 <span class="n">Fit</span> <span class="n">report</span>
 
@@ -1548,21 +1587,21 @@ fit run: 0</pre>
 </pre></div>
 </div>
 <i>Table length=14</i>
-<table id="table140201010673888-458169" class="table-striped table-bordered table-condensed">
+<table id="table140222416534592-666796" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-<tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>nuFnu-scale</td><td>erg / (cm2 s)</td><td>-1.005417e+01</td><td>-2.000000e+01</td><td>2.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>nuFnu-scale</td><td>erg / (cm2 s)</td><td>-1.005318e+01</td><td>-2.000000e+01</td><td>2.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>host_galaxy</td><td>nu_scale</td><td>nu-scale</td><td>Hz</td><td>1.730764e-02</td><td>-2.000000e+00</td><td>2.000000e+00</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.372003e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.331857e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.352654e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>3.895807e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.430901e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>3.825207e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>3.000000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>1.103238e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>2.116548e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>2.499808e+01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>8.604887e+03</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.220391e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>2.399041e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>9.433759e+01</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>2.114571e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>3.099671e+01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>8.655846e+03</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.213503e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>2.448936e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>Franceschini_2008</td><td>z_cosm(L,jet_leptonic)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
@@ -1587,14 +1626,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140201010673888-458169').dataTable()");
+    console.log("$('#table140222416534592-666796').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140201010673888-458169').dataTable({
+    $('#table140222416534592-666796').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1603,7 +1642,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     });
 });
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">converged</span><span class="o">=</span><span class="kc">True</span>
-<span class="n">calls</span><span class="o">=</span><span class="mi">22</span>
+<span class="n">calls</span><span class="o">=</span><span class="mi">21</span>
 <span class="n">mesg</span><span class="o">=</span>
 </pre></div>
 </div>
@@ -1611,27 +1650,27 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dof</span><span class="o">=</span><span class="mi">21</span>
-<span class="n">chisq</span><span class="o">=</span><span class="mf">8.811664</span><span class="p">,</span> <span class="n">chisq</span><span class="o">/</span><span class="n">red</span><span class="o">=</span><span class="mf">0.419603</span> <span class="n">null</span> <span class="n">hypothesis</span> <span class="n">sig</span><span class="o">=</span><span class="mf">0.990620</span>
+<span class="n">chisq</span><span class="o">=</span><span class="mf">8.657084</span><span class="p">,</span> <span class="n">chisq</span><span class="o">/</span><span class="n">red</span><span class="o">=</span><span class="mf">0.412242</span> <span class="n">null</span> <span class="n">hypothesis</span> <span class="n">sig</span><span class="o">=</span><span class="mf">0.991665</span>
 
 <span class="n">best</span> <span class="n">fit</span> <span class="n">pars</span>
 </pre></div>
 </div>
 <i>Table length=14</i>
-<table id="table140201010673456-911082" class="table-striped table-bordered table-condensed">
+<table id="table140222944016416-82656" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
-<tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>-1.005417e+01</td><td>-1.005417e+01</td><td>3.349605e-02</td><td>--</td><td>-1.006557e+01</td><td>-1.225412e+01</td><td>-8.254123e+00</td><td>False</td></tr>
+<tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>-1.005318e+01</td><td>-1.005318e+01</td><td>3.308679e-02</td><td>--</td><td>-1.006557e+01</td><td>-1.225412e+01</td><td>-8.254123e+00</td><td>False</td></tr>
 <tr><td>host_galaxy</td><td>nu_scale</td><td>1.730764e-02</td><td>--</td><td>--</td><td>--</td><td>1.730764e-02</td><td>-5.000000e-01</td><td>5.000000e-01</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>R</td><td>1.372003e+16</td><td>1.372003e+16</td><td>1.344655e+16</td><td>--</td><td>1.057083e+16</td><td>3.162278e+15</td><td>3.162278e+17</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>1.331857e+16</td><td>1.331857e+16</td><td>1.137047e+16</td><td>--</td><td>1.057083e+16</td><td>3.162278e+15</td><td>3.162278e+17</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>1.000000e+17</td><td>--</td><td>--</td><td>--</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>B</td><td>1.352654e-02</td><td>1.352654e-02</td><td>5.856726e-03</td><td>--</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>beam_obj</td><td>3.895807e+01</td><td>3.895807e+01</td><td>1.344487e+01</td><td>--</td><td>2.500000e+01</td><td>5.000000e+00</td><td>5.000000e+01</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>1.430901e-02</td><td>1.430901e-02</td><td>5.822142e-03</td><td>--</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>3.825207e+01</td><td>3.825207e+01</td><td>1.194162e+01</td><td>--</td><td>2.500000e+01</td><td>5.000000e+00</td><td>5.000000e+01</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>z_cosm(M)</td><td>3.000000e-02</td><td>--</td><td>--</td><td>--</td><td>3.000000e-02</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>gmin</td><td>1.103238e+02</td><td>1.103238e+02</td><td>9.398029e+01</td><td>--</td><td>1.487509e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gmax</td><td>2.116548e+06</td><td>2.116548e+06</td><td>7.457191e+05</td><td>--</td><td>2.310708e+06</td><td>1.000000e+04</td><td>1.000000e+08</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>N</td><td>2.499808e+01</td><td>2.499808e+01</td><td>4.266465e+00</td><td>--</td><td>2.989983e+01</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>8.604887e+03</td><td>8.604887e+03</td><td>1.393575e+04</td><td>--</td><td>1.045843e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>s</td><td>2.220391e+00</td><td>2.220391e+00</td><td>2.219036e-01</td><td>--</td><td>2.248787e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>r</td><td>2.399041e-01</td><td>2.399041e-01</td><td>4.778163e-02</td><td>--</td><td>3.205572e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>9.433759e+01</td><td>9.433759e+01</td><td>8.623754e+01</td><td>--</td><td>1.487509e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>2.114571e+06</td><td>2.114571e+06</td><td>6.522991e+05</td><td>--</td><td>2.310708e+06</td><td>1.000000e+04</td><td>1.000000e+08</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>3.099671e+01</td><td>3.099671e+01</td><td>2.839969e+01</td><td>--</td><td>2.989983e+01</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>8.655846e+03</td><td>8.655846e+03</td><td>1.251062e+04</td><td>--</td><td>1.045843e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>2.213503e+00</td><td>2.213503e+00</td><td>2.137809e-01</td><td>--</td><td>2.248787e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>2.448936e-01</td><td>2.448936e-01</td><td>4.613658e-02</td><td>--</td><td>3.205572e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td></tr>
 <tr><td>Franceschini_2008</td><td>z_cosm(L,jet_leptonic)</td><td>3.000000e-02</td><td>--</td><td>--</td><td>--</td><td>--</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
@@ -1656,14 +1695,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140201010673456-911082').dataTable()");
+    console.log("$('#table140222944016416-82656').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140201010673456-911082').dataTable({
+    $('#table140222944016416-82656').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
