@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -542,7 +542,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">nu_ptr</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">blob_object</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_nu_name</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="o">=</span><span class="n">spectral_shapes</span><span class="o">.</span><span class="n">SED</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="o">=</span><span class="n">spectral_shapes</span><span class="o">.</span><span class="n">SED</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">beaming</span><span class="o">=</span><span class="n">jet_obj</span><span class="o">.</span><span class="n">get_beaming</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">seed_field</span><span class="o">=</span><span class="kc">None</span>
 
         <span class="c1"># self._nu_start_src_name, self._nu_stop_src_name = nu_src_start_stop_dict[self.name]</span>
@@ -599,10 +599,10 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blob_object</span><span class="o">.</span><span class="n">emiss_lim</span></div>
 
 
-<div class="viewcode-block" id="JetSpecComponent.fill_SED"><a class="viewcode-back" href="../../api/jetset.jet_spectral_components.JetSpecComponent.html#jetset.jet_spectral_components.JetSpecComponent.fill_SED">[docs]</a>    <span class="k">def</span> <span class="nf">fill_SED</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">lin_nu</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="JetSpecComponent.fill_SED"><a class="viewcode-back" href="../../api/jetset.jet_spectral_components.JetSpecComponent.html#jetset.jet_spectral_components.JetSpecComponent.fill_SED">[docs]</a>    <span class="k">def</span> <span class="nf">fill_SED</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">lin_nu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">skip_zeros</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 
-        <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_SED_points</span><span class="p">(</span> <span class="n">log_log</span><span class="o">=</span><span class="n">log_log</span><span class="p">,</span><span class="n">lin_nu</span><span class="o">=</span><span class="n">lin_nu</span><span class="p">,)</span>
-
+        <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_SED_points</span><span class="p">(</span> <span class="n">log_log</span><span class="o">=</span><span class="n">log_log</span><span class="p">,</span><span class="n">lin_nu</span><span class="o">=</span><span class="n">lin_nu</span><span class="p">,</span><span class="n">skip_zeros</span><span class="o">=</span><span class="n">skip_zeros</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">beaming</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">jet_obj</span><span class="o">.</span><span class="n">get_beaming</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">nuFnu</span><span class="o">=</span><span class="n">y</span><span class="p">,</span><span class="n">log_log</span><span class="o">=</span><span class="n">log_log</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">fill_nuLnu</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">jet_obj</span><span class="o">.</span><span class="n">get_par_by_type</span><span class="p">(</span><span class="s1">&#39;redshift&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">val</span><span class="p">,</span><span class="n">dl</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">jet_obj</span><span class="o">.</span><span class="n">get_DL_cm</span><span class="p">())</span>
 
@@ -611,7 +611,7 @@
 
 
 
-<div class="viewcode-block" id="JetSpecComponent.get_SED_points"><a class="viewcode-back" href="../../api/jetset.jet_spectral_components.JetSpecComponent.html#jetset.jet_spectral_components.JetSpecComponent.get_SED_points">[docs]</a>    <span class="k">def</span> <span class="nf">get_SED_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lin_nu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">interp</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="JetSpecComponent.get_SED_points"><a class="viewcode-back" href="../../api/jetset.jet_spectral_components.JetSpecComponent.html#jetset.jet_spectral_components.JetSpecComponent.get_SED_points">[docs]</a>    <span class="k">def</span> <span class="nf">get_SED_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lin_nu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">interp</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span><span class="n">skip_zeros</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 
         <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blob_object</span><span class="o">.</span><span class="n">nu_grid_size</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
@@ -631,20 +631,34 @@
         <span class="n">msk</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_emiss_lim</span><span class="p">()</span>
         <span class="n">y</span><span class="p">[</span><span class="n">msk</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_emiss_lim</span><span class="p">()</span>
 
+        <span class="n">msk_zeros</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_emiss_lim</span><span class="p">()</span>
+
         <span class="k">if</span> <span class="n">lin_nu</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="c1">#f_interp=interpolate.Akima1DInterpolator(log10(x), log10(y))</span>
             <span class="n">f_interp</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">interp</span><span class="p">)</span>
             <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mf">10.</span><span class="p">,</span> <span class="n">f_interp</span><span class="p">(</span><span class="n">log10</span><span class="p">(</span><span class="n">lin_nu</span><span class="p">)))</span>
             <span class="n">x</span><span class="o">=</span><span class="n">lin_nu</span>
             <span class="n">msk_nan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-            <span class="n">y</span><span class="p">[</span><span class="n">msk_nan</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_emiss_lim</span><span class="p">()</span>
+            <span class="n">y</span><span class="p">[</span><span class="n">msk_nan</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
+            <span class="n">msk_zeros</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_emiss_lim</span><span class="p">()</span>
+            <span class="n">y</span><span class="p">[</span><span class="o">~</span><span class="n">msk_zeros</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
 
         <span class="k">if</span> <span class="n">log_log</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">msk</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mf">0.</span>
             <span class="n">y</span><span class="p">[</span><span class="n">msk</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_emiss_lim</span><span class="p">()</span>
+            <span class="n">msk_zeros</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&gt;</span>  <span class="bp">self</span><span class="o">.</span><span class="n">get_emiss_lim</span><span class="p">()</span>
             <span class="n">x</span> <span class="o">=</span> <span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="n">y</span> <span class="o">=</span> <span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span></div>
+            <span class="n">skip_zeros</span><span class="o">=</span><span class="kc">True</span>
+
+        <span class="k">if</span> <span class="n">skip_zeros</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">_x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">msk_zeros</span><span class="p">]</span>
+            <span class="n">_y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">msk_zeros</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_x</span> <span class="o">=</span> <span class="n">x</span>
+            <span class="n">_y</span> <span class="o">=</span> <span class="n">y</span>
+
+        <span class="k">return</span> <span class="n">_x</span><span class="p">,</span> <span class="n">_y</span></div>
 
 
 

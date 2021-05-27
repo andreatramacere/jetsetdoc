@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -744,21 +744,14 @@
         <span class="k">return</span> <span class="n">f</span></div>
 
 <div class="viewcode-block" id="McmcSampler.plot_model"><a class="viewcode-back" href="../../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fit_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="c1">#if labels is None:</span>
-        <span class="c1">#    labels = self.labels</span>
+
         <span class="k">if</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">sed_data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sed_data</span>
 
         <span class="k">if</span> <span class="n">fit_range</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">fit_range</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">nu_min_fit</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">nu_max_fit</span><span class="p">]</span>
 
-        <span class="n">p</span> <span class="o">=</span> <span class="n">PlotSED</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">and</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">z_sed_data</span> <span class="o">=</span> <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span>
-            <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">get_par_by_type</span><span class="p">(</span><span class="s1">&#39;redshift&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">val</span>
-
-        <span class="n">p</span><span class="o">.</span><span class="n">add_data_plot</span><span class="p">(</span><span class="n">sed_data</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">_set_up_plot</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">sed_data</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="n">density</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_to_best_fit</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">fill_SED</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -789,8 +782,6 @@
         <span class="n">p</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">fit_range</span> <span class="o">=</span> <span class="n">fit_range</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
         <span class="n">p</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">sed_data</span><span class="p">,</span> <span class="n">fit_range</span> <span class="o">=</span>  <span class="n">fit_range</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">and</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z_sed_data</span>
 
         <span class="k">return</span> <span class="n">p</span></div>
 

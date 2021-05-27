@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -575,10 +575,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">best_fit_par_table</span>
 
     <span class="k">def</span> <span class="nf">_update_asymm_errors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">)):</span>
-            <span class="k">if</span>  <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">minimizer</span><span class="p">,</span><span class="s1">&#39;asymm_errors&#39;</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">.</span><span class="n">err_p</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">asymm_errors</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">.</span><span class="n">err_m</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">asymm_errors</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">)):</span>
+                <span class="k">if</span>  <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">minimizer</span><span class="p">,</span><span class="s1">&#39;asymm_errors&#39;</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">.</span><span class="n">err_p</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">asymm_errors</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">.</span><span class="n">err_m</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">asymm_errors</span><span class="p">[</span><span class="n">pi</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 
 <div class="viewcode-block" id="FitResults.show_report"><a class="viewcode-back" href="../../api/jetset.minimizer.FitResults.html#jetset.minimizer.FitResults.show_report">[docs]</a>    <span class="k">def</span> <span class="nf">show_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
@@ -596,8 +597,30 @@
 <div class="viewcode-block" id="FitResults.save_report"><a class="viewcode-back" href="../../api/jetset.minimizer.FitResults.html#jetset.minimizer.FitResults.save_report">[docs]</a>    <span class="k">def</span> <span class="nf">save_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;best_fit_report.pkl&#39;</span>
+        <span class="n">mm</span> <span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mm</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">mm</span><span class="o">=</span><span class="kc">None</span>
-        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">),</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span></div></div>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;mm&#39;</span><span class="p">,</span> <span class="n">mm</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">),</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">o</span> <span class="o">=</span> <span class="n">FitResults</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                           <span class="n">mm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                           <span class="n">parameters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">,</span>
+                           <span class="n">calls</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">calls</span><span class="p">,</span>
+                           <span class="n">mesg</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                           <span class="n">success</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">success</span><span class="p">,</span>
+                           <span class="n">chisq</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chisq</span><span class="p">,</span>
+                           <span class="n">dof</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dof</span><span class="p">,</span>
+                           <span class="n">chisq_red</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chisq_red</span><span class="p">,</span>
+                           <span class="n">null_hyp_sig</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">null_hyp_sig</span><span class="p">,</span>
+                           <span class="n">wd</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">wd</span><span class="p">,</span>
+                           <span class="n">chisq_no_UL</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chisq_no_UL</span><span class="p">,</span>
+                           <span class="n">dof_no_UL</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dof_no_UL</span><span class="p">,</span>
+                           <span class="n">chisq_red_no_UL</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chisq_red_no_UL</span><span class="p">,</span>
+                           <span class="n">null_hyp_sig_no_UL</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">null_hyp_sig_no_UL</span><span class="p">)</span>
+
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">),</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span></div></div>
+
 
 
 
@@ -876,8 +899,8 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">reset_to_best_fit</span><span class="p">()</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">_fit_stats</span><span class="p">()</span>
                 <span class="k">if</span> <span class="n">silent</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-                    <span class="nb">print</span><span class="p">()</span>
                     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;- best chisq=</span><span class="si">%5.5e</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">chisq</span><span class="p">))</span>
+                    <span class="nb">print</span><span class="p">()</span>
 
                 <span class="n">new_chisq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">minimizer</span><span class="o">.</span><span class="n">chisq</span>
                 <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
@@ -1057,10 +1080,12 @@
                       <span class="n">chisq</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                       <span class="n">use_UL</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                       <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-
+        <span class="c1">#print(&#39;==&gt;p&#39;, p)</span>
+        <span class="c1">#print(&#39;==&gt;fit_par_fre&#39;, self.model.fit_par_free)</span>
         <span class="n">_warn</span><span class="o">=</span><span class="kc">False</span>
         <span class="k">for</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fit_par</span><span class="p">)):</span>
             <span class="n">_old_v</span><span class="o">=</span><span class="n">fit_par</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">.</span><span class="n">val</span>
+            <span class="c1">#print(&#39;==&gt; set&#39;, fit_par[pi].val,fit_par[pi].val_min,p[pi])</span>
             <span class="n">fit_par</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="n">pi</span><span class="p">])</span>
             <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">pi</span><span class="p">]):</span>
                 <span class="n">_warn</span><span class="o">=</span><span class="kc">True</span>
@@ -1298,11 +1323,24 @@
             <span class="n">max_ev</span> <span class="o">=</span><span class="mi">10000</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">mesg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">migrad</span><span class="p">(</span><span class="n">ncall</span><span class="o">=</span><span class="n">max_ev</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">pout</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+        <span class="c1">#print(&#39;==&gt; mesg&#39;,self.mesg)</span>
+        <span class="k">if</span> <span class="n">iminuit</span><span class="o">.</span><span class="n">__version__</span> <span class="o">&lt;</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pout</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pout</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">pout</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
 
     <span class="k">def</span> <span class="nf">_set_fit_errors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">errors</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">errors</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+        <span class="k">if</span> <span class="n">iminuit</span><span class="o">.</span><span class="n">__version__</span> <span class="o">&lt;</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">errors</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">errors</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">errors</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">errors</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">err</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">errors</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="o">=</span> <span class="n">err</span>
 
 
 
@@ -1329,20 +1367,34 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">minuit_par_name_dict</span><span class="o">=</span><span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">minuit_bounds_dict</span><span class="o">=</span><span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">par_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1">#print(&#39;==&gt; iminuit.__version__&#39;,iminuit.__version__)</span>
         <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">par</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">minuit_par_name_dict</span><span class="p">[</span><span class="n">par</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">=</span><span class="n">p_names</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">minuit_bounds_dict</span><span class="p">[</span><span class="n">par</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">=</span><span class="n">bounds</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">par_dict</span><span class="p">[</span><span class="n">par</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">=</span><span class="n">par</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span> <span class="o">=</span> <span class="n">iminuit</span><span class="o">.</span><span class="n">Minuit</span><span class="p">(</span><span class="n">fcn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chisq_func</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="n">p_names</span><span class="p">,</span>
-            <span class="n">pedantic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-            <span class="n">errordef</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwdarg</span><span class="p">)</span>
-
+        <span class="k">if</span> <span class="n">iminuit</span><span class="o">.</span><span class="n">__version__</span> <span class="o">&lt;</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span> <span class="o">=</span> <span class="n">iminuit</span><span class="o">.</span><span class="n">Minuit</span><span class="p">(</span><span class="n">fcn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chisq_func</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="n">p_names</span><span class="p">,</span>
+                <span class="n">pedantic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">errordef</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwdarg</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">values</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">par</span><span class="o">.</span><span class="n">val</span> <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">par</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">))</span>
+            <span class="c1">#print(&#39;=&gt; values&#39;,values)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span> <span class="o">=</span> <span class="n">iminuit</span><span class="o">.</span><span class="n">Minuit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chisq_func</span><span class="p">,</span>
+                                             <span class="n">values</span><span class="p">,</span>
+                                             <span class="n">name</span><span class="o">=</span><span class="n">p_names</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">minuit_fun</span><span class="o">.</span><span class="n">limits</span><span class="o">=</span><span class="p">[</span> <span class="n">bounds</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span> <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">par</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">)</span> <span class="p">]</span>
+            <span class="c1">#print(&#39;=&gt;  self.minuit_fun.limits&#39;,  self.minuit_fun.limits)</span>
 <div class="viewcode-block" id="MinutiMinimizer.chisq_func"><a class="viewcode-back" href="../../api/jetset.minimizer.MinutiMinimizer.html#jetset.minimizer.MinutiMinimizer.chisq_func">[docs]</a>    <span class="k">def</span> <span class="nf">chisq_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">residuals_Fit</span><span class="p">(</span><span class="n">p</span><span class="p">,</span>
+        <span class="k">if</span> <span class="n">iminuit</span><span class="o">.</span><span class="n">__version__</span> <span class="o">&lt;</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1">#print(&#39;==&gt;p&#39;,self.p)</span>
+        <span class="c1">#print(&#39;==&gt;fit_par_fre&#39;, self.model.fit_par_free)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">residuals_Fit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">,</span>
                           <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit_par_free</span><span class="p">,</span>
                           <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
                           <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit_model</span><span class="p">,</span>
@@ -1631,6 +1683,24 @@
                   <span class="n">repeat</span><span class="o">=</span><span class="n">repeat</span><span class="p">)</span></div>
 
 
+
+<span class="k">def</span> <span class="nf">fit_XY</span><span class="p">(</span><span class="n">fit_model</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">x_fit_start</span><span class="p">,</span><span class="n">x_fit_stop</span><span class="p">,</span><span class="n">fitname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">get_conf_int</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;minuit&#39;</span><span class="p">,</span>
+           <span class="n">use_UL</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+
+    <span class="n">mm</span> <span class="o">=</span> <span class="n">ModelMinimizer</span><span class="p">(</span><span class="n">minimizer</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mm</span><span class="p">,</span> <span class="n">mm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">fit_model</span><span class="p">,</span>
+                      <span class="n">data</span><span class="p">,</span>
+                      <span class="n">nu_fit_start</span><span class="o">=</span><span class="n">x_fit_start</span><span class="p">,</span>
+                      <span class="n">nu_fit_stop</span><span class="o">=</span><span class="n">x_fit_stop</span><span class="p">,</span>
+                      <span class="n">fitname</span><span class="o">=</span><span class="n">fitname</span><span class="p">,</span>
+                      <span class="n">fit_workplace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                      <span class="n">loglog</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                      <span class="n">silent</span><span class="o">=</span><span class="n">silent</span><span class="p">,</span>
+                      <span class="n">get_conf_int</span><span class="o">=</span><span class="n">get_conf_int</span><span class="p">,</span>
+                      <span class="n">max_ev</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                      <span class="n">use_fake_err</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                      <span class="n">use_UL</span><span class="o">=</span><span class="n">use_UL</span><span class="p">,</span>
+                      <span class="n">repeat</span><span class="o">=</span><span class="n">repeat</span><span class="p">)</span>
 </pre></div>
 
     </div>

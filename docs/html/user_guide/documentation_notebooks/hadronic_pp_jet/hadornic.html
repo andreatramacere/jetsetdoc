@@ -58,7 +58,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -476,7 +476,6 @@
 <span class="kn">from</span> <span class="nn">jetset.jetkernel</span> <span class="kn">import</span> <span class="n">jetkernel</span>
 <span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">const</span>
 <span class="kn">from</span> <span class="nn">jetset.jet_emitters_factory</span> <span class="kn">import</span> <span class="n">EmittersFactory</span>
-<span class="kn">from</span> <span class="nn">jetset.jet_emitters</span> <span class="kn">import</span> <span class="n">InjEmittersArrayDistribution</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jetset</span>
@@ -557,7 +556,7 @@
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140698358628304-682122" class="table-striped table-bordered table-condensed">
+<table id="table140512693000416-601336" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_hadronic_pp</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+18</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_hadronic_pp</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -593,14 +592,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140698358628304-682122').dataTable()");
+    console.log("$('#table140512693000416-601336').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140698358628304-682122').dataTable({
+    $('#table140512693000416-601336').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],

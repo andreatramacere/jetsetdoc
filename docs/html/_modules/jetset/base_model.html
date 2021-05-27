@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -539,7 +539,7 @@
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;spectral_components_list&#39;</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spectral_components_list</span><span class="p">)):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">spectral_components_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_SED</span><span class="p">(</span><span class="n">lin_nu</span><span class="o">=</span><span class="n">lin_nu</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">spectral_components_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_SED</span><span class="p">(</span><span class="n">lin_nu</span><span class="o">=</span><span class="n">lin_nu</span><span class="p">,</span><span class="n">skip_zeros</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Model.eval"><a class="viewcode-back" href="../../api/jetset.base_model.Model.html#jetset.base_model.Model.eval">[docs]</a>    <span class="k">def</span> <span class="nf">eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fill_SED</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">get_model</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">loglog</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
@@ -562,16 +562,29 @@
         <span class="k">return</span> <span class="n">out_model</span></div>
 
 
-
-<div class="viewcode-block" id="Model.plot_model"><a class="viewcode-back" href="../../api/jetset.base_model.Model.html#jetset.base_model.Model.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">plot_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">clean</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span><span class="n">skip_components</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_set_up_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">plot_obj</span><span class="p">,</span><span class="n">sed_data</span><span class="p">,</span><span class="n">frame</span><span class="p">,</span><span class="n">density</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">plot_obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">plot_obj</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">sed_data</span> <span class="o">=</span> <span class="n">sed_data</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+            <span class="n">plot_obj</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
 
+        <span class="n">z_sed_data</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">and</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">z_sed_data</span> <span class="o">=</span> <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_par_by_type</span><span class="p">(</span><span class="s1">&#39;redshift&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
                 <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_par_by_type</span><span class="p">(</span><span class="s1">&#39;redshift&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">val</span>
+
+        <span class="k">if</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_data_plot</span><span class="p">(</span><span class="n">sed_data</span><span class="p">)</span>
+
+
+        <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">and</span> <span class="n">z_sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z_sed_data</span>
+
+        <span class="k">return</span> <span class="n">plot_obj</span>
+
+
+<div class="viewcode-block" id="Model.plot_model"><a class="viewcode-back" href="../../api/jetset.base_model.Model.html#jetset.base_model.Model.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">plot_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">clean</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span><span class="n">skip_components</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+        <span class="n">plot_obj</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_up_plot</span><span class="p">(</span><span class="n">plot_obj</span><span class="p">,</span><span class="n">sed_data</span><span class="p">,</span><span class="n">frame</span><span class="p">,</span><span class="n">density</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">clean</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">plot_obj</span><span class="o">.</span><span class="n">clean_model_lines</span><span class="p">()</span>
@@ -580,7 +593,7 @@
             <span class="n">label</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s1">&#39;SED&#39;</span><span class="p">):</span>
-            <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="n">line_style</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span><span class="n">label</span><span class="p">,</span><span class="n">flim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+            <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="n">line_style</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span><span class="n">label</span><span class="p">,</span><span class="n">flim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
 
 
 
@@ -592,15 +605,12 @@
                     <span class="n">line_style</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span>
                     <span class="k">if</span> <span class="n">comp_label</span><span class="o">!=</span><span class="s1">&#39;Sum&#39;</span><span class="p">:</span>
                         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s1">&#39;SED&#39;</span><span class="p">):</span>
-                            <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">SED</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="n">line_style</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;  -</span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">comp_label</span><span class="p">,</span> <span class="n">flim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+                            <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">SED</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="n">line_style</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;  -</span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">comp_label</span><span class="p">,</span> <span class="n">flim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
 
         <span class="n">line_style</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
 
 
         <span class="c1">#plot_obj.add_model_residual_plot(data=sed_data, model=self,fit_range=np.log10([self.nu_min_fit,self.nu_max_fit]) )</span>
-
-        <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">and</span> <span class="n">sed_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">sed_data</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z_sed_data</span>
 
         <span class="k">return</span> <span class="n">plot_obj</span></div>
 

@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -523,14 +523,8 @@
         
         <span class="bp">self</span><span class="o">.</span><span class="n">model_type</span> <span class="o">=</span> <span class="s1">&#39;table2D&#39;</span>
 
-    
-
-      
-
-
-<div class="viewcode-block" id="TemplateTable2D.plot_model"><a class="viewcode-back" href="../../api/jetset.template_2Dmodel.TemplateTable2D.html#jetset.template_2Dmodel.TemplateTable2D.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">plot_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">clean</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">plot_obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">plot_obj</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
+<div class="viewcode-block" id="TemplateTable2D.plot_model"><a class="viewcode-back" href="../../api/jetset.template_2Dmodel.TemplateTable2D.html#jetset.template_2Dmodel.TemplateTable2D.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">plot_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">clean</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">):</span>
+        <span class="n">plot_obj</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_up_plot</span><span class="p">(</span><span class="n">plot_obj</span><span class="p">,</span><span class="n">sed_data</span><span class="p">,</span><span class="n">frame</span><span class="p">,</span><span class="n">density</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">clean</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
             <span class="n">plot_obj</span><span class="o">.</span><span class="n">clean_model_lines</span><span class="p">()</span>
@@ -538,7 +532,7 @@
         <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-        <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">flim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+        <span class="n">plot_obj</span><span class="o">.</span><span class="n">add_model_plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SED</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">flim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">plot_obj</span></div>
 
@@ -777,9 +771,9 @@
 
         <span class="k">return</span> <span class="n">out_model</span></div>
 
-<div class="viewcode-block" id="EBLAbsorptionTemplate.plot_model"><a class="viewcode-back" href="../../api/jetset.template_2Dmodel.EBLAbsorptionTemplate.html#jetset.template_2Dmodel.EBLAbsorptionTemplate.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="EBLAbsorptionTemplate.plot_model"><a class="viewcode-back" href="../../api/jetset.template_2Dmodel.EBLAbsorptionTemplate.html#jetset.template_2Dmodel.EBLAbsorptionTemplate.plot_model">[docs]</a>    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">line_style</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">plot_obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">plot_obj</span> <span class="o">=</span> <span class="n">PlotSpectralMultipl</span><span class="p">()</span>
+            <span class="n">plot_obj</span> <span class="o">=</span> <span class="n">PlotSpectralMultipl</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span>

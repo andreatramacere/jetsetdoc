@@ -56,7 +56,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -492,8 +492,16 @@
     <span class="k">return</span> <span class="n">c</span><span class="o">*</span><span class="n">nuFnu</span></div>
 
 
+<span class="k">def</span> <span class="nf">convert_nuLnu_src_to_nuLnu_blob</span><span class="p">(</span><span class="n">nuLnu</span><span class="p">,</span><span class="n">beaming</span><span class="p">,</span><span class="n">in_frame</span><span class="p">):</span>
+    <span class="n">check_frame</span><span class="p">(</span><span class="n">in_frame</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">beaming</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">c</span><span class="o">*</span><span class="n">nuLnu</span>
 
-    
+
+<span class="k">def</span> <span class="nf">convert_nu_src_to_nu_blob</span><span class="p">(</span><span class="n">nu_src</span><span class="p">,</span><span class="n">beaming</span><span class="p">,</span><span class="n">in_frame</span><span class="p">):</span>
+    <span class="n">check_frame</span><span class="p">(</span><span class="n">in_frame</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nu_src</span><span class="o">/</span><span class="n">beaming</span>
+
     
     
     

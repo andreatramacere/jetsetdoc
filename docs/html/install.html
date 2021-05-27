@@ -58,7 +58,7 @@
         </button>
         <a class="navbar-brand" href="index.html"><span><img src="_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -546,7 +546,10 @@ conda install --yes   -c astropy --file requirements.txt
 </div>
 </li>
 </ul>
-<p>if anaconda fails to install swig, you can try one of the following alternative <span class="xref std std-ref">swig</span></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>if anaconda fails to install swig, you can try one of the following alternative :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>swig’</p>
+</div>
 <ul>
 <li><p>run on the command line</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py clean
@@ -579,7 +582,10 @@ pip install -r requirements.txt
 </div>
 </li>
 </ul>
-<p>if pip fails to install swig, you can try one of the following alternative <span class="xref std std-ref">swig</span></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>if pip fails to install swig, you can try one of the following alternative :ref:<a href="#id3"><span class="problematic" id="id4">`</span></a>swig’</p>
+</div>
 <ul>
 <li><p>Install JetSeT: run on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py clean
@@ -604,11 +610,11 @@ pytest  --disable-warnings --pyargs jetset.tests.test_users::test_short
 <dt>The following python packages are required:</dt><dd><ul class="simple">
 <li><p>python &gt;=3.6 (python &gt;=3.6 is suggested, older python 3 versions should  work, python 2 is not supported any more from version&gt;=1.1.0)</p></li>
 <li><p>setuptools</p></li>
-<li><p>scipy</p></li>
-<li><p>numpy</p></li>
-<li><p>astropy</p></li>
-<li><p>matplotlib</p></li>
-<li><p>swig</p></li>
+<li><p>scipy&gt;=1.5.0</p></li>
+<li><p>numpy&gt;=1.16</p></li>
+<li><p>astropy&gt;=4.0</p></li>
+<li><p>matplotlib&gt;=3.1.0</p></li>
+<li><p>swig&gt;=3.0.0</p></li>
 <li><p>future</p></li>
 <li><p>iminuit</p></li>
 <li><p>corner</p></li>
@@ -616,10 +622,11 @@ pytest  --disable-warnings --pyargs jetset.tests.test_users::test_short
 <li><p>emcee</p></li>
 <li><p>pyyaml</p></li>
 <li><p>numba</p></li>
+<li><p>sherpa</p></li>
 </ul>
 </dd>
 </dl>
-<p>A C compiler is also necessary, plus the SWIG wrapper generator.</p>
+<p>To install from source A C compiler is also necessary, plus the SWIG wrapper generator.</p>
 <p>All the dependencies are installed following the Anaconda method <strong>OR</strong> the pip method, as described below.</p>
 </div>
 </div>
