@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>ObsData &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data" href="jetset.data_loader.Data.html" />
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +72,12 @@
      href="../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -260,13 +256,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -323,7 +318,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -359,14 +354,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -376,10 +369,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -400,7 +393,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -447,17 +440,18 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -475,11 +469,11 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="obsdata">
+  <section id="obsdata">
 <h1>ObsData<a class="headerlink" href="#obsdata" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="jetset.data_loader.ObsData">
-<em class="property">class </em><code class="sig-name descname">ObsData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cosmo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_table</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dupl_filter</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">data_set_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">UL_filtering</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">UL_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">UL_CL</span><span class="o">=</span><span class="default_value">0.95</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">keywords</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ObsData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cosmo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dupl_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_set_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UL_filtering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UL_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UL_CL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>ObsData class</p>
 <p>This class provides a  powerful interface  to load observational data stored in a file.
@@ -524,7 +518,7 @@ The following parameters set the corresponding class members</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.find_time_span" title="jetset.data_loader.ObsData.find_time_span"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_time_span</span></code></a>([data_set, silent, get_values])</p></td>
 <td><p>returns Tstart, Tstop, and Delta T for the full data set (if no dat_set is provided), or for a specific data_set</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.get_data_points" title="jetset.data_loader.ObsData.get_data_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_points</span></code></a>([log_log, skip_UL, frame, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.get_data_points" title="jetset.data_loader.ObsData.get_data_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_points</span></code></a>([log_log, skip_UL, frame, ...])</p></td>
 <td><p>Gives data point</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.get_data_sets" title="jetset.data_loader.ObsData.get_data_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_sets</span></code></a>()</p></td>
@@ -545,7 +539,7 @@ The following parameters set the corresponding class members</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.log_to_lin" title="jetset.data_loader.ObsData.log_to_lin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_to_lin</span></code></a>([log_val, log_err])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.plot_sed" title="jetset.data_loader.ObsData.plot_sed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_sed</span></code></a>([plot_obj, frame, color, fmt, ms, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.plot_sed" title="jetset.data_loader.ObsData.plot_sed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_sed</span></code></a>([plot_obj, frame, color, fmt, ms, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.plot_time_spans" title="jetset.data_loader.ObsData.plot_time_spans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_time_spans</span></code></a>([save_as])</p></td>
@@ -563,7 +557,7 @@ The following parameters set the corresponding class members</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.set_UL" title="jetset.data_loader.ObsData.set_UL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_UL</span></code></a>([val])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.set_error" title="jetset.data_loader.ObsData.set_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_error</span></code></a>(error_value[, nu_range, data_set, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.set_error" title="jetset.data_loader.ObsData.set_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_error</span></code></a>(error_value[, nu_range, data_set, ...])</p></td>
 <td><p>set all the paramters to same error</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.data_loader.ObsData.set_fake_error" title="jetset.data_loader.ObsData.set_fake_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_fake_error</span></code></a>(val)</p></td>
@@ -582,19 +576,19 @@ The following parameters set the corresponding class members</p>
 </table>
 <p class="rubric">Attributes Documentation</p>
 <dl class="py attribute">
-<dt id="jetset.data_loader.ObsData.metadata">
-<code class="sig-name descname">metadata</code><a class="headerlink" href="#jetset.data_loader.ObsData.metadata" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#jetset.data_loader.ObsData.metadata" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.data_loader.ObsData.table">
-<code class="sig-name descname">table</code><a class="headerlink" href="#jetset.data_loader.ObsData.table" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#jetset.data_loader.ObsData.table" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods Documentation</p>
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.add_systematics">
-<code class="sig-name descname">add_systematics</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">syst</span></em>, <em class="sig-param"><span class="n">nu_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_set</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.add_systematics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.add_systematics" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.add_systematics">
+<span class="sig-name descname"><span class="pre">add_systematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.add_systematics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.add_systematics" title="Permalink to this definition">¶</a></dt>
 <dd><p>add systematics to errors</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -607,8 +601,8 @@ The following parameters set the corresponding class members</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.filter_UL">
-<code class="sig-name descname">filter_UL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_UL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_UL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.filter_UL">
+<span class="sig-name descname"><span class="pre">filter_UL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_UL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_UL" title="Permalink to this definition">¶</a></dt>
 <dd><p>remove the  upper limits points from  from data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -621,13 +615,13 @@ The following parameters set the corresponding class members</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.filter_data_set">
-<code class="sig-name descname">filter_data_set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span></em>, <em class="sig-param"><span class="n">exclude</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">silent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_data_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_data_set" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.filter_data_set">
+<span class="sig-name descname"><span class="pre">filter_data_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_data_set"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_data_set" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.filter_freq">
-<code class="sig-name descname">filter_freq</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu_min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nu_max</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_freq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_freq" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.filter_freq">
+<span class="sig-name descname"><span class="pre">filter_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_freq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_freq" title="Permalink to this definition">¶</a></dt>
 <dd><p>filter the data, keeping all the data with
 nu_min &lt;nu&lt; nu_max if exclude=False (defualt).
 The opposite if exclude=True</p>
@@ -643,8 +637,8 @@ The opposite if exclude=True</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.filter_time">
-<code class="sig-name descname">filter_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">T_max</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_time" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.filter_time">
+<span class="sig-name descname"><span class="pre">filter_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.filter_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.filter_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>filter the data, keeping all the data with
 T_min &lt;T&lt; T_max if exclude=False (defualt).
 The opposite if exclude=True</p>
@@ -659,31 +653,31 @@ The opposite if exclude=True</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.find_time_span">
-<code class="sig-name descname">find_time_span</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">silent</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">get_values</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.find_time_span"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.find_time_span" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.find_time_span">
+<span class="sig-name descname"><span class="pre">find_time_span</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.find_time_span"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.find_time_span" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns Tstart, Tstop, and Delta T for the full data set (if no dat_set
 is provided), or for a specific data_set</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.get_data_points">
-<code class="sig-name descname">get_data_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">log_log</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">skip_UL</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">frame</span><span class="o">=</span><span class="default_value">'obs'</span></em>, <em class="sig-param"><span class="n">density</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.get_data_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.get_data_points" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.get_data_points">
+<span class="sig-name descname"><span class="pre">get_data_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_UL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'obs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.get_data_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.get_data_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives data point</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.get_data_sets">
-<code class="sig-name descname">get_data_sets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.get_data_sets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.get_data_sets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.get_data_sets">
+<span class="sig-name descname"><span class="pre">get_data_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.get_data_sets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.get_data_sets" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.get_time_span">
-<code class="sig-name descname">get_time_span</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_set</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.get_time_span"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.get_time_span" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.get_time_span">
+<span class="sig-name descname"><span class="pre">get_time_span</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.get_time_span"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.get_time_span" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.group_data">
-<code class="sig-name descname">group_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">N_bin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bin_width</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.group_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.group_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.group_data">
+<span class="sig-name descname"><span class="pre">group_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N_bin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.group_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.group_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>function to perform a spectral group of the data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -700,33 +694,33 @@ is provided), or for a specific data_set</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.lin_to_log">
-<code class="sig-name descname">lin_to_log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">err</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.lin_to_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.lin_to_log" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.lin_to_log">
+<span class="sig-name descname"><span class="pre">lin_to_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.lin_to_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.lin_to_log" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.load">
-<em class="property">static </em><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.load" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.load">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.log_to_lin">
-<code class="sig-name descname">log_to_lin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">log_val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_err</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.log_to_lin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.log_to_lin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.log_to_lin">
+<span class="sig-name descname"><span class="pre">log_to_lin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_err</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.log_to_lin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.log_to_lin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.plot_sed">
-<code class="sig-name descname">plot_sed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot_obj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frame</span><span class="o">=</span><span class="default_value">'obs'</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fmt</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">ms</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">mew</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">figsize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_dataset</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">density</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.plot_sed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.plot_sed" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.plot_sed">
+<span class="sig-name descname"><span class="pre">plot_sed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'obs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'o'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mew</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_dataset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.plot_sed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.plot_sed" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.plot_time_spans">
-<code class="sig-name descname">plot_time_spans</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">save_as</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.plot_time_spans"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.plot_time_spans" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.plot_time_spans">
+<span class="sig-name descname"><span class="pre">plot_time_spans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_as</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.plot_time_spans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.plot_time_spans" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.remove_dupl_entries">
-<code class="sig-name descname">remove_dupl_entries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.remove_dupl_entries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.remove_dupl_entries" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.remove_dupl_entries">
+<span class="sig-name descname"><span class="pre">remove_dupl_entries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.remove_dupl_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.remove_dupl_entries" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>remove duplicate entries</p>
 </div></blockquote>
@@ -746,23 +740,23 @@ is equal to the corresponding elements of another row</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.reset_data">
-<code class="sig-name descname">reset_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.reset_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.reset_data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.reset_data">
+<span class="sig-name descname"><span class="pre">reset_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.reset_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.reset_data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.save">
-<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.save" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.save" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.set_UL">
-<code class="sig-name descname">set_UL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_UL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_UL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.set_UL">
+<span class="sig-name descname"><span class="pre">set_UL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_UL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_UL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.set_error">
-<code class="sig-name descname">set_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">error_value</span></em>, <em class="sig-param"><span class="n">nu_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_msk</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_error" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.set_error">
+<span class="sig-name descname"><span class="pre">set_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_msk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_error" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>set all the paramters to same error</p>
 </div></blockquote>
@@ -777,29 +771,29 @@ is equal to the corresponding elements of another row</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.set_fake_error">
-<code class="sig-name descname">set_fake_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_fake_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_fake_error" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.set_fake_error">
+<span class="sig-name descname"><span class="pre">set_fake_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_fake_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_fake_error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the value for the fake error</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.set_zero_error">
-<code class="sig-name descname">set_zero_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">replace_zero</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_zero_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_zero_error" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.set_zero_error">
+<span class="sig-name descname"><span class="pre">set_zero_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_zero</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.set_zero_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.set_zero_error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.show_data_sets">
-<code class="sig-name descname">show_data_sets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.show_data_sets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.show_data_sets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.show_data_sets">
+<span class="sig-name descname"><span class="pre">show_data_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.show_data_sets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.show_data_sets" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.data_loader.ObsData.show_time_span">
-<code class="sig-name descname">show_time_span</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_set</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.show_time_span"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.data_loader.ObsData.show_time_span" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.data_loader.ObsData.show_time_span">
+<span class="sig-name descname"><span class="pre">show_time_span</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/data_loader.html#ObsData.show_time_span"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.data_loader.ObsData.show_time_span" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -814,7 +808,7 @@ is equal to the corresponding elements of another row</p>
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

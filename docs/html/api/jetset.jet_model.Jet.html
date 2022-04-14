@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Jet &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="JetBase" href="jetset.jet_model.JetBase.html" />
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +72,12 @@
      href="../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -260,13 +256,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -323,7 +318,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -359,14 +354,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -376,10 +369,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -400,7 +393,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -446,17 +439,18 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -474,11 +468,11 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="jet">
+  <section id="jet">
 <h1>Jet<a class="headerlink" href="#jet" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="jetset.jet_model.Jet">
-<em class="property">class </em><code class="sig-name descname">Jet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cosmo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emitters_type</span><span class="o">=</span><span class="default_value">'electrons'</span></em>, <em class="sig-param"><span class="n">emitters_distribution</span><span class="o">=</span><span class="default_value">'plc'</span></em>, <em class="sig-param"><span class="n">emitters_distribution_log_values</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">beaming_expr</span><span class="o">=</span><span class="default_value">'delta'</span></em>, <em class="sig-param"><span class="n">T_esc_e_second</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jet_workplace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clean_work_dir</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">electron_distribution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proton_distribution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">electron_distribution_log_values</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proton_distribution_log_values</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Jet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cosmo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emitters_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'electrons'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emitters_distribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'plc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emitters_distribution_log_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beaming_expr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'delta'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_esc_e_second</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jet_workplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean_work_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">electron_distribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proton_distribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">electron_distribution_log_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proton_distribution_log_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="jetset.jet_model.JetBase.html#jetset.jet_model.JetBase" title="jetset.jet_model.JetBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">jetset.jet_model.JetBase</span></code></a></p>
 <p>Jet class</p>
 <p class="rubric">Methods Summary</p>
@@ -509,7 +503,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.jet_model.Jet.get_proton_distribution_name" title="jetset.jet_model.Jet.get_proton_distribution_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_proton_distribution_name</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.jet_model.Jet.set_B_eq" title="jetset.jet_model.Jet.set_B_eq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_B_eq</span></code></a>(nuFnu_obs, nu_obs[, B_min, B_max, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.jet_model.Jet.set_B_eq" title="jetset.jet_model.Jet.set_B_eq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_B_eq</span></code></a>(nuFnu_obs, nu_obs[, B_min, B_max, ...])</p></td>
 <td><p>Sets the magnetic field (B) equipartition from numerical minimization over a logarithmic grid  of B values, for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given observed frequency (nu_obs)</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.jet_model.Jet.set_N_from_F_sync" title="jetset.jet_model.Jet.set_N_from_F_sync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_N_from_F_sync</span></code></a>(F_sync)</p></td>
@@ -540,43 +534,43 @@
 </table>
 <p class="rubric">Methods Documentation</p>
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.add_bremss_ep_component">
-<code class="sig-name descname">add_bremss_ep_component</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.add_bremss_ep_component"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.add_bremss_ep_component" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.add_bremss_ep_component">
+<span class="sig-name descname"><span class="pre">add_bremss_ep_component</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.add_bremss_ep_component"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.add_bremss_ep_component" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.add_pp_gamma_component">
-<code class="sig-name descname">add_pp_gamma_component</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.add_pp_gamma_component"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.add_pp_gamma_component" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.add_pp_gamma_component">
+<span class="sig-name descname"><span class="pre">add_pp_gamma_component</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.add_pp_gamma_component"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.add_pp_gamma_component" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.add_pp_neutrino_component">
-<code class="sig-name descname">add_pp_neutrino_component</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.add_pp_neutrino_component"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.add_pp_neutrino_component" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.add_pp_neutrino_component">
+<span class="sig-name descname"><span class="pre">add_pp_neutrino_component</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.add_pp_neutrino_component"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.add_pp_neutrino_component" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.available_electron_distributions">
-<em class="property">static </em><code class="sig-name descname">available_electron_distributions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.available_electron_distributions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.available_electron_distributions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.available_electron_distributions">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">available_electron_distributions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.available_electron_distributions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.available_electron_distributions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.available_proton_distributions">
-<em class="property">static </em><code class="sig-name descname">available_proton_distributions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.available_proton_distributions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.available_proton_distributions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.available_proton_distributions">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">available_proton_distributions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.available_proton_distributions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.available_proton_distributions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.get_electron_distribution_name">
-<code class="sig-name descname">get_electron_distribution_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.get_electron_distribution_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.get_electron_distribution_name" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.get_electron_distribution_name">
+<span class="sig-name descname"><span class="pre">get_electron_distribution_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.get_electron_distribution_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.get_electron_distribution_name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.get_proton_distribution_name">
-<code class="sig-name descname">get_proton_distribution_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.get_proton_distribution_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.get_proton_distribution_name" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.get_proton_distribution_name">
+<span class="sig-name descname"><span class="pre">get_proton_distribution_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.get_proton_distribution_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.get_proton_distribution_name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.set_B_eq">
-<code class="sig-name descname">set_B_eq</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nuFnu_obs</span></em>, <em class="sig-param"><span class="n">nu_obs</span></em>, <em class="sig-param"><span class="n">B_min</span><span class="o">=</span><span class="default_value">1e-09</span></em>, <em class="sig-param"><span class="n">B_max</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">N_pts</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">plot</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_B_eq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_B_eq" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.set_B_eq">
+<span class="sig-name descname"><span class="pre">set_B_eq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nuFnu_obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-09</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_pts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_B_eq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_B_eq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the magnetic field (B) equipartition from numerical minimization over a logarithmic grid  of B values,
 for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given observed frequency (nu_obs)</p>
 <dl class="field-list simple">
@@ -594,8 +588,8 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.set_N_from_F_sync">
-<code class="sig-name descname">set_N_from_F_sync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">F_sync</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_F_sync"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_F_sync" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.set_N_from_F_sync">
+<span class="sig-name descname"><span class="pre">set_N_from_F_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F_sync</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_F_sync"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_F_sync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the normalization of N to match the observed integrated synchrotron flux</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -605,8 +599,8 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.set_N_from_L_sync">
-<code class="sig-name descname">set_N_from_L_sync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">L_sync</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_L_sync"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_L_sync" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.set_N_from_L_sync">
+<span class="sig-name descname"><span class="pre">set_N_from_L_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L_sync</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_L_sync"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_L_sync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the normalization of N to match the src integrated Luminosity of the   synchrotron emission</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -616,8 +610,8 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.set_N_from_U_emitters">
-<code class="sig-name descname">set_N_from_U_emitters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">U</span></em>, <em class="sig-param"><span class="n">gmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gmax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_U_emitters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_U_emitters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.set_N_from_U_emitters">
+<span class="sig-name descname"><span class="pre">set_N_from_U_emitters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_U_emitters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_U_emitters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the normalization of N to match the energy density of the primary emitters
 :param U:
 :type U: float, (erg/cm3)
@@ -628,8 +622,8 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.set_N_from_U_vol_emitters">
-<code class="sig-name descname">set_N_from_U_vol_emitters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">U_vol</span></em>, <em class="sig-param"><span class="n">gmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gmax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_U_vol_emitters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_U_vol_emitters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.set_N_from_U_vol_emitters">
+<span class="sig-name descname"><span class="pre">set_N_from_U_vol_emitters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U_vol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_U_vol_emitters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_U_vol_emitters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the normalization of N to match the volume integrated energy of the primary emitters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -643,8 +637,8 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.set_N_from_nuFnu">
-<code class="sig-name descname">set_N_from_nuFnu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nuFnu_obs</span></em>, <em class="sig-param"><span class="n">nu_obs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_nuFnu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_nuFnu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.set_N_from_nuFnu">
+<span class="sig-name descname"><span class="pre">set_N_from_nuFnu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nuFnu_obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_obs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_nuFnu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_nuFnu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the normalization of N to match the observed flux nuFnu_obs at a given frequency nu_obs</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -657,8 +651,8 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.set_N_from_nuLnu">
-<code class="sig-name descname">set_N_from_nuLnu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nuLnu_src</span></em>, <em class="sig-param"><span class="n">nu_src</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_nuLnu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_nuLnu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.set_N_from_nuLnu">
+<span class="sig-name descname"><span class="pre">set_N_from_nuLnu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nuLnu_src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_src</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.set_N_from_nuLnu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.set_N_from_nuLnu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the normalization of N to match the src Luminosity of the   synchrotron emission at src frequency nu</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -671,18 +665,18 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.show_electron_distribution">
-<code class="sig-name descname">show_electron_distribution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.show_electron_distribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.show_electron_distribution" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.show_electron_distribution">
+<span class="sig-name descname"><span class="pre">show_electron_distribution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.show_electron_distribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.show_electron_distribution" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_model.Jet.show_proton_distribution">
-<code class="sig-name descname">show_proton_distribution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.show_proton_distribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_model.Jet.show_proton_distribution" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_model.Jet.show_proton_distribution">
+<span class="sig-name descname"><span class="pre">show_proton_distribution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_model.html#Jet.show_proton_distribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_model.Jet.show_proton_distribution" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -697,7 +691,7 @@ for a given observed flux of the  synchrotron emission (nuFnu_obs) at a given ob
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

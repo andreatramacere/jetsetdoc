@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>MinuitMinimizer &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ModelMinimizer" href="jetset.minimizer.ModelMinimizer.html" />
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +72,12 @@
      href="../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -260,13 +256,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -323,7 +318,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -359,14 +354,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -376,10 +369,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -400,7 +393,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -447,17 +440,18 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -475,11 +469,11 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="minuitminimizer">
+  <section id="minuitminimizer">
 <h1>MinuitMinimizer<a class="headerlink" href="#minuitminimizer" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="jetset.minimizer.MinuitMinimizer">
-<em class="property">class </em><code class="sig-name descname">MinuitMinimizer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">MinuitMinimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="jetset.minimizer.Minimizer.html#jetset.minimizer.Minimizer" title="jetset.minimizer.Minimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">jetset.minimizer.Minimizer</span></code></a></p>
 <p class="rubric">Methods Summary</p>
 <table class="longtable docutils align-default">
@@ -491,7 +485,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.chisq_func" title="jetset.minimizer.MinuitMinimizer.chisq_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chisq_func</span></code></a>(*p)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.contour" title="jetset.minimizer.MinuitMinimizer.contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour</span></code></a>(par_1, par_2[, bound, bins, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.contour" title="jetset.minimizer.MinuitMinimizer.contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour</span></code></a>(par_1, par_2[, bound, bins, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.draw_contour" title="jetset.minimizer.MinuitMinimizer.draw_contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_contour</span></code></a>(par_1, par_2[, bound, levels])</p></td>
@@ -513,7 +507,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.minos_errors" title="jetset.minimizer.MinuitMinimizer.minos_errors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minos_errors</span></code></a>([par])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.mncontour" title="jetset.minimizer.MinuitMinimizer.mncontour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mncontour</span></code></a>(par_1, par_2[, bound, bins, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.mncontour" title="jetset.minimizer.MinuitMinimizer.mncontour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mncontour</span></code></a>(par_1, par_2[, bound, bins, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.minimizer.MinuitMinimizer.mnprofile" title="jetset.minimizer.MinuitMinimizer.mnprofile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mnprofile</span></code></a>(par[, bound, subtract_min])</p></td>
@@ -530,28 +524,28 @@
 </table>
 <p class="rubric">Methods Documentation</p>
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.chisq_func">
-<code class="sig-name descname">chisq_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">p</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.chisq_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.chisq_func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.chisq_func">
+<span class="sig-name descname"><span class="pre">chisq_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.chisq_func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.chisq_func" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.contour">
-<code class="sig-name descname">contour</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par_1</span></em>, <em class="sig-param"><span class="n">par_2</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">bins</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">subtract_min</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.contour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.contour" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.contour">
+<span class="sig-name descname"><span class="pre">contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">par_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.contour"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.contour" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.draw_contour">
-<code class="sig-name descname">draw_contour</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par_1</span></em>, <em class="sig-param"><span class="n">par_2</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">levels</span><span class="o">=</span><span class="default_value">array([0, 1, 2, 3, 4])</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_contour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_contour" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.draw_contour">
+<span class="sig-name descname"><span class="pre">draw_contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">par_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4])</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_contour"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_contour" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.draw_mncontour">
-<code class="sig-name descname">draw_mncontour</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par_1</span></em>, <em class="sig-param"><span class="n">par_2</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">levels</span><span class="o">=</span><span class="default_value">array([0, 1, 2, 3, 4])</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_mncontour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_mncontour" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.draw_mncontour">
+<span class="sig-name descname"><span class="pre">draw_mncontour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">par_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4])</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_mncontour"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_mncontour" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.draw_mnprofile">
-<code class="sig-name descname">draw_mnprofile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_mnprofile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_mnprofile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.draw_mnprofile">
+<span class="sig-name descname"><span class="pre">draw_mnprofile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_mnprofile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_mnprofile" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -563,23 +557,23 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.draw_profile">
-<code class="sig-name descname">draw_profile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_profile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.draw_profile">
+<span class="sig-name descname"><span class="pre">draw_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.draw_profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.draw_profile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.minos_errors">
-<code class="sig-name descname">minos_errors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.minos_errors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.minos_errors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.minos_errors">
+<span class="sig-name descname"><span class="pre">minos_errors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.minos_errors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.minos_errors" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.mncontour">
-<code class="sig-name descname">mncontour</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par_1</span></em>, <em class="sig-param"><span class="n">par_2</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">bins</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">subtract_min</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.mncontour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.mncontour" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.mncontour">
+<span class="sig-name descname"><span class="pre">mncontour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">par_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.mncontour"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.mncontour" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.mnprofile">
-<code class="sig-name descname">mnprofile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">subtract_min</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.mnprofile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.mnprofile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.mnprofile">
+<span class="sig-name descname"><span class="pre">mnprofile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.mnprofile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.mnprofile" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -592,13 +586,13 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.minimizer.MinuitMinimizer.profile">
-<code class="sig-name descname">profile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par</span></em>, <em class="sig-param"><span class="n">bound</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">subtract_min</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.profile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.minimizer.MinuitMinimizer.profile">
+<span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/minimizer.html#MinuitMinimizer.profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.minimizer.MinuitMinimizer.profile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -613,7 +607,7 @@
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

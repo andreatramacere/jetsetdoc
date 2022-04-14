@@ -3,19 +3,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Data format and SED data &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -58,7 +59,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +74,12 @@
      href="../../../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +136,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +172,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +187,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -278,13 +276,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -341,7 +338,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -377,14 +374,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -394,10 +389,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -418,7 +413,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -437,17 +432,18 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -465,7 +461,7 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="data-format-and-sed-data">
+  <section id="data-format-and-sed-data">
 <span id="data-format"></span><h1>Data format and SED data<a class="headerlink" href="#data-format-and-sed-data" title="Permalink to this headline">¶</a></h1>
 <p>The data are treated using two classes from the module <a class="reference internal" href="../../../api/data_loader.html#module-jetset.data_loader" title="jetset.data_loader"><code class="xref py py-mod docutils literal notranslate"><span class="pre">data_loader</span></code></a></p>
 <ul class="simple">
@@ -493,9 +489,6 @@ in <a class="reference internal" href="#import"><span class="std std-ref">Import
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span><span class="n">rc4</span>
-</pre></div>
-</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
@@ -505,7 +498,7 @@ in <a class="reference internal" href="#import"><span class="std std-ref">Import
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
-<div class="section" id="data-format-for-data-object">
+<section id="data-format-for-data-object">
 <h2>Data format for Data object<a class="headerlink" href="#data-format-for-data-object" title="Permalink to this headline">¶</a></h2>
 <p>The SED data are internally stored as astropy tables, but it is very
 easy to import from</p>
@@ -525,7 +518,7 @@ of the table:</p>
 </pre></div>
 </div>
 <i>Table length=10</i>
-<table id="table140316093220272" class="table-striped table-bordered table-condensed">
+<table id="table140538418063536" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -591,7 +584,7 @@ respectively</p></li>
 <p class="admonition-title">Note</p>
 <p>starting from version 1.1.0 <code class="docutils literal notranslate"><span class="pre">src</span></code> to <code class="docutils literal notranslate"><span class="pre">obs</span></code> transformation is available</p>
 </div>
-<div class="section" id="loading-from-astropy-table">
+<section id="loading-from-astropy-table">
 <h3>Loading from astropy table<a class="headerlink" href="#loading-from-astropy-table" title="Permalink to this headline">¶</a></h3>
 <p>you can use the default SEDs distributed with the package to get
 familiar with data handling</p>
@@ -616,7 +609,7 @@ familiar with data handling</p>
 </pre></div>
 </div>
 <i>Table length=110</i>
-<table id="table140316051741472" class="table-striped table-bordered table-condensed">
+<table id="table140538442366640" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str13</th></tr></thead>
@@ -673,8 +666,8 @@ familiar with data handling</p>
 <span class="mf">4799040000.0</span> <span class="mf">0.0</span> <span class="mf">2.3136e-14</span> <span class="mf">2.4e-16</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="kc">False</span> <span class="n">campaing</span><span class="o">-</span><span class="mi">2009</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="saving-data-object-to-a-file">
+</section>
+<section id="saving-data-object-to-a-file">
 <h3>Saving Data object to a file<a class="headerlink" href="#saving-data-object-to-a-file" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">save_file</span><span class="p">(</span><span class="s1">&#39;test.ecsv&#39;</span><span class="p">)</span>
 </pre></div>
@@ -687,7 +680,7 @@ familiar with data handling</p>
 </pre></div>
 </div>
 <i>Table length=110</i>
-<table id="table140316127455168" class="table-striped table-bordered table-condensed">
+<table id="table140538418063152" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str13</th></tr></thead>
@@ -711,8 +704,8 @@ familiar with data handling</p>
 <tr><td>3.823193e+26</td><td>0.0</td><td>2.247871e-11</td><td>4.343216e-12</td><td>0.0</td><td>0.0</td><td>False</td><td>campaing-2009</td></tr>
 <tr><td>6.059363e+26</td><td>0.0</td><td>1.972081e-11</td><td>4.407365e-12</td><td>0.0</td><td>0.0</td><td>False</td><td>campaing-2009</td></tr>
 <tr><td>9.603433e+26</td><td>0.0</td><td>7.994215e-12</td><td>3.469109e-12</td><td>0.0</td><td>0.0</td><td>False</td><td>campaing-2009</td></tr>
-</table></div>
-<div class="section" id="importing-from-an-arbitrary-ascii-file-or-numpy-array-to-data-object">
+</table></section>
+<section id="importing-from-an-arbitrary-ascii-file-or-numpy-array-to-data-object">
 <span id="import"></span><h3>Importing from an arbitrary ascii file or numpy array to Data object<a class="headerlink" href="#importing-from-an-arbitrary-ascii-file-or-numpy-array-to-data-object" title="Permalink to this headline">¶</a></h3>
 <p>Assume that your data are stored in an ASCII file named
 ‘test-ascii.txt’, with - <code class="docutils literal notranslate"><span class="pre">x</span></code> in the first column with frequency in
@@ -742,7 +735,7 @@ this is only an example</strong></p>
 </pre></div>
 </div>
 <i>Table length=20</i>
-<table id="table140316093008960" class="table-striped table-bordered table-condensed">
+<table id="table140538442408240" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -766,8 +759,8 @@ this is only an example</strong></p>
 <tr><td>9.36172783601759</td><td>0.0</td><td>-14.121068671527</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
 <tr><td>9.14612803567824</td><td>0.0</td><td>-14.5547242324656</td><td>0.682147390735292</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
 <tr><td>7.86805636182304</td><td>0.0</td><td>-15.4827165132972</td><td>0.025977834481891</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
-</table></div>
-<div class="section" id="importing-to-data-object-from-a-generic-astropy-table-mapping-columns">
+</table></section>
+<section id="importing-to-data-object-from-a-generic-astropy-table-mapping-columns">
 <h3>Importing to Data object from a generic astropy table mapping columns<a class="headerlink" href="#importing-to-data-object-from-a-generic-astropy-table-mapping-columns" title="Permalink to this headline">¶</a></h3>
 <p>If you want to use a <code class="docutils literal notranslate"><span class="pre">TABLE</span></code> with arbitrary column names, you can use
 an import dictionary, mapping the input name to the target. E.g. assume
@@ -777,8 +770,8 @@ target the <code class="docutils literal notranslate"><span class="pre">x</span>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">Data</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">data_table</span><span class="o">=</span><span class="s1">&#39;your-file&#39;</span><span class="p">,</span><span class="n">import_dictionary</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;freq&#39;</span><span class="p">:</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;freq err&#39;</span><span class="p">:</span><span class="s1">&#39;dx&#39;</span><span class="p">})</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="importing-from-the-asi-ssdc-sedtool-to-data-object">
+</section>
+<section id="importing-from-the-asi-ssdc-sedtool-to-data-object">
 <h3>Importing from the ASI ssdc sedtool to Data object<a class="headerlink" href="#importing-from-the-asi-ssdc-sedtool-to-data-object" title="Permalink to this headline">¶</a></h3>
 <p>To import data from a data file downloaded from the asi ssdc sedtool:
 <a class="reference external" href="https://tools.ssdc.asi.it/SED/">https://tools.ssdc.asi.it/SED/</a></p>
@@ -796,7 +789,7 @@ Assume that we downloaded the data for Mrk421, in observed fluxes and linear sca
 </pre></div>
 </div>
 <i>Table length=3550</i>
-<table id="table140316048442464" class="table-striped table-bordered table-condensed">
+<table id="table140538417879792" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -824,9 +817,9 @@ Assume that we downloaded the data for Mrk421, in observed fluxes and linear sca
 <p class="admonition-title">Note</p>
 <p>When importing data from the <code class="docutils literal notranslate"><span class="pre">src</span></code> frame, the Data constructor will not convert units, but will assume that input units are erg/s. If this is not the case an error message will be displayed</p>
 </div>
-</div>
-</div>
-<div class="section" id="building-the-sed-the-obsdata-object">
+</section>
+</section>
+<section id="building-the-sed-the-obsdata-object">
 <h2>Building the SED the ObsData object<a class="headerlink" href="#building-the-sed-the-obsdata-object" title="Permalink to this headline">¶</a></h2>
 <p>Once we have a data table built with the class:<cite>jetset.data_loader.Data</cite>, following  one of the method described above, you can create  SED data using the  <a class="reference internal" href="../../../api/jetset.data_loader.ObsData.html#jetset.data_loader.ObsData" title="jetset.data_loader.ObsData"><code class="xref py py-class docutils literal notranslate"><span class="pre">jetset.data_loader.ObsData</span></code></a> class.
 In the example we use one of the test SEDs provided by the package:</p>
@@ -847,7 +840,7 @@ and after elimination of duplicated entries, and upper limits</p>
 </pre></div>
 </div>
 <i>Table length=110</i>
-<table id="table140316127455264" class="table-striped table-bordered table-condensed">
+<table id="table140538444373344" class="table-striped table-bordered table-condensed">
 <thead><tr><th>nu_data</th><th>dnu_data</th><th>nuFnu_data</th><th>dnuFnu_data</th><th>nu_data_log</th><th>dnu_data_log</th><th>nuFnu_data_log</th><th>dnuFnu_data_log</th><th>dnuFnu_fake</th><th>dnuFnu_fake_log</th><th>UL</th><th>zero_error</th><th>T_start</th><th>T_stop</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th></th><th></th><th></th><th>MJD</th><th>MJD</th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bool</th><th>float64</th><th>float64</th><th>str13</th></tr></thead>
@@ -881,31 +874,45 @@ and after elimination of duplicated entries, and upper limits</p>
 <span class="n">UL_CL</span> <span class="p">:</span>  <span class="mf">0.95</span>
 </pre></div>
 </div>
-<div class="section" id="plotting-obsdata">
+<section id="plotting-obsdata">
 <h3>Plotting ObsData<a class="headerlink" href="#plotting-obsdata" title="Permalink to this headline">¶</a></h3>
 <p>We can now plot our SED using the <code class="xref py py-class docutils literal notranslate"><span class="pre">BlazarSEDFit.plot_sedfit.Plot</span></code> class</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span>
 <span class="n">myPlot</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">(</span><span class="n">sed_data</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_61_0.png" src="../../../_images/Jet_example_load_data_61_0.png" />
+<img alt="../../../_images/Jet_example_load_data_60_0.png" src="../../../_images/Jet_example_load_data_60_0.png" />
 <p>or you can create the object to plot on the fly in this way</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_63_0.png" src="../../../_images/Jet_example_load_data_63_0.png" />
+<img alt="../../../_images/Jet_example_load_data_62_0.png" src="../../../_images/Jet_example_load_data_62_0.png" />
 <p>you can rescale your plot</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_65_0.png" src="../../../_images/Jet_example_load_data_65_0.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+The rescale method as been replaced by the setlim method
+please notice that now jetset uses log axis rather than loglog plots
+so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</pre></div>
+</div>
+<img alt="../../../_images/Jet_example_load_data_64_1.png" src="../../../_images/Jet_example_load_data_64_1.png" />
 <p>plotting in the <code class="docutils literal notranslate"><span class="pre">src</span></code> restframe</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;src&#39;</span><span class="p">)</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mi">46</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E40</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E46</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_67_0.png" src="../../../_images/Jet_example_load_data_67_0.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+The rescale method as been replaced by the setlim method
+please notice that now jetset uses log axis rather than loglog plots
+so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</pre></div>
+</div>
+<img alt="../../../_images/Jet_example_load_data_66_1.png" src="../../../_images/Jet_example_load_data_66_1.png" />
 <p><strong>to have interactive plot in jupyter</strong></p>
 <p>if you want to to have interacitve plot in a jupyter notebook use:</p>
 <div class="highlight-no notranslate"><div class="highlight"><pre><span></span>
@@ -921,8 +928,8 @@ and after elimination of duplicated entries, and upper limits</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">widget</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="grouping-data">
+</section>
+<section id="grouping-data">
 <h3>Grouping data<a class="headerlink" href="#grouping-data" title="Permalink to this headline">¶</a></h3>
 <p>As you can see, due to the overlapping of different instruments and to
 different time snapshots, some points have multiple values. Although
@@ -931,9 +938,9 @@ this is not a problem for the fit process, you might want to rebin
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">sed_data</span><span class="o">.</span><span class="n">group_data</span><span class="p">(</span><span class="n">bin_width</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">myPlot</span><span class="o">.</span><span class="n">add_data_plot</span><span class="p">(</span><span class="n">sed_data</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;rebinned&#39;</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
 </pre></div>
 </div>
 <pre class="literal-block">================================================================================
@@ -941,10 +948,16 @@ this is not a problem for the fit process, you might want to rebin
 <strong>*  binning data  *</strong>
 ---&gt; N bins= 89
 ---&gt; bin_widht= 0.2
-================================================================================</pre>
-<img alt="../../../_images/Jet_example_load_data_71_1.png" src="../../../_images/Jet_example_load_data_71_1.png" />
-</div>
-<div class="section" id="handling-errors-and-systematics">
+================================================================================
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+The rescale method as been replaced by the setlim method
+please notice that now jetset uses log axis rather than loglog plots
+so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</pre>
+<img alt="../../../_images/Jet_example_load_data_70_1.png" src="../../../_images/Jet_example_load_data_70_1.png" />
+</section>
+<section id="handling-errors-and-systematics">
 <h3>Handling errors and systematics<a class="headerlink" href="#handling-errors-and-systematics" title="Permalink to this headline">¶</a></h3>
 <p>Another important issue when dealing with fitting of data, is the proper
 handling of errors. Typically one might need to add systematics for
@@ -960,13 +973,20 @@ frequencies branch.</p></li>
 <p>For these reasons the package offer the possibility to add systematics</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">add_systematics</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,[</span><span class="mf">10.</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span><span class="mf">10.</span><span class="o">**</span><span class="mi">29</span><span class="p">])</span>
 <span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_73_0.png" src="../../../_images/Jet_example_load_data_73_0.png" />
-<p>with this command we add 20% systematics for data between <span class="math notranslate nohighlight">\(10^{6}&lt;\nu&lt;10^{29}\)</span> Hz</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+The rescale method as been replaced by the setlim method
+please notice that now jetset uses log axis rather than loglog plots
+so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</pre></div>
 </div>
-<div class="section" id="filtering-data-sets">
+<img alt="../../../_images/Jet_example_load_data_72_1.png" src="../../../_images/Jet_example_load_data_72_1.png" />
+<p>with this command we add 20% systematics for data between <span class="math notranslate nohighlight">\(10^{6}&lt;\nu&lt;10^{29}\)</span> Hz</p>
+</section>
+<section id="filtering-data-sets">
 <h3>Filtering data sets<a class="headerlink" href="#filtering-data-sets" title="Permalink to this headline">¶</a></h3>
 <p>we use the <code class="docutils literal notranslate"><span class="pre">show_data_sets()</span></code> method to have know wich data sets are
 defined in our table</p>
@@ -984,7 +1004,7 @@ defined in our table</p>
 <span class="n">p</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">(</span><span class="n">show_dataset</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_79_0.png" src="../../../_images/Jet_example_load_data_79_0.png" />
+<img alt="../../../_images/Jet_example_load_data_78_0.png" src="../../../_images/Jet_example_load_data_78_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">show_data_sets</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1017,7 +1037,7 @@ method. Please not with <code class="docutils literal notranslate"><span class="
 <span class="n">dataset</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_82_1.png" src="../../../_images/Jet_example_load_data_82_1.png" />
+<img alt="../../../_images/Jet_example_load_data_81_1.png" src="../../../_images/Jet_example_load_data_81_1.png" />
 <p>we can pass more datasets, comma separated</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">filter_data_set</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="s1">&#39;-1,0&#39;</span><span class="p">,</span><span class="n">exclude</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">sed_data</span><span class="o">.</span><span class="n">show_data_sets</span><span class="p">()</span>
@@ -1037,7 +1057,7 @@ method. Please not with <code class="docutils literal notranslate"><span class="
 <span class="n">dataset</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_84_1.png" src="../../../_images/Jet_example_load_data_84_1.png" />
+<img alt="../../../_images/Jet_example_load_data_83_1.png" src="../../../_images/Jet_example_load_data_83_1.png" />
 <p>we can also use <code class="docutils literal notranslate"><span class="pre">filter_data_set</span></code> to exclude <em>only</em> the datasets in
 <code class="docutils literal notranslate"><span class="pre">filters</span></code> with <code class="docutils literal notranslate"><span class="pre">exclude=False</span></code></p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">filter_data_set</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="s1">&#39;-1&#39;</span><span class="p">,</span><span class="n">exclude</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1059,7 +1079,7 @@ method. Please not with <code class="docutils literal notranslate"><span class="
 <span class="n">dataset</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_86_1.png" src="../../../_images/Jet_example_load_data_86_1.png" />
+<img alt="../../../_images/Jet_example_load_data_85_1.png" src="../../../_images/Jet_example_load_data_85_1.png" />
 <p>we can revert <code class="docutils literal notranslate"><span class="pre">sed_data</span></code> to the original state with the
 <code class="docutils literal notranslate"><span class="pre">reset_data()</span></code> method</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">reset_data</span><span class="p">()</span>
@@ -1076,9 +1096,9 @@ method. Please not with <code class="docutils literal notranslate"><span class="
 <span class="n">dataset</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_89_1.png" src="../../../_images/Jet_example_load_data_89_1.png" />
-</div>
-<div class="section" id="saving-sed-data-and-loading">
+<img alt="../../../_images/Jet_example_load_data_88_1.png" src="../../../_images/Jet_example_load_data_88_1.png" />
+</section>
+<section id="saving-sed-data-and-loading">
 <h3>Saving sed_data and loading<a class="headerlink" href="#saving-sed-data-and-loading" title="Permalink to this headline">¶</a></h3>
 <p>you can save and relaod you sed_data</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;3C454_data.pkl&#39;</span><span class="p">)</span>
@@ -1087,13 +1107,13 @@ method. Please not with <code class="docutils literal notranslate"><span class="
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">=</span><span class="n">ObsData</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;3C454_data.pkl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">(</span><span class="n">show_dataset</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_load_data_94_0.png" src="../../../_images/Jet_example_load_data_94_0.png" />
-</div>
-</div>
-</div>
+<img alt="../../../_images/Jet_example_load_data_93_0.png" src="../../../_images/Jet_example_load_data_93_0.png" />
+</section>
+</section>
+</section>
 
 
     </div>
@@ -1108,7 +1128,7 @@ method. Please not with <code class="docutils literal notranslate"><span class="
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

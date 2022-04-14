@@ -22,7 +22,7 @@ Model fitting 1: Only SSC
 
 .. parsed-literal::
 
-    1.2.0rc6
+    1.2.0rc13
 
 
 .. code:: ipython3
@@ -66,6 +66,7 @@ see the :ref:`data_format` user guide for further information about loading data
     
     sed_data.add_systematics(0.1,[10.**6,10.**29])
     p=sed_data.plot_sed()
+    #p.setlim(y_min=1E-15,x_min=1E7,x_max=1E29)
 
 
 .. parsed-literal::
@@ -77,10 +78,53 @@ see the :ref:`data_format` user guide for further information about loading data
     ---> bin_widht= 0.2
     ================================================================================
     
+    Line2D(_nolegend_)
+    ()
+
+
+::
+
+
+    ---------------------------------------------------------------------------
+
+    AttributeError                            Traceback (most recent call last)
+
+    <ipython-input-5-f4bea578c667> in <module>
+          4 
+          5 sed_data.add_systematics(0.1,[10.**6,10.**29])
+    ----> 6 p=sed_data.plot_sed()
+          7 #p.setlim(y_min=1E-15,x_min=1E7,x_max=1E29)
+
+
+    ~/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/data_loader.py in plot_sed(self, plot_obj, frame, color, fmt, ms, mew, figsize, show_dataset, density)
+       1162         if show_dataset is False:
+       1163 
+    -> 1164             plot_obj.add_data_plot(self, color=color, fmt=fmt, ms=ms, mew=mew, density=density)
+       1165         else:
+       1166             for ds in self.get_data_sets():
+
+
+    ~/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/plot_sedfit.py in add_data_plot(self, sed_data, label, color, frame, fmt, ms, mew, fit_range, density)
+        566         self.counter+=1
+        567         #self.update_legend()
+    --> 568         self.update_plot()
+        569 
+        570 
+
+
+    ~/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/plot_sedfit.py in update_plot(self)
+        332                 for l in dl.lines:
+        333                     print(l)
+    --> 334                     if len(l.get_ydata())>0:
+        335                         y_s.append(np.max(l.get_ydata()))
+        336                         y_s.append(np.min(l.get_ydata()))
+
+
+    AttributeError: 'tuple' object has no attribute 'get_ydata'
 
 
 
-.. image:: Jet_example_model_fit_files/Jet_example_model_fit_8_1.png
+.. image:: Jet_example_model_fit_files/Jet_example_model_fit_8_2.png
 
 
 .. code:: ipython3
@@ -101,7 +145,7 @@ spectral indices
     my_shape=SEDShape(sed_data)
     my_shape.eval_indices(minimizer='lsb',silent=True)
     p=my_shape.plot_indices()
-    p.rescale(y_min=-15,y_max=-6)
+    p.setlim(y_min=1E-15,y_max=5E-8)
 
 
 .. parsed-literal::
@@ -145,7 +189,7 @@ sed shaper
 .. raw:: html
 
     <i>Table length=4</i>
-    <table id="table140409502171728-223028" class="table-striped table-bordered table-condensed">
+    <table id="table140566041476640-353179" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
     <tr><td>LogCubic</td><td>b</td><td>-1.545300e-01</td><td>-1.545300e-01</td><td>9.534795e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
     <tr><td>LogCubic</td><td>c</td><td>-1.023245e-02</td><td>-1.023245e-02</td><td>1.433073e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -174,14 +218,14 @@ sed shaper
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table140409502171728-223028').dataTable()");
+        console.log("$('#table140566041476640-353179').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table140409502171728-223028').dataTable({
+        $('#table140566041476640-353179').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -204,7 +248,7 @@ sed shaper
 
     my_shape.IC_fit(fit_range=[23.,29.],minimizer='minuit',silent=True)
     p=my_shape.plot_shape_fit()
-    p.rescale(y_min=-15)
+    p.setlim(y_min=1E-15,y_max=5E-8)
 
 
 .. parsed-literal::
@@ -222,7 +266,7 @@ sed shaper
 .. raw:: html
 
     <i>Table length=4</i>
-    <table id="table140409503090432-868182" class="table-striped table-bordered table-condensed">
+    <table id="table140566041382192-824428" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
     <tr><td>LogCubic</td><td>b</td><td>-2.098186e-01</td><td>-2.098186e-01</td><td>3.133032e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
     <tr><td>LogCubic</td><td>c</td><td>-4.661868e-02</td><td>-4.661868e-02</td><td>2.178352e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -251,14 +295,14 @@ sed shaper
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table140409503090432-868182').dataTable()");
+        console.log("$('#table140566041382192-824428').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table140409503090432-868182').dataTable({
+        $('#table140566041382192-824428').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -316,7 +360,7 @@ ore least-square bound, as shown below
 .. raw:: html
 
     <i>Table length=11</i>
-    <table id="table140409521812720-389344" class="table-striped table-bordered table-condensed">
+    <table id="table140566107232096-426408" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.112712e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -352,14 +396,14 @@ ore least-square bound, as shown below
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table140409521812720-389344').dataTable()");
+        console.log("$('#table140566107232096-426408').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table140409521812720-389344').dataTable({
+        $('#table140566107232096-426408').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -380,9 +424,10 @@ ore least-square bound, as shown below
 
 .. code:: ipython3
 
+    prefit_jet.eval()
     pl=prefit_jet.plot_model(sed_data=sed_data)
     pl.add_residual_plot(prefit_jet,sed_data)
-    pl.rescale(y_min=-15,x_min=7,x_max=29)
+    pl.setlim(y_min=1E-15,x_min=1E7,x_max=1E29)
 
 
 

@@ -3,23 +3,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Numerical setup &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Jet pp Consistency with Kelner 2006" href="../hadronic_pp_jet/hadornic.html" />
+    <link rel="next" title="Jet pp Consistency with Kelner 2006¶" href="../hadronic_pp_jet/hadornic.html" />
     <link rel="prev" title="External Compton" href="../jet_model_phys_EC/Jet_example_phys_EC.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +72,12 @@
      href="../../../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -213,8 +209,8 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Numerical setup</a><ul>
 <li><a class="reference internal" href="#changing-the-grid-size-for-the-electron-distribution">Changing the grid size for the electron distribution</a></li>
-<li><a class="reference internal" href="#changing-the-grid-size-for-the-seed-photons">Changing the grid size for the seed photons</a></li>
 <li><a class="reference internal" href="#changing-the-grid-size-for-the-ic-process-spectra">Changing the grid size for the IC process spectra</a></li>
+<li><a class="reference internal" href="#changing-the-grid-size-for-the-seed-photons">Changing the grid size for the seed photons</a></li>
 </ul>
 </li>
 </ul>
@@ -230,7 +226,7 @@
     </a>
   </li>
   <li>
-    <a href="../hadronic_pp_jet/hadornic.html" title="Next Chapter: Jet pp Consistency with Kelner 2006"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Jet pp Consis... &raquo;</span>
+    <a href="../hadronic_pp_jet/hadornic.html" title="Next Chapter: Jet pp Consistency with Kelner 2006¶"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Jet pp Consis... &raquo;</span>
     </a>
   </li>
               
@@ -265,13 +261,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -328,7 +323,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -364,14 +359,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -381,10 +374,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -405,7 +398,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -426,17 +419,18 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -454,16 +448,16 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="numerical-setup">
+  <section id="numerical-setup">
 <span id="jet-numerical-guide"></span><h1>Numerical setup<a class="headerlink" href="#numerical-setup" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jetset</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span><span class="n">rc6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span><span class="n">rc13</span>
 </pre></div>
 </div>
-<div class="section" id="changing-the-grid-size-for-the-electron-distribution">
+<section id="changing-the-grid-size-for-the-electron-distribution">
 <h2>Changing the grid size for the electron distribution<a class="headerlink" href="#changing-the-grid-size-for-the-electron-distribution" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
 <span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,)</span>
@@ -505,7 +499,7 @@
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140208766189520-892110" class="table-striped table-bordered table-condensed">
+<table id="table140593888587440-105009" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -541,14 +535,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140208766189520-892110').dataTable()");
+    console.log("$('#table140593888587440-105009').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140208766189520-892110').dataTable({
+    $('#table140593888587440-105009').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -573,146 +567,19 @@ the speed will increase, <strong>but it is not recommended to go below 100</stro
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 <span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../_images/Jet_example_num_9_0.png" src="../../../_images/Jet_example_num_9_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 <span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../_images/Jet_example_num_10_0.png" src="../../../_images/Jet_example_num_10_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">flux_plot_lim</span><span class="o">=</span><span class="mf">1E-200</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_num_11_0.png" src="../../../_images/Jet_example_num_11_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_gamma_grid_size</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_num_12_0.png" src="../../../_images/Jet_example_num_12_0.png" />
-</div>
-<div class="section" id="changing-the-grid-size-for-the-seed-photons">
-<h2>Changing the grid size for the seed photons<a class="headerlink" href="#changing-the-grid-size-for-the-seed-photons" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,)</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
-<span class="n">jet</span> <span class="n">model</span> <span class="n">description</span>
-<span class="o">--------------------------------------------------------------------------------</span>
-<span class="n">name</span><span class="p">:</span> <span class="n">test</span>
-
-<span class="n">electrons</span> <span class="n">distribution</span><span class="p">:</span>
- <span class="nb">type</span><span class="p">:</span> <span class="n">lppl</span>
- <span class="n">gamma</span> <span class="n">energy</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">201</span>
- <span class="n">gmin</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">2.000000e+00</span>
- <span class="n">gmax</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">1.000000e+06</span>
- <span class="n">normalization</span>  <span class="kc">True</span>
- <span class="n">log</span><span class="o">-</span><span class="n">values</span>  <span class="kc">False</span>
-
-<span class="n">radiative</span> <span class="n">fields</span><span class="p">:</span>
- <span class="n">seed</span> <span class="n">photons</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
- <span class="n">IC</span> <span class="n">emission</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
- <span class="n">source</span> <span class="n">emissivity</span> <span class="n">lower</span> <span class="n">bound</span> <span class="p">:</span>  <span class="mf">1.000000e-120</span>
- <span class="n">spectral</span> <span class="n">components</span><span class="p">:</span>
-   <span class="n">name</span><span class="p">:</span><span class="n">Sum</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
-   <span class="n">name</span><span class="p">:</span><span class="n">Sync</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="bp">self</span><span class="o">-</span><span class="nb">abs</span>
-   <span class="n">name</span><span class="p">:</span><span class="n">SSC</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
-<span class="n">external</span> <span class="n">fields</span> <span class="n">transformation</span> <span class="n">method</span><span class="p">:</span> <span class="n">blob</span>
-
-<span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
- <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
- <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
- <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
- <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
-
-<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-120</span>
-
-<span class="o">--------------------------------------------------------------------------------</span>
-</pre></div>
-</div>
-<i>Table length=11</i>
-<table id="table140576104810192-413296" class="table-striped table-bordered table-condensed">
-<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-<tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>test</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
-.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
-display: inline-block; margin-right: 1em; }
-.paginate_button { margin-right: 5px; }
-</style>
-<script>
-
-var astropy_sort_num = function(a, b) {
-    var a_num = parseFloat(a);
-    var b_num = parseFloat(b);
-
-    if (isNaN(a_num) && isNaN(b_num))
-        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
-    else if (!isNaN(a_num) && !isNaN(b_num))
-        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
-    else
-        return isNaN(a_num) ? -1 : 1;
-}
-
-require.config({paths: {
-    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
-}});
-require(["datatables"], function(){
-    console.log("$('#table140576104810192-413296').dataTable()");
-
-jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-    "optionalnum-asc": astropy_sort_num,
-    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
-});
-
-    $('#table140576104810192-413296').dataTable({
-        order: [],
-        pageLength: 100,
-        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
-        pagingType: "full_numbers",
-        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
-    });
-});
-</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
-</pre></div>
-</div>
-<p>we can get the current value of the seed photons grid size using attribute <code class="xref py py-meth docutils literal notranslate"><span class="pre">Jet.nu_seed_size()</span></code></p>
-<p><strong>in the current version there is lit of the size to 1000</strong></p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">nu_seed_size</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span>
-</pre></div>
-</div>
-<p>and this value can be changed using the method <code class="xref py py-meth docutils literal notranslate"><span class="pre">Jet.set_seed_nu_size()</span></code>. In the following we show the result for a grid of nu_size=10</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">nu_seed_size</span><span class="o">=</span><span class="mi">10</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_num_19_0.png" src="../../../_images/Jet_example_num_19_0.png" />
-</div>
-<div class="section" id="changing-the-grid-size-for-the-ic-process-spectra">
+</section>
+<section id="changing-the-grid-size-for-the-ic-process-spectra">
 <h2>Changing the grid size for the IC process spectra<a class="headerlink" href="#changing-the-grid-size-for-the-ic-process-spectra" title="Permalink to this headline">¶</a></h2>
 <p><strong>in the current version there is a limit of the size to 1000</strong></p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,)</span>
@@ -754,7 +621,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140208792967728-851187" class="table-striped table-bordered table-condensed">
+<table id="table140498049813424-869191" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -790,14 +657,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140208792967728-851187').dataTable()");
+    console.log("$('#table140498049813424-869191').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140208792967728-851187').dataTable({
+    $('#table140498049813424-869191').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -808,63 +675,71 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span>
-</pre></div>
-</div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">20</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 <span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_num_24_0.png" src="../../../_images/Jet_example_num_24_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">100</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<img alt="../../../_images/Jet_example_num_14_0.png" src="../../../_images/Jet_example_num_14_0.png" />
+<p>To get a better sampling of the IC cut-off you can increase the IC
+emission grid size</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 <span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_num_25_0.png" src="../../../_images/Jet_example_num_25_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">200</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+<img alt="../../../_images/Jet_example_num_17_0.png" src="../../../_images/Jet_example_num_17_0.png" />
+</section>
+<section id="changing-the-grid-size-for-the-seed-photons">
+<h2>Changing the grid size for the seed photons<a class="headerlink" href="#changing-the-grid-size-for-the-seed-photons" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_num_26_0.png" src="../../../_images/Jet_example_num_26_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">IC_adaptive_e_binning</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">100</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">sed_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">12</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">jet</span> <span class="n">model</span> <span class="n">description</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">test</span>
+
+<span class="n">electrons</span> <span class="n">distribution</span><span class="p">:</span>
+ <span class="nb">type</span><span class="p">:</span> <span class="n">lppl</span>
+ <span class="n">gamma</span> <span class="n">energy</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">201</span>
+ <span class="n">gmin</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">2.000000e+00</span>
+ <span class="n">gmax</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">1.000000e+06</span>
+ <span class="n">normalization</span>  <span class="kc">True</span>
+ <span class="n">log</span><span class="o">-</span><span class="n">values</span>  <span class="kc">False</span>
+
+<span class="n">radiative</span> <span class="n">fields</span><span class="p">:</span>
+ <span class="n">seed</span> <span class="n">photons</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
+ <span class="n">IC</span> <span class="n">emission</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
+ <span class="n">source</span> <span class="n">emissivity</span> <span class="n">lower</span> <span class="n">bound</span> <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+ <span class="n">spectral</span> <span class="n">components</span><span class="p">:</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">Sum</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">Sync</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="bp">self</span><span class="o">-</span><span class="nb">abs</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">SSC</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
+<span class="n">external</span> <span class="n">fields</span> <span class="n">transformation</span> <span class="n">method</span><span class="p">:</span> <span class="n">blob</span>
+
+<span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
+ <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
+ <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
+ <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
+
+<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-30</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_num_27_0.png" src="../../../_images/Jet_example_num_27_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">beam_obj</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">15</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">BulkFactor</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">15.0</span>
-</pre></div>
-</div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span><span class="n">beaming_expr</span><span class="o">=</span><span class="s1">&#39;bulk_theta&#39;</span><span class="p">)</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span>
-</pre></div>
-</div>
-<i>Table length=12</i>
-<table id="table140576093637792-768329" class="table-striped table-bordered table-condensed">
+<i>Table length=11</i>
+<table id="table140498042081488-865728" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>test</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>theta</td><td>jet-viewing-angle</td><td>deg</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>test</td><td>BulkFactor</td><td>jet-bulk-factor</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -895,14 +770,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140576093637792-768329').dataTable()");
+    console.log("$('#table140498042081488-865728').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140576093637792-768329').dataTable({
+    $('#table140498042081488-865728').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -910,64 +785,77 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
     });
 });
-</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<p>we can get the current value of the seed photons grid size using attribute <code class="xref py py-meth docutils literal notranslate"><span class="pre">Jet.nu_seed_size()</span></code></p>
+<p><strong>in the current version there is lit of the size to 1000</strong></p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">nu_seed_size</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">BulkFactor</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">20</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">BulkFactor</span>
+<p>and this value can be changed using the method <code class="xref py py-meth docutils literal notranslate"><span class="pre">Jet.set_seed_nu_size()</span></code>. In the following we show the result for a grid of nu_size=10</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">nu_seed_size</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">20.0</span>
+<img alt="../../../_images/Jet_example_num_24_0.png" src="../../../_images/Jet_example_num_24_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,)</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">energetic_report</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">jet</span> <span class="n">model</span> <span class="n">description</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">test</span>
+
+<span class="n">electrons</span> <span class="n">distribution</span><span class="p">:</span>
+ <span class="nb">type</span><span class="p">:</span> <span class="n">lppl</span>
+ <span class="n">gamma</span> <span class="n">energy</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">201</span>
+ <span class="n">gmin</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">2.000000e+00</span>
+ <span class="n">gmax</span> <span class="n">grid</span> <span class="p">:</span> <span class="mf">1.000000e+06</span>
+ <span class="n">normalization</span>  <span class="kc">True</span>
+ <span class="n">log</span><span class="o">-</span><span class="n">values</span>  <span class="kc">False</span>
+
+<span class="n">radiative</span> <span class="n">fields</span><span class="p">:</span>
+ <span class="n">seed</span> <span class="n">photons</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
+ <span class="n">IC</span> <span class="n">emission</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span>  <span class="mi">100</span>
+ <span class="n">source</span> <span class="n">emissivity</span> <span class="n">lower</span> <span class="n">bound</span> <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+ <span class="n">spectral</span> <span class="n">components</span><span class="p">:</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">Sum</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">Sync</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="bp">self</span><span class="o">-</span><span class="nb">abs</span>
+   <span class="n">name</span><span class="p">:</span><span class="n">SSC</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">on</span>
+<span class="n">external</span> <span class="n">fields</span> <span class="n">transformation</span> <span class="n">method</span><span class="p">:</span> <span class="n">blob</span>
+
+<span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
+ <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
+ <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
+ <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
+
+<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-30</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
-<i>Table length=37</i>
-<table id="table140576110195040-60769" class="table-striped table-bordered table-condensed">
-<thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
-<tr><td>U_e</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.736635e-03</td></tr>
-<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_B</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>3.978874e-04</td></tr>
-<tr><td>U_p</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_p_target</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_Synch</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>5.494838e-05</td></tr>
-<tr><td>U_Synch_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>1.396358e+02</td></tr>
-<tr><td>U_Disk</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_BLR</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_DT</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_CMB</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_Disk_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_BLR_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_DT_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_CMB_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>L_Sync_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>1.073958e+37</td></tr>
-<tr><td>L_SSC_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>2.093242e+35</td></tr>
-<tr><td>L_EC_Disk_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_EC_BLR_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_EC_DT_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_EC_CMB_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_pp_gamma_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_Sync</td><td>jet Lum.</td><td>erg / s</td><td>1.073958e+39</td></tr>
-<tr><td>jet_L_SSC</td><td>jet Lum.</td><td>erg / s</td><td>2.093242e+37</td></tr>
-<tr><td>jet_L_EC_Disk</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_EC_BLR</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_EC_DT</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_EC_CMB</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_pp_gamma</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_rad</td><td>jet Lum.</td><td>erg / s</td><td>1.094891e+39</td></tr>
-<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>1.633562e+42</td></tr>
-<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>2.008928e+42</td></tr>
-<tr><td>jet_L_e</td><td>jet Lum.</td><td>erg / s</td><td>1.633562e+42</td></tr>
-<tr><td>jet_L_B</td><td>jet Lum.</td><td>erg / s</td><td>3.742719e+41</td></tr>
-<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_p</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>BulkLorentzFactor</td><td></td><td></td><td>2.000000e+01</td></tr>
+<i>Table length=11</i>
+<table id="table140498051081792-780424" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>test</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>test</td><td>r</td><td>spectral_curvature</td><td></td><td>4.000000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -991,106 +879,61 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140576110195040-60769').dataTable()");
+    console.log("$('#table140498051081792-780424').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140576110195040-60769').dataTable({
+    $('#table140498051081792-780424').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
         pagingType: "full_numbers",
-        columnDefs: [{targets: [3], type: "optionalnum"}]
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
     });
 });
-</script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span><span class="n">beaming_expr</span><span class="o">=</span><span class="s1">&#39;delta&#39;</span><span class="p">)</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">beam_obj</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">15</span>
-<span class="n">my_jet</span><span class="o">.</span><span class="n">energetic_report</span><span class="p">()</span>
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
-<i>Table length=37</i>
-<table id="table140576087442240-331147" class="table-striped table-bordered table-condensed">
-<thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
-<tr><td>U_e</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.736635e-03</td></tr>
-<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_B</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>3.978874e-04</td></tr>
-<tr><td>U_p</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_p_target</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_Synch</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_Synch_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_Disk</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_BLR</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_DT</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_CMB</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_Disk_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_BLR_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_DT_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>U_CMB_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
-<tr><td>L_Sync_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_SSC_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_EC_Disk_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_EC_BLR_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_EC_DT_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_EC_CMB_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>L_pp_gamma_rf</td><td>Lum. blob rest. frme.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_Sync</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_SSC</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_EC_Disk</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_EC_BLR</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_EC_DT</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_EC_CMB</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_pp_gamma</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_rad</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>9.179824e+41</td></tr>
-<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>1.128305e+42</td></tr>
-<tr><td>jet_L_e</td><td>jet Lum.</td><td>erg / s</td><td>9.179824e+41</td></tr>
-<tr><td>jet_L_B</td><td>jet Lum.</td><td>erg / s</td><td>2.103226e+41</td></tr>
-<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>jet_L_p</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-<tr><td>BulkLorentzFactor</td><td></td><td></td><td>1.500000e+01</td></tr>
-</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
-.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
-display: inline-block; margin-right: 1em; }
-.paginate_button { margin-right: 5px; }
-</style>
-<script>
-
-var astropy_sort_num = function(a, b) {
-    var a_num = parseFloat(a);
-    var b_num = parseFloat(b);
-
-    if (isNaN(a_num) && isNaN(b_num))
-        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
-    else if (!isNaN(a_num) && !isNaN(b_num))
-        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
-    else
-        return isNaN(a_num) ? -1 : 1;
-}
-
-require.config({paths: {
-    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
-}});
-require(["datatables"], function(){
-    console.log("$('#table140576087442240-331147').dataTable()");
-
-jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-    "optionalnum-asc": astropy_sort_num,
-    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
-});
-
-    $('#table140576087442240-331147').dataTable({
-        order: [],
-        pageLength: 100,
-        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
-        pagingType: "full_numbers",
-        columnDefs: [{targets: [3], type: "optionalnum"}]
-    });
-});
-</script></div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="p">)</span>
+</pre></div>
 </div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">20</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Jet_example_num_27_0.png" src="../../../_images/Jet_example_num_27_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Jet_example_num_28_0.png" src="../../../_images/Jet_example_num_28_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">200</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Jet_example_num_29_0.png" src="../../../_images/Jet_example_num_29_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">IC_adaptive_e_binning</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">IC_nu_size</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+<span class="n">sed_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-20</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Jet_example_num_30_0.png" src="../../../_images/Jet_example_num_30_0.png" />
+</section>
+</section>
 
 
     </div>
@@ -1105,7 +948,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

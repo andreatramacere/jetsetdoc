@@ -44,7 +44,7 @@ Broad Line Region
 
 .. parsed-literal::
 
-    tested on jetset 1.2.0rc4
+    tested on jetset 1.2.0rc13
 
 
 .. code:: ipython3
@@ -104,7 +104,7 @@ black body ``BB``
      nu mix (Hz): 1.000000e+06
      nu max (Hz): 1.000000e+30
     
-    flux plot lower bound   :  1.000000e-120
+    flux plot lower bound   :  1.000000e-30
     
     --------------------------------------------------------------------------------
 
@@ -113,7 +113,7 @@ black body ``BB``
 .. raw:: html
 
     <i>Table length=17</i>
-    <table id="table140702458564672-466115" class="table-striped table-bordered table-condensed">
+    <table id="table140228794306960-98938" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -155,14 +155,14 @@ black body ``BB``
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table140702458564672-466115').dataTable()");
+        console.log("$('#table140228794306960-98938').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table140702458564672-466115').dataTable({
+        $('#table140228794306960-98938').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -260,7 +260,7 @@ parameters regarding the multi temperature black body accretion disk:
      nu mix (Hz): 1.000000e+06
      nu max (Hz): 1.000000e+30
     
-    flux plot lower bound   :  1.000000e-120
+    flux plot lower bound   :  1.000000e-30
     
     --------------------------------------------------------------------------------
 
@@ -269,7 +269,7 @@ parameters regarding the multi temperature black body accretion disk:
 .. raw:: html
 
     <i>Table length=20</i>
-    <table id="table140702465461072-681397" class="table-striped table-bordered table-condensed">
+    <table id="table140228849467056-804724" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>3.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>3.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -314,14 +314,14 @@ parameters regarding the multi temperature black body accretion disk:
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table140702465461072-681397').dataTable()");
+        console.log("$('#table140228849467056-804724').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table140702465461072-681397').dataTable({
+        $('#table140228849467056-804724').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -348,7 +348,7 @@ now we set some parameter for the model
 .. code:: ipython3
 
     p=my_jet.plot_model(frame='obs')
-    p.rescale(y_min=-13.5,y_max=-9.5,x_min=9,x_max=27)
+    p.setlim(y_min=1E-13,y_max=5E-11,x_min=1E9,x_max=1E27)
 
 
 
@@ -406,7 +406,7 @@ Dusty Torus
      nu mix (Hz): 1.000000e+06
      nu max (Hz): 1.000000e+30
     
-    flux plot lower bound   :  1.000000e-120
+    flux plot lower bound   :  1.000000e-30
     
     --------------------------------------------------------------------------------
 
@@ -415,7 +415,7 @@ Dusty Torus
 .. raw:: html
 
     <i>Table length=20</i>
-    <table id="table140702467160096-855512" class="table-striped table-bordered table-condensed">
+    <table id="table140228874803904-897696" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>3.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>3.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -460,14 +460,14 @@ Dusty Torus
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table140702467160096-855512').dataTable()");
+        console.log("$('#table140228874803904-897696').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table140702467160096-855512').dataTable({
+        $('#table140228874803904-897696').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -492,7 +492,7 @@ Dusty Torus
 .. code:: ipython3
 
     p=my_jet.plot_model()
-    p.rescale(y_min=-13.5,y_max=-9.5,x_min=9,x_max=27)
+    p.setlim(y_min=1E-13,y_max=5E-11,x_min=1E9,x_max=1E27)
 
 
 
@@ -508,7 +508,7 @@ Dusty Torus
 .. code:: ipython3
 
     p=my_jet.plot_model()
-    p.rescale(y_min=-13.5,y_max=-9.5,x_min=9,x_max=27)
+    p.setlim(y_min=1E-13,y_max=5E-11,x_min=1E9,x_max=1E27)
 
 
 
@@ -603,13 +603,19 @@ the disk/BH frame to the relativistic blob
     my_jet.set_external_field_transf('blob')
 
 Alternatively, in the case of istropric fields as the CMB or the BLR and
-DT within the BLR radius, and DT radius, respectively, the it is
-possible to transform the the electron distribution, moving the blob to
-the disk/BH frame.
+DT within the BLR radius, and DT radius, respectively, it is possible to
+transform the the electron distribution, moving the blob to the disk/BH
+frame.
 
 .. code:: ipython3
 
     my_jet.set_external_field_transf('disk')
+
+**Anyhow, the ``disk`` transformation is valid only for isotropic
+external fields, suchs as the CMB, or the BLR and Dusty torus seed
+photons whitin the DT radius and BLR radius, respectively. Beyond the
+isotropic region, the code will switch automatically to the ``blob``
+transformation, even if ``disk`` is used**
 
 External photon field energy density along the jet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -673,12 +679,12 @@ EC seed photon fields, in the Disk rest frame
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x7ff7d890c730>
+    <matplotlib.legend.Legend at 0x7f8995fee940>
 
 
 
 
-.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_31_1.png
+.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_32_1.png
 
 
 .. code:: ipython3
@@ -740,12 +746,12 @@ EC seed photon fields, in the Disk rest frame
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x7ff7d8d21790>
+    <matplotlib.legend.Legend at 0x7f8976fa39a0>
 
 
 
 
-.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_32_1.png
+.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_33_1.png
 
 
 IC against the CMB
@@ -770,10 +776,9 @@ IC against the CMB
 We can now compare the different beaming pattern for the EC emission if
 the CMB, and realize that the beaming pattern is different. This is very
 important in the case of radio galaxies. The ``src`` transformation is
-the one to use in the case of radio galaies or misaligned AGNs, and
-gives a more accurate results. Anyhow, be careful that this works only
-for isotropic external fields, suchs as the CMB, or the BLR seed photons
-whitin the Dusty torus radius, and BLR radius, respectively
+the one to use in the case of radio galaxies or misaligned AGNs in
+general, and gives a more accurate results for the beaming patter of an
+isotropic external field.
 
 .. code:: ipython3
 
@@ -793,11 +798,11 @@ whitin the Dusty torus radius, and BLR radius, respectively
         my_jet.eval()
         my_jet.plot_model(plot_obj=p,comp='Sum',label='disk, theta=%2.2f'%theta,line_style='',color=c[ID])
     
-    p.rescale(y_min=-17.5,y_max=-12.5,x_max=28)
+    p.setlim(y_min=5E-18,y_max=5E-13,x_max=1E28)
 
 
 
-.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_36_0.png
+.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_37_0.png
 
 
 Equipartition
@@ -828,7 +833,7 @@ points (``N_pts``)
 
 
 
-.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_39_1.png
+.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_40_1.png
 
 
 .. parsed-literal::
@@ -841,7 +846,7 @@ points (``N_pts``)
 .. raw:: html
 
     <i>Table length=14</i>
-    <table id="table140702479999520-710298" class="table-striped table-bordered table-condensed">
+    <table id="table140228868320560-551053" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>test_equipartition</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+21</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>test_equipartition</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -880,14 +885,14 @@ points (``N_pts``)
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table140702479999520-710298').dataTable()");
+        console.log("$('#table140228868320560-551053').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table140702479999520-710298').dataTable({
+        $('#table140228868320560-551053').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -902,10 +907,10 @@ points (``N_pts``)
 .. code:: ipython3
 
     p=my_jet.plot_model()
-    p.rescale(y_min=-16.5,y_max=-13.5,x_max=28)
+    p.setlim(y_min=5E-18,y_max=2E-14,x_max=1E28)
 
 
 
-.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_40_0.png
+.. image:: Jet_example_phys_EC_files/Jet_example_phys_EC_41_0.png
 
 

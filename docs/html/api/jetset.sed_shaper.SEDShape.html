@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>SEDShape &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="jetset.sherpa_plugin Module" href="sherpa_plugin.html" />
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +72,12 @@
      href="../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -260,13 +256,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -323,7 +318,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -359,14 +354,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -376,10 +369,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -400,7 +393,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -447,17 +440,18 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -475,11 +469,11 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="sedshape">
+  <section id="sedshape">
 <h1>SEDShape<a class="headerlink" href="#sedshape" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="jetset.sed_shaper.SEDShape">
-<em class="property">class </em><code class="sig-name descname">SEDShape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sed_data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SEDShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sed_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This handle the SED shaping process</p>
 <p class="rubric">Methods Summary</p>
@@ -489,7 +483,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.IC_fit" title="jetset.sed_shaper.SEDShape.IC_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IC_fit</span></code></a>([fit_range, use_log_par, Ep_start, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.IC_fit" title="jetset.sed_shaper.SEDShape.IC_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IC_fit</span></code></a>([fit_range, use_log_par, Ep_start, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.add_BBB_template" title="jetset.sed_shaper.SEDShape.add_BBB_template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_BBB_template</span></code></a>(fit_model)</p></td>
@@ -501,17 +495,17 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.add_host_template" title="jetset.sed_shaper.SEDShape.add_host_template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_host_template</span></code></a>(fit_model)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.check_adapt_range_size" title="jetset.sed_shaper.SEDShape.check_adapt_range_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_adapt_range_size</span></code></a>(x, index, min_size[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.check_adapt_range_size" title="jetset.sed_shaper.SEDShape.check_adapt_range_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_adapt_range_size</span></code></a>(x, index, min_size[, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.do_sync_fit" title="jetset.sed_shaper.SEDShape.do_sync_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_sync_fit</span></code></a>(fit_model, fit_law_name[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.do_sync_fit" title="jetset.sed_shaper.SEDShape.do_sync_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_sync_fit</span></code></a>(fit_model, fit_law_name[, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.eval_indices" title="jetset.sed_shaper.SEDShape.eval_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eval_indices</span></code></a>([minimizer, silent, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.eval_indices" title="jetset.sed_shaper.SEDShape.eval_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eval_indices</span></code></a>([minimizer, silent, ...])</p></td>
 <td><p>This methods evaluates the indices for the SED indices are istances of the index_array () class</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.find_class" title="jetset.sed_shaper.SEDShape.find_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_class</span></code></a>(E_S)</p></td>
-<td><p>method to evaluate obj class ‘L/I/HPS’ according to Ep</p></td>
+<td><p>method to evaluate obj class 'L/I/HPS' according to Ep</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.get_nu_max" title="jetset.sed_shaper.SEDShape.get_nu_max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_nu_max</span></code></a>(nu, fit_range)</p></td>
 <td><p></p></td>
@@ -528,58 +522,58 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.save_values" title="jetset.sed_shaper.SEDShape.save_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_values</span></code></a>(name)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.set_S_LE_slope" title="jetset.sed_shaper.SEDShape.set_S_LE_slope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_S_LE_slope</span></code></a>(fit_func, fit_law_name, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.set_S_LE_slope" title="jetset.sed_shaper.SEDShape.set_S_LE_slope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_S_LE_slope</span></code></a>(fit_func, fit_law_name, ...)</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.show_values" title="jetset.sed_shaper.SEDShape.show_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_values</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.sync_fit" title="jetset.sed_shaper.SEDShape.sync_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sync_fit</span></code></a>([check_host_gal_template, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.sed_shaper.SEDShape.sync_fit" title="jetset.sed_shaper.SEDShape.sync_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sync_fit</span></code></a>([check_host_gal_template, ...])</p></td>
 <td><p>This method analyses the synchrotron shape by means of log-log polynomial fits</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.IC_fit">
-<code class="sig-name descname">IC_fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fit_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_log_par</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">Ep_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimizer</span><span class="o">=</span><span class="default_value">'minuit'</span></em>, <em class="sig-param"><span class="n">silent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.IC_fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.IC_fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.IC_fit">
+<span class="sig-name descname"><span class="pre">IC_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fit_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_log_par</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ep_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'minuit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.IC_fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.IC_fit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.add_BBB_template">
-<code class="sig-name descname">add_BBB_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fit_model</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.add_BBB_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.add_BBB_template" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.add_BBB_template">
+<span class="sig-name descname"><span class="pre">add_BBB_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fit_model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.add_BBB_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.add_BBB_template" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.add_disk">
-<code class="sig-name descname">add_disk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fit_model</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.add_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.add_disk" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.add_disk">
+<span class="sig-name descname"><span class="pre">add_disk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fit_model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.add_disk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.add_disk" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.add_host_template">
-<code class="sig-name descname">add_host_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fit_model</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.add_host_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.add_host_template" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.add_host_template">
+<span class="sig-name descname"><span class="pre">add_host_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fit_model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.add_host_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.add_host_template" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.check_adapt_range_size">
-<code class="sig-name descname">check_adapt_range_size</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">index</span></em>, <em class="sig-param"><span class="n">min_size</span></em>, <em class="sig-param"><span class="n">silent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.check_adapt_range_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.check_adapt_range_size" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.check_adapt_range_size">
+<span class="sig-name descname"><span class="pre">check_adapt_range_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.check_adapt_range_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.check_adapt_range_size" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.do_sync_fit">
-<code class="sig-name descname">do_sync_fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fit_model</span></em>, <em class="sig-param"><span class="n">fit_law_name</span></em>, <em class="sig-param"><span class="n">fit_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_disk</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">check_BBB</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">check_host</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">Ep_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_check</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">minimizer</span><span class="o">=</span><span class="default_value">'lsb'</span></em>, <em class="sig-param"><span class="n">silent</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">show_fit_report</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.do_sync_fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.do_sync_fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.do_sync_fit">
+<span class="sig-name descname"><span class="pre">do_sync_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fit_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_law_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_disk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_BBB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ep_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lsb'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_fit_report</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.do_sync_fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.do_sync_fit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.eval_indices">
-<code class="sig-name descname">eval_indices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">minimizer</span><span class="o">=</span><span class="default_value">'lsb'</span></em>, <em class="sig-param"><span class="n">silent</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">show_fit_report</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.eval_indices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.eval_indices" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.eval_indices">
+<span class="sig-name descname"><span class="pre">eval_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lsb'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_fit_report</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.eval_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.eval_indices" title="Permalink to this definition">¶</a></dt>
 <dd><p>This methods evaluates the indices for the SED
 indices are istances of the index_array () class</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.find_class">
-<code class="sig-name descname">find_class</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">E_S</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.find_class"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.find_class" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.find_class">
+<span class="sig-name descname"><span class="pre">find_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E_S</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.find_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.find_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>method to evaluate obj class ‘L/I/HPS’ according
 to Ep</p>
 <p>args: E_S</p>
@@ -588,43 +582,43 @@ to Ep</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.get_nu_max">
-<code class="sig-name descname">get_nu_max</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span></em>, <em class="sig-param"><span class="n">fit_range</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.get_nu_max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.get_nu_max" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.get_nu_max">
+<span class="sig-name descname"><span class="pre">get_nu_max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_range</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.get_nu_max"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.get_nu_max" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.plot_indices">
-<code class="sig-name descname">plot_indices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot_obj</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.plot_indices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.plot_indices" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.plot_indices">
+<span class="sig-name descname"><span class="pre">plot_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.plot_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.plot_indices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.plot_shape_fit">
-<code class="sig-name descname">plot_shape_fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot_obj</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.plot_shape_fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.plot_shape_fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.plot_shape_fit">
+<span class="sig-name descname"><span class="pre">plot_shape_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.plot_shape_fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.plot_shape_fit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.save_sync_fit_report">
-<code class="sig-name descname">save_sync_fit_report</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.save_sync_fit_report"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.save_sync_fit_report" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.save_sync_fit_report">
+<span class="sig-name descname"><span class="pre">save_sync_fit_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.save_sync_fit_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.save_sync_fit_report" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.save_values">
-<code class="sig-name descname">save_values</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.save_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.save_values" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.save_values">
+<span class="sig-name descname"><span class="pre">save_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.save_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.save_values" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.set_S_LE_slope">
-<code class="sig-name descname">set_S_LE_slope</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fit_func</span></em>, <em class="sig-param"><span class="n">fit_law_name</span></em>, <em class="sig-param"><span class="n">use_log_par</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.set_S_LE_slope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.set_S_LE_slope" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.set_S_LE_slope">
+<span class="sig-name descname"><span class="pre">set_S_LE_slope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fit_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_law_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_log_par</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.set_S_LE_slope"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.set_S_LE_slope" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.show_values">
-<code class="sig-name descname">show_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.show_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.show_values" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.show_values">
+<span class="sig-name descname"><span class="pre">show_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.show_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.show_values" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.sed_shaper.SEDShape.sync_fit">
-<code class="sig-name descname">sync_fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">check_host_gal_template</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">check_BBB_template</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">check_disk</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">fit_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nu_min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nu_max</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Ep_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_log_par</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">minimizer</span><span class="o">=</span><span class="default_value">'lsb'</span></em>, <em class="sig-param"><span class="n">silent</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">show_fit_report</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.sync_fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.sync_fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.sed_shaper.SEDShape.sync_fit">
+<span class="sig-name descname"><span class="pre">sync_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_host_gal_template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_BBB_template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_disk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ep_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_log_par</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lsb'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_fit_report</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/sed_shaper.html#SEDShape.sync_fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.sed_shaper.SEDShape.sync_fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method analyses the synchrotron shape by means
 of log-log polynomial fits</p>
 <p>The following paremeters are estimated:</p>
@@ -653,7 +647,7 @@ of log-log polynomial fits</p>
 
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -668,7 +662,7 @@ of log-log polynomial fits</p>
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>External Compton &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Numerical setup" href="../jet_model_num/Jet_example_num.html" />
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +72,12 @@
      href="../../../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -269,13 +265,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -332,7 +327,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -368,14 +363,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -385,10 +378,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -409,7 +402,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -430,17 +423,18 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -458,7 +452,7 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="external-compton">
+  <section id="external-compton">
 <span id="jet-physical-guide-ec"></span><h1>External Compton<a class="headerlink" href="#external-compton" title="Permalink to this headline">¶</a></h1>
 <p>The external Compton implementation  gives you the possibility to use a double approach</p>
 <ul class="simple">
@@ -474,17 +468,19 @@ disk/BH restframe Dermer(1995)[Dermer95]_ and Georganopoulos, Kirk, and Mastichi
 <li><p>Cosmic Microwave Background (CMB)</p></li>
 </ul>
 <p>Please read <span class="xref std std-ref">jet_physical_guide_SSC</span> if you skipped it.</p>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <img alt="EC scheme" src="../../../_images/jetset_EC_scheme.png" />
-<p class="caption"><span class="caption-text">EC scheme</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="broad-line-region">
+<figcaption>
+<p><span class="caption-text">EC scheme</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="broad-line-region">
 <h2>Broad Line Region<a class="headerlink" href="#broad-line-region" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jetset</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span><span class="n">rc4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span><span class="n">rc13</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
@@ -536,13 +532,13 @@ black body <code class="docutils literal notranslate"><span class="pre">BB</span
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
-<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-30</span>
 
 <span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
 <i>Table length=17</i>
-<table id="table140702458564672-466115" class="table-striped table-bordered table-condensed">
+<table id="table140228794306960-98938" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -584,14 +580,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140702458564672-466115').dataTable()");
+    console.log("$('#table140228794306960-98938').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140702458564672-466115').dataTable({
+    $('#table140228794306960-98938').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -602,8 +598,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="change-disk-type">
+</section>
+<section id="change-disk-type">
 <h2>change Disk type<a class="headerlink" href="#change-disk-type" title="Permalink to this headline">¶</a></h2>
 <p>the disk type can be set as a more realistic multi temperature black
 body (MultiBB). In this case the <code class="docutils literal notranslate"><span class="pre">show_model</span></code> method provides physical
@@ -675,13 +671,13 @@ parameters regarding the multi temperature black body accretion disk:</p>
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
-<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-30</span>
 
 <span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
 <i>Table length=20</i>
-<table id="table140702465461072-681397" class="table-striped table-bordered table-condensed">
+<table id="table140228849467056-804724" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>3.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>3.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -726,14 +722,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140702465461072-681397').dataTable()");
+    console.log("$('#table140228849467056-804724').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140702465461072-681397').dataTable({
+    $('#table140228849467056-804724').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -749,12 +745,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mf">13.5</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mf">9.5</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">27</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E27</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../_images/Jet_example_phys_EC_15_0.png" src="../../../_images/Jet_example_phys_EC_15_0.png" />
-</div>
-<div class="section" id="dusty-torus">
+</section>
+<section id="dusty-torus">
 <h2>Dusty Torus<a class="headerlink" href="#dusty-torus" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">add_EC_component</span><span class="p">(</span><span class="s1">&#39;DT&#39;</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
@@ -799,13 +795,13 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
-<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-120</span>
+<span class="n">flux</span> <span class="n">plot</span> <span class="n">lower</span> <span class="n">bound</span>   <span class="p">:</span>  <span class="mf">1.000000e-30</span>
 
 <span class="o">--------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
 <i>Table length=20</i>
-<table id="table140702467160096-855512" class="table-striped table-bordered table-condensed">
+<table id="table140228874803904-897696" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>3.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>3.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -850,14 +846,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140702467160096-855512').dataTable()");
+    console.log("$('#table140228874803904-897696').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140702467160096-855512').dataTable({
+    $('#table140228874803904-897696').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -872,7 +868,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mf">13.5</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mf">9.5</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">27</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E27</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../_images/Jet_example_phys_EC_19_0.png" src="../../../_images/Jet_example_phys_EC_19_0.png" />
@@ -881,7 +877,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mf">13.5</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mf">9.5</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">27</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E27</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../_images/Jet_example_phys_EC_21_0.png" src="../../../_images/Jet_example_phys_EC_21_0.png" />
@@ -953,8 +949,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
     });
 });
-</script></div>
-<div class="section" id="changing-the-external-field-transformation">
+</script></section>
+<section id="changing-the-external-field-transformation">
 <h2>Changing the external field transformation<a class="headerlink" href="#changing-the-external-field-transformation" title="Permalink to this headline">¶</a></h2>
 <p>Default method, is the transformation of the external photon field from
 the disk/BH frame to the relativistic blob</p>
@@ -962,14 +958,19 @@ the disk/BH frame to the relativistic blob</p>
 </pre></div>
 </div>
 <p>Alternatively, in the case of istropric fields as the CMB or the BLR and
-DT within the BLR radius, and DT radius, respectively, the it is
-possible to transform the the electron distribution, moving the blob to
-the disk/BH frame.</p>
+DT within the BLR radius, and DT radius, respectively, it is possible to
+transform the the electron distribution, moving the blob to the disk/BH
+frame.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_external_field_transf</span><span class="p">(</span><span class="s1">&#39;disk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="external-photon-field-energy-density-along-the-jet">
+<p><strong>Anyhow, the ``disk`` transformation is valid only for isotropic
+external fields, suchs as the CMB, or the BLR and Dusty torus seed
+photons whitin the DT radius and BLR radius, respectively. Beyond the
+isotropic region, the code will switch automatically to the ``blob``
+transformation, even if ``disk`` is used</strong></p>
+</section>
+<section id="external-photon-field-energy-density-along-the-jet">
 <h2>External photon field energy density along the jet<a class="headerlink" href="#external-photon-field-energy-density-along-the-jet" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">iso_field_transf</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">BulckFactor</span><span class="p">):</span>
     <span class="n">beta</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">BulckFactor</span><span class="o">*</span><span class="n">BulckFactor</span><span class="p">)</span>
@@ -1020,10 +1021,10 @@ the disk/BH frame.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7ff7d890c730</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7f8995fee940</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_31_1.png" src="../../../_images/Jet_example_phys_EC_31_1.png" />
+<img alt="../../../_images/Jet_example_phys_EC_32_1.png" src="../../../_images/Jet_example_phys_EC_32_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
@@ -1041,9 +1042,9 @@ the disk/BH frame.</p>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">_blob</span><span class="o">.</span><span class="n">l_n_int</span><span class="o">=</span><span class="mi">100</span>
 <span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">R</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">R_range</span><span class="p">):</span>
     <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R_H&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="n">R</span><span class="p">)</span>
-    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R_BLR_in&#39;</span><span class="p">,</span><span class="mf">1E17</span><span class="o">*</span><span class="p">(</span><span class="n">L_Disk</span><span class="o">/</span><span class="mf">1E45</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R_BLR_out&#39;</span><span class="p">,</span><span class="mf">1.1E17</span><span class="o">*</span><span class="p">(</span><span class="n">L_Disk</span><span class="o">/</span><span class="mf">1E45</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R_DT&#39;</span><span class="p">,</span><span class="mf">2.5E18</span><span class="o">*</span><span class="p">(</span><span class="n">L_Disk</span><span class="o">/</span><span class="mf">1E45</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R_BLR_in&#39;</span><span class="p">,</span><span class="mf">1E17</span><span class="o">*</span><span class="p">(</span><span class="n">L_Disk</span><span class="o">/</span><span class="mf">1E45</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R_BLR_out&#39;</span><span class="p">,</span><span class="mf">1.1E17</span><span class="o">*</span><span class="p">(</span><span class="n">L_Disk</span><span class="o">/</span><span class="mf">1E45</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span><span class="p">)</span>
+    <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R_DT&#39;</span><span class="p">,</span><span class="mf">2.5E18</span><span class="o">*</span><span class="p">(</span><span class="n">L_Disk</span><span class="o">/</span><span class="mf">1E45</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span><span class="p">)</span>
     <span class="n">my_jet</span><span class="o">.</span><span class="n">set_external_fields</span><span class="p">()</span>
     <span class="n">my_jet</span><span class="o">.</span><span class="n">energetic_report</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
@@ -1076,12 +1077,12 @@ the disk/BH frame.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7ff7d8d21790</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7f8976fa39a0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_32_1.png" src="../../../_images/Jet_example_phys_EC_32_1.png" />
-</div>
-<div class="section" id="ic-against-the-cmb">
+<img alt="../../../_images/Jet_example_phys_EC_33_1.png" src="../../../_images/Jet_example_phys_EC_33_1.png" />
+</section>
+<section id="ic-against-the-cmb">
 <h2>IC against the CMB<a class="headerlink" href="#ic-against-the-cmb" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test_equipartition&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span><span class="n">beaming_expr</span><span class="o">=</span><span class="s1">&#39;bulk_theta&#39;</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E21</span><span class="p">)</span>
@@ -1101,10 +1102,9 @@ the disk/BH frame.</p>
 <p>We can now compare the different beaming pattern for the EC emission if
 the CMB, and realize that the beaming pattern is different. This is very
 important in the case of radio galaxies. The <code class="docutils literal notranslate"><span class="pre">src</span></code> transformation is
-the one to use in the case of radio galaies or misaligned AGNs, and
-gives a more accurate results. Anyhow, be careful that this works only
-for isotropic external fields, suchs as the CMB, or the BLR seed photons
-whitin the Dusty torus radius, and BLR radius, respectively</p>
+the one to use in the case of radio galaxies or misaligned AGNs in
+general, and gives a more accurate results for the beaming patter of an
+isotropic external field.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span>
 <span class="n">p</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">()</span>
 
@@ -1121,13 +1121,13 @@ whitin the Dusty torus radius, and BLR radius, respectively</p>
     <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
     <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">plot_obj</span><span class="o">=</span><span class="n">p</span><span class="p">,</span><span class="n">comp</span><span class="o">=</span><span class="s1">&#39;Sum&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;disk, theta=</span><span class="si">%2.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">theta</span>,line_style=&#39;&#39;,color=c[ID])
 
-<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mf">17.5</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mf">12.5</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">28</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">5E-18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-13</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_36_0.png" src="../../../_images/Jet_example_phys_EC_36_0.png" />
-</div>
-</div>
-<div class="section" id="equipartition">
+<img alt="../../../_images/Jet_example_phys_EC_37_0.png" src="../../../_images/Jet_example_phys_EC_37_0.png" />
+</section>
+</section>
+<section id="equipartition">
 <h1>Equipartition<a class="headerlink" href="#equipartition" title="Permalink to this headline">¶</a></h1>
 <p>It is also possible to set our jet at the equipartition, that is
 achieved not using analytical approximation, but by numerically finding
@@ -1147,13 +1147,13 @@ points (<code class="docutils literal notranslate"><span class="pre">N_pts</span
 <span class="n">grid</span> <span class="n">points</span> <span class="mi">50</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_39_1.png" src="../../../_images/Jet_example_phys_EC_39_1.png" />
+<img alt="../../../_images/Jet_example_phys_EC_40_1.png" src="../../../_images/Jet_example_phys_EC_40_1.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setting</span> <span class="n">B</span> <span class="n">to</span>  <span class="mf">0.0001389495494373139</span>
 <span class="n">setting</span> <span class="n">N</span> <span class="n">to</span>  <span class="mf">9.160733610838076e-06</span>
 </pre></div>
 </div>
 <i>Table length=14</i>
-<table id="table140702479999520-710298" class="table-striped table-bordered table-condensed">
+<table id="table140228868320560-551053" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test_equipartition</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+21</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1192,14 +1192,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140702479999520-710298').dataTable()");
+    console.log("$('#table140228868320560-551053').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140702479999520-710298').dataTable({
+    $('#table140228868320560-551053').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1208,11 +1208,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     });
 });
 </script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mf">16.5</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mf">13.5</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">28</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">5E-18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">2E-14</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_40_0.png" src="../../../_images/Jet_example_phys_EC_40_0.png" />
-</div>
+<img alt="../../../_images/Jet_example_phys_EC_41_0.png" src="../../../_images/Jet_example_phys_EC_41_0.png" />
+</section>
 
 
     </div>
@@ -1227,7 +1227,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

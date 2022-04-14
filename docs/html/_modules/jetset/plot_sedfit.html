@@ -5,18 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jetset.plot_sedfit &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <meta charset='utf-8'>
@@ -56,7 +54,7 @@
         </button>
         <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -71,7 +69,7 @@
      href="../../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
@@ -133,7 +131,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -169,8 +167,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -180,10 +182,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -236,7 +238,7 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
@@ -298,7 +300,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -334,8 +336,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -345,10 +351,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -369,24 +375,25 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">code documentation (API)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -428,6 +435,7 @@
 <span class="kn">import</span>  <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">astropy.constants</span> <span class="kn">import</span> <span class="n">m_e</span><span class="p">,</span><span class="n">m_p</span><span class="p">,</span><span class="n">c</span>
 <span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
 
@@ -438,22 +446,31 @@
 <span class="n">__all__</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PlotSED&#39;</span><span class="p">,</span><span class="s1">&#39;BasePlot&#39;</span><span class="p">,</span><span class="s1">&#39;PlotPdistr&#39;</span><span class="p">,</span><span class="s1">&#39;PlotSpecComp&#39;</span><span class="p">,</span><span class="s1">&#39;PlotSeedPhotons&#39;</span><span class="p">,</span><span class="s1">&#39;PlotSpectralMultipl&#39;</span><span class="p">,</span><span class="s1">&#39;PlotTempEvDiagram&#39;</span><span class="p">,</span><span class="s1">&#39;PlotTempEvEmitters&#39;</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">y_ev_transf</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">2.417E14</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="mf">2.417E14</span>
 
 <span class="k">def</span> <span class="nf">y_ev_transf_inv</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">2.417E14</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mf">2.417E14</span>
 
 
 
 <span class="k">def</span> <span class="nf">set_mpl</span><span class="p">():</span>
     <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">12.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">]</span>
-    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
     <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;savefig.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
 
     <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;14&#39;</span>
     <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;medium&#39;</span>
     <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.titlesize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;medium&#39;</span>
 
+
+
+<span class="k">def</span> <span class="nf">_rescale</span><span class="p">(</span> <span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;`The rescale method has been removed and has been replaced by the setlim method&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!The rescale method as been replaced by the setlim method            !&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!please notice that now jetset uses log axis rather than loglog plots!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="PlotSED"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED">[docs]</a><span class="k">class</span>  <span class="nc">PlotSED</span> <span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
@@ -464,7 +481,9 @@
                  <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Plot&#39;</span><span class="p">,</span>
                  <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span>
                  <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                 <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">)):</span>
+                 <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                 <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+                 <span class="n">use_grid</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 
         <span class="n">check_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
 
@@ -497,7 +516,7 @@
         <span class="k">if</span> <span class="n">figsize</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">gs</span> <span class="o">=</span> <span class="n">gridspec</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">height_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 
@@ -511,23 +530,27 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_autoscaley_on</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_autoscale_on</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">counter</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">if</span> <span class="n">use_grid</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">use_grid</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">1E6</span><span class="p">,</span> <span class="mf">1E30</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;obs&#39;</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1E-20</span><span class="p">,</span> <span class="mf">1E-8</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">38</span><span class="p">,</span> <span class="mi">55</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1E38</span><span class="p">,</span> <span class="mf">1E55</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;blob&#39;</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1E34</span><span class="p">,</span> <span class="mf">1E51</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">unexpected_behaviour</span><span class="p">()</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">nonpositive</span><span class="o">=</span><span class="s1">&#39;clip&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">nonpositive</span><span class="o">=</span><span class="s1">&#39;clip&#39;</span><span class="p">)</span>
+   
         <span class="bp">self</span><span class="o">.</span><span class="n">secaxy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">secondary_xaxis</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">functions</span><span class="o">=</span><span class="p">(</span><span class="n">y_ev_transf</span><span class="p">,</span> <span class="n">y_ev_transf_inv</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">secaxy</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;log(E) (eV)&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secaxy</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;E (eV)&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">resplot</span><span class="o">.</span><span class="n">set_ybound</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">manager</span><span class="p">,</span><span class="s1">&#39;toolbar&#39;</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
@@ -555,12 +578,12 @@
     <span class="k">def</span> <span class="nf">_add_res_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">resplot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sharex</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">lx_res</span> <span class="o">=</span> <span class="s1">&#39;log($ </span><span class="se">\\</span><span class="s1">nu $)  (Hz)&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lx_res</span> <span class="o">=</span> <span class="s1">&#39;$ </span><span class="se">\\</span><span class="s1">nu $  (Hz)&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ly_res</span> <span class="o">=</span> <span class="s1">&#39;res&#39;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">resplot</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ly_res</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">resplot</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lx_res</span><span class="p">)</span>
-
+        <span class="c1">#self,resplot.set_xscale(&quot;log&quot;, nonpositive=&#39;clip&#39;)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_res_zeroline</span><span class="p">()</span>
 
 <div class="viewcode-block" id="PlotSED.clean_residuals_lines"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.clean_residuals_lines">[docs]</a>    <span class="k">def</span> <span class="nf">clean_residuals_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -639,20 +662,20 @@
             <span class="c1">#self.update_legend()</span>
 
 <div class="viewcode-block" id="PlotSED.set_plot_axis_labels"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.set_plot_axis_labels">[docs]</a>    <span class="k">def</span> <span class="nf">set_plot_axis_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lx</span> <span class="o">=</span> <span class="s1">&#39;log($ </span><span class="se">\\</span><span class="s1">nu $)  (Hz)&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lx</span> <span class="o">=</span> <span class="s1">&#39;$ </span><span class="se">\\</span><span class="s1">nu $  (Hz)&#39;</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;src&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;blob&#39;</span><span class="p">:</span>
 
             <span class="k">if</span> <span class="n">density</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;log($ </span><span class="se">\\</span><span class="s1">nu L_{</span><span class="se">\\</span><span class="s1">nu} $ )  (erg  s$^{-1}$)&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;$ </span><span class="se">\\</span><span class="s1">nu L_{</span><span class="se">\\</span><span class="s1">nu} $   (erg  s$^{-1})$&#39;</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;log($   L_{</span><span class="se">\\</span><span class="s1">nu} $ )  (erg  s$^{-1}$ Hz$^{-1}$)&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;$   L_{</span><span class="se">\\</span><span class="s1">nu} $   (erg  s$^{-1}$ Hz$^{-1})$&#39;</span>
 
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">==</span> <span class="s1">&#39;obs&#39;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">density</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;log($ </span><span class="se">\\</span><span class="s1">nu F_{</span><span class="se">\\</span><span class="s1">nu} $ )  (erg cm$^{-2}$  s$^{-1}$)&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;$ </span><span class="se">\\</span><span class="s1">nu F_{</span><span class="se">\\</span><span class="s1">nu} $   (erg cm$^{-2}$  s$^{-1})$&#39;</span>
             <span class="k">else</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;log($   F{</span><span class="se">\\</span><span class="s1">nu} $ )  (erg cm$^{-2}$  s$^{-1}$ Hz$^{-1}$)&#39;</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ly</span> <span class="o">=</span> <span class="s1">&#39;$   F{</span><span class="se">\\</span><span class="s1">nu} $   (erg cm$^{-2}$  s$^{-1}$ Hz$^{-1})$&#39;</span>
 
 
         <span class="k">else</span><span class="p">:</span>
@@ -669,20 +692,22 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">resplot</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">update_plot</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PlotSED.rescale"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.rescale">[docs]</a>    <span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="p">)</span></div>
+    
+<div class="viewcode-block" id="PlotSED.rescale"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.rescale">[docs]</a>    <span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">_rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="n">x_max</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="n">y_max</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PlotSED.rescale_res"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.rescale_res">[docs]</a>    <span class="k">def</span> <span class="nf">rescale_res</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setlim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">setlim_res</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">resplot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">resplot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">update_plot</span><span class="p">()</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_plot</span><span class="p">()</span>
 
 <div class="viewcode-block" id="PlotSED.update_plot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.update_plot">[docs]</a>    <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-        <span class="c1">#self.sedplot.relim()</span>
-        <span class="c1">#self.sedplot.autoscale(axis=&#39;y&#39;)</span>
-        <span class="c1">#self.sedplot.autoscale(axis=&#39;x&#39;)</span>
+       
         <span class="n">y_s</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">x_min</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">x_max</span> <span class="o">=</span> <span class="p">[]</span>
@@ -694,8 +719,8 @@
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">())</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
                     <span class="n">y_s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">()))</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">y_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">y_s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">3</span>
-                <span class="n">y_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">y_s</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">y_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">y_s</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span>
+                <span class="n">y_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">y_s</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">y_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">y_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -706,12 +731,12 @@
                         <span class="n">x_min</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
                         <span class="n">x_max</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_min</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span>  <span class="ow">and</span>  <span class="nb">len</span><span class="p">(</span><span class="n">x_max</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x_min</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_max</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x_min</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_max</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">relim</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sedplot</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+    
         <span class="bp">self</span><span class="o">.</span><span class="n">update_legend</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span></div>
 
@@ -744,17 +769,17 @@
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s1">&#39;get_model_points&#39;</span><span class="p">):</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_model_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
+                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_model_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;for model&#39;</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;problem with get_model_points()&quot;</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">get_model_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
+                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">SED</span><span class="o">.</span><span class="n">get_model_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;for model&#39;</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;problem with SED.get_model_points()&quot;</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">density</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">-</span><span class="n">x</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">/</span><span class="n">x</span>
         <span class="k">if</span> <span class="n">line_style</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">line_style</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
 
@@ -765,8 +790,7 @@
                 <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;line </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">counter</span>
 
         <span class="k">if</span> <span class="n">flim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-            <span class="n">msk</span><span class="o">=</span><span class="n">y</span><span class="o">&gt;</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">flim</span><span class="p">)</span>
+            <span class="n">msk</span><span class="o">=</span><span class="n">y</span><span class="o">&gt;</span><span class="n">flim</span>
             <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">msk</span><span class="p">]</span>
             <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">msk</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
@@ -888,11 +912,11 @@
         <span class="k">return</span></div>
 
 
-<div class="viewcode-block" id="PlotSED.add_data_plot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.add_data_plot">[docs]</a>    <span class="k">def</span> <span class="nf">add_data_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sed_data</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">autoscale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">mew</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="PlotSED.add_data_plot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.add_data_plot">[docs]</a>    <span class="k">def</span> <span class="nf">add_data_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sed_data</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">mew</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
 
         <span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="p">,</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">get_data_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="p">,</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">get_data_points</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;!!! ERROR failed to get data points from&quot;</span><span class="p">,</span> <span class="n">sed_data</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
 
@@ -930,6 +954,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">counter</span><span class="o">+=</span><span class="mi">1</span>
         <span class="c1">#self.update_legend()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">update_plot</span><span class="p">()</span></div>
+    
 
 
 <div class="viewcode-block" id="PlotSED.add_xy_plot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.add_xy_plot">[docs]</a>    <span class="k">def</span> <span class="nf">add_xy_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">autoscale</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -954,7 +979,7 @@
 
 <div class="viewcode-block" id="PlotSED.add_model_residual_plot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSED.html#jetset.plot_sedfit.PlotSED.add_model_residual_plot">[docs]</a>    <span class="k">def</span> <span class="nf">add_model_residual_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filter_UL</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fit_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_residuals</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span><span class="n">filter_UL</span><span class="o">=</span><span class="n">filter_UL</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_residuals</span><span class="p">(</span><span class="n">log_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span><span class="n">filter_UL</span><span class="o">=</span><span class="n">filter_UL</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_xy_residual_plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">fit_range</span><span class="o">=</span><span class="n">fit_range</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">pass</span></div>
@@ -1004,14 +1029,18 @@
 
 
 
+
 <div class="viewcode-block" id="BasePlot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.BasePlot.html#jetset.plot_sedfit.BasePlot">[docs]</a><span class="k">class</span> <span class="nc">BasePlot</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span>
 
 <div class="viewcode-block" id="BasePlot.rescale"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.BasePlot.html#jetset.plot_sedfit.BasePlot.rescale">[docs]</a>    <span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">_rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="n">x_max</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="n">y_max</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">setlim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
 
 <div class="viewcode-block" id="BasePlot.update_plot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.BasePlot.html#jetset.plot_sedfit.BasePlot.update_plot">[docs]</a>    <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
@@ -1027,13 +1056,13 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">PlotSpectralMultipl</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
         <span class="n">secax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">secondary_xaxis</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">functions</span><span class="o">=</span><span class="p">(</span><span class="n">y_ev_transf</span><span class="p">,</span> <span class="n">y_ev_transf_inv</span><span class="p">))</span>
-        <span class="n">secax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;log(E) (eV)&#39;</span><span class="p">)</span>
+        <span class="n">secax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;E (eV)&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="PlotSpectralMultipl.plot"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSpectralMultipl.html#jetset.plot_sedfit.PlotSpectralMultipl.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nu</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">y_label</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">line_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">nu</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="n">line_style</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;log($ \nu $)  (Hz)&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$ \nu $  (Hz)&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">y_label</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
@@ -1044,7 +1073,7 @@
 
 <div class="viewcode-block" id="PlotPdistr"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotPdistr.html#jetset.plot_sedfit.PlotPdistr">[docs]</a><span class="k">class</span>  <span class="nc">PlotPdistr</span> <span class="p">(</span><span class="n">BasePlot</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">injection</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">injection</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PlotPdistr</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">loglog</span><span class="o">=</span><span class="n">loglog</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">injection</span> <span class="o">=</span> <span class="n">injection</span>
@@ -1107,8 +1136,14 @@
             <span class="n">_e</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
         <span class="n">n_str</span> <span class="o">=</span> <span class="s1">&#39;n($</span><span class="si">%s</span><span class="s1">$)&#39;</span><span class="o">%</span><span class="n">energy_name</span>
-        <span class="k">if</span> <span class="nb">pow</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">pow</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">pow</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
             <span class="n">n_str</span> <span class="o">=</span> <span class="s1">&#39;n($</span><span class="si">%s</span><span class="s1">$) $</span><span class="si">%s</span><span class="s1">^{</span><span class="si">%d</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">energy_name</span><span class="p">,</span><span class="n">energy_name</span><span class="p">,</span><span class="nb">pow</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">energy_units</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                <span class="n">i</span><span class="o">=-</span><span class="mi">1</span><span class="o">+</span><span class="nb">pow</span>
+                <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="n">_e</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">energy_units</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">_e</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">^{</span><span class="si">%d</span><span class="s1">}&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">energy_units</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">injection</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
 
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">loglog</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
@@ -1121,11 +1156,11 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Q$_</span><span class="si">{inj}</span><span class="s1">$($</span><span class="si">%s</span><span class="s1">$)   ($cm^{-3} s^{-1} </span><span class="si">%s</span><span class="s1">$)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">energy_name</span><span class="p">,</span><span class="n">_e</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">loglog</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="n">ls</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="n">ls</span><span class="p">)</span>
 
 <div class="viewcode-block" id="PlotPdistr.plot_distr"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotPdistr.html#jetset.plot_sedfit.PlotPdistr.plot_distr">[docs]</a>    <span class="k">def</span> <span class="nf">plot_distr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">gamma</span><span class="p">,</span><span class="n">n_gamma</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">particle</span><span class="o">=</span><span class="s1">&#39;electrons&#39;</span><span class="p">,</span><span class="n">energy_unit</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
@@ -1179,45 +1214,76 @@
 
 <div class="viewcode-block" id="PlotTempEvEmitters"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotTempEvEmitters.html#jetset.plot_sedfit.PlotTempEvEmitters">[docs]</a><span class="k">class</span>  <span class="nc">PlotTempEvEmitters</span> <span class="p">(</span><span class="n">PlotPdistr</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PlotTempEvEmitters</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="n">loglog</span><span class="p">,)</span>
 
 
-    <span class="k">def</span> <span class="nf">_plot_distr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">temp_ev</span><span class="p">,</span><span class="n">region</span><span class="p">,</span><span class="n">particle</span><span class="o">=</span><span class="s1">&#39;electrons&#39;</span><span class="p">,</span><span class="n">energy_unit</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="nb">pow</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">plot_Q_inj</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">t1</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">t2</span><span class="o">=</span><span class="kc">None</span><span class="p">,):</span>
+    <span class="k">def</span> <span class="nf">_plot_distr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">temp_ev</span><span class="p">,</span>
+                        <span class="n">region</span><span class="p">,</span><span class="n">particle</span><span class="o">=</span><span class="s1">&#39;electrons&#39;</span><span class="p">,</span>
+                        <span class="n">energy_unit</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span>
+                        <span class="nb">pow</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                        <span class="n">plot_Q_inj</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">t1</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+                        <span class="n">t2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                        <span class="c1">#time_slice_bin=None,</span>
+                        <span class="c1">#time_slice=None):</span>
+                    <span class="p">):</span>
+
         <span class="k">if</span> <span class="n">t1</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">t1</span><span class="o">=</span><span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">time_blob</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
         <span class="k">if</span> <span class="n">t2</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">t2</span><span class="o">=</span><span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">time_blob</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+       <span class="c1"># if time_slice_bin is None and time_slice is None:</span>
+       <span class="c1">#     _time_slice_bin = 1</span>
 
-
-        <span class="n">t_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">time_blob</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">t_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">time_blob</span><span class="o">.</span><span class="n">size</span><span class="p">,)</span>
 
         <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
         <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.2</span>
 
+        <span class="n">g</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Greens</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t_array</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Reds</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t_array</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t_array</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
 
         <span class="n">n</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">n_gamma</span>
         <span class="k">for</span> <span class="n">ID</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">t_array</span><span class="p">):</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span>
 
             <span class="k">if</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">custom_q_jnj_profile</span><span class="p">[</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">_get_time_slice_T_array</span><span class="p">(</span><span class="n">t</span><span class="p">)]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="n">g</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span>
+                <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+                <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.2</span>
 
             <span class="k">if</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">custom_acc_profile</span><span class="p">[</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">_get_time_slice_T_array</span><span class="p">(</span><span class="n">t</span><span class="p">)]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span>
+                <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+                <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+            <span class="k">if</span> <span class="n">ID</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+                <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;start, t=</span><span class="si">%2.2e</span><span class="s1"> (s)&#39;</span> <span class="o">%</span> <span class="n">t</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
+            <span class="k">if</span> <span class="n">ID</span> <span class="o">==</span> <span class="n">t_array</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+                <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;purple&#39;</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;stop, t=</span><span class="si">%2.2e</span><span class="s1"> (s)&#39;</span> <span class="o">%</span> <span class="n">t</span>
 
             <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">energy_name</span><span class="p">,</span> <span class="n">energy_units</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_variable</span><span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">gamma</span><span class="p">,</span> <span class="n">n</span><span class="p">[</span><span class="n">ID</span><span class="p">],</span> <span class="n">particle</span><span class="p">,</span> <span class="n">energy_unit</span><span class="p">,</span> <span class="nb">pow</span><span class="o">=</span><span class="nb">pow</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-            <span class="c1">#print(&#39;==&gt; ID,t,c&#39;,ID,t,color)</span>
-        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">energy_name</span><span class="p">,</span> <span class="n">energy_units</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_variable</span><span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">gamma</span><span class="p">,</span> <span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">particle</span><span class="p">,</span> <span class="n">energy_unit</span><span class="p">,</span> <span class="nb">pow</span><span class="o">=</span><span class="nb">pow</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Start sample&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="n">ls</span><span class="p">)</span>
+        <span class="c1">#x, y, energy_name, energy_units = self._set_variable(region.time_sampled_emitters.gamma, n[0], particle, #energy_unit, pow=pow)</span>
+        <span class="c1">#self._plot(x, y, c=&#39;black&#39;, lw=2,label=&#39;Start sample&#39;)</span>
 
-        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">energy_name</span><span class="p">,</span> <span class="n">energy_units</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_variable</span><span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">gamma</span><span class="p">,</span> <span class="n">n</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">particle</span><span class="p">,</span> <span class="n">energy_unit</span><span class="p">,</span> <span class="nb">pow</span><span class="o">=</span><span class="nb">pow</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Stop sample&#39;</span><span class="p">)</span>
+        <span class="c1">#x, y, energy_name, energy_units = self._set_variable(region.time_sampled_emitters.gamma, n[-1], particle, #energy_unit, pow=pow)</span>
+        <span class="c1">#self._plot(x, y, c=&#39;blue&#39;, lw=2,label=&#39;Stop sample&#39;)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_xy_label</span><span class="p">(</span><span class="n">energy_name</span><span class="p">,</span> <span class="n">energy_units</span><span class="p">,</span><span class="nb">pow</span><span class="o">=</span><span class="nb">pow</span><span class="p">)</span>
         <span class="c1">#TODO move to plot inj if iny is used in region</span>
-        <span class="k">if</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">Q_inj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">region</span><span class="o">.</span><span class="n">_region_type</span> <span class="o">==</span> <span class="s1">&#39;acc&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">Q_inj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">_region_type</span> <span class="o">==</span> <span class="s1">&#39;acc&#39;</span> <span class="ow">or</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">_only_radiation</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">):</span>
             <span class="n">y</span> <span class="o">=</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">Q_inj</span><span class="o">.</span><span class="n">n_gamma_e</span> <span class="o">*</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">delta_t</span>
             <span class="n">x</span> <span class="o">=</span> <span class="n">temp_ev</span><span class="o">.</span><span class="n">Q_inj</span><span class="o">.</span><span class="n">gamma_e</span>
             <span class="k">if</span> <span class="n">plot_Q_inj</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
@@ -1241,7 +1307,7 @@
 
 <div class="viewcode-block" id="PlotTempEvDiagram"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotTempEvDiagram.html#jetset.plot_sedfit.PlotTempEvDiagram">[docs]</a><span class="k">class</span>  <span class="nc">PlotTempEvDiagram</span> <span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">expanding_region</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">expanding_region</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">expanding_region</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">n_rows</span> <span class="o">=</span><span class="mi">4</span>
         <span class="k">else</span><span class="p">:</span>
@@ -1280,8 +1346,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="PlotTempEvDiagram.rescale"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotTempEvDiagram.html#jetset.plot_sedfit.PlotTempEvDiagram.rescale">[docs]</a>    <span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">_rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="n">x_max</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="n">y_max</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">setlim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="PlotSpecComp"><a class="viewcode-back" href="../../api/jetset.plot_sedfit.PlotSpecComp.html#jetset.plot_sedfit.PlotSpecComp">[docs]</a><span class="k">class</span>  <span class="nc">PlotSpecComp</span> <span class="p">(</span><span class="n">BasePlot</span><span class="p">):</span>
 
@@ -1324,7 +1393,7 @@
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

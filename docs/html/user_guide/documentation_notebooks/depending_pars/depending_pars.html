@@ -3,19 +3,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Depending parameters &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -58,7 +59,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +74,12 @@
      href="../../../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +136,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +172,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +187,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -266,13 +264,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -329,7 +326,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -365,14 +362,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -382,10 +377,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -406,27 +401,14 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
-<ul class="current">
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../model_advanced.html">model advanced features</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../composite_model/Composite_model.html"> composite models  *New (v1.2.0)*</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> depending parameters  *New (v1.2.0)*</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html"> jet model custom  emitters distributions *New (v1.2.0)*</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../EBL/EBL.html"> EBL models  *New (v1.2.0)*</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -438,11 +420,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -468,15 +451,15 @@
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span><span class="n">rc7</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span><span class="n">rc13</span>
 </pre></div>
 </div>
-<div class="section" id="depending-parameters">
+<section id="depending-parameters">
 <h1>Depending parameters<a class="headerlink" href="#depending-parameters" title="Permalink to this headline">¶</a></h1>
 <p>In the following we show how to link parameters in the same model or
 among different models, and how to make a paramter depending on other
 parameters according to a mathematical expression.</p>
-<div class="section" id="example-linked-paramters-for-ebl">
+<section id="example-linked-paramters-for-ebl">
 <h2>Example: linked paramters for EBL<a class="headerlink" href="#example-linked-paramters-for-ebl" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
 <span class="kn">from</span> <span class="nn">jetset.template_2Dmodel</span> <span class="kn">import</span> <span class="n">EBLAbsorptionTemplate</span>
@@ -510,13 +493,17 @@ parameters according to a mathematical expression.</p>
 <span class="n">new_composite_model</span><span class="o">.</span><span class="n">show_pars</span><span class="p">()</span>
 <span class="n">v</span><span class="o">=</span><span class="mf">2.0</span>
 <span class="n">new_composite_model</span><span class="o">.</span><span class="n">jet_flaring</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">v</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_composite_model</span><span class="o">.</span><span class="n">Franceschini_2008</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;new_composite_model.Franceschini_2008.parameters.z_cosm.val&#39;</span><span class="p">,</span><span class="n">new_composite_model</span><span class="o">.</span><span class="n">Franceschini_2008</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span><span class="p">,</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
 <span class="k">assert</span> <span class="p">(</span><span class="n">new_composite_model</span><span class="o">.</span><span class="n">Franceschini_2008</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span> <span class="o">==</span> <span class="n">v</span><span class="p">)</span>
 <span class="k">assert</span> <span class="p">(</span><span class="n">new_composite_model</span><span class="o">.</span><span class="n">Franceschini_2008</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">linked</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">model_manager</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">147</span><span class="p">:</span> <span class="ne">UserWarning</span><span class="p">:</span> <span class="n">no</span> <span class="n">cosmology</span> <span class="n">defined</span><span class="p">,</span> <span class="n">using</span> <span class="n">default</span> <span class="n">FlatLambdaCDM</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Planck13&quot;</span><span class="p">,</span> <span class="n">H0</span><span class="o">=</span><span class="mf">67.8</span> <span class="n">km</span> <span class="o">/</span> <span class="p">(</span><span class="n">Mpc</span> <span class="n">s</span><span class="p">),</span> <span class="n">Om0</span><span class="o">=</span><span class="mf">0.307</span><span class="p">,</span> <span class="n">Tcmb0</span><span class="o">=</span><span class="mf">2.725</span> <span class="n">K</span><span class="p">,</span> <span class="n">Neff</span><span class="o">=</span><span class="mf">3.05</span><span class="p">,</span> <span class="n">m_nu</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">0.06</span><span class="p">]</span> <span class="n">eV</span><span class="p">,</span> <span class="n">Ob0</span><span class="o">=</span><span class="mf">0.0483</span><span class="p">)</span>
+  <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;no cosmology defined, using default </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="p">)</span>
+</pre></div>
+</div>
 <i>Table length=12</i>
-<table id="table140302865201952-133925" class="table-striped table-bordered table-condensed">
+<table id="table140613869498224-535841" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_flaring</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -553,14 +540,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302865201952-133925').dataTable()");
+    console.log("$('#table140613869498224-535841').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302865201952-133925').dataTable({
+    $('#table140613869498224-535841').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -573,7 +560,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140302893717968-639162" class="table-striped table-bordered table-condensed">
+<table id="table140613897635152-656111" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_flaring</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_flaring</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -610,14 +597,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302893717968-639162').dataTable()");
+    console.log("$('#table140613897635152-656111').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302893717968-639162').dataTable({
+    $('#table140613897635152-656111').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -625,11 +612,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
     });
 });
-</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">2.0</span> <span class="mf">2.0</span>
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_composite_model</span><span class="o">.</span><span class="n">Franceschini_2008</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">val</span> <span class="mf">2.0</span> <span class="n">v</span> <span class="mf">2.0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-depending-pars-for-bkn-power-law-emitters">
+</section>
+<section id="example-depending-pars-for-bkn-power-law-emitters">
 <h2>Example: depending pars for bkn power-law emitters<a class="headerlink" href="#example-depending-pars-for-bkn-power-law-emitters" title="Permalink to this headline">¶</a></h2>
 <p>here we create a custom <code class="docutils literal notranslate"><span class="pre">bkn</span></code> distribution where we impose a
 functional dependence among the low and high-energy spectral index.</p>
@@ -647,7 +634,7 @@ functional dependence among the low and high-energy spectral index.</p>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140302898799520-878465" class="table-striped table-bordered table-condensed">
+<table id="table140613765061984-443934" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -683,14 +670,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302898799520-878465').dataTable()");
+    console.log("$('#table140613765061984-443934').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302898799520-878465').dataTable({
+    $('#table140613765061984-443934').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -701,17 +688,23 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">j</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;p_1&#39;</span><span class="p">,</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">],</span><span class="n">par_expr</span><span class="o">=</span><span class="s1">&#39;1 + p&#39;</span><span class="p">)</span>
+<p>the functional dependence can be provided by a python function, where
+the argument (<code class="docutils literal notranslate"><span class="pre">p</span></code> in this case) is the same name as the parameter:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f_p</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">j</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;p_1&#39;</span><span class="p">,</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">],</span><span class="n">par_expr</span><span class="o">=</span><span class="n">f_p</span><span class="p">)</span>
 <span class="n">j</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">2</span>
 <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">j</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">p_1</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">j</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">val</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">j</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">p_1</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">p</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">p_1</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span><span class="n">p_1</span> <span class="o">=</span>
+<span class="k">def</span> <span class="nf">f_p</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">+</span><span class="mi">1</span>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140302898799520-712950" class="table-striped table-bordered table-condensed">
+<table id="table140613765061984-704554" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -747,14 +740,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302898799520-712950').dataTable()");
+    console.log("$('#table140613765061984-704554').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302898799520-712950').dataTable({
+    $('#table140613765061984-704554').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -763,17 +756,98 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     });
 });
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+</pre></div>
+</div>
+<p>as you can notice, now a message is shown describing the dependence of
+the parameters</p>
+<p>It is also possible to set the dependence function as a string that can
+be evaluated</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">j</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;p_1&#39;</span><span class="p">,</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">],</span><span class="n">par_expr</span><span class="o">=</span><span class="s1">&#39;p+1&#39;</span><span class="p">)</span>
+<span class="n">j</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">j</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">p_1</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">j</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">val</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">j</span><span class="o">.</span><span class="n">parameters</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">p_1</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span><span class="n">p_1</span> <span class="o">=</span>
+<span class="n">p</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+<i>Table length=11</i>
+<table id="table140613824323792-262776" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma_break</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>p(M)</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>*p_1(D,p)</td><td>HE_spectral_slope</td><td></td><td>3.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>True</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140613824323792-262776').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140613824323792-262776').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+</pre></div>
+</div>
+<p>In principle, you can use strings for short expressions, and functions
+for more complicated formulas.</p>
+<p>You can print the actual expression/function for the depending parameter
+using the <code class="docutils literal notranslate"><span class="pre">print_par_expr</span></code> method:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">j</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">p_1</span><span class="o">.</span><span class="n">print_par_expr</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">p_1</span> <span class="ow">is</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span>   <span class="n">p_1</span> <span class="o">=</span>
+<span class="n">p</span><span class="o">+</span><span class="mi">1</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">j</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;jet.pkl&#39;</span><span class="p">)</span>
 <span class="n">new_jet</span><span class="o">=</span><span class="n">Jet</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;jet.pkl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">p_1</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">p</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">p_1</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span><span class="n">p_1</span> <span class="o">=</span>
+<span class="n">p</span><span class="o">+</span><span class="mi">1</span>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140302899316624-27888" class="table-striped table-bordered table-condensed">
+<table id="table140613901155488-388526" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -809,14 +883,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302899316624-27888').dataTable()");
+    console.log("$('#table140613901155488-388526').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302899316624-27888').dataTable({
+    $('#table140613901155488-388526').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -830,7 +904,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140302899316624-742377" class="table-striped table-bordered table-condensed">
+<table id="table140613901155488-294447" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -866,14 +940,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302899316624-742377').dataTable()");
+    console.log("$('#table140613901155488-294447').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302899316624-742377').dataTable({
+    $('#table140613901155488-294447').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -884,8 +958,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">
+</section>
+<section id="example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">
 <h2>Example depending par: Building a Jet model with B function of R_H and R_0<a class="headerlink" href="#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0" title="Permalink to this headline">¶</a></h2>
 <p>In this example we create a fuctional dependence among the paramters
 <code class="docutils literal notranslate"><span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">R_H</span></code> introducing user custom pararameters. Wewant that the
@@ -903,32 +977,41 @@ expression:</p>
 
 <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">add_user_par</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="n">units</span><span class="o">=</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E3</span><span class="p">,</span><span class="n">val_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">add_user_par</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;cm&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mf">5E13</span><span class="p">,</span> <span class="n">val_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">val_max</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">add_user_par</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;m_B&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">val_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">val_max</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R0</span><span class="o">.</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B0</span><span class="o">.</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span>
 
-<span class="n">par_expr</span> <span class="o">=</span> <span class="s1">&#39;B0*np.power((R0/R_H),1.1)&#39;</span>
+<span class="k">def</span> <span class="nf">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="n">m_B</span><span class="p">)</span>
 
-<span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">],</span> <span class="n">par_expr</span><span class="o">=</span><span class="n">par_expr</span><span class="p">)</span>
+<span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">,</span><span class="s1">&#39;m_B&#39;</span><span class="p">],</span> <span class="n">par_expr</span><span class="o">=</span><span class="n">par_func</span><span class="p">)</span>
 
 <span class="n">B0</span><span class="o">=</span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B0</span><span class="o">.</span><span class="n">val</span>
 <span class="n">R0</span> <span class="o">=</span> <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R0</span><span class="o">.</span><span class="n">val</span>
 <span class="n">R_H</span> <span class="o">=</span> <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R_H</span><span class="o">.</span><span class="n">val</span>
+<span class="n">m_B</span><span class="o">=</span> <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">m_B</span><span class="o">.</span><span class="n">val</span>
 
-<span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="nb">eval</span><span class="p">(</span><span class="n">par_expr</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="mf">1.1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">,</span> <span class="s1">&#39;m_B&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span><span class="n">B</span> <span class="o">=</span>
+<span class="k">def</span> <span class="nf">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="n">m_B</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">model_manager</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">147</span><span class="p">:</span> <span class="ne">UserWarning</span><span class="p">:</span> <span class="n">no</span> <span class="n">cosmology</span> <span class="n">defined</span><span class="p">,</span> <span class="n">using</span> <span class="n">default</span> <span class="n">FlatLambdaCDM</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Planck13&quot;</span><span class="p">,</span> <span class="n">H0</span><span class="o">=</span><span class="mf">67.8</span> <span class="n">km</span> <span class="o">/</span> <span class="p">(</span><span class="n">Mpc</span> <span class="n">s</span><span class="p">),</span> <span class="n">Om0</span><span class="o">=</span><span class="mf">0.307</span><span class="p">,</span> <span class="n">Tcmb0</span><span class="o">=</span><span class="mf">2.725</span> <span class="n">K</span><span class="p">,</span> <span class="n">Neff</span><span class="o">=</span><span class="mf">3.05</span><span class="p">,</span> <span class="n">m_nu</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">0.06</span><span class="p">]</span> <span class="n">eV</span><span class="p">,</span> <span class="n">Ob0</span><span class="o">=</span><span class="mf">0.0483</span><span class="p">)</span>
+  <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;no cosmology defined, using default </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
-<i>Table length=12</i>
-<table id="table140302744411344-946341" class="table-striped table-bordered table-condensed">
+<i>Table length=13</i>
+<table id="table140613824323648-530942" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>magnetic_field</td><td>gauss</td><td>3.981072e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>*B(D,m_B)</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
@@ -938,6 +1021,7 @@ expression:</p>
 <tr><td>jet_leptonic</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0(M)</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0(M)</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B(M)</td><td>user_defined</td><td></td><td>1.000000e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -961,14 +1045,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302744411344-946341').dataTable()");
+    console.log("$('#table140613824323648-530942').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302744411344-946341').dataTable({
+    $('#table140613824323648-530942').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -982,12 +1066,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
-<i>Table length=12</i>
-<table id="table140302744411344-317529" class="table-striped table-bordered table-condensed">
+<i>Table length=13</i>
+<table id="table140613824323648-131721" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>magnetic_field</td><td>gauss</td><td>3.981072e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>*B(D,m_B)</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
@@ -997,6 +1081,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>jet_leptonic</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0(M)</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0(M)</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B(M)</td><td>user_defined</td><td></td><td>1.000000e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -1020,14 +1105,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302744411344-317529').dataTable()");
+    console.log("$('#table140613824323648-131721').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302744411344-317529').dataTable({
+    $('#table140613824323648-131721').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1044,11 +1129,21 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model_lsb</span><span class="o">=</span><span class="n">FitModel</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;test.pkl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="mf">1.1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">,</span> <span class="s1">&#39;m_B&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span><span class="n">B</span> <span class="o">=</span>
+<span class="k">def</span> <span class="nf">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="n">m_B</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B0</span><span class="o">=</span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B0</span><span class="o">.</span><span class="n">val</span>
+<span class="n">R0</span> <span class="o">=</span> <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R0</span><span class="o">.</span><span class="n">val</span>
+<span class="n">R_H</span> <span class="o">=</span> <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R_H</span><span class="o">.</span><span class="n">val</span>
+<span class="n">m_B</span><span class="o">=</span> <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">m_B</span><span class="o">.</span><span class="n">val</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">))</span>
+</pre></div>
 </div>
-<div class="section" id="example-depending-par-fitting-with-a-jet-model-with-depending-pars">
+</section>
+<section id="example-depending-par-fitting-with-a-jet-model-with-depending-pars">
 <h2>Example depending par: fitting with a Jet model with depending pars<a class="headerlink" href="#example-depending-par-fitting-with-a-jet-model-with-depending-pars" title="Permalink to this headline">¶</a></h2>
 <p>In this example we show how to use the previous model during a Fit</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.test_data_helper</span> <span class="kn">import</span>  <span class="n">test_SEDs</span>
@@ -1073,19 +1168,20 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 ---&gt; N bins= 89
 ---&gt; bin_widht= 0.2
 ================================================================================</pre>
-<img alt="../../../_images/depending_pars_24_1.png" src="../../../_images/depending_pars_24_1.png" />
+<pre class="literal-block">/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/astropy/table/table.py:1187: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use <cite>arr[tuple(seq)]</cite> instead of <cite>arr[seq]</cite>. In the future this will be interpreted as an array index, <cite>arr[np.array(seq)]</cite>, which will result either in an error or a different result.
+  newcol = col[<a href="#id5"><span class="problematic" id="id6">slice_</span></a>]</pre>
+<img alt="../../../_images/depending_pars_33_2.png" src="../../../_images/depending_pars_33_2.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.sed_shaper</span> <span class="kn">import</span>  <span class="n">SEDShape</span>
 <span class="n">my_shape</span><span class="o">=</span><span class="n">SEDShape</span><span class="p">(</span><span class="n">sed_data</span><span class="p">)</span>
 <span class="n">my_shape</span><span class="o">.</span><span class="n">eval_indices</span><span class="p">(</span><span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">plot_indices</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=-</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
 <pre class="literal-block">================================================================================
 
 <strong>* evaluating spectral indices for data *</strong>
 ================================================================================</pre>
-<img alt="../../../_images/depending_pars_25_1.png" src="../../../_images/depending_pars_25_1.png" />
+<img alt="../../../_images/depending_pars_34_1.png" src="../../../_images/depending_pars_34_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="p">,</span><span class="n">best_fit</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">sync_fit</span><span class="p">(</span><span class="n">check_host_gal_template</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                   <span class="n">Ep_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                   <span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span>
@@ -1099,7 +1195,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 ---&gt; first blind fit run,  fit range: [10.0, 21.0]
 ---&gt; class:  HSP</pre>
 <i>Table length=4</i>
-<table id="table140302885356352-587224" class="table-striped table-bordered table-condensed">
+<table id="table140613880650528-175210" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-1.545300e-01</td><td>-1.545300e-01</td><td>9.534795e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>-1.023245e-02</td><td>-1.023245e-02</td><td>1.433073e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -1128,14 +1224,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302885356352-587224').dataTable()");
+    console.log("$('#table140613880650528-175210').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302885356352-587224').dataTable({
+    $('#table140613880650528-175210').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1158,7 +1254,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 ---&gt; fit range: [23.0, 29.0]
 ---&gt; LogCubic fit</pre>
 <i>Table length=4</i>
-<table id="table140302894201872-203106" class="table-striped table-bordered table-condensed">
+<table id="table140613881734384-614703" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-2.098186e-01</td><td>-2.098186e-01</td><td>3.133032e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>-4.661868e-02</td><td>-4.661868e-02</td><td>2.178352e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -1187,14 +1283,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302894201872-203106').dataTable()");
+    console.log("$('#table140613881734384-614703').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302894201872-203106').dataTable({
+    $('#table140613881734384-614703').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1202,11 +1298,17 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         columnDefs: [{targets: [2, 3, 4, 5, 6, 7, 8], type: "optionalnum"}]
     });
 });
-</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span> <span class="n">IC</span>         <span class="n">nu_p</span><span class="o">=+</span><span class="mf">2.524926e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">1.147759e-01</span><span class="p">)</span>  <span class="n">nuFnu_p</span><span class="o">=-</span><span class="mf">1.011085e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">3.498963e-02</span><span class="p">)</span> <span class="n">curv</span><span class="o">.=-</span><span class="mf">2.098186e-01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">3.133032e-02</span><span class="p">)</span>
-<span class="o">================================================================================</span>
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>---&gt; IC         nu_p=+2.524926e+01 (err=+1.147759e-01)  nuFnu_p=-1.011085e+01 (err=+3.498963e-02) curv.=-2.098186e-01 (err=+3.133032e-02)
+================================================================================
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+The rescale method as been replaced by the setlim method
+please notice that now jetset uses log axis rather than loglog plots
+so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 </pre></div>
 </div>
-<img alt="../../../_images/depending_pars_27_3.png" src="../../../_images/depending_pars_27_3.png" />
+<img alt="../../../_images/depending_pars_36_3.png" src="../../../_images/depending_pars_36_3.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.obs_constrain</span> <span class="kn">import</span> <span class="n">ObsConstrain</span>
 <span class="kn">from</span> <span class="nn">jetset.model_manager</span> <span class="kn">import</span>  <span class="n">FitModel</span>
 <span class="n">sed_obspar</span><span class="o">=</span><span class="n">ObsConstrain</span><span class="p">(</span><span class="n">beaming</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
@@ -1224,8 +1326,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <pre class="literal-block">================================================================================
 
 <strong>*  constrains parameters from observable *</strong></pre>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">obs_constrain</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">650</span><span class="p">:</span> <span class="n">RankWarning</span><span class="p">:</span> <span class="n">Polyfit</span> <span class="n">may</span> <span class="n">be</span> <span class="n">poorly</span> <span class="n">conditioned</span>
+  <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span><span class="n">completed</span>
+</pre></div>
+</div>
 <i>Table length=11</i>
-<table id="table140302886186480-763117" class="table-striped table-bordered table-condensed">
+<table id="table140613880788880-314103" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.112712e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1261,14 +1367,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302886186480-763117').dataTable()");
+    console.log("$('#table140613880788880-314103').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302886186480-763117').dataTable({
+    $('#table140613880788880-314103').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1287,7 +1393,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140302893101456-313744" class="table-striped table-bordered table-condensed">
+<table id="table140613390075888-660475" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1323,14 +1429,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302893101456-313744').dataTable()");
+    console.log("$('#table140613390075888-660475').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302893101456-313744').dataTable({
+    $('#table140613390075888-660475').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1342,8 +1448,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">fit_model</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">model_manager</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">147</span><span class="p">:</span> <span class="ne">UserWarning</span><span class="p">:</span> <span class="n">no</span> <span class="n">cosmology</span> <span class="n">defined</span><span class="p">,</span> <span class="n">using</span> <span class="n">default</span> <span class="n">FlatLambdaCDM</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Planck13&quot;</span><span class="p">,</span> <span class="n">H0</span><span class="o">=</span><span class="mf">67.8</span> <span class="n">km</span> <span class="o">/</span> <span class="p">(</span><span class="n">Mpc</span> <span class="n">s</span><span class="p">),</span> <span class="n">Om0</span><span class="o">=</span><span class="mf">0.307</span><span class="p">,</span> <span class="n">Tcmb0</span><span class="o">=</span><span class="mf">2.725</span> <span class="n">K</span><span class="p">,</span> <span class="n">Neff</span><span class="o">=</span><span class="mf">3.05</span><span class="p">,</span> <span class="n">m_nu</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">0.06</span><span class="p">]</span> <span class="n">eV</span><span class="p">,</span> <span class="n">Ob0</span><span class="o">=</span><span class="mf">0.0483</span><span class="p">)</span>
+  <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;no cosmology defined, using default </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="p">)</span>
+</pre></div>
+</div>
 <i>Table length=11</i>
-<table id="table140302894441232-534678" class="table-striped table-bordered table-condensed">
+<table id="table140613897498384-558986" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1379,14 +1489,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302894441232-534678').dataTable()");
+    console.log("$('#table140613897498384-558986').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302894441232-534678').dataTable({
+    $('#table140613897498384-558986').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1408,18 +1518,24 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">add_user_par</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="n">units</span><span class="o">=</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E3</span><span class="p">,</span><span class="n">val_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">add_user_par</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;cm&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mf">5E13</span><span class="p">,</span> <span class="n">val_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">val_max</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">add_user_par</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;m_B&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">val_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">val_max</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R0</span><span class="o">.</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B0</span><span class="o">.</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span>
 
-<span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;R0&#39;</span><span class="p">,</span><span class="s1">&#39;R_H&#39;</span><span class="p">],</span><span class="n">par_expr</span><span class="o">=</span><span class="s1">&#39;B0*(R0/R_H)&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="n">m_B</span><span class="p">)</span>
+
+<span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">,</span><span class="s1">&#39;m_B&#39;</span><span class="p">],</span> <span class="n">par_expr</span><span class="o">=</span><span class="n">par_func</span><span class="p">)</span>
 <span class="n">fit_model</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span> <span class="n">B0</span><span class="o">*</span><span class="p">(</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">,</span> <span class="s1">&#39;m_B&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span><span class="n">B</span> <span class="o">=</span>
+<span class="k">def</span> <span class="nf">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="n">m_B</span><span class="p">)</span>
 </pre></div>
 </div>
-<i>Table length=13</i>
-<table id="table140302894442096-714322" class="table-striped table-bordered table-condensed">
+<i>Table length=14</i>
+<table id="table140613897496704-80829" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1429,11 +1545,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.726502e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.112712e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>*B(D,m_B)</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>2.500000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0(M)</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0(M)</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B(M)</td><td>user_defined</td><td></td><td>1.000000e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -1457,14 +1574,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302894442096-714322').dataTable()");
+    console.log("$('#table140613897496704-80829').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302894442096-714322').dataTable({
+    $('#table140613897496704-80829').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1491,15 +1608,15 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;B (G)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/depending_pars_32_1.png" src="../../../_images/depending_pars_32_1.png" />
+<img alt="../../../_images/depending_pars_41_1.png" src="../../../_images/depending_pars_41_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R_H</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mf">5E17</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
-<i>Table length=13</i>
-<table id="table140302895366304-100844" class="table-striped table-bordered table-condensed">
+<i>Table length=14</i>
+<table id="table140613892072640-331050" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1509,11 +1626,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.726502e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.112712e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>*B(D,m_B)</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>2.500000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0(M)</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0(M)</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B(M)</td><td>user_defined</td><td></td><td>1.000000e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -1537,14 +1655,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302895366304-100844').dataTable()");
+    console.log("$('#table140613892072640-331050').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302895366304-100844').dataTable({
+    $('#table140613892072640-331050').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1579,25 +1697,25 @@ fit run: 0</pre>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.53754e+01</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.55264e+01</span>
 
 <span class="n">fit</span> <span class="n">run</span><span class="p">:</span> <span class="mi">1</span>
-<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.53754e+01</span>
+<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.55264e+01</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.53754e+01</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.55263e+01</span>
 
 <span class="n">fit</span> <span class="n">run</span><span class="p">:</span> <span class="mi">2</span>
-<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.53754e+01</span>
+<span class="o">-</span> <span class="n">old</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.55263e+01</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.53754e+01</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">best</span> <span class="n">chisq</span><span class="o">=</span><span class="mf">1.55263e+01</span>
 
 <span class="o">-------------------------------------------------------------------------</span>
 <span class="n">Fit</span> <span class="n">report</span>
@@ -1605,22 +1723,23 @@ fit run: 0</pre>
 <span class="n">Model</span><span class="p">:</span> <span class="n">SSC</span><span class="o">-</span><span class="n">best</span><span class="o">-</span><span class="n">fit</span><span class="o">-</span><span class="n">minuit</span>
 </pre></div>
 </div>
-<i>Table length=13</i>
-<table id="table140302892214544-504379" class="table-striped table-bordered table-condensed">
+<i>Table length=14</i>
+<table id="table140613411914080-903617" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.368198e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>6.211715e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.536303e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.256015e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.271004e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.076524e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.124032e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>9.438578e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>magnetic_field</td><td>gauss</td><td>5.297408e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>4.999997e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.179783e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.707170e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>6.628146e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.096259e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.542531e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.275366e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.219607e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.022039e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>6.570078e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>*B(D,m_B)</td><td>magnetic_field</td><td>gauss</td><td>4.997430e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>4.643401e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>9.556801e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0(M)</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0(M)</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B(M)</td><td>user_defined</td><td></td><td>1.044348e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -1644,14 +1763,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302892214544-504379').dataTable()");
+    console.log("$('#table140613411914080-903617').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302892214544-504379').dataTable({
+    $('#table140613411914080-903617').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1660,23 +1779,23 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     });
 });
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">converged</span><span class="o">=</span><span class="kc">True</span>
-<span class="n">calls</span><span class="o">=</span><span class="mi">171</span>
+<span class="n">calls</span><span class="o">=</span><span class="mi">187</span>
 <span class="n">mesg</span><span class="o">=</span>
 </pre></div>
 </div>
 <table>
     <tr>
-        <td colspan="2" style="text-align:left" title="Minimum value of function"> FCN = 15.38 </td>
-        <td colspan="3" style="text-align:center" title="No. of function evaluations in last call and total number"> Nfcn = 171 </td>
+        <td colspan="2" style="text-align:left" title="Minimum value of function"> FCN = 15.53 </td>
+        <td colspan="3" style="text-align:center" title="No. of function evaluations in last call and total number"> Nfcn = 187 </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 6.66e-05 (Goal: 0.0002) </td>
+        <td colspan="2" style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 0.000156 (Goal: 0.0002) </td>
         <td colspan="3" style="text-align:center" title="No. of gradient evaluations in last call and total number">  </td>
     </tr>
     <tr>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Parameters </td>
-        <td colspan="3" style="text-align:center;background-color:#FFF79A;color:black"> SOME Parameters at limit </td>
+        <td colspan="3" style="text-align:center;background-color:#92CCA6;color:black"> No Parameters at limit </td>
     </tr>
     <tr>
         <td colspan="2" style="text-align:center;background-color:#92CCA6;color:black"> Below EDM threshold (goal x 10) </td>
@@ -1704,8 +1823,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 0 </th>
         <td> par_0 </td>
-        <td> 537 </td>
-        <td> 20 </td>
+        <td> 571 </td>
+        <td> 18 </td>
         <td>  </td>
         <td>  </td>
         <td> 10 </td>
@@ -1715,8 +1834,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 1 </th>
         <td> par_1 </td>
-        <td> 0.62e6 </td>
-        <td> 0.06e6 </td>
+        <td> 0.663e6 </td>
+        <td> 0.011e6 </td>
         <td>  </td>
         <td>  </td>
         <td> 1E+05 </td>
@@ -1726,8 +1845,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 2 </th>
         <td> par_2 </td>
-        <td> 0.95 </td>
-        <td> 0.08 </td>
+        <td> 0.910 </td>
+        <td> 0.029 </td>
         <td>  </td>
         <td>  </td>
         <td> 0 </td>
@@ -1737,8 +1856,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 3 </th>
         <td> par_3 </td>
-        <td> 33e3 </td>
-        <td> 4e3 </td>
+        <td> 35.4e3 </td>
+        <td> 3.3e3 </td>
         <td>  </td>
         <td>  </td>
         <td> 1E+03 </td>
@@ -1748,8 +1867,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 4 </th>
         <td> par_4 </td>
-        <td> 2.271 </td>
-        <td> 0.014 </td>
+        <td> 2.275 </td>
+        <td> 0.015 </td>
         <td>  </td>
         <td>  </td>
         <td> -10 </td>
@@ -1759,8 +1878,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 5 </th>
         <td> par_5 </td>
-        <td> 0.71 </td>
-        <td> 0.10 </td>
+        <td> 0.72 </td>
+        <td> 0.04 </td>
         <td>  </td>
         <td>  </td>
         <td> -15 </td>
@@ -1770,8 +1889,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 6 </th>
         <td> par_6 </td>
-        <td> 31.2e15 </td>
-        <td> 2.0e15 </td>
+        <td> 30.2e15 </td>
+        <td> 0.6e15 </td>
         <td>  </td>
         <td>  </td>
         <td> 3.16E+15 </td>
@@ -1781,8 +1900,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 7 </th>
         <td> par_7 </td>
-        <td> 0.94e18 </td>
-        <td> 0.05e18 </td>
+        <td> 0.66e18 </td>
+        <td> 0.06e18 </td>
         <td>  </td>
         <td>  </td>
         <td> 1E+15 </td>
@@ -1792,8 +1911,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 8 </th>
         <td> par_8 </td>
-        <td> 50 </td>
-        <td> 34 </td>
+        <td> 46.4 </td>
+        <td> 0.5 </td>
         <td>  </td>
         <td>  </td>
         <td> 5 </td>
@@ -1803,12 +1922,23 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     <tr>
         <th> 9 </th>
         <td> par_9 </td>
-        <td> 0.118 </td>
-        <td> 0.004 </td>
+        <td> 0.0956 </td>
+        <td> 0.0020 </td>
         <td>  </td>
         <td>  </td>
         <td> 0 </td>
         <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 10 </th>
+        <td> par_10 </td>
+        <td> 1.044 </td>
+        <td> 0.008 </td>
+        <td>  </td>
+        <td>  </td>
+        <td> 1 </td>
+        <td> 2 </td>
         <td>  </td>
     </tr>
 </table><table>
@@ -1824,159 +1954,185 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         <th> par_7 </th>
         <th> par_8 </th>
         <th> par_9 </th>
+        <th> par_10 </th>
     </tr>
     <tr>
         <th> par_0 </th>
-        <td> 422 </td>
-        <td style="background-color:rgb(250,229,229);color:black"> 1.81e+05 <strong>(0.141)</strong> </td>
-        <td style="background-color:rgb(205,205,250);color:black"> -0.578 <strong>(-0.343)</strong> </td>
-        <td style="background-color:rgb(250,214,214);color:black"> 2.1e+04 <strong>(0.238)</strong> </td>
-        <td style="background-color:rgb(250,207,207);color:black"> 0.0806 <strong>(0.286)</strong> </td>
-        <td style="background-color:rgb(250,222,222);color:black"> 0.38 <strong>(0.190)</strong> </td>
-        <td style="background-color:rgb(232,232,250);color:black"> -5.88e+15 <strong>(-0.142)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 1.31e+15 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00227 </td>
-        <td style="background-color:rgb(221,221,250);color:black"> -0.0197 <strong>(-0.225)</strong> </td>
+        <td> 314 </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -4.13e+04 <strong>(-0.207)</strong> </td>
+        <td style="background-color:rgb(202,202,250);color:black"> -0.19 <strong>(-0.367)</strong> </td>
+        <td style="background-color:rgb(250,174,174);color:black"> 3.01e+04 <strong>(0.510)</strong> </td>
+        <td style="background-color:rgb(250,164,164);color:black"> 0.157 <strong>(0.575)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 0.0518 <strong>(0.081)</strong> </td>
+        <td style="background-color:rgb(250,205,205);color:black"> 3.01e+15 <strong>(0.299)</strong> </td>
+        <td style="background-color:rgb(250,158,158);color:black"> 6.09e+17 <strong>(0.617)</strong> </td>
+        <td style="background-color:rgb(218,218,250);color:black"> -2.3 <strong>(-0.246)</strong> </td>
+        <td style="background-color:rgb(250,219,219);color:black"> 0.00721 <strong>(0.204)</strong> </td>
+        <td style="background-color:rgb(175,175,250);color:black"> -0.0841 <strong>(-0.573)</strong> </td>
     </tr>
     <tr>
         <th> par_1 </th>
-        <td style="background-color:rgb(250,229,229);color:black"> 1.81e+05 <strong>(0.141)</strong> </td>
-        <td> 3.92e+09 </td>
-        <td style="background-color:rgb(250,241,241);color:black"> 302 <strong>(0.059)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 2.17e+06 <strong>(0.008)</strong> </td>
-        <td style="background-color:rgb(203,203,250);color:black"> -309 <strong>(-0.359)</strong> </td>
-        <td style="background-color:rgb(250,195,195);color:black"> 2.24e+03 <strong>(0.367)</strong> </td>
-        <td style="background-color:rgb(223,223,250);color:black"> -2.63e+19 <strong>(-0.207)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -2.85e+19 <strong>(-0.010)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 2.24 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(219,219,250);color:black"> -63.8 <strong>(-0.239)</strong> </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -4.13e+04 <strong>(-0.207)</strong> </td>
+        <td> 1.27e+08 </td>
+        <td style="background-color:rgb(250,226,226);color:black"> 52.7 <strong>(0.160)</strong> </td>
+        <td style="background-color:rgb(225,225,250);color:black"> -7.33e+06 <strong>(-0.195)</strong> </td>
+        <td style="background-color:rgb(229,229,250);color:black"> -28.7 <strong>(-0.165)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -1.24 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(226,226,250);color:black"> -1.17e+18 <strong>(-0.183)</strong> </td>
+        <td style="background-color:rgb(232,232,250);color:black"> -8.6e+19 <strong>(-0.137)</strong> </td>
+        <td style="background-color:rgb(250,244,244);color:black"> 227 <strong>(0.038)</strong> </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -1.32 <strong>(-0.059)</strong> </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 9.53 <strong>(0.102)</strong> </td>
     </tr>
     <tr>
         <th> par_2 </th>
-        <td style="background-color:rgb(205,205,250);color:black"> -0.578 <strong>(-0.343)</strong> </td>
-        <td style="background-color:rgb(250,241,241);color:black"> 302 <strong>(0.059)</strong> </td>
-        <td> 0.00672 </td>
-        <td style="background-color:rgb(250,193,193);color:black"> 134 <strong>(0.379)</strong> </td>
-        <td style="background-color:rgb(250,226,226);color:black"> 0.000181 <strong>(0.161)</strong> </td>
-        <td style="background-color:rgb(250,193,193);color:black"> 0.00304 <strong>(0.380)</strong> </td>
-        <td style="background-color:rgb(157,157,250);color:black"> -1.18e+14 <strong>(-0.714)</strong> </td>
-        <td style="background-color:rgb(180,180,250);color:black"> -2.05e+15 <strong>(-0.540)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 9.81e-06 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(223,223,250);color:black"> -7.24e-05 <strong>(-0.207)</strong> </td>
+        <td style="background-color:rgb(202,202,250);color:black"> -0.19 <strong>(-0.367)</strong> </td>
+        <td style="background-color:rgb(250,226,226);color:black"> 52.7 <strong>(0.160)</strong> </td>
+        <td> 0.000853 </td>
+        <td style="background-color:rgb(235,235,250);color:black"> -11.3 <strong>(-0.116)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -1.06e-05 <strong>(-0.024)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -1.51e-05 <strong>(-0.014)</strong> </td>
+        <td style="background-color:rgb(214,214,250);color:black"> -4.56e+12 <strong>(-0.275)</strong> </td>
+        <td style="background-color:rgb(225,225,250);color:black"> -3.1e+14 <strong>(-0.191)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.000306 <strong>(-0.020)</strong> </td>
+        <td style="background-color:rgb(250,240,240);color:black"> 3.7e-06 <strong>(0.064)</strong> </td>
+        <td style="background-color:rgb(250,220,220);color:black"> 4.78e-05 <strong>(0.198)</strong> </td>
     </tr>
     <tr>
         <th> par_3 </th>
-        <td style="background-color:rgb(250,214,214);color:black"> 2.1e+04 <strong>(0.238)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 2.17e+06 <strong>(0.008)</strong> </td>
-        <td style="background-color:rgb(250,193,193);color:black"> 134 <strong>(0.379)</strong> </td>
-        <td> 1.85e+07 </td>
-        <td style="background-color:rgb(250,218,218);color:black"> 12.7 <strong>(0.215)</strong> </td>
-        <td style="background-color:rgb(250,122,122);color:black"> 358 <strong>(0.852)</strong> </td>
-        <td style="background-color:rgb(147,147,250);color:black"> -6.92e+18 <strong>(-0.796)</strong> </td>
-        <td style="background-color:rgb(164,164,250);color:black"> -1.32e+20 <strong>(-0.661)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 1.36 <strong>(0.005)</strong> </td>
-        <td style="background-color:rgb(178,178,250);color:black"> -10.1 <strong>(-0.552)</strong> </td>
+        <td style="background-color:rgb(250,174,174);color:black"> 3.01e+04 <strong>(0.510)</strong> </td>
+        <td style="background-color:rgb(225,225,250);color:black"> -7.33e+06 <strong>(-0.195)</strong> </td>
+        <td style="background-color:rgb(235,235,250);color:black"> -11.3 <strong>(-0.116)</strong> </td>
+        <td> 1.11e+07 </td>
+        <td style="background-color:rgb(250,125,125);color:black"> 42.8 <strong>(0.834)</strong> </td>
+        <td style="background-color:rgb(250,170,170);color:black"> 64.2 <strong>(0.531)</strong> </td>
+        <td style="background-color:rgb(250,162,162);color:black"> 1.11e+18 <strong>(0.586)</strong> </td>
+        <td style="background-color:rgb(250,130,130);color:black"> 1.49e+20 <strong>(0.800)</strong> </td>
+        <td style="background-color:rgb(216,216,250);color:black"> -455 <strong>(-0.258)</strong> </td>
+        <td style="background-color:rgb(250,218,218);color:black"> 1.44 <strong>(0.216)</strong> </td>
+        <td style="background-color:rgb(150,150,250);color:black"> -21.2 <strong>(-0.770)</strong> </td>
     </tr>
     <tr>
         <th> par_4 </th>
-        <td style="background-color:rgb(250,207,207);color:black"> 0.0806 <strong>(0.286)</strong> </td>
-        <td style="background-color:rgb(203,203,250);color:black"> -309 <strong>(-0.359)</strong> </td>
-        <td style="background-color:rgb(250,226,226);color:black"> 0.000181 <strong>(0.161)</strong> </td>
-        <td style="background-color:rgb(250,218,218);color:black"> 12.7 <strong>(0.215)</strong> </td>
-        <td> 0.000188 </td>
-        <td style="background-color:rgb(237,237,250);color:black"> -0.000136 <strong>(-0.102)</strong> </td>
-        <td style="background-color:rgb(235,235,250);color:black"> -3.29e+12 <strong>(-0.118)</strong> </td>
-        <td style="background-color:rgb(220,220,250);color:black"> -1.48e+14 <strong>(-0.233)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 1.57e-06 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(236,236,250);color:black"> -6.27e-06 <strong>(-0.107)</strong> </td>
+        <td style="background-color:rgb(250,164,164);color:black"> 0.157 <strong>(0.575)</strong> </td>
+        <td style="background-color:rgb(229,229,250);color:black"> -28.7 <strong>(-0.165)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -1.06e-05 <strong>(-0.024)</strong> </td>
+        <td style="background-color:rgb(250,125,125);color:black"> 42.8 <strong>(0.834)</strong> </td>
+        <td> 0.000238 </td>
+        <td style="background-color:rgb(250,212,212);color:black"> 0.00014 <strong>(0.250)</strong> </td>
+        <td style="background-color:rgb(250,153,153);color:black"> 5.68e+12 <strong>(0.649)</strong> </td>
+        <td style="background-color:rgb(250,126,126);color:black"> 7.08e+14 <strong>(0.824)</strong> </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -0.00171 <strong>(-0.209)</strong> </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 5.84e-06 <strong>(0.190)</strong> </td>
+        <td style="background-color:rgb(147,147,250);color:black"> -0.000101 <strong>(-0.790)</strong> </td>
     </tr>
     <tr>
         <th> par_5 </th>
-        <td style="background-color:rgb(250,222,222);color:black"> 0.38 <strong>(0.190)</strong> </td>
-        <td style="background-color:rgb(250,195,195);color:black"> 2.24e+03 <strong>(0.367)</strong> </td>
-        <td style="background-color:rgb(250,193,193);color:black"> 0.00304 <strong>(0.380)</strong> </td>
-        <td style="background-color:rgb(250,122,122);color:black"> 358 <strong>(0.852)</strong> </td>
-        <td style="background-color:rgb(237,237,250);color:black"> -0.000136 <strong>(-0.102)</strong> </td>
-        <td> 0.00951 </td>
-        <td style="background-color:rgb(144,144,250);color:black"> -1.6e+14 <strong>(-0.813)</strong> </td>
-        <td style="background-color:rgb(159,159,250);color:black"> -3.18e+15 <strong>(-0.704)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 3.37e-05 <strong>(0.006)</strong> </td>
-        <td style="background-color:rgb(174,174,250);color:black"> -0.000244 <strong>(-0.587)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 0.0518 <strong>(0.081)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -1.24 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -1.51e-05 <strong>(-0.014)</strong> </td>
+        <td style="background-color:rgb(250,170,170);color:black"> 64.2 <strong>(0.531)</strong> </td>
+        <td style="background-color:rgb(250,212,212);color:black"> 0.00014 <strong>(0.250)</strong> </td>
+        <td> 0.00132 </td>
+        <td style="background-color:rgb(250,232,232);color:black"> 2.46e+12 <strong>(0.119)</strong> </td>
+        <td style="background-color:rgb(250,221,221);color:black"> 3.9e+14 <strong>(0.193)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.00025 <strong>(0.013)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 4.33e-06 <strong>(0.060)</strong> </td>
+        <td style="background-color:rgb(215,215,250);color:black"> -8.1e-05 <strong>(-0.269)</strong> </td>
     </tr>
     <tr>
         <th> par_6 </th>
-        <td style="background-color:rgb(232,232,250);color:black"> -5.88e+15 <strong>(-0.142)</strong> </td>
-        <td style="background-color:rgb(223,223,250);color:black"> -2.63e+19 <strong>(-0.207)</strong> </td>
-        <td style="background-color:rgb(157,157,250);color:black"> -1.18e+14 <strong>(-0.714)</strong> </td>
-        <td style="background-color:rgb(147,147,250);color:black"> -6.92e+18 <strong>(-0.796)</strong> </td>
-        <td style="background-color:rgb(235,235,250);color:black"> -3.29e+12 <strong>(-0.118)</strong> </td>
-        <td style="background-color:rgb(144,144,250);color:black"> -1.6e+14 <strong>(-0.813)</strong> </td>
-        <td> 4.08e+30 </td>
-        <td style="background-color:rgb(250,136,136);color:black"> 7.14e+31 <strong>(0.761)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -7.51e+11 <strong>(-0.006)</strong> </td>
-        <td style="background-color:rgb(250,153,153);color:black"> 5.56e+12 <strong>(0.645)</strong> </td>
+        <td style="background-color:rgb(250,205,205);color:black"> 3.01e+15 <strong>(0.299)</strong> </td>
+        <td style="background-color:rgb(226,226,250);color:black"> -1.17e+18 <strong>(-0.183)</strong> </td>
+        <td style="background-color:rgb(214,214,250);color:black"> -4.56e+12 <strong>(-0.275)</strong> </td>
+        <td style="background-color:rgb(250,162,162);color:black"> 1.11e+18 <strong>(0.586)</strong> </td>
+        <td style="background-color:rgb(250,153,153);color:black"> 5.68e+12 <strong>(0.649)</strong> </td>
+        <td style="background-color:rgb(250,232,232);color:black"> 2.46e+12 <strong>(0.119)</strong> </td>
+        <td> 3.23e+29 </td>
+        <td style="background-color:rgb(250,151,151);color:black"> 2.08e+31 <strong>(0.657)</strong> </td>
+        <td style="background-color:rgb(208,208,250);color:black"> -9.7e+13 <strong>(-0.323)</strong> </td>
+        <td style="background-color:rgb(250,202,202);color:black"> 3.66e+11 <strong>(0.323)</strong> </td>
+        <td style="background-color:rgb(170,170,250);color:black"> -2.89e+12 <strong>(-0.613)</strong> </td>
     </tr>
     <tr>
         <th> par_7 </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 1.31e+15 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -2.85e+19 <strong>(-0.010)</strong> </td>
-        <td style="background-color:rgb(180,180,250);color:black"> -2.05e+15 <strong>(-0.540)</strong> </td>
-        <td style="background-color:rgb(164,164,250);color:black"> -1.32e+20 <strong>(-0.661)</strong> </td>
-        <td style="background-color:rgb(220,220,250);color:black"> -1.48e+14 <strong>(-0.233)</strong> </td>
-        <td style="background-color:rgb(159,159,250);color:black"> -3.18e+15 <strong>(-0.704)</strong> </td>
-        <td style="background-color:rgb(250,136,136);color:black"> 7.14e+31 <strong>(0.761)</strong> </td>
-        <td> 2.15e+33 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -7.41e+12 <strong>(-0.003)</strong> </td>
-        <td style="background-color:rgb(250,208,208);color:black"> 5.48e+13 <strong>(0.277)</strong> </td>
+        <td style="background-color:rgb(250,158,158);color:black"> 6.09e+17 <strong>(0.617)</strong> </td>
+        <td style="background-color:rgb(232,232,250);color:black"> -8.6e+19 <strong>(-0.137)</strong> </td>
+        <td style="background-color:rgb(225,225,250);color:black"> -3.1e+14 <strong>(-0.191)</strong> </td>
+        <td style="background-color:rgb(250,130,130);color:black"> 1.49e+20 <strong>(0.800)</strong> </td>
+        <td style="background-color:rgb(250,126,126);color:black"> 7.08e+14 <strong>(0.824)</strong> </td>
+        <td style="background-color:rgb(250,221,221);color:black"> 3.9e+14 <strong>(0.193)</strong> </td>
+        <td style="background-color:rgb(250,151,151);color:black"> 2.08e+31 <strong>(0.657)</strong> </td>
+        <td> 3.11e+33 </td>
+        <td style="background-color:rgb(217,217,250);color:black"> -7.51e+15 <strong>(-0.255)</strong> </td>
+        <td style="background-color:rgb(250,219,219);color:black"> 2.32e+13 <strong>(0.209)</strong> </td>
+        <td style="background-color:rgb(126,126,250);color:black"> -4.42e+14 <strong>(-0.956)</strong> </td>
     </tr>
     <tr>
         <th> par_8 </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00227 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 2.24 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 9.81e-06 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 1.36 <strong>(0.005)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 1.57e-06 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 3.37e-05 <strong>(0.006)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -7.51e+11 <strong>(-0.006)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -7.41e+12 <strong>(-0.003)</strong> </td>
-        <td> 0.00351 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -3.75e-07 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(218,218,250);color:black"> -2.3 <strong>(-0.246)</strong> </td>
+        <td style="background-color:rgb(250,244,244);color:black"> 227 <strong>(0.038)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.000306 <strong>(-0.020)</strong> </td>
+        <td style="background-color:rgb(216,216,250);color:black"> -455 <strong>(-0.258)</strong> </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -0.00171 <strong>(-0.209)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.00025 <strong>(0.013)</strong> </td>
+        <td style="background-color:rgb(208,208,250);color:black"> -9.7e+13 <strong>(-0.323)</strong> </td>
+        <td style="background-color:rgb(217,217,250);color:black"> -7.51e+15 <strong>(-0.255)</strong> </td>
+        <td> 0.279 </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 0.000108 <strong>(0.102)</strong> </td>
+        <td style="background-color:rgb(250,202,202);color:black"> 0.0014 <strong>(0.321)</strong> </td>
     </tr>
     <tr>
         <th> par_9 </th>
-        <td style="background-color:rgb(221,221,250);color:black"> -0.0197 <strong>(-0.225)</strong> </td>
-        <td style="background-color:rgb(219,219,250);color:black"> -63.8 <strong>(-0.239)</strong> </td>
-        <td style="background-color:rgb(223,223,250);color:black"> -7.24e-05 <strong>(-0.207)</strong> </td>
-        <td style="background-color:rgb(178,178,250);color:black"> -10.1 <strong>(-0.552)</strong> </td>
-        <td style="background-color:rgb(236,236,250);color:black"> -6.27e-06 <strong>(-0.107)</strong> </td>
-        <td style="background-color:rgb(174,174,250);color:black"> -0.000244 <strong>(-0.587)</strong> </td>
-        <td style="background-color:rgb(250,153,153);color:black"> 5.56e+12 <strong>(0.645)</strong> </td>
-        <td style="background-color:rgb(250,208,208);color:black"> 5.48e+13 <strong>(0.277)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -3.75e-07 <strong>(-0.001)</strong> </td>
-        <td> 1.82e-05 </td>
+        <td style="background-color:rgb(250,219,219);color:black"> 0.00721 <strong>(0.204)</strong> </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -1.32 <strong>(-0.059)</strong> </td>
+        <td style="background-color:rgb(250,240,240);color:black"> 3.7e-06 <strong>(0.064)</strong> </td>
+        <td style="background-color:rgb(250,218,218);color:black"> 1.44 <strong>(0.216)</strong> </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 5.84e-06 <strong>(0.190)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 4.33e-06 <strong>(0.060)</strong> </td>
+        <td style="background-color:rgb(250,202,202);color:black"> 3.66e+11 <strong>(0.323)</strong> </td>
+        <td style="background-color:rgb(250,219,219);color:black"> 2.32e+13 <strong>(0.209)</strong> </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 0.000108 <strong>(0.102)</strong> </td>
+        <td> 3.98e-06 </td>
+        <td style="background-color:rgb(214,214,250);color:black"> -4.61e-06 <strong>(-0.279)</strong> </td>
     </tr>
-</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dof</span><span class="o">=</span><span class="mi">25</span>
-<span class="n">chisq</span><span class="o">=</span><span class="mf">15.375410</span><span class="p">,</span> <span class="n">chisq</span><span class="o">/</span><span class="n">red</span><span class="o">=</span><span class="mf">0.615016</span> <span class="n">null</span> <span class="n">hypothesis</span> <span class="n">sig</span><span class="o">=</span><span class="mf">0.932164</span>
+    <tr>
+        <th> par_10 </th>
+        <td style="background-color:rgb(175,175,250);color:black"> -0.0841 <strong>(-0.573)</strong> </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 9.53 <strong>(0.102)</strong> </td>
+        <td style="background-color:rgb(250,220,220);color:black"> 4.78e-05 <strong>(0.198)</strong> </td>
+        <td style="background-color:rgb(150,150,250);color:black"> -21.2 <strong>(-0.770)</strong> </td>
+        <td style="background-color:rgb(147,147,250);color:black"> -0.000101 <strong>(-0.790)</strong> </td>
+        <td style="background-color:rgb(215,215,250);color:black"> -8.1e-05 <strong>(-0.269)</strong> </td>
+        <td style="background-color:rgb(170,170,250);color:black"> -2.89e+12 <strong>(-0.613)</strong> </td>
+        <td style="background-color:rgb(126,126,250);color:black"> -4.42e+14 <strong>(-0.956)</strong> </td>
+        <td style="background-color:rgb(250,202,202);color:black"> 0.0014 <strong>(0.321)</strong> </td>
+        <td style="background-color:rgb(214,214,250);color:black"> -4.61e-06 <strong>(-0.279)</strong> </td>
+        <td> 6.86e-05 </td>
+    </tr>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dof</span><span class="o">=</span><span class="mi">24</span>
+<span class="n">chisq</span><span class="o">=</span><span class="mf">15.526262</span><span class="p">,</span> <span class="n">chisq</span><span class="o">/</span><span class="n">red</span><span class="o">=</span><span class="mf">0.646928</span> <span class="n">null</span> <span class="n">hypothesis</span> <span class="n">sig</span><span class="o">=</span><span class="mf">0.904412</span>
 
 <span class="n">best</span> <span class="n">fit</span> <span class="n">pars</span>
 </pre></div>
 </div>
-<i>Table length=13</i>
-<table id="table140302891938768-335527" class="table-striped table-bordered table-condensed">
+<i>Table length=14</i>
+<table id="table140613427091968-499301" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
-<tr><td>jet_leptonic</td><td>gmin</td><td>5.368198e+02</td><td>5.368198e+02</td><td>2.052798e+01</td><td>--</td><td>4.697542e+02</td><td>1.000000e+01</td><td>1.000000e+03</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gmax</td><td>6.211715e+05</td><td>6.211715e+05</td><td>6.263881e+04</td><td>--</td><td>1.373160e+06</td><td>1.000000e+05</td><td>1.000000e+08</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>N</td><td>9.536303e-01</td><td>9.536303e-01</td><td>8.194088e-02</td><td>--</td><td>9.060842e-01</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>3.256015e+04</td><td>3.256015e+04</td><td>4.305212e+03</td><td>--</td><td>3.188500e+04</td><td>1.000000e+03</td><td>1.000000e+06</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>s</td><td>2.271004e+00</td><td>2.271004e+00</td><td>1.371986e-02</td><td>--</td><td>2.181578e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>r</td><td>7.076524e-01</td><td>7.076524e-01</td><td>9.749619e-02</td><td>--</td><td>7.726502e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R</td><td>3.124032e+16</td><td>3.124032e+16</td><td>2.020868e+15</td><td>--</td><td>3.112712e+16</td><td>3.162278e+15</td><td>3.162278e+17</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R_H(M)</td><td>9.438578e+17</td><td>9.438578e+17</td><td>4.640439e+16</td><td>--</td><td>5.000000e+17</td><td>1.000000e+15</td><td>1.000000e+19</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>5.297408e-02</td><td>--</td><td>--</td><td>--</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>beam_obj</td><td>4.999997e+01</td><td>4.999997e+01</td><td>3.403813e+01</td><td>--</td><td>2.500000e+01</td><td>5.000000e+00</td><td>5.000000e+01</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>z_cosm</td><td>1.179783e-01</td><td>1.179783e-01</td><td>4.264552e-03</td><td>--</td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>5.707170e+02</td><td>5.707170e+02</td><td>1.770879e+01</td><td>--</td><td>4.697542e+02</td><td>1.000000e+01</td><td>1.000000e+03</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>6.628146e+05</td><td>6.628146e+05</td><td>1.128277e+04</td><td>--</td><td>1.373160e+06</td><td>1.000000e+05</td><td>1.000000e+08</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>9.096259e-01</td><td>9.096259e-01</td><td>2.920374e-02</td><td>--</td><td>9.060842e-01</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>3.542531e+04</td><td>3.542531e+04</td><td>3.330848e+03</td><td>--</td><td>3.188500e+04</td><td>1.000000e+03</td><td>1.000000e+06</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>2.275366e+00</td><td>2.275366e+00</td><td>1.541557e-02</td><td>--</td><td>2.181578e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>7.219607e-01</td><td>7.219607e-01</td><td>3.630592e-02</td><td>--</td><td>7.726502e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>3.022039e+16</td><td>3.022039e+16</td><td>5.684398e+14</td><td>--</td><td>3.112712e+16</td><td>3.162278e+15</td><td>3.162278e+17</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H(M)</td><td>6.570078e+17</td><td>6.570078e+17</td><td>5.574426e+16</td><td>--</td><td>5.000000e+17</td><td>1.000000e+15</td><td>1.000000e+19</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>*B(D,m_B)</td><td>4.997430e-02</td><td>--</td><td>--</td><td>--</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>4.643401e+01</td><td>4.643401e+01</td><td>5.282534e-01</td><td>--</td><td>2.500000e+01</td><td>5.000000e+00</td><td>5.000000e+01</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>9.556801e-02</td><td>9.556801e-02</td><td>1.995728e-03</td><td>--</td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0(M)</td><td>1.000000e+03</td><td>--</td><td>--</td><td>--</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0(M)</td><td>5.000000e+13</td><td>--</td><td>--</td><td>--</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B(M)</td><td>1.044348e+00</td><td>1.044348e+00</td><td>8.281168e-03</td><td>--</td><td>1.000000e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -2000,14 +2156,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302891938768-335527').dataTable()");
+    console.log("$('#table140613427091968-499301').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302891938768-335527').dataTable({
+    $('#table140613427091968-499301').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -2020,19 +2176,30 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="o">================================================================================</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">_depending_par_expr</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;B0*(R0/R_H)&#39;</span>
-</pre></div>
-</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f9acfc0dc10</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7fe31d5f5310</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/depending_pars_39_1.png" src="../../../_images/depending_pars_39_1.png" />
+<img alt="../../../_images/depending_pars_47_1.png" src="../../../_images/depending_pars_47_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">R_H_array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">B_array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">R_H_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span><span class="n">R_H</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">R_H_array</span><span class="p">):</span>
+    <span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R_H</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">R_H</span>
+    <span class="n">B_array</span><span class="p">[</span><span class="n">ID</span><span class="p">]</span><span class="o">=</span><span class="n">fit_model_lsb</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">val</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">R_H_array</span><span class="p">,</span><span class="n">B_array</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;R_H (cm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;B (G)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;B (G)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/depending_pars_48_1.png" src="../../../_images/depending_pars_48_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit_model</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;test.pkl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2041,28 +2208,31 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">new_fit_model</span><span class="o">=</span><span class="n">FitModel</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;test.pkl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span> <span class="n">B0</span><span class="o">*</span><span class="p">(</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">,</span> <span class="s1">&#39;m_B&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span><span class="p">:</span><span class="n">B</span> <span class="o">=</span>
+<span class="k">def</span> <span class="nf">par_func</span><span class="p">(</span><span class="n">R0</span><span class="p">,</span><span class="n">B0</span><span class="p">,</span><span class="n">R_H</span><span class="p">,</span><span class="n">m_B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">B0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">),</span><span class="n">m_B</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_fit_model</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
-<i>Table length=13</i>
-<table id="table140302420272224-490708" class="table-striped table-bordered table-condensed">
+<i>Table length=14</i>
+<table id="table140613426298736-189257" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.368198e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>6.211715e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.536303e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.256015e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.271004e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.076524e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.124032e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>9.438578e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>magnetic_field</td><td>gauss</td><td>5.297408e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>4.999997e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.179783e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.707170e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>6.628146e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.096259e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.542531e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.275366e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.219607e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.022039e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>6.570078e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>*B(D,m_B)</td><td>magnetic_field</td><td>gauss</td><td>4.997430e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>4.643401e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>9.556801e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0(M)</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0(M)</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B(M)</td><td>user_defined</td><td></td><td>1.044348e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -2086,14 +2256,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302420272224-490708').dataTable()");
+    console.log("$('#table140613426298736-189257').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302420272224-490708').dataTable({
+    $('#table140613426298736-189257').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -2110,22 +2280,23 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_fit_model</span><span class="o">.</span><span class="n">parameters</span>
 </pre></div>
 </div>
-<i>Table length=13</i>
-<table id="table140302422590944-592269" class="table-striped table-bordered table-condensed">
+<i>Table length=14</i>
+<table id="table140613891350000-796089" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.368198e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>6.211715e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.536303e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.256015e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.271004e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.076524e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.124032e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>9.438578e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>5.297408e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>4.999997e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.179783e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.707170e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>6.628146e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.096259e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.542531e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.275366e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.219607e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.022039e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>6.570078e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>4.997430e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>4.643401e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>9.556801e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>B0</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_leptonic</td><td>R0</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>m_B</td><td>user_defined</td><td></td><td>1.044348e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
 display: inline-block; margin-right: 1em; }
@@ -2149,14 +2320,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140302422590944-592269').dataTable()");
+    console.log("$('#table140613891350000-796089').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140302422590944-592269').dataTable({
+    $('#table140613891350000-796089').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -2167,74 +2338,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_fit_model</span><span class="o">.</span><span class="n">jet_leptonic</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;R0&#39;</span><span class="p">,</span><span class="s1">&#39;R_H&#39;</span><span class="p">],</span><span class="n">par_expr</span><span class="o">=</span><span class="s1">&#39;B0*(R0/R_H)**1.2&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==&gt;</span> <span class="n">par</span> <span class="n">B</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">depending</span> <span class="n">on</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;R0&#39;</span><span class="p">,</span> <span class="s1">&#39;R_H&#39;</span><span class="p">]</span> <span class="n">according</span> <span class="n">to</span> <span class="n">expr</span> <span class="n">B0</span><span class="o">*</span><span class="p">(</span><span class="n">R0</span><span class="o">/</span><span class="n">R_H</span><span class="p">)</span><span class="o">**</span><span class="mf">1.2</span>
-</pre></div>
-</div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_fit_model</span><span class="o">.</span><span class="n">parameters</span>
-</pre></div>
-</div>
-<i>Table length=13</i>
-<table id="table140302892701728-901565" class="table-striped table-bordered table-condensed">
-<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.368198e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>6.211715e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.536303e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.256015e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.271004e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>7.076524e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.124032e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>9.438578e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>*B(D,R_H)</td><td>magnetic_field</td><td>gauss</td><td>7.393944e-03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>4.999997e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.179783e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>jet_leptonic</td><td>B0(M)</td><td>user_defined</td><td>G</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_leptonic</td><td>R0(M)</td><td>user_defined</td><td>cm</td><td>5.000000e+13</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
-.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
-display: inline-block; margin-right: 1em; }
-.paginate_button { margin-right: 5px; }
-</style>
-<script>
-
-var astropy_sort_num = function(a, b) {
-    var a_num = parseFloat(a);
-    var b_num = parseFloat(b);
-
-    if (isNaN(a_num) && isNaN(b_num))
-        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
-    else if (!isNaN(a_num) && !isNaN(b_num))
-        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
-    else
-        return isNaN(a_num) ? -1 : 1;
-}
-
-require.config({paths: {
-    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
-}});
-require(["datatables"], function(){
-    console.log("$('#table140302892701728-901565').dataTable()");
-
-jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-    "optionalnum-asc": astropy_sort_num,
-    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
-});
-
-    $('#table140302892701728-901565').dataTable({
-        order: [],
-        pageLength: 100,
-        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
-        pagingType: "full_numbers",
-        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
-    });
-});
-</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
@@ -2249,7 +2354,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

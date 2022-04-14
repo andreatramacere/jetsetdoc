@@ -1,7 +1,10 @@
 .. _sherpa_plugin:
 
-Example to use the sherpa plugin with the JeSeT interface
-=========================================================
+Example to use the sherpa minimizer plugin with a JeSeT model
+=============================================================
+
+In this tutorial we show how to import a jetset model into sherpa, and
+finally we perform a model fitting.
 
 .. code:: ipython3
 
@@ -70,7 +73,7 @@ see the :ref:`data_format` user guide for further information about loading data
 
 
 
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_7_1.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_8_1.png
 
 
 .. code:: ipython3
@@ -104,7 +107,7 @@ spectral indices
 
 
 
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_12_1.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_13_1.png
 
 
 sed shaper
@@ -271,7 +274,7 @@ sed shaper
 
 
 
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_15_3.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_16_3.png
 
 
 Model constraining
@@ -379,7 +382,7 @@ ore least-square bound, as shown below
 
 
 
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_19_0.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_20_0.png
 
 
 Model fitting with Sherpa
@@ -481,7 +484,7 @@ Model fitting with Sherpa
 
 
 
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_23_2.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_24_2.png
 
 
 .. code:: ipython3
@@ -780,7 +783,7 @@ Model fitting with Sherpa
 
 
 
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_26_0.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_27_0.png
 
 
 Using the ``sherpa_fitter`` you can access all the sherpa fetarues
@@ -898,6 +901,6 @@ https://sherpa.readthedocs.io/en/latest/fit/index.html
 
 
 
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_29_0.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_30_0.png
 
 

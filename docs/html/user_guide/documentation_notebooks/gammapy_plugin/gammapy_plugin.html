@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Example to use the sherpa plugin with the JeSeT interface &#8212; jetset  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/gallery.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href=" https://github.com/andreatramacere/jetset"
+     class="visible-desktop hidden-xs"><img
+    id="gh-banner"
+    style="position: absolute; top: 50px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+  <script>
+    // Adjust banner height.
+    $(function () {
+      var navHeight = $(".navbar .container").css("height");
+      $("#gh-banner").css("top", navHeight);
+    });
+  </script>
+
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
+          JetSeT doc</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">JetSeT <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li><a class="reference internal" href="#importing-a-jetset-model-into-gammapy">Importing a jetset model into gammapy</a><ul>
+<li><a class="reference internal" href="#plotting-with-gammapy">plotting with gammapy</a></li>
+<li><a class="reference internal" href="#plotting-with-jetset">plotting with jetset</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#model-fitting-with-gammapy">Model fitting with gammapy</a><ul>
+<li><a class="reference internal" href="#setting-gammapy-jetset-model">setting gammapy jetset model</a></li>
+<li><a class="reference internal" href="#importing-data-to-gammapy">importing data to gammapy</a></li>
+<li><a class="reference internal" href="#building-gammapy-skymodel">building gammapy SkyModel</a></li>
+<li><a class="reference internal" href="#setting-gammapy-datasets-and-fit-classes-and-running-the-fit">setting gammapy Datasets and Fit classes, and running the fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/gammapy_plugin/gammapy_plugin.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><!--
+<ul class="globaltoc"
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#introduction-of-depending-pars">Introduction of depending pars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#temporal-evolution">Temporal Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#hadronic-pp-emission">Hadronic pp emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/analytical_model.html">analytical_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/base_model.html">base_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/convert_qdp.html">convert_qdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_paramters.html">jet_paramters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_spectral_components.html">jet_spectral_components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_timedep.html">jet_timedep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jet_tools.html">jet_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/jetkernel_models_dic.html">jetkernel_models_dic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/loglog_poly_model.html">loglog_poly_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mcmc.html">mcmc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/minimizer.html">minimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mock.html">mock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_manager.html">model_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/model_parameters.html">model_parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/obs_constrain.html">obs_constrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/output.html">output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/plot_sedfit.html">plot_sedfit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit.html">poly_fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/poly_fit_tools.html">poly_fit_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sed_shaper.html">sed_shaper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sherpa_plugin.html">sherpa_plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/spectral_shapes.html">spectral_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_2Dmodel.html">template_2Dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/template_model.html">template_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/test_data_helper.html">test_data_helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-pars-for-bkn-power-law-emitters">Example: depending pars for bkn power-law emitters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-building-a-jet-model-with-b-function-of-r-h-and-r-0">Example depending par: Building a Jet model with B function of R_H and R_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../depending_pars/depending_pars.html#example-depending-par-fitting-with-a-jet-model-with-depending-pars">Example depending par: fitting with a Jet model with depending pars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#combine-a-jet-model-with-the-ebl-model-multiplicative-case">Combine a Jet model with the EBL model (Multiplicative case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#setting-parameters">Setting parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_model/Composite_model.html#sum-of-two-jets-steady-and-flaring-and-application-of-the-ebl-absorption-to-both-multiplicative-and-additive">Sum of two jets (steady and flaring) and application of the EBL absorption to both (Multiplicative and additive)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#passing-the-custom-distribution-to-the-jet-class">Passing the custom distribution to the Jet class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html#building-a-distribution-from-an-external-array">Building a distribution from an external array</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#basic-setup">Basic setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-parameters">Setting the parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#investigating-the-electron-distribution">Investigating the electron distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#evaluate-and-plot-the-model">Evaluate and plot the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#comparing-models-on-the-same-plot">Comparing models on the same plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-a-plot">Saving a plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#saving-and-loading-a-model">Saving and loading a model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switching-on-off-the-particle-distribution-normalization">Switching on/off the particle distribution normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-particle-density-from-observed-fluxes-or-luminosities">Setting the particle density from observed Fluxes or Luminosities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#setting-the-beaming-factor-and-expression">Setting the beaming factor and expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#switch-on-off-synchrotron-sefl-absorption-and-ic-emission">Switch ON/OFF Synchrotron sefl-absorption and IC emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#accessing-individual-spectral-components">Accessing individual spectral components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+//-->
+
+
+<html style="height:100%">
+    <body style="height:100%">
+      <div class="sidebar-block">
+        <div class="sidebar-wrapper">
+          <h2></h2>
+        </div>
+        <div class="sidebar-toc">
+
+          
+          
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../depending_pars/depending_pars.html">Depending parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
+</ul>
+
+          
+
+        </div>
+
+      </div>
+    </body>
+</html>
+<div id="sourcelink">
+  <a href="../../../_sources/user_guide/documentation_notebooks/gammapy_plugin/gammapy_plugin.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <section id="example-to-use-the-sherpa-plugin-with-the-jeset-interface">
+<span id="gammapy-plugin"></span><h1>Example to use the sherpa plugin with the JeSeT interface<a class="headerlink" href="#example-to-use-the-sherpa-plugin-with-the-jeset-interface" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">import</span>  <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">jetset.gammapy_plugin</span> <span class="kn">import</span> <span class="n">GammapyJetsetModelFactory</span>
+<span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
+<span class="kn">from</span> <span class="nn">jetset.test_data_helper</span> <span class="kn">import</span>  <span class="n">test_SEDs</span>
+<span class="kn">from</span> <span class="nn">jetset.data_loader</span> <span class="kn">import</span> <span class="n">ObsData</span><span class="p">,</span><span class="n">Data</span>
+<span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span>
+<span class="kn">from</span> <span class="nn">jetset.test_data_helper</span> <span class="kn">import</span>  <span class="n">test_SEDs</span>
+<span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <span class="n">SPECTRAL_MODEL_REGISTRY</span>
+</pre></div>
+</div>
+<section id="importing-a-jetset-model-into-gammapy">
+<h2>Importing a jetset model into gammapy<a class="headerlink" href="#importing-a-jetset-model-into-gammapy" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jet</span><span class="o">.</span><span class="n">parameters</span>
+</pre></div>
+</div>
+<i>Table length=10</i>
+<table id="table140283478399968-301335" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140283478399968-301335').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140283478399968-301335').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gammapy_jet_model</span><span class="o">=</span><span class="n">GammapyJetsetModelFactory</span><span class="p">(</span><span class="n">jet</span><span class="p">)</span>
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+</pre></div>
+</div>
+<div><i>Table length=9</i>
+<table id="table140283478598128" class="table-striped table-bordered table-condensed">
+<thead><tr><th>type</th><th>name</th><th>value</th><th>unit</th><th>error</th><th>min</th><th>max</th><th>frozen</th><th>link</th></tr></thead>
+<thead><tr><th>str8</th><th>str9</th><th>float64</th><th>str4</th><th>int64</th><th>float64</th><th>float64</th><th>bool</th><th>str1</th></tr></thead>
+<tr><td>spectral</td><td>gmin</td><td>2.0000e+00</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>gmax</td><td>1.0000e+06</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+15</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>N</td><td>1.0000e+02</td><td>cm-3</td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>gamma_cut</td><td>1.0000e+04</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>R</td><td>5.0000e+15</td><td>cm</td><td>0.000e+00</td><td>1.000e+03</td><td>1.000e+30</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>R_H</td><td>1.0000e+17</td><td>cm</td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>True</td><td></td></tr>
+<tr><td>spectral</td><td>B</td><td>1.0000e-01</td><td>G</td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>beam_obj</td><td>1.0000e+01</td><td></td><td>0.000e+00</td><td>1.000e-04</td><td>nan</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>z_cosm</td><td>1.0000e-01</td><td></td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>False</td><td></td></tr>
+</table></div><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gammapy_jet_model</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GammapyJetsetModel</span>
+
+  <span class="nb">type</span>      <span class="n">name</span>     <span class="n">value</span>    <span class="n">unit</span>   <span class="n">error</span>      <span class="nb">min</span>       <span class="nb">max</span>    <span class="n">frozen</span> <span class="n">link</span>
+<span class="o">--------</span> <span class="o">---------</span> <span class="o">----------</span> <span class="o">----</span> <span class="o">---------</span> <span class="o">---------</span> <span class="o">---------</span> <span class="o">------</span> <span class="o">----</span>
+<span class="n">spectral</span>      <span class="n">gmin</span> <span class="mf">2.0000e+00</span>      <span class="mf">0.000e+00</span> <span class="mf">1.000e+00</span> <span class="mf">1.000e+09</span>  <span class="kc">False</span>
+<span class="n">spectral</span>      <span class="n">gmax</span> <span class="mf">1.0000e+06</span>      <span class="mf">0.000e+00</span> <span class="mf">1.000e+00</span> <span class="mf">1.000e+15</span>  <span class="kc">False</span>
+<span class="n">spectral</span>         <span class="n">N</span> <span class="mf">1.0000e+02</span> <span class="n">cm</span><span class="o">-</span><span class="mi">3</span> <span class="mf">0.000e+00</span> <span class="mf">0.000e+00</span>       <span class="n">nan</span>  <span class="kc">False</span>
+<span class="n">spectral</span> <span class="n">gamma_cut</span> <span class="mf">1.0000e+04</span>      <span class="mf">0.000e+00</span> <span class="mf">1.000e+00</span> <span class="mf">1.000e+09</span>  <span class="kc">False</span>
+<span class="n">spectral</span>         <span class="n">R</span> <span class="mf">5.0000e+15</span>   <span class="n">cm</span> <span class="mf">0.000e+00</span> <span class="mf">1.000e+03</span> <span class="mf">1.000e+30</span>  <span class="kc">False</span>
+<span class="n">spectral</span>       <span class="n">R_H</span> <span class="mf">1.0000e+17</span>   <span class="n">cm</span> <span class="mf">0.000e+00</span> <span class="mf">0.000e+00</span>       <span class="n">nan</span>   <span class="kc">True</span>
+<span class="n">spectral</span>         <span class="n">B</span> <span class="mf">1.0000e-01</span>    <span class="n">G</span> <span class="mf">0.000e+00</span> <span class="mf">0.000e+00</span>       <span class="n">nan</span>  <span class="kc">False</span>
+<span class="n">spectral</span>  <span class="n">beam_obj</span> <span class="mf">1.0000e+01</span>      <span class="mf">0.000e+00</span> <span class="mf">1.000e-04</span>       <span class="n">nan</span>  <span class="kc">False</span>
+<span class="n">spectral</span>    <span class="n">z_cosm</span> <span class="mf">1.0000e-01</span>      <span class="mf">0.000e+00</span> <span class="mf">0.000e+00</span>       <span class="n">nan</span>  <span class="kc">False</span>
+</pre></div>
+</div>
+<p>let’s verify that parameters are updated</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">R</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mf">1E15</span>
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mf">1E4</span>
+
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mf">1.5</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+</pre></div>
+</div>
+<div><i>Table length=9</i>
+<table id="table140283846408272" class="table-striped table-bordered table-condensed">
+<thead><tr><th>type</th><th>name</th><th>value</th><th>unit</th><th>error</th><th>min</th><th>max</th><th>frozen</th><th>link</th></tr></thead>
+<thead><tr><th>str8</th><th>str9</th><th>float64</th><th>str4</th><th>int64</th><th>float64</th><th>float64</th><th>bool</th><th>str1</th></tr></thead>
+<tr><td>spectral</td><td>gmin</td><td>2.0000e+00</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>gmax</td><td>1.0000e+06</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+15</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>N</td><td>1.0000e+04</td><td>cm-3</td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>gamma_cut</td><td>1.0000e+04</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>R</td><td>1.0000e+15</td><td>cm</td><td>0.000e+00</td><td>1.000e+03</td><td>1.000e+30</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>R_H</td><td>1.0000e+17</td><td>cm</td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>True</td><td></td></tr>
+<tr><td>spectral</td><td>B</td><td>1.0000e-01</td><td>G</td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>beam_obj</td><td>1.0000e+01</td><td></td><td>0.000e+00</td><td>1.000e-04</td><td>nan</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>z_cosm</td><td>1.0000e-01</td><td></td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>False</td><td></td></tr>
+</table></div><section id="plotting-with-gammapy">
+<h3>plotting with gammapy<a class="headerlink" href="#plotting-with-gammapy" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">energy_bounds</span><span class="o">=</span><span class="p">[</span><span class="mf">1E-18</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span><span class="n">energy_power</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_12_0.png" src="../../../_images/gammapy_plugin_12_0.png" />
+</section>
+<section id="plotting-with-jetset">
+<h3>plotting with jetset<a class="headerlink" href="#plotting-with-jetset" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">jetset_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f9660f92490</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_14_1.png" src="../../../_images/gammapy_plugin_14_1.png" />
+</section>
+</section>
+<section id="model-fitting-with-gammapy">
+<h2>Model fitting with gammapy<a class="headerlink" href="#model-fitting-with-gammapy" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">data</span><span class="o">=</span><span class="n">Data</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">test_SEDs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">sed_data</span><span class="o">=</span><span class="n">ObsData</span><span class="p">(</span><span class="n">data_table</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="n">sed_data</span><span class="o">.</span><span class="n">group_data</span><span class="p">(</span><span class="n">bin_width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">sed_data</span><span class="o">.</span><span class="n">add_systematics</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,[</span><span class="mf">10.</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span><span class="mf">10.</span><span class="o">**</span><span class="mi">29</span><span class="p">])</span>
+<span class="n">p</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>*  binning data  *</strong>
+---&gt; N bins= 179
+---&gt; bin_widht= 0.1
+================================================================================</pre>
+<pre class="literal-block">/Users/orion/anaconda3/envs/gammapy/lib/python3.9/site-packages/astropy/table/table.py:1407: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use <cite>arr[tuple(seq)]</cite> instead of <cite>arr[seq]</cite>. In the future this will be interpreted as an array index, <cite>arr[np.array(seq)]</cite>, which will result either in an error or a different result.
+  newcol = col[<a href="#id5"><span class="problematic" id="id6">slice_</span></a>]</pre>
+<img alt="../../../_images/gammapy_plugin_16_2.png" src="../../../_images/gammapy_plugin_16_2.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.sed_shaper</span> <span class="kn">import</span>  <span class="n">SEDShape</span>
+<span class="n">my_shape</span><span class="o">=</span><span class="n">SEDShape</span><span class="p">(</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">my_shape</span><span class="o">.</span><span class="n">eval_indices</span><span class="p">(</span><span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">plot_indices</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-6</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>* evaluating spectral indices for data *</strong>
+================================================================================</pre>
+<img alt="../../../_images/gammapy_plugin_17_1.png" src="../../../_images/gammapy_plugin_17_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="p">,</span><span class="n">best_fit</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">sync_fit</span><span class="p">(</span><span class="n">check_host_gal_template</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">Ep_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                  <span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span>
+                  <span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                  <span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">10.</span><span class="p">,</span><span class="mf">21.</span><span class="p">])</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>* Log-Polynomial fitting of the synchrotron component *</strong>
+---&gt; first blind fit run,  fit range: [10.0, 21.0]
+---&gt; class:  HSP</pre>
+<i>Table length=4</i>
+<table id="table140283357015728-944710" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
+<tr><td>LogCubic</td><td>b</td><td>-1.624004e-01</td><td>-1.624004e-01</td><td>6.476287e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>c</td><td>-1.152224e-02</td><td>-1.152224e-02</td><td>9.546081e-04</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Ep</td><td>1.673089e+01</td><td>1.673089e+01</td><td>2.573962e-02</td><td>--</td><td>1.668212e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Sp</td><td>-9.484256e+00</td><td>-9.484256e+00</td><td>1.783365e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140283357015728-944710').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140283357015728-944710').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [2, 3, 4, 5, 6, 7, 8], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span> <span class="n">sync</span>       <span class="n">nu_p</span><span class="o">=+</span><span class="mf">1.673089e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">2.573962e-02</span><span class="p">)</span>  <span class="n">nuFnu_p</span><span class="o">=-</span><span class="mf">9.484256e+00</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">1.783365e-02</span><span class="p">)</span> <span class="n">curv</span><span class="o">.=-</span><span class="mf">1.624004e-01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">6.476287e-03</span><span class="p">)</span>
+<span class="o">================================================================================</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_shape</span><span class="o">.</span><span class="n">IC_fit</span><span class="p">(</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">23.</span><span class="p">,</span><span class="mf">29.</span><span class="p">],</span><span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;minuit&#39;</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">plot_shape_fit</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>* Log-Polynomial fitting of the IC component *</strong>
+---&gt; fit range: [23.0, 29.0]
+---&gt; LogCubic fit</pre>
+<i>Table length=4</i>
+<table id="table140283387841024-616991" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
+<tr><td>LogCubic</td><td>b</td><td>-2.104700e-01</td><td>-2.104700e-01</td><td>3.125009e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>c</td><td>-4.685169e-02</td><td>-4.685169e-02</td><td>2.175617e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Ep</td><td>2.525001e+01</td><td>2.525001e+01</td><td>1.144759e-01</td><td>--</td><td>2.529805e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+<tr><td>LogCubic</td><td>Sp</td><td>-1.010998e+01</td><td>-1.010998e+01</td><td>3.513736e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140283387841024-616991').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140283387841024-616991').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [2, 3, 4, 5, 6, 7, 8], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span> <span class="n">IC</span>         <span class="n">nu_p</span><span class="o">=+</span><span class="mf">2.525001e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">1.144759e-01</span><span class="p">)</span>  <span class="n">nuFnu_p</span><span class="o">=-</span><span class="mf">1.010998e+01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">3.513736e-02</span><span class="p">)</span> <span class="n">curv</span><span class="o">.=-</span><span class="mf">2.104700e-01</span> <span class="p">(</span><span class="n">err</span><span class="o">=+</span><span class="mf">3.125009e-02</span><span class="p">)</span>
+<span class="o">================================================================================</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_19_3.png" src="../../../_images/gammapy_plugin_19_3.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.obs_constrain</span> <span class="kn">import</span> <span class="n">ObsConstrain</span>
+<span class="kn">from</span> <span class="nn">jetset.model_manager</span> <span class="kn">import</span>  <span class="n">FitModel</span>
+<span class="n">sed_obspar</span><span class="o">=</span><span class="n">ObsConstrain</span><span class="p">(</span><span class="n">beaming</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
+                        <span class="n">B_range</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span>
+                        <span class="n">distr_e</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span>
+                        <span class="n">t_var_sec</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="mi">86400</span><span class="p">,</span>
+                        <span class="n">nu_cut_IR</span><span class="o">=</span><span class="mf">1E12</span><span class="p">,</span>
+                        <span class="n">SEDShape</span><span class="o">=</span><span class="n">my_shape</span><span class="p">)</span>
+
+
+<span class="n">prefit_jet</span><span class="o">=</span><span class="n">sed_obspar</span><span class="o">.</span><span class="n">constrain_SSC_model</span><span class="p">(</span><span class="n">electron_distribution_log_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">prefit_jet</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;prefit_jet.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">================================================================================
+
+<strong>*  constrains parameters from observable *</strong></pre>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">orion</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">gammapy</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jetset</span><span class="o">/</span><span class="n">obs_constrain</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">650</span><span class="p">:</span> <span class="n">RankWarning</span><span class="p">:</span> <span class="n">Polyfit</span> <span class="n">may</span> <span class="n">be</span> <span class="n">poorly</span> <span class="n">conditioned</span>
+  <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span><span class="n">completed</span>
+</pre></div>
+</div>
+<i>Table length=11</i>
+<table id="table140283395898000-409177" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.105858e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>2.500000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>8.476131e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.327955e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.163414e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>8.120021e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140283395898000-409177').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140283395898000-409177').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">================================================================================</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span><span class="o">=</span><span class="n">prefit_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">prefit_jet</span><span class="p">,</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E29</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_21_0.png" src="../../../_images/gammapy_plugin_21_0.png" />
+<section id="setting-gammapy-jetset-model">
+<h3>setting gammapy jetset model<a class="headerlink" href="#setting-gammapy-jetset-model" title="Permalink to this headline">¶</a></h3>
+<p>we import the model to gammapy and we set min/max values. Notice that
+gammapy has not fit_range, but uses only min/max</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jet</span><span class="o">=</span><span class="n">Jet</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;prefit_jet.pkl&#39;</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmin</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gmax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">1E5</span><span class="p">,</span> <span class="n">val_max</span><span class="o">=</span><span class="mf">1E7</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">val_max</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">1E15</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mf">1E17</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">beam_obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gamma0_log_parab</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">1E3</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mf">1E5</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">R_H</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">1E17</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mf">1E19</span><span class="p">)</span>
+<span class="n">jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">z_cosm</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">val_min</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span><span class="n">val_max</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">gammapy_jet_model</span><span class="o">=</span><span class="n">GammapyJetsetModelFactory</span><span class="p">(</span><span class="n">jet</span><span class="p">)</span>
+<span class="n">SPECTRAL_MODEL_REGISTRY</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gammapy_jet_model</span><span class="p">)</span>
+</pre></div>
+</div>
+<i>Table length=11</i>
+<table id="table140283327778576-138689" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>8.476131e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.327955e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.163414e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>8.120021e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.105858e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td>lorentz-factor*</td><td>2.500000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140283327778576-138689').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140283327778576-138689').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+</pre></div>
+</div>
+<div><i>Table length=11</i>
+<table id="table140283351312944" class="table-striped table-bordered table-condensed">
+<thead><tr><th>type</th><th>name</th><th>value</th><th>unit</th><th>error</th><th>min</th><th>max</th><th>frozen</th><th>link</th></tr></thead>
+<thead><tr><th>str8</th><th>str16</th><th>float64</th><th>str4</th><th>int64</th><th>float64</th><th>float64</th><th>bool</th><th>str1</th></tr></thead>
+<tr><td>spectral</td><td>gmin</td><td>4.6975e+02</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>True</td><td></td></tr>
+<tr><td>spectral</td><td>gmax</td><td>1.3732e+06</td><td></td><td>0.000e+00</td><td>1.000e+05</td><td>1.000e+07</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>N</td><td>8.4761e-01</td><td>cm-3</td><td>0.000e+00</td><td>1.000e-03</td><td>3.000e+00</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>gamma0_log_parab</td><td>3.3280e+04</td><td></td><td>0.000e+00</td><td>1.000e+03</td><td>1.000e+05</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>s</td><td>2.1634e+00</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>3.000e+00</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>r</td><td>8.1200e-01</td><td></td><td>0.000e+00</td><td>1.000e-01</td><td>2.000e+00</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>R</td><td>3.1059e+16</td><td>cm</td><td>0.000e+00</td><td>1.000e+15</td><td>1.000e+17</td><td>True</td><td></td></tr>
+<tr><td>spectral</td><td>R_H</td><td>1.0000e+17</td><td>cm</td><td>0.000e+00</td><td>1.000e+17</td><td>1.000e+19</td><td>True</td><td></td></tr>
+<tr><td>spectral</td><td>B</td><td>5.0500e-02</td><td>G</td><td>0.000e+00</td><td>1.000e-04</td><td>1.000e+00</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>beam_obj</td><td>2.5000e+01</td><td></td><td>0.000e+00</td><td>5.000e+00</td><td>3.000e+01</td><td>False</td><td></td></tr>
+<tr><td>spectral</td><td>z_cosm</td><td>3.0800e-02</td><td></td><td>0.000e+00</td><td>0.000e+00</td><td>1.000e+00</td><td>True</td><td></td></tr>
+</table></div><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">jetset_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">jet</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">1E11</span><span class="p">,</span><span class="mf">1E30</span><span class="p">])</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E8</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-14</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_27_0.png" src="../../../_images/gammapy_plugin_27_0.png" />
+</section>
+<section id="importing-data-to-gammapy">
+<h3>importing data to gammapy<a class="headerlink" href="#importing-data-to-gammapy" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.estimators</span> <span class="kn">import</span> <span class="n">FluxPoints</span>
+
+<span class="n">fp</span><span class="o">=</span><span class="n">FluxPoints</span><span class="o">.</span><span class="n">from_table</span><span class="p">(</span><span class="n">sed_data</span><span class="o">.</span><span class="n">gammapy_table</span><span class="p">,</span><span class="n">sed_type</span><span class="o">=</span><span class="s1">&#39;e2dnde&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">fp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s1">&#39;e2dnde&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">energy_bounds</span><span class="o">=</span><span class="p">[</span><span class="mf">1E-18</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span><span class="n">energy_power</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">No</span> <span class="n">reference</span> <span class="n">model</span> <span class="nb">set</span> <span class="k">for</span> <span class="n">FluxMaps</span><span class="o">.</span> <span class="n">Assuming</span> <span class="n">point</span> <span class="n">source</span> <span class="k">with</span> <span class="n">E</span><span class="o">^-</span><span class="mi">2</span> <span class="n">spectrum</span><span class="o">.</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_29_1.png" src="../../../_images/gammapy_plugin_29_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">fp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s1">&#39;dnde&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">energy_bounds</span><span class="o">=</span><span class="p">[</span><span class="mf">1E-18</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span><span class="n">energy_power</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_30_0.png" src="../../../_images/gammapy_plugin_30_0.png" />
+</section>
+<section id="building-gammapy-skymodel">
+<h3>building gammapy SkyModel<a class="headerlink" href="#building-gammapy-skymodel" title="Permalink to this headline">¶</a></h3>
+<p>we build the SkyModel, and we degrade the pre-fit model quality</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <span class="n">SkyModel</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">SkyModel</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;SSC model Mrk 421&quot;</span><span class="p">,</span> <span class="n">spectral_model</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="p">)</span>
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">beam_obj</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mi">20</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
+<span class="n">p</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">jetset_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">jetset_model</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">1E11</span><span class="p">,</span><span class="mf">1E30</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SkyModel</span>
+
+  <span class="n">Name</span>                      <span class="p">:</span> <span class="n">SSC</span> <span class="n">model</span> <span class="n">Mrk</span> <span class="mi">421</span>
+  <span class="n">Datasets</span> <span class="n">names</span>            <span class="p">:</span> <span class="kc">None</span>
+  <span class="n">Spectral</span> <span class="n">model</span> <span class="nb">type</span>       <span class="p">:</span> <span class="n">GammapyJetsetModel</span>
+  <span class="n">Spatial</span>  <span class="n">model</span> <span class="nb">type</span>       <span class="p">:</span>
+  <span class="n">Temporal</span> <span class="n">model</span> <span class="nb">type</span>       <span class="p">:</span>
+  <span class="n">Parameters</span><span class="p">:</span>
+    <span class="n">gmin</span>         <span class="p">(</span><span class="n">frozen</span><span class="p">)</span>   <span class="p">:</span>    <span class="mf">469.754</span>
+    <span class="n">gmax</span>                    <span class="p">:</span> <span class="mf">1373159.756</span>  <span class="o">+/-</span>    <span class="mf">0.00</span>
+    <span class="n">N</span>                       <span class="p">:</span>      <span class="mf">2.000</span>   <span class="o">+/-</span>    <span class="mf">0.00</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">cm3</span>
+    <span class="n">gamma0_log_parab</span>            <span class="p">:</span>  <span class="mf">33279.546</span>   <span class="o">+/-</span>    <span class="mf">0.00</span>
+    <span class="n">s</span>                       <span class="p">:</span>      <span class="mf">2.163</span>   <span class="o">+/-</span>    <span class="mf">0.00</span>
+    <span class="n">r</span>                       <span class="p">:</span>      <span class="mf">0.500</span>   <span class="o">+/-</span>    <span class="mf">0.00</span>
+    <span class="n">R</span>            <span class="p">(</span><span class="n">frozen</span><span class="p">)</span>   <span class="p">:</span> <span class="mf">31058584282107640.000</span>      <span class="n">cm</span>
+    <span class="n">R_H</span>          <span class="p">(</span><span class="n">frozen</span><span class="p">)</span>   <span class="p">:</span> <span class="mf">100000000000000000.000</span>       <span class="n">cm</span>
+    <span class="n">B</span>                       <span class="p">:</span>      <span class="mf">0.051</span>   <span class="o">+/-</span>    <span class="mf">0.00</span> <span class="n">gauss</span>
+    <span class="n">beam_obj</span>                <span class="p">:</span>     <span class="mf">20.000</span>   <span class="o">+/-</span>    <span class="mf">0.00</span>
+    <span class="n">z_cosm</span>       <span class="p">(</span><span class="n">frozen</span><span class="p">)</span>   <span class="p">:</span>      <span class="mf">0.031</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_33_1.png" src="../../../_images/gammapy_plugin_33_1.png" />
+</section>
+<section id="setting-gammapy-datasets-and-fit-classes-and-running-the-fit">
+<h3>setting gammapy Datasets and Fit classes, and running the fit<a class="headerlink" href="#setting-gammapy-datasets-and-fit-classes-and-running-the-fit" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.datasets</span> <span class="kn">import</span> <span class="n">FluxPointsDataset</span><span class="p">,</span><span class="n">Datasets</span>
+<span class="n">dataset_mrk421</span> <span class="o">=</span> <span class="n">FluxPointsDataset</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">fp</span><span class="p">,</span><span class="n">models</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+<span class="c1"># do not use frequency point below 1e11 Hz, affected by non-blazar emission</span>
+<span class="n">E_min_fit</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e11</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Hz</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;eV&quot;</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+<span class="n">dataset_mrk421</span><span class="o">.</span><span class="n">mask_fit</span> <span class="o">=</span> <span class="n">dataset_mrk421</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">energy_ref</span> <span class="o">&gt;</span> <span class="n">E_min_fit</span>
+<span class="n">datasets</span><span class="o">=</span><span class="n">Datasets</span><span class="p">([</span><span class="n">dataset_mrk421</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.modeling</span> <span class="kn">import</span> <span class="n">Fit</span>
+
+<span class="n">fitter</span> <span class="o">=</span> <span class="n">Fit</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s1">&#39;minuit&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">fitter</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">datasets</span><span class="o">=</span><span class="n">datasets</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OptimizeResult</span>
+
+    <span class="n">backend</span>    <span class="p">:</span> <span class="n">minuit</span>
+    <span class="n">method</span>     <span class="p">:</span> <span class="n">migrad</span>
+    <span class="n">success</span>    <span class="p">:</span> <span class="kc">False</span>
+    <span class="n">message</span>    <span class="p">:</span> <span class="n">Optimization</span> <span class="n">failed</span><span class="o">.</span> <span class="n">Estimated</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">minimum</span> <span class="n">too</span> <span class="n">large</span><span class="o">.</span>
+    <span class="n">nfev</span>       <span class="p">:</span> <span class="mi">1460</span>
+    <span class="n">total</span> <span class="n">stat</span> <span class="p">:</span> <span class="mf">57.98</span>
+
+<span class="n">OptimizeResult</span>
+
+    <span class="n">backend</span>    <span class="p">:</span> <span class="n">minuit</span>
+    <span class="n">method</span>     <span class="p">:</span> <span class="n">migrad</span>
+    <span class="n">success</span>    <span class="p">:</span> <span class="kc">False</span>
+    <span class="n">message</span>    <span class="p">:</span> <span class="n">Optimization</span> <span class="n">failed</span><span class="o">.</span> <span class="n">Estimated</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">minimum</span> <span class="n">too</span> <span class="n">large</span><span class="o">.</span>
+    <span class="n">nfev</span>       <span class="p">:</span> <span class="mi">1460</span>
+    <span class="n">total</span> <span class="n">stat</span> <span class="p">:</span> <span class="mf">57.98</span>
+
+
+  <span class="nb">type</span>         <span class="n">name</span>         <span class="n">value</span>    <span class="n">unit</span>   <span class="n">error</span>      <span class="nb">min</span>       <span class="nb">max</span>    <span class="n">frozen</span> <span class="n">link</span>
+<span class="o">--------</span> <span class="o">----------------</span> <span class="o">----------</span> <span class="o">----</span> <span class="o">---------</span> <span class="o">---------</span> <span class="o">---------</span> <span class="o">------</span> <span class="o">----</span>
+<span class="n">spectral</span>             <span class="n">gmin</span> <span class="mf">4.6975e+02</span>      <span class="mf">0.000e+00</span> <span class="mf">1.000e+00</span> <span class="mf">1.000e+09</span>   <span class="kc">True</span>
+<span class="n">spectral</span>             <span class="n">gmax</span> <span class="mf">8.8519e+05</span>      <span class="mf">2.298e-01</span> <span class="mf">1.000e+05</span> <span class="mf">1.000e+07</span>  <span class="kc">False</span>
+<span class="n">spectral</span>                <span class="n">N</span> <span class="mf">1.0987e+00</span> <span class="n">cm</span><span class="o">-</span><span class="mi">3</span> <span class="mf">1.902e-06</span> <span class="mf">1.000e-03</span> <span class="mf">3.000e+00</span>  <span class="kc">False</span>
+<span class="n">spectral</span> <span class="n">gamma0_log_parab</span> <span class="mf">5.0485e+04</span>      <span class="mf">1.480e-06</span> <span class="mf">1.000e+03</span> <span class="mf">1.000e+05</span>  <span class="kc">False</span>
+<span class="n">spectral</span>                <span class="n">s</span> <span class="mf">2.1768e+00</span>      <span class="mf">2.005e-07</span> <span class="mf">1.000e+00</span> <span class="mf">3.000e+00</span>  <span class="kc">False</span>
+<span class="n">spectral</span>                <span class="n">r</span> <span class="mf">8.8931e-01</span>      <span class="mf">8.676e-02</span> <span class="mf">1.000e-01</span> <span class="mf">2.000e+00</span>  <span class="kc">False</span>
+<span class="n">spectral</span>                <span class="n">R</span> <span class="mf">3.1059e+16</span>   <span class="n">cm</span> <span class="mf">0.000e+00</span> <span class="mf">1.000e+15</span> <span class="mf">1.000e+17</span>   <span class="kc">True</span>
+<span class="n">spectral</span>              <span class="n">R_H</span> <span class="mf">1.0000e+17</span>   <span class="n">cm</span> <span class="mf">0.000e+00</span> <span class="mf">1.000e+17</span> <span class="mf">1.000e+19</span>   <span class="kc">True</span>
+<span class="n">spectral</span>                <span class="n">B</span> <span class="mf">7.1542e-02</span>    <span class="n">G</span> <span class="mf">2.212e-08</span> <span class="mf">1.000e-04</span> <span class="mf">1.000e+00</span>  <span class="kc">False</span>
+<span class="n">spectral</span>         <span class="n">beam_obj</span> <span class="mf">1.8433e+01</span>      <span class="mf">1.071e-06</span> <span class="mf">5.000e+00</span> <span class="mf">3.000e+01</span>  <span class="kc">False</span>
+<span class="n">spectral</span>           <span class="n">z_cosm</span> <span class="mf">3.0800e-02</span>      <span class="mf">0.000e+00</span> <span class="mf">0.000e+00</span> <span class="mf">1.000e+00</span>   <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">covariance</span><span class="o">.</span><span class="n">plot_correlation</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_39_0.png" src="../../../_images/gammapy_plugin_39_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s1">&#39;e2dnde&#39;</span><span class="p">)</span>
+<span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">energy_bounds</span><span class="o">=</span><span class="p">[</span><span class="mf">1E-18</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span><span class="n">energy_power</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_40_0.png" src="../../../_images/gammapy_plugin_40_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">jetset_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">p</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">jetset_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_model_residual_plot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">gammapy_jet_model</span><span class="o">.</span><span class="n">jetset_model</span><span class="p">,</span>
+                                         <span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">1E11</span><span class="p">,</span><span class="mf">1E30</span><span class="p">])</span>
+</pre></div>
+</div>
+<img alt="../../../_images/gammapy_plugin_41_0.png" src="../../../_images/gammapy_plugin_41_0.png" />
+</section>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, andrea tramacere.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

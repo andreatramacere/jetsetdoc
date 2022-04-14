@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>JetTimeEvol &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="TimeEmittersDistribution" href="jetset.jet_timedep.TimeEmittersDistribution.html" />
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,7 +72,7 @@
      href="../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
@@ -135,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -171,8 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -182,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -253,7 +256,7 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
@@ -315,7 +318,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -351,8 +354,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -362,10 +369,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -386,7 +393,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -432,17 +439,18 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -460,11 +468,11 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="jettimeevol">
+  <section id="jettimeevol">
 <h1>JetTimeEvol<a class="headerlink" href="#jettimeevol" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="jetset.jet_timedep.JetTimeEvol">
-<em class="property">class </em><code class="sig-name descname">JetTimeEvol</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jet_rad</span></em>, <em class="sig-param"><span class="n">Q_inj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'jet_time_ev'</span></em>, <em class="sig-param"><span class="n">inplace</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">log_sampling</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">jet_gamma_grid_size</span><span class="o">=</span><span class="default_value">200</span></em>, <em class="sig-param"><span class="n">setup</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">JetTimeEvol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jet_rad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_radiation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q_inj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'jet_time_ev'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_sampling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jet_gamma_grid_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -601,16 +609,16 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.plot_pre_run_plot" title="jetset.jet_timedep.JetTimeEvol.plot_pre_run_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_pre_run_plot</span></code></a>([figsize, dpi])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters" title="jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_tempev_emitters</span></code></a>([region, figsize, dpi, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters" title="jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_tempev_emitters</span></code></a>([region, figsize, dpi, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_model" title="jetset.jet_timedep.JetTimeEvol.plot_tempev_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_tempev_model</span></code></a>([comp, region, frame, t1, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_model" title="jetset.jet_timedep.JetTimeEvol.plot_tempev_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_tempev_model</span></code></a>([comp, region, frame, t1, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.plot_time_profile" title="jetset.jet_timedep.JetTimeEvol.plot_time_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_time_profile</span></code></a>([figsize, dpi])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.run" title="jetset.jet_timedep.JetTimeEvol.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([only_injection, do_injection, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jetset.jet_timedep.JetTimeEvol.run" title="jetset.jet_timedep.JetTimeEvol.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([only_injection, do_injection, ...])</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">param only_injection</dt>
 <dd class="field-odd"><p></p></dd>
@@ -633,123 +641,123 @@
 </table>
 <p class="rubric">Attributes Documentation</p>
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.Delta_R_acc">
-<code class="sig-name descname">Delta_R_acc</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.Delta_R_acc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.Delta_R_acc">
+<span class="sig-name descname"><span class="pre">Delta_R_acc</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.Delta_R_acc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.IC_cooling">
-<code class="sig-name descname">IC_cooling</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.IC_cooling" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.IC_cooling">
+<span class="sig-name descname"><span class="pre">IC_cooling</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.IC_cooling" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.Sync_cooling">
-<code class="sig-name descname">Sync_cooling</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.Sync_cooling" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.Sync_cooling">
+<span class="sig-name descname"><span class="pre">Sync_cooling</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.Sync_cooling" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.custom_acc_profile">
-<code class="sig-name descname">custom_acc_profile</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.custom_acc_profile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.custom_acc_profile">
+<span class="sig-name descname"><span class="pre">custom_acc_profile</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.custom_acc_profile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.custom_q_jnj_profile">
-<code class="sig-name descname">custom_q_jnj_profile</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.custom_q_jnj_profile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.custom_q_jnj_profile">
+<span class="sig-name descname"><span class="pre">custom_q_jnj_profile</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.custom_q_jnj_profile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.delta_t">
-<code class="sig-name descname">delta_t</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.delta_t" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.delta_t">
+<span class="sig-name descname"><span class="pre">delta_t</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.delta_t" title="Permalink to this definition">¶</a></dt>
 <dd><p>blob delta t in s</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.log_sampling">
-<code class="sig-name descname">log_sampling</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.log_sampling" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.log_sampling">
+<span class="sig-name descname"><span class="pre">log_sampling</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.log_sampling" title="Permalink to this definition">¶</a></dt>
 <dd><p>logarithmically spaced bool</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.region_expansion">
-<code class="sig-name descname">region_expansion</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.region_expansion" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.region_expansion">
+<span class="sig-name descname"><span class="pre">region_expansion</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.region_expansion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.t_unit_acc">
-<code class="sig-name descname">t_unit_acc</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.t_unit_acc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.t_unit_acc">
+<span class="sig-name descname"><span class="pre">t_unit_acc</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.t_unit_acc" title="Permalink to this definition">¶</a></dt>
 <dd><p>blob time in R/c</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.t_unit_rad">
-<code class="sig-name descname">t_unit_rad</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.t_unit_rad" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.t_unit_rad">
+<span class="sig-name descname"><span class="pre">t_unit_rad</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.t_unit_rad" title="Permalink to this definition">¶</a></dt>
 <dd><p>blob time in R/c</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.temp_ev">
-<code class="sig-name descname">temp_ev</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.temp_ev" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.temp_ev">
+<span class="sig-name descname"><span class="pre">temp_ev</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.temp_ev" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.jet_timedep.JetTimeEvol.time_steps_array">
-<code class="sig-name descname">time_steps_array</code><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.time_steps_array" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.time_steps_array">
+<span class="sig-name descname"><span class="pre">time_steps_array</span></span><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.time_steps_array" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods Documentation</p>
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.V_acc">
-<code class="sig-name descname">V_acc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.V_acc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.V_acc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.V_acc">
+<span class="sig-name descname"><span class="pre">V_acc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.V_acc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.V_acc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.eval_L_tot_inj">
-<code class="sig-name descname">eval_L_tot_inj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.eval_L_tot_inj"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.eval_L_tot_inj" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.eval_L_tot_inj">
+<span class="sig-name descname"><span class="pre">eval_L_tot_inj</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.eval_L_tot_inj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.eval_L_tot_inj" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.init_TempEv">
-<code class="sig-name descname">init_TempEv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.init_TempEv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.init_TempEv" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.init_TempEv">
+<span class="sig-name descname"><span class="pre">init_TempEv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.init_TempEv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.init_TempEv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.load_model">
-<em class="property">classmethod </em><code class="sig-name descname">load_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.load_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.load_model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.load_model">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.load_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.load_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.plot_pre_run_plot">
-<code class="sig-name descname">plot_pre_run_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">figsize</span><span class="o">=</span><span class="default_value">(8, 6)</span></em>, <em class="sig-param"><span class="n">dpi</span><span class="o">=</span><span class="default_value">120</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_pre_run_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_pre_run_plot" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.plot_pre_run_plot">
+<span class="sig-name descname"><span class="pre">plot_pre_run_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_pre_run_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_pre_run_plot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters">
-<code class="sig-name descname">plot_tempev_emitters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">'rad'</span></em>, <em class="sig-param"><span class="n">figsize</span><span class="o">=</span><span class="default_value">(8, 8)</span></em>, <em class="sig-param"><span class="n">dpi</span><span class="o">=</span><span class="default_value">120</span></em>, <em class="sig-param"><span class="n">energy_unit</span><span class="o">=</span><span class="default_value">'gamma'</span></em>, <em class="sig-param"><span class="n">loglog</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">plot_Q_inj</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">pow</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_tempev_emitters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters">
+<span class="sig-name descname"><span class="pre">plot_tempev_emitters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rad'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">8)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gamma'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_Q_inj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_tempev_emitters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_emitters" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.plot_tempev_model">
-<code class="sig-name descname">plot_tempev_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">comp</span><span class="o">=</span><span class="default_value">'Sum'</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">'rad'</span></em>, <em class="sig-param"><span class="n">frame</span><span class="o">=</span><span class="default_value">'obs'</span></em>, <em class="sig-param"><span class="n">t1</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">t2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_slice</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_slice_bin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_bin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">density</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">use_cached</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">sed_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plot_obj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">average</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_tempev_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.plot_tempev_model">
+<span class="sig-name descname"><span class="pre">plot_tempev_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Sum'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rad'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'obs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_slice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_slice_bin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_bin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cached</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sed_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_tempev_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_tempev_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.plot_time_profile">
-<code class="sig-name descname">plot_time_profile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">figsize</span><span class="o">=</span><span class="default_value">(8, 8)</span></em>, <em class="sig-param"><span class="n">dpi</span><span class="o">=</span><span class="default_value">120</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_time_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_time_profile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.plot_time_profile">
+<span class="sig-name descname"><span class="pre">plot_time_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">8)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.plot_time_profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.plot_time_profile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">only_injection</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">do_injection</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cache_SEDs_rad</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cache_SEDs_acc</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.run" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">only_injection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_injection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_SEDs_rad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_SEDs_acc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.run" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>only_injection</strong> (<em>if TRUE radiative regions is considered empty and is filled by particles escaped from acceleration region</em><em>,</em>) – </p></li>
-<li><p><strong>particle escaped from acc regions are injected and mixed with pre-existing particles in the radiative region.</strong> (<em>otherwise</em>) – </p></li>
-<li><p><strong>Q_inj is not provided in the object</strong> (<em>if</em>) – </p></li>
-<li><p><strong>only_injection will be considered FALSE</strong> (<em>then</em>) – </p></li>
+<li><p><strong>region.</strong> (<em>otherwise particle escaped from acc regions are injected and mixed with pre-existing particles in the radiative</em>) – </p></li>
+<li><p><strong>object</strong> (<em>in the radiative region are cooled.  if Q_inj is not provided in the</em>) – </p></li>
+<li><p><strong>FALSE</strong> (<em>then  do_injection will be considered</em>) – </p></li>
 <li><p><strong>do_injection</strong> (<em>if TRUE</em><em>, </em><em>particles are injected in the acceleration region</em><em>, </em><em>otherwise acc region is skipped</em><em>, </em><em>and only particles</em>) – </p></li>
-<li><p><strong>the radiative region are cooled.  if Q_inj is not provided in the object</strong> (<em>in</em>) – </p></li>
-<li><p><strong>do_injection will be considered FALSE</strong> (<em>then</em>) – </p></li>
+<li><p><strong>object</strong> – </p></li>
+<li><p><strong>FALSE</strong> – </p></li>
 <li><p><strong>cache_SEDs_rad</strong> (<em>if TRUE</em><em>, </em><em>all the SEDs of the radiative region will be cached</em>) – </p></li>
 <li><p><strong>cache_SEDs_acc</strong> (<em>if TRUE</em><em>, </em><em>all the SEDs of the acceleration region will be cached</em>) – </p></li>
 </ul>
@@ -758,28 +766,28 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.save_model">
-<code class="sig-name descname">save_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.save_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.save_model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.save_model">
+<span class="sig-name descname"><span class="pre">save_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.save_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.save_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.set_time">
-<code class="sig-name descname">set_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">time_slice</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frame</span><span class="o">=</span><span class="default_value">'blob'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.set_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.set_time" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.set_time">
+<span class="sig-name descname"><span class="pre">set_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_slice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blob'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.set_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.set_time" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.show_model">
-<code class="sig-name descname">show_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">getstring</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">names_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sort_key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.show_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.show_model" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.show_model">
+<span class="sig-name descname"><span class="pre">show_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">getstring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.show_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.show_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.jet_timedep.JetTimeEvol.show_pars">
-<code class="sig-name descname">show_pars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sort_key</span><span class="o">=</span><span class="default_value">'par type'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.show_pars"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.show_pars" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.jet_timedep.JetTimeEvol.show_pars">
+<span class="sig-name descname"><span class="pre">show_pars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'par</span> <span class="pre">type'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/jet_timedep.html#JetTimeEvol.show_pars"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.jet_timedep.JetTimeEvol.show_pars" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -794,7 +802,7 @@
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

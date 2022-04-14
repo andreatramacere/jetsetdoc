@@ -3,6 +3,9 @@
 Example to use the sherpa plugin with the sherpa interface
 ==========================================================
 
+In this tutorial we show how to import a jetset model into Sherpa, and
+finally we perform a model fitting with Sherpa.
+
 .. code:: ipython3
 
     import warnings
@@ -70,7 +73,7 @@ see the :ref:`data_format` user guide for further information about loading data
 
 
 
-.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_7_1.png
+.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_8_1.png
 
 
 .. code:: ipython3
@@ -104,7 +107,7 @@ spectral indices
 
 
 
-.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_12_1.png
+.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_13_1.png
 
 
 sed shaper
@@ -271,7 +274,7 @@ sed shaper
 
 
 
-.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_15_3.png
+.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_16_3.png
 
 
 Model constraining
@@ -379,11 +382,13 @@ ore least-square bound, as shown below
 
 
 
-.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_19_0.png
+.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_20_0.png
 
 
-Model fitting with Sherpa
--------------------------
+Model fitting with using a Sherpa model
+---------------------------------------
+
+we show now, how to import a jetset model into a Sherpa model
 
 .. code:: ipython3
 
@@ -461,6 +466,9 @@ Model fitting with Sherpa
 
 
 
+The following instructions create a Sherpa model for each of the
+existing jetset models.
+
 .. code:: ipython3
 
     sherpa_model_jet=JetsetSherpaModel(prefit_jet)
@@ -473,6 +481,7 @@ Model fitting with Sherpa
 .. parsed-literal::
 
     jetset model name R renamed to  R_sh due to sherpa internal naming convention
+
 
 
 .. code:: ipython3
@@ -1059,7 +1068,7 @@ Model fitting with Sherpa
 
 
 
-.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_40_0.png
+.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_44_0.png
 
 
 You can access all the sherpa fetarues
@@ -1075,6 +1084,6 @@ https://sherpa.readthedocs.io/en/latest/fit/index.html
 
 
 
-.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_42_0.png
+.. image:: sherpa-plugin-sherpa-interface_files/sherpa-plugin-sherpa-interface_46_0.png
 
 

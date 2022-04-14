@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>ModelParameter &#8212; jetset  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/my_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ModelParameterArray" href="jetset.model_parameters.ModelParameterArray.html" />
@@ -58,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../index.html"><span><img src="../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc8</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -73,13 +72,12 @@
      href="../index.html">JetSeT <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Documentation:</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -136,7 +134,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -172,14 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -189,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -260,13 +256,12 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
-><p class="caption"><span class="caption-text">Documentation:</span></p>
+><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -323,7 +318,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html#example-linked-paramters-for-ebl">Example: linked paramters for EBL</a></li>
@@ -359,14 +354,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#setting-the-injection-distribution">setting the injection distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-using-only-injection">running cooling and acc using only injection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-cooling-and-acc-on-injetcion-plus-input-jet">running cooling and acc on injetcion plus input jet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html#running-only-cooling-input-jet">running only cooling input jet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -376,10 +369,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
@@ -400,7 +393,7 @@
 
           
           
-            <p class="caption"><span class="caption-text">Documentation:</span></p>
+            <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../new_release.html">what's new in jetset 1.2.0</a></li>
@@ -446,17 +439,18 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">New/updated in v1.2.0:</span></p>
+<p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/depending_pars/depending_pars.html">Depending parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa plugin with the JeSeT interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/documentation_notebooks/sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
 </ul>
 
           
@@ -474,11 +468,11 @@
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="modelparameter">
+  <section id="modelparameter">
 <h1>ModelParameter<a class="headerlink" href="#modelparameter" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="jetset.model_parameters.ModelParameter">
-<em class="property">class </em><code class="sig-name descname">ModelParameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">keywords</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ModelParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class is the base class for models parameters. The following keywords
 arguments can be passed to the constructor</p>
@@ -501,8 +495,8 @@ arguments can be passed to the constructor</p>
 </dd>
 </dl>
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.name">
-<code class="sig-name descname">name</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.name" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.name" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(str)         parameter name (default=’unk’)</p>
@@ -511,8 +505,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.val">
-<code class="sig-name descname">val</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.val">
+<span class="sig-name descname"><span class="pre">val</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(float)       parameter value</p>
@@ -521,8 +515,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.par_type">
-<code class="sig-name descname">par_type</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.par_type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.par_type">
+<span class="sig-name descname"><span class="pre">par_type</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.par_type" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(str)         parameter type (default=’unk’)</p>
@@ -531,8 +525,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.units">
-<code class="sig-name descname">units</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.units" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.units">
+<span class="sig-name descname"><span class="pre">units</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.units" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(str)         units of the parameter, (default=’No’)</p>
@@ -541,8 +535,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.val_min">
-<code class="sig-name descname">val_min</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_min" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.val_min">
+<span class="sig-name descname"><span class="pre">val_min</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_min" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(float)       minimum physical value</p>
@@ -551,8 +545,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.val_max">
-<code class="sig-name descname">val_max</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_max" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.val_max">
+<span class="sig-name descname"><span class="pre">val_max</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_max" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(float)       maximum physical value</p>
@@ -561,8 +555,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.val_start">
-<code class="sig-name descname">val_start</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_start" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.val_start">
+<span class="sig-name descname"><span class="pre">val_start</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_start" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(float)       starting value</p>
@@ -571,8 +565,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.val_last_call">
-<code class="sig-name descname">val_last_call</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_last_call" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.val_last_call">
+<span class="sig-name descname"><span class="pre">val_last_call</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_last_call" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(float)       last call value</p>
@@ -581,8 +575,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.fit_range_min">
-<code class="sig-name descname">fit_range_min</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.fit_range_min" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.fit_range_min">
+<span class="sig-name descname"><span class="pre">fit_range_min</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.fit_range_min" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(float)       minimum boundary value for the fit</p>
@@ -591,8 +585,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.fit_range_max">
-<code class="sig-name descname">fit_range_max</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.fit_range_max" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.fit_range_max">
+<span class="sig-name descname"><span class="pre">fit_range_max</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.fit_range_max" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(float)       maximum boundary value for the fit</p>
@@ -601,8 +595,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.frozen">
-<code class="sig-name descname">frozen</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.frozen" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.frozen">
+<span class="sig-name descname"><span class="pre">frozen</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.frozen" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(bool)        boolean flag for frozen parameter (default=False)</p>
@@ -611,8 +605,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.log">
-<code class="sig-name descname">log</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.log" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.log">
+<span class="sig-name descname"><span class="pre">log</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.log" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>(bool)        boolean flag for log-scale value (default=False)</p>
@@ -709,76 +703,76 @@ arguments can be passed to the constructor</p>
 </table>
 <p class="rubric">Attributes Documentation</p>
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.fit_range">
-<code class="sig-name descname">fit_range</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.fit_range" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.fit_range">
+<span class="sig-name descname"><span class="pre">fit_range</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.fit_range" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="id0">
-<code class="sig-name descname">frozen</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">frozen</span></span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.immutable">
-<code class="sig-name descname">immutable</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.immutable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.immutable">
+<span class="sig-name descname"><span class="pre">immutable</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.immutable" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.islog">
-<code class="sig-name descname">islog</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.islog" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.islog">
+<span class="sig-name descname"><span class="pre">islog</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.islog" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.linked">
-<code class="sig-name descname">linked</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.linked" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.linked">
+<span class="sig-name descname"><span class="pre">linked</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.linked" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.par_expr">
-<code class="sig-name descname">par_expr</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.par_expr" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.par_expr">
+<span class="sig-name descname"><span class="pre">par_expr</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.par_expr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="id1">
-<code class="sig-name descname">units</code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">units</span></span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="id2">
-<code class="sig-name descname">val</code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">val</span></span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.val_lin">
-<code class="sig-name descname">val_lin</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_lin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.val_lin">
+<span class="sig-name descname"><span class="pre">val_lin</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_lin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="jetset.model_parameters.ModelParameter.val_log">
-<code class="sig-name descname">val_log</code><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_log" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.val_log">
+<span class="sig-name descname"><span class="pre">val_log</span></span><a class="headerlink" href="#jetset.model_parameters.ModelParameter.val_log" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods Documentation</p>
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.free">
-<code class="sig-name descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.free"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.free" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.free">
+<span class="sig-name descname"><span class="pre">free</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.free"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.free" title="Permalink to this definition">¶</a></dt>
 <dd><p>make a parameter free</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.freeze">
-<code class="sig-name descname">freeze</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.freeze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.freeze" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.freeze">
+<span class="sig-name descname"><span class="pre">freeze</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.freeze"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.freeze" title="Permalink to this definition">¶</a></dt>
 <dd><p>freezes a parameter</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.get_bestfit_description">
-<code class="sig-name descname">get_bestfit_description</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nofields</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get_bestfit_description"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get_bestfit_description" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.get_bestfit_description">
+<span class="sig-name descname"><span class="pre">get_bestfit_description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nofields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get_bestfit_description"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get_bestfit_description" title="Permalink to this definition">¶</a></dt>
 <dd><p>gives the value of each member of the  <a class="reference internal" href="#jetset.model_parameters.ModelParameter" title="jetset.model_parameters.ModelParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelParameter</span></code></a> objects, suited for  the best-fit values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -791,8 +785,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.get_description">
-<code class="sig-name descname">get_description</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nofields</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get_description"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get_description" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.get_description">
+<span class="sig-name descname"><span class="pre">get_description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nofields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get_description"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get_description" title="Permalink to this definition">¶</a></dt>
 <dd><p>gives the value of each member of the  <a class="reference internal" href="#jetset.model_parameters.ModelParameter" title="jetset.model_parameters.ModelParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelParameter</span></code></a> objects, except the best-fit values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -805,8 +799,8 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.get_fit_initial_value">
-<code class="sig-name descname">get_fit_initial_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get_fit_initial_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get_fit_initial_value" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.get_fit_initial_value">
+<span class="sig-name descname"><span class="pre">get_fit_initial_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.get_fit_initial_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.get_fit_initial_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the initial fit value of the parameter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -819,48 +813,48 @@ arguments can be passed to the constructor</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.identity_func">
-<code class="sig-name descname">identity_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.identity_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.identity_func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.identity_func">
+<span class="sig-name descname"><span class="pre">identity_func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.identity_func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.identity_func" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.reset_dependencies">
-<code class="sig-name descname">reset_dependencies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.reset_dependencies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.reset_dependencies" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.reset_dependencies">
+<span class="sig-name descname"><span class="pre">reset_dependencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.reset_dependencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.reset_dependencies" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.set">
-<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">skip_dep_par_warning</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">keywords</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.set" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_dep_par_warning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.set"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.set" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets a parameter value checking for physical boundaries</p>
 <p>Parameters: keywords of the constructor</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.set_fit_initial_value">
-<code class="sig-name descname">set_fit_initial_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.set_fit_initial_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.set_fit_initial_value" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.set_fit_initial_value">
+<span class="sig-name descname"><span class="pre">set_fit_initial_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.set_fit_initial_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.set_fit_initial_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the initial fit value of the parameter</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.show">
-<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.show" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.show" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prints the description of a parameter</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.show_best_fit">
-<code class="sig-name descname">show_best_fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.show_best_fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.show_best_fit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.show_best_fit">
+<span class="sig-name descname"><span class="pre">show_best_fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.show_best_fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.show_best_fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prints the best-fit description of a parameter</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="jetset.model_parameters.ModelParameter.to">
-<code class="sig-name descname">to</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">units</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.to" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="jetset.model_parameters.ModelParameter.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">units</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/jetset/model_parameters.html#ModelParameter.to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jetset.model_parameters.ModelParameter.to" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -875,7 +869,7 @@ arguments can be passed to the constructor</p>
     </p>
     <p>
         &copy; Copyright 2019, andrea tramacere.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>

@@ -2,5 +2,5 @@ temporal evolution
 ------------------
 .. toctree::
    :maxdepth: 1
-
-   temporal evolution  *New (v1.2.0)* <documentation_notebooks/temporal_evolution/Temp_Ev.rst>
+   temporal evolution, one zone,  acceleration+cooling *New (vƒ1.2.0)* <documentation_notebooks/temporal_evolution/Temp_Ev_one_zone_cooling.rst>
+   temporal evolution, two zones, acceleration+cooling  *New (v1.2.0)* <documentation_notebooks/temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.rst>
