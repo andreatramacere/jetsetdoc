@@ -1,5 +1,3 @@
-.. _depending_parameters_guide:
-
 .. code:: ipython3
 
     import warnings
@@ -15,6 +13,8 @@
 
     tested on jetset 1.2.0rc13
 
+
+.. _depending_parameters:
 
 Depending parameters
 ====================

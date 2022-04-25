@@ -18,6 +18,8 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Modules" href="../../../api/modules.html" />
+    <link rel="prev" title="Temporal evolution, two zones, cooling+acc+adb exp" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -71,7 +73,7 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
@@ -87,12 +89,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -102,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/gammapy_plugin.html">gammapy_plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
@@ -131,6 +134,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
@@ -168,12 +172,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hadornic.html">Hadronic pp jet model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hadornic.html#jet-pp-consistency-with-kelner-2006">Jet pp Consistency with Kelner 2006</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -214,6 +221,14 @@
             
               
                 
+  <li>
+    <a href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html" title="Previous Chapter: Temporal evolution, two zones, cooling+acc+adb exp"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Temporal evol...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../../api/modules.html" title="Next Chapter: Modules"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Modules &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -247,7 +262,7 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
 ><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
@@ -263,12 +278,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -278,6 +293,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/gammapy_plugin.html">gammapy_plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
@@ -307,6 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
@@ -344,12 +361,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hadornic.html">Hadronic pp jet model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hadornic.html#jet-pp-consistency-with-kelner-2006">Jet pp Consistency with Kelner 2006</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
@@ -384,11 +404,25 @@
           
           
             <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html"> Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html"> Temporal evolution, two zones,  cooling+acc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html"> Temporal evolution, two zones,  cooling+acc+adiabatic expansion</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Temporal evolution, validation of the hadronic pp secondaries evolution</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul>
@@ -396,9 +430,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hadornic.html">Hadronic pp jet model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
@@ -492,7 +526,7 @@
 <span class="n">j</span><span class="o">.</span><span class="n">emitters_distribution</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotPdistr</span> <span class="n">at</span> <span class="mh">0x7fdb3cfaa0a0</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotPdistr</span> <span class="n">at</span> <span class="mh">0x7fd18ccaadf0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../_images/hadornic_validate_temp_ev_8_1.png" src="../../../_images/hadornic_validate_temp_ev_8_1.png" />
@@ -504,7 +538,7 @@
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140579014409760-771560" class="table-striped table-bordered table-condensed">
+<table id="table140538009036880-962051" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_hadronic_pp</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_hadronic_pp</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -540,14 +574,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140579014409760-771560').dataTable()");
+    console.log("$('#table140538009036880-962051').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140579014409760-771560').dataTable({
+    $('#table140538009036880-962051').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -570,7 +604,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=3</i>
-<table id="table140579014321968-863803" class="table-striped table-bordered table-condensed">
+<table id="table140537895686000-749539" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.836150e+07</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -598,14 +632,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140579014321968-863803').dataTable()");
+    console.log("$('#table140537895686000-749539').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140579014321968-863803').dataTable({
+    $('#table140537895686000-749539').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -621,7 +655,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gamma_sec_inj</span><span class="p">,</span> <span class="n">n_gamma_sec_inj</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">Line2D</span> <span class="n">at</span> <span class="mh">0x7fdb18dbc580</span><span class="o">&gt;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">Line2D</span> <span class="n">at</span> <span class="mh">0x7fd18eb21d30</span><span class="o">&gt;</span><span class="p">]</span>
 </pre></div>
 </div>
 <img alt="../../../_images/hadornic_validate_temp_ev_14_1.png" src="../../../_images/hadornic_validate_temp_ev_14_1.png" />
@@ -642,9 +676,9 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <p>we use the acc region with escape time equal to radiative region</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">duration</span><span class="o">=</span><span class="mf">5E8</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">duration</span><span class="o">=</span><span class="mf">5E9</span>
 <span class="n">duration_acc</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">T_SIZE</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="mf">1E6</span><span class="p">)</span>
+<span class="n">T_SIZE</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="mf">2E6</span><span class="p">)</span>
 
 <span class="n">temp_ev</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">duration</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">duration</span>
 
@@ -655,7 +689,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <span class="n">temp_ev</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">Esc_Index_rad</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">temp_ev</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">t_size</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="n">T_SIZE</span>
-<span class="n">temp_ev</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">num_samples</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">200</span>
+<span class="n">temp_ev</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">num_samples</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">500</span>
 <span class="n">temp_ev</span><span class="o">.</span><span class="n">IC_cooling</span><span class="o">=</span><span class="s1">&#39;off&#39;</span>
 <span class="n">temp_ev</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">L_inj</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">0</span>
 
@@ -678,9 +712,9 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140579314055488-463012" class="table-striped table-bordered table-condensed">
+<table id="table140537034329968-251237" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
-<tr><td>delta t</td><td>time</td><td>5.000000e+02</td><td>s</td><td>1.49896229e-05</td><td>R/c</td><td>False</td></tr>
+<tr><td>delta t</td><td>time</td><td>2.500000e+03</td><td>s</td><td>7.494811449999999e-05</td><td>R/c</td><td>False</td></tr>
 <tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
 <tr><td>R/c</td><td>time</td><td>3.335641e+07</td><td>s</td><td>1.0</td><td>R/c</td><td>False</td></tr>
 <tr><td>IC cooling</td><td></td><td>off</td><td></td><td>None</td><td></td><td>False</td></tr>
@@ -690,7 +724,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>Tesc rad</td><td>time</td><td>3.335641e+07</td><td>s</td><td>1.0</td><td>R/c</td><td>False</td></tr>
 <tr><td>R_rad rad start</td><td>region_position</td><td>1.000000e+18</td><td>cm</td><td>None</td><td></td><td>False</td></tr>
 <tr><td>R_H rad start</td><td>region_position</td><td>1.000000e+17</td><td>cm</td><td>None</td><td></td><td>False</td></tr>
-<tr><td>T min. synch. cooling</td><td></td><td>6.190400e+01</td><td>s</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>T min. synch. cooling</td><td></td><td>1.547600e+01</td><td>s</td><td>None</td><td></td><td>False</td></tr>
 <tr><td>L inj (electrons)</td><td>injected lum.</td><td>7.490407e+38</td><td>erg/s</td><td>None</td><td></td><td>False</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
@@ -715,14 +749,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140579314055488-463012').dataTable()");
+    console.log("$('#table140537034329968-251237').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140579314055488-463012').dataTable({
+    $('#table140537034329968-251237').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -736,14 +770,14 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=17</i>
-<table id="table140579314054528-694965" class="table-striped table-bordered table-condensed">
+<table id="table140537542288672-998633" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-<tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>5.000000e+08</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>5.000000e+09</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.100000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>gmax_grid</td><td>gamma_grid</td><td></td><td>5.000000e+07</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>gamma_grid_size</td><td>gamma_grid</td><td></td><td>4.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>TStart_Inj</td><td>time_grid</td><td>s</td><td>0.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_time_ev</td><td>TStop_Inj</td><td>time_grid</td><td>s</td><td>5.000000e+08</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>TStop_Inj</td><td>time_grid</td><td>s</td><td>5.000000e+09</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>T_esc_rad</td><td>escape_time</td><td>(R/c)*</td><td>1.000000e+00</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>Esc_Index_rad</td><td>fp_coeff_index</td><td></td><td>0.000000e+00</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>R_rad_start</td><td>region_size</td><td>cm</td><td>1.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -752,8 +786,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>jet_time_ev</td><td>t_jet_exp</td><td>exp_start_time</td><td>s</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>beta_exp_R</td><td>beta_expansion</td><td>v/c*</td><td>1.000000e+00</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>B_rad</td><td>magnetic_field</td><td>G</td><td>5.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_time_ev</td><td>t_size</td><td>time_grid</td><td></td><td>1.000000e+06</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>jet_time_ev</td><td>num_samples</td><td>time_ev_output</td><td></td><td>2.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>t_size</td><td>time_grid</td><td></td><td>2.000000e+06</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>num_samples</td><td>time_ev_output</td><td></td><td>5.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>L_inj</td><td>inj_luminosity</td><td>erg / s</td><td>0.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
@@ -778,14 +812,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140579314054528-694965').dataTable()");
+    console.log("$('#table140537542288672-998633').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140579314054528-694965').dataTable({
+    $('#table140537542288672-998633').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -807,7 +841,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">temporal</span> <span class="n">evolution</span> <span class="n">running</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0%|          | 0/1000000 [00:00&lt;?, ?it/s]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0%|          | 0/2000000 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">temporal</span> <span class="n">evolution</span> <span class="n">completed</span>
@@ -816,30 +850,41 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <p>we use the acc region with escape time equal to radiative region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">plot_tempev_emitters</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">energy_unit</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="nb">pow</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">plot_Q_inj</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gamma_sec_evovled</span><span class="p">,</span><span class="n">n_gamma_sec_evovled</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;analytical solution&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="c1">#p.ax.legend()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-30</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-2</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../_images/hadornic_validate_temp_ev_23_0.png" src="../../../_images/hadornic_validate_temp_ev_23_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">=</span><span class="n">n_gamma_sec_evovled</span><span class="o">&gt;</span><span class="mi">0</span>
-<span class="n">x_in</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">gamma_sec_evovled</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
-<span class="n">y_in</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">n_gamma_sec_evovled</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
-<span class="n">x_out</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">gamma</span><span class="p">)</span>
+<span class="n">x_analytical</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">gamma_sec_evovled</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+<span class="n">y_analytical</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">n_gamma_sec_evovled</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
 
-<span class="n">y_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">x_out</span><span class="p">,</span> <span class="n">x_in</span><span class="p">,</span><span class="n">y_in</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-<span class="n">m</span><span class="o">=~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">y_out</span><span class="p">)</span>
-<span class="n">m</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">x_out</span><span class="o">&gt;-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">m</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">x_out</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">m</span><span class="o">=</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">n_gamma</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="n">x_num</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">gamma</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+<span class="n">y_num</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">time_sampled_emitters</span><span class="o">.</span><span class="n">n_gamma</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">m</span><span class="p">])</span>
 
-<span class="n">y_out</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="n">y_out</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
-<span class="n">x_out</span><span class="o">=</span><span class="n">x_out</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
-<span class="n">y_target</span><span class="o">=</span><span class="n">n_gamma_sec_evovled_out</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
+<span class="n">y_analytical_interp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">x_num</span><span class="p">,</span> <span class="n">x_analytical</span><span class="p">,</span><span class="n">y_analytical</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">m</span><span class="o">=~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">y_analytical_interp</span><span class="p">)</span>
+<span class="n">m</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">x_num</span><span class="o">&gt;</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">m</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">x_num</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">y_analytical_interp</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="n">y_analytical_interp</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
+<span class="n">x_out</span><span class="o">=</span><span class="n">x_num</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
+<span class="n">y_num</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="n">y_num</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">y_out</span><span class="o">-</span><span class="n">y_target</span><span class="p">)</span><span class="o">/</span><span class="n">y_target</span>
-<span class="k">assert</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">d</span><span class="o">&lt;</span><span class="mf">0.03</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">y_analytical_interp</span><span class="o">-</span><span class="n">y_num</span><span class="p">)</span><span class="o">/</span><span class="n">y_num</span>
+<span class="k">assert</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">d</span><span class="o">&lt;</span><span class="mf">0.25</span><span class="p">))</span>
 </pre></div>
 </div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_out</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">Line2D</span> <span class="n">at</span> <span class="mh">0x7fd1526e72b0</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<img alt="../../../_images/hadornic_validate_temp_ev_26_1.png" src="../../../_images/hadornic_validate_temp_ev_26_1.png" />
 </section>
 
 

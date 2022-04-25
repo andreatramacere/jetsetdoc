@@ -1,5 +1,12 @@
 .. _hadronic_pp_jet_guide:
 
+
+
+Hadronic pp jet model
+=====================
+
+In this section we show the hadronic `pp` implemented for the Jet model. The `pp` implementation is based on the [Kelner2006]_.
+
 .. code:: ipython3
 
     def get_component(j_name,nu_name):
@@ -42,6 +49,9 @@
 
     tested on jetset 1.2.0rc13
 
+
+To get an hadronic jet with ``pp`` interaction, we set the
+``emitters_type='protons'``
 
 .. code:: ipython3
 
@@ -186,7 +196,7 @@
 
 
 
-.. image:: hadornic_files/hadornic_7_0.png
+.. image:: hadornic_files/hadornic_11_0.png
 
 
 .. code:: ipython3
@@ -197,11 +207,11 @@
 
 
 
-.. image:: hadornic_files/hadornic_8_0.png
+.. image:: hadornic_files/hadornic_12_0.png
 
 
-Jet pp Consistency with Kelner 2006¶
-------------------------------------
+Jet pp Consistency with Kelner 2006
+-----------------------------------
 
 .. code:: ipython3
 
@@ -362,7 +372,7 @@ Jet pp Consistency with Kelner 2006¶
 
 
 
-.. image:: hadornic_files/hadornic_14_0.png
+.. image:: hadornic_files/hadornic_18_0.png
 
 
 .. code:: ipython3
@@ -416,7 +426,7 @@ Jet pp Consistency with Kelner 2006¶
 
 
 
-.. image:: hadornic_files/hadornic_15_1.png
+.. image:: hadornic_files/hadornic_19_1.png
 
 
 .. code:: ipython3
@@ -459,6 +469,7 @@ Jet pp Consistency with Kelner 2006¶
 
 
 
-.. image:: hadornic_files/hadornic_16_1.png
+.. image:: hadornic_files/hadornic_20_1.png
 
 
+.. bibliography:: references.rst

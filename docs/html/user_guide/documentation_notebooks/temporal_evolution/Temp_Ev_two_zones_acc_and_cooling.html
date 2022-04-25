@@ -18,6 +18,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Temporal evolution, two zones, cooling+acc+adb exp" href="Temp_Ev_two_zones_acc_and_cooling_adb_exp.html" />
     <link rel="prev" title="Temporal evolution, one zone, only cooling" href="Temp_Ev_one_zone_only_cooling.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -72,7 +73,7 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
@@ -88,12 +89,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -103,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/gammapy_plugin.html">gammapy_plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
@@ -132,6 +134,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul class="current">
@@ -169,7 +172,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Hadronic pp jet model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html#jet-pp-consistency-with-kelner-2006">Jet pp Consistency with Kelner 2006</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
@@ -219,6 +225,10 @@
     <a href="Temp_Ev_one_zone_only_cooling.html" title="Previous Chapter: Temporal evolution, one zone, only cooling"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Temporal evol...</span>
     </a>
   </li>
+  <li>
+    <a href="Temp_Ev_two_zones_acc_and_cooling_adb_exp.html" title="Next Chapter: Temporal evolution, two zones, cooling+acc+adb exp"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Temporal evol... &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -252,7 +262,7 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><!--
 <ul class="globaltoc"
 ><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
@@ -268,12 +278,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -283,6 +293,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/cosmo_tools.html">cosmo_tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/data_loader.html">data_loader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/frame_converter.html">frame_converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/gammapy_plugin.html">gammapy_plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters.html">jet_emitters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_emitters_factory.html">jet_emitters_factory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/jet_model.html">jet_model</a></li>
@@ -312,6 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../api/utils.html">utils</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul class="current">
@@ -349,7 +361,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html#energetic-report">Energetic report</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Hadronic pp jet model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html#jet-pp-consistency-with-kelner-2006">Jet pp Consistency with Kelner 2006</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Temp_Ev_one_zone_only_cooling.html#cooling-only-the-newly-injecting-electrons">Cooling only the newly injecting electrons</a></li>
 </ul>
@@ -389,11 +404,25 @@
           
           
             <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Temp_Ev_one_zone_only_cooling.html"> Temporal evolution, one zone, only cooling</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Temporal evolution, two zones,  cooling+acc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Temp_Ev_two_zones_acc_and_cooling_adb_exp.html"> Temporal evolution, two zones,  cooling+acc+adiabatic expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hadronic_pp_jet/hadornic_validate_temp_ev.html"> Temporal evolution, validation of the hadronic pp secondaries evolution</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">New/updated in v1.2.0:</span></p>
 <ul class="current">
@@ -401,7 +430,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../composite_model/Composite_model.html">Composite Models and depending pars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html">Physical setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Jet pp Consistency with Kelner 2006¶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Hadronic pp jet model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Temporal evolution, two zones, cooling+acc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
@@ -441,8 +470,8 @@
 capabilities of jetset. Here we show how to create a decopuled
 radiative+acceleration region, and how to evolve the system in order to
 generate both particle spectra, SEDs, and lightcurves</p>
-<p>definition of the injected particle distributio, and of the jet model
-for the radiative region</p>
+<p>definition of the injected particle distribution (<code class="docutils literal notranslate"><span class="pre">q_inj</span></code>), and of the
+jet model for the radiative region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_emitters_factory</span> <span class="kn">import</span> <span class="n">InjEmittersFactory</span>
 <span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
 <span class="n">jet_model</span><span class="o">=</span><span class="n">Jet</span><span class="p">()</span>
@@ -529,7 +558,7 @@ off to make the process faster.</p>
 </pre></div>
 </div>
 <i>Table length=29</i>
-<table id="table140460267429408-8733" class="table-striped table-bordered table-condensed">
+<table id="table140643683125472-935163" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
 <tr><td>delta t</td><td>time</td><td>5.000000e+01</td><td>s</td><td>0.00029979245799999996</td><td>R/c</td><td>False</td></tr>
 <tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
@@ -583,14 +612,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140460267429408-8733').dataTable()");
+    console.log("$('#table140643683125472-935163').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140460267429408-8733').dataTable({
+    $('#table140643683125472-935163').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -604,7 +633,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=30</i>
-<table id="table140460264542160-200643" class="table-striped table-bordered table-condensed">
+<table id="table140643680493472-574927" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>1.000000e+06</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -659,14 +688,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140460264542160-200643').dataTable()");
+    console.log("$('#table140643680493472-574927').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140460264542160-200643').dataTable({
+    $('#table140643680493472-574927').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -677,10 +706,13 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_time_profile</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotTempEvDiagram</span> <span class="n">at</span> <span class="mh">0x7fbf70715d90</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotTempEvDiagram</span> <span class="n">at</span> <span class="mh">0x7fea28474b20</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_11_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_11_1.png" />
+<p>we do not want to evolve the particle in the <code class="docutils literal notranslate"><span class="pre">jet_rad</span></code>, so we set
+<code class="docutils literal notranslate"><span class="pre">only_injection=True</span></code>, and we set <code class="docutils literal notranslate"><span class="pre">do_injection=True</span></code> to injet the
+particle defined by <code class="docutils literal notranslate"><span class="pre">q_inj</span></code></p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">only_injection</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">do_injection</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">plot_fit_model</span><span class="o">=</span><span class="kc">True</span>
@@ -726,7 +758,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_14_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_14_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_15_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_15_0.png" />
 <p>Particle spectrum in the acceleration region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_tempev_emitters</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;acc&#39;</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">energy_unit</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="nb">pow</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">gamma_eq_t_A</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
@@ -734,19 +766,19 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-30</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_16_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_16_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_17_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_17_0.png" />
 <p>SEDs in the acceleration region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_tempev_model</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_cached</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-18</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_18_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_18_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_19_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_19_0.png" />
 <p>SEDs in the acceleration region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_tempev_model</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;acc&#39;</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_cached</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-18</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_20_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_20_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_21_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_21_0.png" />
 <p>We generate a lightcurve in the range nu1=2.4E22 Hz, nu2=7.2E25 Hz,
 without the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lg</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">make_lc</span><span class="p">(</span><span class="n">nu1</span><span class="o">=</span><span class="mf">2.4E22</span><span class="p">,</span><span class="n">nu2</span><span class="o">=</span><span class="mf">7.2E25</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="n">eval_cross_time</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">delta_t_out</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">use_cached</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">)</span>
@@ -756,7 +788,7 @@ without the effect of the light crossing time, in the observer frame</p>
 </pre></div>
 </div>
 <i>Table length=344</i>
-<table id="table140459886455584" class="table-striped table-bordered table-condensed">
+<table id="table140643254016464" class="table-striped table-bordered table-condensed">
 <thead><tr><th>time</th><th>flux</th></tr></thead>
 <thead><tr><th>s</th><th>erg / (cm2 s)</th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th></tr></thead>
@@ -788,7 +820,7 @@ without the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_24_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_24_1.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_25_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_25_1.png" />
 <p>We generate a lightcurve in the range nu1=2.4E22 Hz, nu2=7.2E25 Hz, with
 the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lg_cross</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">make_lc</span><span class="p">(</span><span class="n">nu1</span><span class="o">=</span><span class="mf">2.4E22</span><span class="p">,</span><span class="n">nu2</span><span class="o">=</span><span class="mf">7.2E25</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="n">eval_cross_time</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">delta_t_out</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">use_cached</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span><span class="n">cross_time_slices</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -804,7 +836,187 @@ the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_27_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_27_1.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_28_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_28_1.png" />
+<p>We can save the model and reuse it later for plotting lightcurcves,
+SEDs, and electron distributions</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;two_zone_rad_acc.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_acc_1</span><span class="o">=</span><span class="n">JetTimeEvol</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;two_zone_rad_acc.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_acc_1</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--------------------------------------------------------------------------------</span>
+<span class="n">JetTimeEvol</span> <span class="n">model</span> <span class="n">description</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+
+<span class="n">physical</span> <span class="n">setup</span><span class="p">:</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<i>Table length=29</i>
+<table id="table140643255309360-481218" class="table-striped table-bordered table-condensed">
+<thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
+<tr><td>delta t</td><td>time</td><td>5.000000e+01</td><td>s</td><td>0.00029979245799999996</td><td>R/c</td><td>False</td></tr>
+<tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>R/c</td><td>time</td><td>1.667820e+05</td><td>s</td><td>1.0</td><td>R/c</td><td>False</td></tr>
+<tr><td>IC cooling</td><td></td><td>off</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Sync cooling</td><td></td><td>on</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Adiab. cooling</td><td></td><td>on</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Reg. expansion</td><td></td><td>off</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Diff coeff</td><td></td><td>6.666667e-06</td><td>s-1</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Acc coeff</td><td></td><td>4.000000e-05</td><td>s-1</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Diff index</td><td></td><td>2.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Acc index</td><td></td><td>1.000000e+00</td><td>s-1</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Tesc acc</td><td>time</td><td>5.003461e+04</td><td>s</td><td>3.0</td><td>R_acc/c</td><td>False</td></tr>
+<tr><td>Eacc max</td><td>energy</td><td>4.000000e+60</td><td>erg</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>Tesc rad</td><td>time</td><td>1.667820e+65</td><td>s</td><td>1e+60</td><td>R/c</td><td>False</td></tr>
+<tr><td>Delta R acc</td><td>accelerator_width</td><td>5.000000e+14</td><td>cm</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>B acc</td><td>magnetic field</td><td>2.000000e-01</td><td>cm</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>R_rad rad start</td><td>region_position</td><td>5.000000e+15</td><td>cm</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>R_H rad start</td><td>region_position</td><td>1.000000e+17</td><td>cm</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>T_A0=1/ACC_COEFF</td><td>time</td><td>2.500000e+04</td><td>s</td><td>0.149896229</td><td>R/c</td><td>False</td></tr>
+<tr><td>T_D0=1/DIFF_COEFF</td><td>time</td><td>1.500000e+05</td><td>s</td><td>0.899377374</td><td>R/c</td><td>False</td></tr>
+<tr><td>T_DA0=1/(2*DIFF_COEFF)</td><td>time</td><td>7.500000e+04</td><td>s</td><td>0.449688687</td><td>R/c</td><td>False</td></tr>
+<tr><td>gamma Lambda Turb.  max</td><td></td><td>1.173358e+11</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>gamma Lambda Coher. max</td><td></td><td>1.173358e+10</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>gamma eq Syst. Acc (synch. cool)</td><td></td><td>7.832383e+05</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>gamma eq Diff. Acc (synch. cool)</td><td></td><td>1.309535e+05</td><td></td><td>None</td><td></td><td>False</td></tr>
+<tr><td>T cooling(gamma_eq=gamma_eq_Diff)</td><td></td><td>1.477242e+05</td><td>s</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>T cooling(gamma_eq=gamma_eq_Sys)</td><td></td><td>2.469874e+04</td><td>s</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>T min. synch. cooling</td><td></td><td>1.934500e+02</td><td>s</td><td>None</td><td></td><td>False</td></tr>
+<tr><td>L inj (electrons)</td><td>injected lum.</td><td>5.000000e+39</td><td>erg/s</td><td>None</td><td></td><td>False</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140643255309360-481218').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140643255309360-481218').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="n">parameters</span><span class="p">:</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<i>Table length=30</i>
+<table id="table140643253014384-422041" class="table-striped table-bordered table-condensed">
+<thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+<tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>1.000000e+06</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>gmax_grid</td><td>gamma_grid</td><td></td><td>1.000000e+08</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>gamma_grid_size</td><td>gamma_grid</td><td></td><td>1.500000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>TStart_Acc</td><td>time_grid</td><td>s</td><td>0.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>TStop_Acc</td><td>time_grid</td><td>s</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>TStart_Inj</td><td>time_grid</td><td>s</td><td>0.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>TStop_Inj</td><td>time_grid</td><td>s</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>T_esc_acc</td><td>escape_time</td><td>(R_acc/c)*</td><td>3.000000e+00</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>Esc_Index_acc</td><td>fp_coeff_index</td><td></td><td>0.000000e+00</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>t_D0</td><td>acceleration_time</td><td>s</td><td>1.500000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>t_A0</td><td>acceleration_time</td><td>s</td><td>2.500000e+04</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>Diff_Index</td><td>fp_coeff_index</td><td>s</td><td>2.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>Acc_Index</td><td>fp_coeff_index</td><td></td><td>1.000000e+00</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>Delta_R_acc</td><td>accelerator_width</td><td>cm</td><td>5.000000e+14</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>B_acc</td><td>magnetic_field</td><td>G</td><td>2.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>E_acc_max</td><td>acc_energy</td><td>erg</td><td>4.000000e+60</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>Lambda_max_Turb</td><td>turbulence_scale</td><td>cm</td><td>1.000000e+15</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>Lambda_choer_Turb_factor</td><td>turbulence_scale</td><td>cm</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>T_esc_rad</td><td>escape_time</td><td>(R/c)*</td><td>1.000000e+60</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>Esc_Index_rad</td><td>fp_coeff_index</td><td></td><td>0.000000e+00</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>R_rad_start</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>R_H_rad_start</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>m_B</td><td>magnetic_field_index</td><td></td><td>1.000000e+00</td><td>1.000000e+00</td><td>2.000000e+00</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>t_jet_exp</td><td>exp_start_time</td><td>s</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>beta_exp_R</td><td>beta_expansion</td><td>v/c*</td><td>1.000000e+00</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>B_rad</td><td>magnetic_field</td><td>G</td><td>2.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>t_size</td><td>time_grid</td><td></td><td>2.000000e+04</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>num_samples</td><td>time_ev_output</td><td></td><td>5.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>jet_time_ev</td><td>L_inj</td><td>inj_luminosity</td><td>erg / s</td><td>5.000000e+39</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+</table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+display: inline-block; margin-right: 1em; }
+.paginate_button { margin-right: 5px; }
+</style>
+<script>
+
+var astropy_sort_num = function(a, b) {
+    var a_num = parseFloat(a);
+    var b_num = parseFloat(b);
+
+    if (isNaN(a_num) && isNaN(b_num))
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    else if (!isNaN(a_num) && !isNaN(b_num))
+        return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+    else
+        return isNaN(a_num) ? -1 : 1;
+}
+
+require.config({paths: {
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+}});
+require(["datatables"], function(){
+    console.log("$('#table140643253014384-422041').dataTable()");
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "optionalnum-asc": astropy_sort_num,
+    "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+});
+
+    $('#table140643253014384-422041').dataTable({
+        order: [],
+        pageLength: 100,
+        lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+        pagingType: "full_numbers",
+        columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+    });
+});
+</script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc_1</span><span class="o">.</span><span class="n">plot_tempev_model</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_cached</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_33_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_33_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lx</span><span class="o">=</span><span class="n">temp_ev_acc_1</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">make_lc</span><span class="p">(</span><span class="n">nu1</span><span class="o">=</span><span class="mf">1E17</span><span class="p">,</span><span class="n">nu2</span><span class="o">=</span><span class="mf">1E18</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="n">eval_cross_time</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">delta_t_out</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">use_cached</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lx</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span><span class="n">lx</span><span class="p">[</span><span class="s1">&#39;flux&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time (</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="k">lg</span>[&#39;time&#39;].unit)
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;flux (</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="k">lg</span>[&#39;flux&#39;].unit)
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_34_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_34_1.png" />
 </section>
 
 
