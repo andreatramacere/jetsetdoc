@@ -59,7 +59,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -76,10 +76,11 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -89,6 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#plugins">Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
@@ -97,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -183,22 +186,31 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html#expanding-the-radiative-region">Expanding the radiative region</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#importing-a-jetset-model-into-gammapy">Importing a jetset model into gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#model-fitting-with-gammapy">Model fitting with gammapy</a></li>
 </ul>
 </li>
 </ul>
@@ -290,10 +302,11 @@
 <ul class="globaltoc"
 ><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -303,6 +316,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#plugins">Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
@@ -311,6 +325,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -397,22 +412,31 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html#expanding-the-radiative-region">Expanding the radiative region</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#importing-a-jetset-model-into-gammapy">Importing a jetset model into gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#model-fitting-with-gammapy">Model fitting with gammapy</a></li>
 </ul>
 </li>
 </ul>
@@ -431,25 +455,10 @@
           
           
             <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../model_basic.html">model basic features</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> jet model physical setup  *New (v1.2.0)* (basic features and SSC)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jet_model_phys_EC/Jet_example_phys_EC.html">External Compton</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jet_model_phys_EC/Jet_example_phys_EC.html#equipartition">Equipartition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jet_model_num/Jet_example_num.html"> jet model numerical setup   *New (v1.2.0)*</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html"> jet hadronic pp model *New (v1.2.0)*</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cosmology/Jet_example_cosmo.html"> change cosmology model</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
@@ -487,9 +496,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Hadronic pp jet model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a></li>
 </ul>
 
           
@@ -513,7 +524,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span><span class="n">rc13</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span>
 </pre></div>
 </div>
 <p>In this section we describe how  to build a model of jet able to reproduce SSC/EC emission processes, using the <a class="reference internal" href="../../../api/jetset.jet_model.Jet.html#jetset.jet_model.Jet" title="jetset.jet_model.Jet"><code class="xref py py-class docutils literal notranslate"><span class="pre">Jet</span></code></a> class from the <a class="reference internal" href="../../../api/jet_model.html#module-jetset.jet_model" title="jetset.jet_model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">jet_model</span></code></a> module.  This class, through a flexible and intuitive interface, allows to access the C numerical code that provides an accurate and fast computation of the synchrotron and inverse Compton processes.</p>
@@ -550,7 +561,7 @@
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140509849063184-991920" class="table-striped table-bordered table-condensed">
+<table id="table140456721438128-664485" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -586,14 +597,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140509849063184-991920').dataTable()");
+    console.log("$('#table140456721438128-664485').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140509849063184-991920').dataTable({
+    $('#table140456721438128-664485').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -607,7 +618,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140509849063184-30844" class="table-striped table-bordered table-condensed">
+<table id="table140456721438128-754577" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -643,14 +654,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140509849063184-30844').dataTable()");
+    console.log("$('#table140456721438128-754577').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140509849063184-30844').dataTable({
+    $('#table140456721438128-754577').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -697,7 +708,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
  <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
- <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="n">nu</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
@@ -707,7 +718,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140509849063232-620408" class="table-striped table-bordered table-condensed">
+<table id="table140456768488352-448517" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -743,14 +754,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140509849063232-620408').dataTable()");
+    console.log("$('#table140456768488352-448517').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140509849063232-620408').dataTable({
+    $('#table140456768488352-448517').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -808,7 +819,7 @@ setting <cite>R</cite> with linear values.</p>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140239256542608-811496" class="table-striped table-bordered table-condensed">
+<table id="table140456768488352-627315" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>2.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>1.000000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -844,14 +855,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140239256542608-811496').dataTable()");
+    console.log("$('#table140456768488352-627315').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140239256542608-811496').dataTable({
+    $('#table140456768488352-627315').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -919,7 +930,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
  <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
- <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="n">nu</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
@@ -929,7 +940,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140509849198448-885209" class="table-striped table-bordered table-condensed">
+<table id="table140456802427808-811147" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -965,14 +976,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140509849198448-885209').dataTable()");
+    console.log("$('#table140456802427808-811147').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140509849198448-885209').dataTable({
+    $('#table140456802427808-811147').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -996,7 +1007,7 @@ instruction</p>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140238764001072-851991" class="table-striped table-bordered table-condensed">
+<table id="table140456802684832-407963" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1032,14 +1043,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140238764001072-851991').dataTable()");
+    console.log("$('#table140456802684832-407963').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140238764001072-851991').dataTable({
+    $('#table140456802684832-407963').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1055,21 +1066,10 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.plot_sedfit</span> <span class="kn">import</span> <span class="n">PlotSED</span>
 <span class="n">my_plot</span><span class="o">=</span><span class="n">PlotSED</span><span class="p">()</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">plot_obj</span><span class="o">=</span><span class="n">my_plot</span><span class="p">)</span>
-<span class="n">my_plot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mi">10</span><span class="o">**-</span><span class="mf">17.5</span><span class="p">)</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mi">10</span><span class="o">**-</span><span class="mf">17.5</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/jetset/plot_sedfit.py:58: UserWarning: `The rescale method has been he rescale method as been replaced by the setlim method
-  warnings.warn(&#39;`The rescale method has been he rescale method as been replaced by the setlim method&#39;)
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-The rescale method as been replaced by the setlim method
-please notice that now jetset uses log axis rather than loglog plots
-so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_phys_SSC_43_2.png" src="../../../_images/Jet_example_phys_SSC_43_2.png" />
+<img alt="../../../_images/Jet_example_phys_SSC_43_0.png" src="../../../_images/Jet_example_phys_SSC_43_0.png" />
 <p>alternatively, you can call the <code class="docutils literal notranslate"><span class="pre">plot_model</span></code> method without passing a
 <code class="docutils literal notranslate"><span class="pre">Plot</span></code> object</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_plot</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
@@ -1077,7 +1077,7 @@ so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
 </pre></div>
 </div>
 <img alt="../../../_images/Jet_example_phys_SSC_45_0.png" src="../../../_images/Jet_example_phys_SSC_45_0.png" />
-<p>If you want to have more points on the IC spectrum you can set the numerical  parameters for radiative fields(see :ref:<a href="#id7"><span class="problematic" id="id8">`</span></a>jet_numerical_guide’ section for more details):</p>
+<p>If you want to have more points on the IC spectrum you can set the numerical  parameters for radiative fields(see :ref:<a href="#id3"><span class="problematic" id="id4">`</span></a>jet_numerical_guide’ section for more details):</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_IC_nu_size</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1151,7 +1151,7 @@ emissivity or flux plot lower bound, then your changes on
 
 <span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
  <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
- <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">400</span>
+ <span class="n">nu</span> <span class="n">size</span><span class="p">:</span> <span class="mi">400</span>
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+10</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
@@ -1161,7 +1161,7 @@ emissivity or flux plot lower bound, then your changes on
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140509357374336-612295" class="table-striped table-bordered table-condensed">
+<table id="table140456788906960-507577" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1197,14 +1197,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140509357374336-612295').dataTable()");
+    console.log("$('#table140456788906960-507577').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140509357374336-612295').dataTable({
+    $('#table140456788906960-507577').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1290,7 +1290,7 @@ and then saving them again.</p>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140424755462544-137062" class="table-striped table-bordered table-condensed">
+<table id="table140456777263664-74933" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+08</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1326,14 +1326,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424755462544-137062').dataTable()");
+    console.log("$('#table140456777263664-74933').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424755462544-137062').dataTable({
+    $('#table140456777263664-74933').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1407,7 +1407,7 @@ flux at the given frequency</p>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140424776817728-423295" class="table-striped table-bordered table-condensed">
+<table id="table140456799091776-853705" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1443,14 +1443,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424776817728-423295').dataTable()");
+    console.log("$('#table140456799091776-853705').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424776817728-423295').dataTable({
+    $('#table140456799091776-853705').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1489,7 +1489,7 @@ Alternatively, the value of N  can be obtained using the rest-frame luminosity a
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140424684097248-628712" class="table-striped table-bordered table-condensed">
+<table id="table140456305299904-17763" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1526,14 +1526,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424684097248-628712').dataTable()");
+    console.log("$('#table140456305299904-17763').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424684097248-628712').dataTable({
+    $('#table140456305299904-17763').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1567,7 +1567,7 @@ expression as in the default case</p>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140424755247952-821649" class="table-striped table-bordered table-condensed">
+<table id="table140456771718160-368154" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1603,14 +1603,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424755247952-821649').dataTable()");
+    console.log("$('#table140456771718160-368154').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424755247952-821649').dataTable({
+    $('#table140456771718160-368154').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1649,7 +1649,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
  <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
- <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="n">nu</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
@@ -1659,7 +1659,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140424755247904-986856" class="table-striped table-bordered table-condensed">
+<table id="table140456771718448-992938" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1695,14 +1695,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424755247904-986856').dataTable()");
+    console.log("$('#table140456771718448-992938').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424755247904-986856').dataTable({
+    $('#table140456771718448-992938').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1849,7 +1849,7 @@ evaluated.</p>
 </pre></div>
 </div>
 <i>Table length=50</i>
-<table id="table140424776798464" class="table-striped table-bordered table-condensed">
+<table id="table140456771497744" class="table-striped table-bordered table-condensed">
 <thead><tr><th>nu</th><th>Sum</th><th>Sync</th><th>SSC</th></tr></thead>
 <thead><tr><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
@@ -1882,7 +1882,7 @@ evaluated.</p>
 </pre></div>
 </div>
 <i>Table length=50</i>
-<table id="table140424776800672" class="table-striped table-bordered table-condensed">
+<table id="table140456771494912" class="table-striped table-bordered table-condensed">
 <thead><tr><th>nu</th><th>Sum</th><th>Sync</th><th>SSC</th></tr></thead>
 <thead><tr><th>Hz</th><th>erg / s</th><th>erg / s</th><th>erg / s</th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
@@ -1950,11 +1950,11 @@ electrons, the magnetic fields, and for the cold protons in the jet.</p>
 </pre></div>
 </div>
 <i>Table length=37</i>
-<table id="table140424322816848-545917" class="table-striped table-bordered table-condensed">
+<table id="table140456781917488-273316" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
 <tr><td>BulkLorentzFactor</td><td></td><td></td><td>1.500000e+01</td></tr>
 <tr><td>U_e</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.736635e-03</td></tr>
-<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.503276e-02</td></tr>
 <tr><td>U_B</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>3.978874e-04</td></tr>
 <tr><td>U_p</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
 <tr><td>U_p_target</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
@@ -1983,11 +1983,11 @@ electrons, the magnetic fields, and for the cold protons in the jet.</p>
 <tr><td>jet_L_EC_CMB</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 <tr><td>jet_L_pp_gamma</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 <tr><td>jet_L_rad</td><td>jet Lum.</td><td>erg / s</td><td>9.892349e+39</td></tr>
-<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>9.179824e+41</td></tr>
-<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>1.138197e+42</td></tr>
+<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>8.864278e+42</td></tr>
+<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>9.084493e+42</td></tr>
 <tr><td>jet_L_e</td><td>jet Lum.</td><td>erg / s</td><td>9.179824e+41</td></tr>
 <tr><td>jet_L_B</td><td>jet Lum.</td><td>erg / s</td><td>2.103226e+41</td></tr>
-<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>7.946295e+42</td></tr>
 <tr><td>jet_L_p</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
@@ -2012,14 +2012,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424322816848-545917').dataTable()");
+    console.log("$('#table140456781917488-273316').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424322816848-545917').dataTable({
+    $('#table140456781917488-273316').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -2036,10 +2036,9 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;BulkLorentzFactor&#39;</span><span class="p">:</span> <span class="mf">15.0</span><span class="p">,</span>
  <span class="s1">&#39;U_e&#39;</span><span class="p">:</span> <span class="mf">0.001736634756190472</span><span class="p">,</span>
- <span class="s1">&#39;U_p_cold&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;U_p_cold&#39;</span><span class="p">:</span> <span class="mf">0.015032764261</span><span class="p">,</span>
  <span class="s1">&#39;U_B&#39;</span><span class="p">:</span> <span class="mf">0.00039788735772973844</span><span class="p">,</span>
  <span class="s1">&#39;U_p&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
- <span class="s1">&#39;U_p_target&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
  <span class="s1">&#39;U_Synch&#39;</span><span class="p">:</span> <span class="mf">5.4948380795748906e-05</span><span class="p">,</span>
  <span class="s1">&#39;U_Synch_DRF&#39;</span><span class="p">:</span> <span class="mf">44.18961605963792</span><span class="p">,</span>
  <span class="s1">&#39;U_Disk&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
@@ -2065,11 +2064,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
  <span class="s1">&#39;jet_L_EC_CMB&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
  <span class="s1">&#39;jet_L_pp_gamma&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
  <span class="s1">&#39;jet_L_rad&#39;</span><span class="p">:</span> <span class="mf">9.892349280196463e+39</span><span class="p">,</span>
- <span class="s1">&#39;jet_L_kin&#39;</span><span class="p">:</span> <span class="mf">9.17982370994084e+41</span><span class="p">,</span>
- <span class="s1">&#39;jet_L_tot&#39;</span><span class="p">:</span> <span class="mf">1.1381973449570587e+42</span><span class="p">,</span>
+ <span class="s1">&#39;jet_L_kin&#39;</span><span class="p">:</span> <span class="mf">8.864277658311462e+42</span><span class="p">,</span>
+ <span class="s1">&#39;jet_L_tot&#39;</span><span class="p">:</span> <span class="mf">9.084492632274437e+42</span><span class="p">,</span>
  <span class="s1">&#39;jet_L_e&#39;</span><span class="p">:</span> <span class="mf">9.17982370994084e+41</span><span class="p">,</span>
  <span class="s1">&#39;jet_L_B&#39;</span><span class="p">:</span> <span class="mf">2.1032262468277818e+41</span><span class="p">,</span>
- <span class="s1">&#39;jet_L_p_cold&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;jet_L_p_cold&#39;</span><span class="p">:</span> <span class="mf">7.946295287317377e+42</span><span class="p">,</span>
  <span class="s1">&#39;jet_L_p&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -2077,12 +2076,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=37</i>
-<table id="table140424339448112" class="table-striped table-bordered table-condensed">
+<table id="table140456309159440" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
 <thead><tr><th>str17</th><th>str29</th><th>object</th><th>float64</th></tr></thead>
 <tr><td>BulkLorentzFactor</td><td></td><td></td><td>1.500000e+01</td></tr>
 <tr><td>U_e</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.736635e-03</td></tr>
-<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.503276e-02</td></tr>
 <tr><td>U_B</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>3.978874e-04</td></tr>
 <tr><td>U_p</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
 <tr><td>U_p_target</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
@@ -2095,11 +2094,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>jet_L_EC_CMB</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 <tr><td>jet_L_pp_gamma</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 <tr><td>jet_L_rad</td><td>jet Lum.</td><td>erg / s</td><td>9.892349e+39</td></tr>
-<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>9.179824e+41</td></tr>
-<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>1.138197e+42</td></tr>
+<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>8.864278e+42</td></tr>
+<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>9.084493e+42</td></tr>
 <tr><td>jet_L_e</td><td>jet Lum.</td><td>erg / s</td><td>9.179824e+41</td></tr>
 <tr><td>jet_L_B</td><td>jet Lum.</td><td>erg / s</td><td>2.103226e+41</td></tr>
-<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>7.946295e+42</td></tr>
 <tr><td>jet_L_p</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 </table><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
 </pre></div>
@@ -2129,7 +2128,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <span class="n">SED</span> <span class="n">info</span><span class="p">:</span>
  <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span> <span class="n">jetkernel</span><span class="p">:</span> <span class="mi">1000</span>
- <span class="n">nu</span> <span class="n">grid</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="n">nu</span> <span class="n">size</span><span class="p">:</span> <span class="mi">500</span>
  <span class="n">nu</span> <span class="n">mix</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+06</span>
  <span class="n">nu</span> <span class="nb">max</span> <span class="p">(</span><span class="n">Hz</span><span class="p">):</span> <span class="mf">1.000000e+30</span>
 
@@ -2139,7 +2138,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140424343026704-178162" class="table-striped table-bordered table-condensed">
+<table id="table140456799647488-750556" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -2176,14 +2175,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424343026704-178162').dataTable()");
+    console.log("$('#table140456799647488-750556').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424343026704-178162').dataTable({
+    $('#table140456799647488-750556').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -2210,11 +2209,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=37</i>
-<table id="table140424338261712-1568" class="table-striped table-bordered table-condensed">
+<table id="table140456785425552-958969" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
 <tr><td>BulkLorentzFactor</td><td></td><td></td><td>2.500000e+01</td></tr>
 <tr><td>U_e</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.736635e-03</td></tr>
-<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+<tr><td>U_p_cold</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.503276e-02</td></tr>
 <tr><td>U_B</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>3.978874e-04</td></tr>
 <tr><td>U_p</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
 <tr><td>U_p_target</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
@@ -2243,11 +2242,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>jet_L_EC_CMB</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 <tr><td>jet_L_pp_gamma</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 <tr><td>jet_L_rad</td><td>jet Lum.</td><td>erg / s</td><td>2.747875e+40</td></tr>
-<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>2.553591e+42</td></tr>
-<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>3.166133e+42</td></tr>
+<tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>2.465814e+43</td></tr>
+<tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>2.527069e+43</td></tr>
 <tr><td>jet_L_e</td><td>jet Lum.</td><td>erg / s</td><td>2.553591e+42</td></tr>
 <tr><td>jet_L_B</td><td>jet Lum.</td><td>erg / s</td><td>5.850635e+41</td></tr>
-<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+<tr><td>jet_L_p_cold</td><td>jet Lum.</td><td>erg / s</td><td>2.210455e+43</td></tr>
 <tr><td>jet_L_p</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
 </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
 .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
@@ -2272,14 +2271,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140424338261712-1568').dataTable()");
+    console.log("$('#table140456785425552-958969').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140424338261712-1568').dataTable({
+    $('#table140456785425552-958969').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],

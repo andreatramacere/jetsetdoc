@@ -18,7 +18,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Example to use the sherpa minimizer plugin with a JeSeT model" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html" />
+    <link rel="next" title="Example to use the Sherpa minimizer plugin with a JeSeT model" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html" />
     <link rel="prev" title="Model fitting 3: External Compton" href="../model_fit_3/Jet_example_model_fit_EC.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -57,7 +57,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -74,10 +74,11 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -87,6 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#plugins">Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
@@ -95,6 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -181,22 +184,31 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html#expanding-the-radiative-region">Expanding the radiative region</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#importing-a-jetset-model-into-gammapy">Importing a jetset model into gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#model-fitting-with-gammapy">Model fitting with gammapy</a></li>
 </ul>
 </li>
 </ul>
@@ -241,7 +253,7 @@
     </a>
   </li>
   <li>
-    <a href="../sherpa_plugin/sherpa-plugin-jetset-interface.html" title="Next Chapter: Example to use the sherpa minimizer plugin with a JeSeT model"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Example to us... &raquo;</span>
+    <a href="../sherpa_plugin/sherpa-plugin-jetset-interface.html" title="Next Chapter: Example to use the Sherpa minimizer plugin with a JeSeT model"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Example to us... &raquo;</span>
     </a>
   </li>
               
@@ -278,10 +290,11 @@
 <ul class="globaltoc"
 ><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -291,6 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#plugins">Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
@@ -299,6 +313,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -385,22 +400,31 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html#expanding-the-radiative-region">Expanding the radiative region</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#importing-a-jetset-model-into-gammapy">Importing a jetset model into gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#model-fitting-with-gammapy">Model fitting with gammapy</a></li>
 </ul>
 </li>
 </ul>
@@ -420,7 +444,7 @@
           
             <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
@@ -436,6 +460,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
@@ -450,9 +475,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Hadronic pp jet model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a></li>
 </ul>
 
           
@@ -486,7 +513,7 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.2.0</span><span class="n">rc13</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.2.0</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_SEDs</span>
@@ -560,7 +587,7 @@
 ---&gt; first blind fit run,  fit range: [10.0, 21.0]
 ---&gt; class:  HSP</pre>
 <i>Table length=4</i>
-<table id="table140678961306640-699611" class="table-striped table-bordered table-condensed">
+<table id="table140507450424816-605194" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-1.545300e-01</td><td>-1.545300e-01</td><td>9.534795e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>-1.023245e-02</td><td>-1.023245e-02</td><td>1.433073e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -589,14 +616,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140678961306640-699611').dataTable()");
+    console.log("$('#table140507450424816-605194').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140678961306640-699611').dataTable({
+    $('#table140507450424816-605194').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -619,7 +646,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 ---&gt; fit range: [23.0, 29.0]
 ---&gt; LogCubic fit</pre>
 <i>Table length=4</i>
-<table id="table140678961307408-21252" class="table-striped table-bordered table-condensed">
+<table id="table140507449819088-488026" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>LogCubic</td><td>b</td><td>-2.098186e-01</td><td>-2.098186e-01</td><td>3.133032e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
 <tr><td>LogCubic</td><td>c</td><td>-4.661868e-02</td><td>-4.661868e-02</td><td>2.178352e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -648,14 +675,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140678961307408-21252').dataTable()");
+    console.log("$('#table140507449819088-488026').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140678961307408-21252').dataTable({
+    $('#table140507449819088-488026').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -690,7 +717,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <strong>*  constrains parameters from observable *</strong></pre>
 <i>Table length=11</i>
-<table id="table140678958229056-577967" class="table-striped table-bordered table-condensed">
+<table id="table140506940288928-646296" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.112712e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -726,14 +753,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140678958229056-577967').dataTable()");
+    console.log("$('#table140506940288928-646296').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140678958229056-577967').dataTable({
+    $('#table140506940288928-646296').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -768,7 +795,7 @@ See the <a class="reference internal" href="../composite_model/Composite_model.h
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140678950357264-202940" class="table-striped table-bordered table-condensed">
+<table id="table140507441699904-942977" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -804,14 +831,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140678950357264-202940').dataTable()");
+    console.log("$('#table140507441699904-942977').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140678950357264-202940').dataTable({
+    $('#table140507441699904-942977').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -859,7 +886,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140678961274400-777062" class="table-striped table-bordered table-condensed">
+<table id="table140507441679952-878747" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -895,14 +922,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140678961274400-777062').dataTable()");
+    console.log("$('#table140507441679952-878747').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140678961274400-777062').dataTable({
+    $('#table140507441679952-878747').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -966,7 +993,7 @@ fit run: 0</pre>
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140678960808960-887499" class="table-striped table-bordered table-condensed">
+<table id="table140507436354288-988051" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>9.157430e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>True</td></tr>
@@ -1002,14 +1029,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140678960808960-887499').dataTable()");
+    console.log("$('#table140507436354288-988051').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140678960808960-887499').dataTable({
+    $('#table140507436354288-988051').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1224,7 +1251,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=11</i>
-<table id="table140678955623616-507351" class="table-striped table-bordered table-condensed">
+<table id="table140507436453744-782238" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
 <tr><td>jet_leptonic</td><td>gmin</td><td>9.157430e+02</td><td>9.157430e+02</td><td>2.681484e+02</td><td>--</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
 <tr><td>jet_leptonic</td><td>gmax</td><td>1.373160e+06</td><td>--</td><td>--</td><td>--</td><td>1.373160e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>True</td></tr>
@@ -1260,14 +1287,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140678955623616-507351').dataTable()");
+    console.log("$('#table140507436453744-782238').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140678955623616-507351').dataTable({
+    $('#table140507436453744-782238').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1354,13 +1381,13 @@ the full set of free parameters will be used</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0%|          | 0/50 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span> <span class="n">run</span> <span class="n">done</span><span class="p">,</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">threads</span> <span class="n">took</span> <span class="mf">180.34</span> <span class="n">seconds</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span> <span class="n">run</span> <span class="n">done</span><span class="p">,</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">threads</span> <span class="n">took</span> <span class="mf">171.91</span> <span class="n">seconds</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mcmc</span><span class="o">.</span><span class="n">acceptance_fraction</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.53</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.531875</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">1E15</span><span class="p">,</span> <span class="mf">1E20</span><span class="p">],</span><span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -1376,8 +1403,8 @@ the full set of free parameters will be used</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span><span class="o">.</span><span class="n">get_par</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">array</span><span class="p">([</span><span class="mf">1.86715271</span><span class="p">,</span> <span class="mf">1.82682887</span><span class="p">,</span> <span class="mf">1.8699941</span> <span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">2.02290304</span><span class="p">,</span> <span class="mf">1.90952071</span><span class="p">,</span>
-        <span class="mf">2.4641022</span> <span class="p">]),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">array</span><span class="p">([</span><span class="mf">1.90595324</span><span class="p">,</span> <span class="mf">1.78865777</span><span class="p">,</span> <span class="mf">1.75696001</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">2.14438061</span><span class="p">,</span> <span class="mf">2.37673012</span><span class="p">,</span>
+        <span class="mf">2.03968533</span><span class="p">]),</span>
  <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>

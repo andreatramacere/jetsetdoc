@@ -59,7 +59,7 @@
         </button>
         <a class="navbar-brand" href="../../../index.html"><span><img src="../../../_static/logo_small_color_neg_transparent.png"></span>
           JetSeT doc</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.2.0rc13</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.2.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -76,10 +76,11 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -89,6 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#plugins">Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
@@ -97,6 +99,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -183,22 +186,31 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html#expanding-the-radiative-region">Expanding the radiative region</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#importing-a-jetset-model-into-gammapy">Importing a jetset model into gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#model-fitting-with-gammapy">Model fitting with gammapy</a></li>
 </ul>
 </li>
 </ul>
@@ -283,10 +295,11 @@
 <ul class="globaltoc"
 ><p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-from-binaries-using-the-install-script">install  JetSeT prerelease from binaries using the install script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install_pre.html#install-jetset-prerelease-using-the-wikipage-instructions">install  JetSeT prerelease using the wikipage instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#windows-10-prerequisites">Windows 10 prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-anaconda">Install  JetSeT from Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-jetset-from-pip">Install  JetSeT from pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../install.html#install-the-jetset-from-source">Install the JetSeT from source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a><ul>
@@ -296,6 +309,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#theoretical-background-for-ssc-model">Theoretical background for SSC model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#emitters-distributions">Emitters distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#ebl-absorption">EBL absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new_release.html#plugins">Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
@@ -304,6 +318,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a><ul>
@@ -390,22 +405,31 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html#expanding-the-radiative-region">Expanding the radiative region</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#synchrotron-trends-full-computation-and-delta-approx-comparison">Synchrotron trends: full computation and <span class="math notranslate nohighlight">\(\delta\)</span>-approx comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#trends-for-the-inverse-compton-and-synchrotron-emission">Trends for the inverse Compton and synchrotron emission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html#exercise">Exercise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html#model-fitting-with-using-a-sherpa-model">Model fitting with using a Sherpa model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#loading-data">Loading data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#phenomenological-model-constraining">phenomenological model constraining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html#model-fitting-with-sherpa">Model fitting with Sherpa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#importing-a-jetset-model-into-gammapy">Importing a jetset model into gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html#model-fitting-with-gammapy">Model fitting with gammapy</a></li>
 </ul>
 </li>
 </ul>
@@ -425,7 +449,7 @@
           
             <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../install_pre.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
@@ -438,6 +462,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
@@ -452,9 +477,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../hadronic_pp_jet/hadornic.html">Hadronic pp jet model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html">Temporal evolution, one zone, only cooling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html">Temporal evolution, two zones, cooling+acc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html">Temporal evolution, two zones, cooling+acc+adb exp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../phen_constr/SSC_th_bkg.html">Phenomenological model constraining: SSC theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the sherpa plugin with the sherpa interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the sherpa minimizer plugin with a JeSeT model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html">Example to use the Sherpa plugin with the sherpa interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html">Example to use the Sherpa minimizer plugin with a JeSeT model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html">Example to use the Gamma-py plugin with the JeSeT interface</a></li>
 </ul>
 
           
@@ -500,6 +527,9 @@ in <a class="reference internal" href="#import"><span class="std std-ref">Import
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span>
+</pre></div>
+</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
@@ -529,7 +559,7 @@ of the table:</p>
 </pre></div>
 </div>
 <i>Table length=10</i>
-<table id="table140538418063536" class="table-striped table-bordered table-condensed">
+<table id="table140627727467952" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -620,7 +650,7 @@ familiar with data handling</p>
 </pre></div>
 </div>
 <i>Table length=110</i>
-<table id="table140538442366640" class="table-striped table-bordered table-condensed">
+<table id="table140627761957808" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str13</th></tr></thead>
@@ -691,7 +721,7 @@ familiar with data handling</p>
 </pre></div>
 </div>
 <i>Table length=110</i>
-<table id="table140538418063152" class="table-striped table-bordered table-condensed">
+<table id="table140627763972416" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str13</th></tr></thead>
@@ -746,7 +776,7 @@ this is only an example</strong></p>
 </pre></div>
 </div>
 <i>Table length=20</i>
-<table id="table140538442408240" class="table-striped table-bordered table-condensed">
+<table id="table140627762058096" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -800,7 +830,7 @@ Assume that we downloaded the data for Mrk421, in observed fluxes and linear sca
 </pre></div>
 </div>
 <i>Table length=3550</i>
-<table id="table140538417879792" class="table-striped table-bordered table-condensed">
+<table id="table140627763972224" class="table-striped table-bordered table-condensed">
 <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -851,7 +881,7 @@ and after elimination of duplicated entries, and upper limits</p>
 </pre></div>
 </div>
 <i>Table length=110</i>
-<table id="table140538444373344" class="table-striped table-bordered table-condensed">
+<table id="table140627764112928" class="table-striped table-bordered table-condensed">
 <thead><tr><th>nu_data</th><th>dnu_data</th><th>nuFnu_data</th><th>dnuFnu_data</th><th>nu_data_log</th><th>dnu_data_log</th><th>nuFnu_data_log</th><th>dnuFnu_data_log</th><th>dnuFnu_fake</th><th>dnuFnu_fake_log</th><th>UL</th><th>zero_error</th><th>T_start</th><th>T_stop</th><th>data_set</th></tr></thead>
 <thead><tr><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>Hz</th><th>Hz</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th>erg / (cm2 s)</th><th></th><th></th><th></th><th>MJD</th><th>MJD</th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bool</th><th>float64</th><th>float64</th><th>str13</th></tr></thead>
@@ -878,11 +908,11 @@ and after elimination of duplicated entries, and upper limits</p>
 </table><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">metadata</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="p">:</span>  <span class="mf">0.0308</span>
-<span class="n">obj_name</span> <span class="p">:</span>  <span class="n">J1104</span><span class="o">+</span><span class="mi">3812</span><span class="p">,</span><span class="n">Mrk421</span>
-<span class="n">restframe</span> <span class="p">:</span>  <span class="n">obs</span>
-<span class="n">data_scale</span> <span class="p">:</span>  <span class="n">lin</span><span class="o">-</span><span class="n">lin</span>
-<span class="n">UL_CL</span> <span class="p">:</span>  <span class="mf">0.95</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;z&#39;</span><span class="p">:</span> <span class="mf">0.0308</span><span class="p">,</span>
+ <span class="s1">&#39;obj_name&#39;</span><span class="p">:</span> <span class="s1">&#39;J1104+3812,Mrk421&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;restframe&#39;</span><span class="p">:</span> <span class="s1">&#39;obs&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;data_scale&#39;</span><span class="p">:</span> <span class="s1">&#39;lin-lin&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;UL_CL&#39;</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">}</span>
 </pre></div>
 </div>
 <section id="plotting-obsdata">
@@ -900,30 +930,16 @@ and after elimination of duplicated entries, and upper limits</p>
 <img alt="../../../_images/Jet_example_load_data_62_0.png" src="../../../_images/Jet_example_load_data_62_0.png" />
 <p>you can rescale your plot</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-The rescale method as been replaced by the setlim method
-please notice that now jetset uses log axis rather than loglog plots
-so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_load_data_64_1.png" src="../../../_images/Jet_example_load_data_64_1.png" />
+<img alt="../../../_images/Jet_example_load_data_64_0.png" src="../../../_images/Jet_example_load_data_64_0.png" />
 <p>plotting in the <code class="docutils literal notranslate"><span class="pre">src</span></code> restframe</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;src&#39;</span><span class="p">)</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E40</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E46</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E40</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E46</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-The rescale method as been replaced by the setlim method
-please notice that now jetset uses log axis rather than loglog plots
-so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_load_data_66_1.png" src="../../../_images/Jet_example_load_data_66_1.png" />
+<img alt="../../../_images/Jet_example_load_data_66_0.png" src="../../../_images/Jet_example_load_data_66_0.png" />
 <p><strong>to have interactive plot in jupyter</strong></p>
 <p>if you want to to have interacitve plot in a jupyter notebook use:</p>
 <div class="highlight-no notranslate"><div class="highlight"><pre><span></span>
@@ -951,7 +967,7 @@ this is not a problem for the fit process, you might want to rebin
 <span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
 <span class="n">sed_data</span><span class="o">.</span><span class="n">group_data</span><span class="p">(</span><span class="n">bin_width</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">myPlot</span><span class="o">.</span><span class="n">add_data_plot</span><span class="p">(</span><span class="n">sed_data</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;rebinned&#39;</span><span class="p">)</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
 </pre></div>
 </div>
 <pre class="literal-block">================================================================================
@@ -959,13 +975,7 @@ this is not a problem for the fit process, you might want to rebin
 <strong>*  binning data  *</strong>
 ---&gt; N bins= 89
 ---&gt; bin_widht= 0.2
-================================================================================
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-The rescale method as been replaced by the setlim method
-please notice that now jetset uses log axis rather than loglog plots
-so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</pre>
+================================================================================</pre>
 <img alt="../../../_images/Jet_example_load_data_70_1.png" src="../../../_images/Jet_example_load_data_70_1.png" />
 </section>
 <section id="handling-errors-and-systematics">
@@ -984,17 +994,10 @@ frequencies branch.</p></li>
 <p>For these reasons the package offer the possibility to add systematics</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sed_data</span><span class="o">.</span><span class="n">add_systematics</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,[</span><span class="mf">10.</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span><span class="mf">10.</span><span class="o">**</span><span class="mi">29</span><span class="p">])</span>
 <span class="n">myPlot</span><span class="o">=</span><span class="n">sed_data</span><span class="o">.</span><span class="n">plot_sed</span><span class="p">()</span>
-<span class="n">myPlot</span><span class="o">.</span><span class="n">rescale</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
+<span class="n">myPlot</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-15</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-9</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-The rescale method as been replaced by the setlim method
-please notice that now jetset uses log axis rather than loglog plots
-so, the correct way to use it is rescale(x_min=8)-&gt;setlim(x_min=1E8)
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-</pre></div>
-</div>
-<img alt="../../../_images/Jet_example_load_data_72_1.png" src="../../../_images/Jet_example_load_data_72_1.png" />
+<img alt="../../../_images/Jet_example_load_data_72_0.png" src="../../../_images/Jet_example_load_data_72_0.png" />
 <p>with this command we add 20% systematics for data between <span class="math notranslate nohighlight">\(10^{6}&lt;\nu&lt;10^{29}\)</span> Hz</p>
 </section>
 <section id="filtering-data-sets">
