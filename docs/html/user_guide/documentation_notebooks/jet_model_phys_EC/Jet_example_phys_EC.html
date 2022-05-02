@@ -523,6 +523,10 @@ disk/BH restframe Dermer(1995) <a class="reference internal" href="../../../refe
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span>
 </pre></div>
 </div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
 <span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;EC_example&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;bkn&#39;</span><span class="p">,</span><span class="n">beaming_expr</span><span class="o">=</span><span class="s1">&#39;bulk_theta&#39;</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">add_EC_component</span><span class="p">([</span><span class="s1">&#39;EC_BLR&#39;</span><span class="p">,</span><span class="s1">&#39;EC_Disk&#39;</span><span class="p">],</span><span class="n">disk_type</span><span class="o">=</span><span class="s1">&#39;BB&#39;</span><span class="p">)</span>
@@ -788,7 +792,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E27</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_15_0.png" src="../../../_images/Jet_example_phys_EC_15_0.png" />
+<img alt="../../../_images/Jet_example_phys_EC_16_0.png" src="../../../_images/Jet_example_phys_EC_16_0.png" />
 </section>
 <section id="dusty-torus">
 <h2>Dusty Torus<a class="headerlink" href="#dusty-torus" title="Permalink to this headline">¶</a></h2>
@@ -911,7 +915,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E27</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_19_0.png" src="../../../_images/Jet_example_phys_EC_19_0.png" />
+<img alt="../../../_images/Jet_example_phys_EC_20_0.png" src="../../../_images/Jet_example_phys_EC_20_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">add_EC_component</span><span class="p">(</span><span class="s1">&#39;EC_DT&#39;</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 </pre></div>
@@ -920,7 +924,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E27</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_21_0.png" src="../../../_images/Jet_example_phys_EC_21_0.png" />
+<img alt="../../../_images/Jet_example_phys_EC_22_0.png" src="../../../_images/Jet_example_phys_EC_22_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;test_EC_model.pkl&#39;</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;test_EC_model.pkl&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1082,7 +1086,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-11</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E9</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E27</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_28_0.png" src="../../../_images/Jet_example_phys_EC_28_0.png" />
+<img alt="../../../_images/Jet_example_phys_EC_29_0.png" src="../../../_images/Jet_example_phys_EC_29_0.png" />
 </section>
 <section id="changing-the-external-field-transformation">
 <h2>Changing the external field transformation<a class="headerlink" href="#changing-the-external-field-transformation" title="Permalink to this headline">¶</a></h2>
@@ -1157,7 +1161,7 @@ transformation, even if ``disk`` is used</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7faadc2f52e0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_38_1.png" src="../../../_images/Jet_example_phys_EC_38_1.png" />
+<img alt="../../../_images/Jet_example_phys_EC_39_1.png" src="../../../_images/Jet_example_phys_EC_39_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
@@ -1211,7 +1215,7 @@ transformation, even if ``disk`` is used</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7faadbe3e8e0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_39_1.png" src="../../../_images/Jet_example_phys_EC_39_1.png" />
+<img alt="../../../_images/Jet_example_phys_EC_40_1.png" src="../../../_images/Jet_example_phys_EC_40_1.png" />
 </section>
 <section id="ic-against-the-cmb">
 <h2>IC against the CMB<a class="headerlink" href="#ic-against-the-cmb" title="Permalink to this headline">¶</a></h2>
@@ -1255,7 +1259,7 @@ isotropic external field.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">5E-18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">5E-13</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_43_0.png" src="../../../_images/Jet_example_phys_EC_43_0.png" />
+<img alt="../../../_images/Jet_example_phys_EC_44_0.png" src="../../../_images/Jet_example_phys_EC_44_0.png" />
 </section>
 </section>
 <section id="equipartition">
@@ -1278,7 +1282,7 @@ points (<code class="docutils literal notranslate"><span class="pre">N_pts</span
 <span class="n">grid</span> <span class="n">points</span> <span class="mi">50</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_46_1.png" src="../../../_images/Jet_example_phys_EC_46_1.png" />
+<img alt="../../../_images/Jet_example_phys_EC_47_1.png" src="../../../_images/Jet_example_phys_EC_47_1.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setting</span> <span class="n">B</span> <span class="n">to</span>  <span class="mf">0.0001389495494373139</span>
 <span class="n">setting</span> <span class="n">N</span> <span class="n">to</span>  <span class="mf">9.160733610838076e-06</span>
 </pre></div>
@@ -1342,7 +1346,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">5E-18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">2E-14</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E28</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Jet_example_phys_EC_47_0.png" src="../../../_images/Jet_example_phys_EC_47_0.png" />
+<img alt="../../../_images/Jet_example_phys_EC_48_0.png" src="../../../_images/Jet_example_phys_EC_48_0.png" />
 </section>
 
 

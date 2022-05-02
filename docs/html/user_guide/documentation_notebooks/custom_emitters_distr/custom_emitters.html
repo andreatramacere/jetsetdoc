@@ -476,6 +476,9 @@
       
   <section id="custom-emitters-distribution">
 <span id="custom-emitters-guide"></span><h1>Custom emitters distribution<a class="headerlink" href="#custom-emitters-distribution" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jetset</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
@@ -587,11 +590,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">n_e_super_exp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_16_0.png" src="../../../_images/custom_emitters_16_0.png" />
+<img alt="../../../_images/custom_emitters_17_0.png" src="../../../_images/custom_emitters_17_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">n_e_super_exp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">energy_unit</span><span class="o">=</span><span class="s1">&#39;eV&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_17_0.png" src="../../../_images/custom_emitters_17_0.png" />
+<img alt="../../../_images/custom_emitters_18_0.png" src="../../../_images/custom_emitters_18_0.png" />
 <p>here we define a bkn power-law</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">distr_func_bkn</span><span class="p">(</span><span class="n">gamma_break</span><span class="p">,</span><span class="n">gamma</span><span class="p">,</span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="o">-</span><span class="n">s1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="p">(</span><span class="n">gamma</span><span class="o">/</span><span class="n">gamma_break</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">s2</span><span class="o">-</span><span class="n">s1</span><span class="p">))</span>
@@ -654,7 +657,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         columnDefs: [{targets: [3, 4, 5], type: "optionalnum"}]
     });
 });
-</script><img alt="../../../_images/custom_emitters_19_1.png" src="../../../_images/custom_emitters_19_1.png" />
+</script><img alt="../../../_images/custom_emitters_20_1.png" src="../../../_images/custom_emitters_20_1.png" />
 <section id="passing-the-custom-distribution-to-the-jet-class">
 <h2>Passing the custom distribution to the Jet class<a class="headerlink" href="#passing-the-custom-distribution-to-the-jet-class" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
@@ -777,7 +780,7 @@ number density of particles and conpare it to the parameter <code class="docutil
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-16</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_28_0.png" src="../../../_images/custom_emitters_28_0.png" />
+<img alt="../../../_images/custom_emitters_29_0.png" src="../../../_images/custom_emitters_29_0.png" />
 <p>Now we switch on the normalization for the emetters distribtuion, and we
 keep all the parameters unchanged, including N</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">Norm_distr</span> <span class="o">=</span> <span class="kc">True</span>
@@ -892,7 +895,7 @@ to the parameter N</p>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-16</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-13</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_34_0.png" src="../../../_images/custom_emitters_34_0.png" />
+<img alt="../../../_images/custom_emitters_35_0.png" src="../../../_images/custom_emitters_35_0.png" />
 </section>
 <section id="building-a-distribution-from-an-external-array">
 <h2>Building a distribution from an external array<a class="headerlink" href="#building-a-distribution-from-an-external-array" title="Permalink to this headline">¶</a></h2>
@@ -920,7 +923,7 @@ skip them</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">n_distr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_39_0.png" src="../../../_images/custom_emitters_39_0.png" />
+<img alt="../../../_images/custom_emitters_40_0.png" src="../../../_images/custom_emitters_40_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span> <span class="o">=</span> <span class="n">Jet</span><span class="p">(</span><span class="n">emitters_distribution</span><span class="o">=</span><span class="n">n_distr</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
 </pre></div>
@@ -1032,7 +1035,7 @@ set to <code class="docutils literal notranslate"><span class="pre">False</span>
 <span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_45_0.png" src="../../../_images/custom_emitters_45_0.png" />
+<img alt="../../../_images/custom_emitters_46_0.png" src="../../../_images/custom_emitters_46_0.png" />
 <p>you can still normalize the distribution</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">Norm_distr</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">2000</span>
@@ -1046,7 +1049,7 @@ set to <code class="docutils literal notranslate"><span class="pre">False</span>
 <span class="n">p</span><span class="o">=</span><span class="n">my_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_48_0.png" src="../../../_images/custom_emitters_48_0.png" />
+<img alt="../../../_images/custom_emitters_49_0.png" src="../../../_images/custom_emitters_49_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;test_jet_custom_emitters_array.pkl&#39;</span><span class="p">)</span>
 <span class="n">new_jet</span> <span class="o">=</span> <span class="n">Jet</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;test_jet_custom_emitters_array.pkl&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1104,7 +1107,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">=</span><span class="n">new_jet</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../../_images/custom_emitters_50_0.png" src="../../../_images/custom_emitters_50_0.png" />
+<img alt="../../../_images/custom_emitters_51_0.png" src="../../../_images/custom_emitters_51_0.png" />
 </section>
 </section>
 

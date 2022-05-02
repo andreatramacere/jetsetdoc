@@ -480,6 +480,14 @@
 <p>Secondaries <span class="math notranslate nohighlight">\(e^{\pm}\)</span>, are evolved to the equilibrium following the approach in <a class="reference internal" href="../../../references.html#inoue96" id="id2"><span>[Inoue96]</span></a>. To speed up the process only synchroton cooling is taken into account. In the next release also the option to switch on IC cooling contribution will be added.</p>
 <p>A validation of the integral solution for the <span class="math notranslate nohighlight">\(e^{\pm}\)</span> equilibrium used for the pp jet against the Fokker-Plank equation solution, implemented in the  <a class="reference internal" href="../../../api/jetset.jet_timedep.JetTimeEvol.html#jetset.jet_timedep.JetTimeEvol" title="jetset.jet_timedep.JetTimeEvol"><code class="xref py py-class docutils literal notranslate"><span class="pre">JetTimeEvol</span></code></a> class, is presented in  <a class="reference internal" href="hadornic_validate_temp_ev.html#hadronic-pp-jet-validation-guide"><span class="std std-ref">Validation of the pp equilibrium against the Fokker-Plank equation solution</span></a></p>
 <p>We remind the approximation of the only synchrotron cooling is used only for this specific class, and for this first release, and that the <a class="reference internal" href="../../../api/jetset.jet_timedep.JetTimeEvol.html#jetset.jet_timedep.JetTimeEvol" title="jetset.jet_timedep.JetTimeEvol"><code class="xref py py-class docutils literal notranslate"><span class="pre">JetTimeEvol</span></code></a> class offers full cooling access (synchrotron, IC, and adiabatic expansion). See <a class="reference internal" href="../../temp_ev.html#temp-ev"><span class="std std-ref">temporal evolution</span></a> for more details.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
+<span class="kn">from</span> <span class="nn">jetset.jetkernel</span> <span class="kn">import</span> <span class="n">jetkernel</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">const</span>
+<span class="kn">from</span> <span class="nn">jetset.jet_emitters_factory</span> <span class="kn">import</span> <span class="n">EmittersFactory</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_component</span><span class="p">(</span><span class="n">j_name</span><span class="p">,</span><span class="n">nu_name</span><span class="p">):</span>
     <span class="n">j_nu_ptr</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">j</span><span class="o">.</span><span class="n">_blob</span><span class="p">,</span><span class="n">j_name</span><span class="p">)</span>
     <span class="n">nu_ptr</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">j</span><span class="o">.</span><span class="n">_blob</span><span class="p">,</span><span class="n">nu_name</span><span class="p">)</span>
@@ -499,12 +507,6 @@
     <span class="n">xg</span><span class="o">=</span><span class="n">xg</span><span class="o">*</span><span class="n">jetkernel</span><span class="o">.</span><span class="n">HPLANCK_TeV</span>
 
     <span class="k">return</span> <span class="n">xg</span><span class="p">,</span><span class="n">yg</span>
-</pre></div>
-</div>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
-<span class="kn">from</span> <span class="nn">jetset.jetkernel</span> <span class="kn">import</span> <span class="n">jetkernel</span>
-<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">const</span>
-<span class="kn">from</span> <span class="nn">jetset.jet_emitters_factory</span> <span class="kn">import</span> <span class="n">EmittersFactory</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jetset</span>

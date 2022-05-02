@@ -495,6 +495,10 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.0</span>
 </pre></div>
 </div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
 <p>EBL models are implemented using a 2D interpolation where the x and y axes represent the redshift and the frequency, and the z axes represents the value of <span class="math notranslate nohighlight">\(e^{-\tau}\)</span></p>
 <p>Included models are</p>
 <ul class="simple">
@@ -519,11 +523,13 @@
 <span class="n">p</span><span class="o">=</span><span class="n">ebl_dominguez</span><span class="o">.</span><span class="n">plot_model</span><span class="p">()</span>
 <span class="n">ebl_finke</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="n">ebl_franceschini</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-10</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E29</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y_min</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mi">29</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_6_0.png" src="../../../_images/EBL_6_0.png" />
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nu</span><span class="o">=</span><span class="mf">1E26</span>
+<img alt="../../../_images/EBL_7_0.png" src="../../../_images/EBL_7_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="n">nu</span><span class="o">=</span><span class="mf">1E26</span>
 <span class="n">z_range</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">y_fr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">z_range</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
 <span class="n">y_fi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">z_range</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
@@ -548,7 +554,7 @@
 <span class="n">t</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\nu=</span><span class="si">%1.1E</span><span class="s1"> Hz$&#39;</span><span class="o">%</span><span class="k">nu</span>)
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_7_0.png" src="../../../_images/EBL_7_0.png" />
+<img alt="../../../_images/EBL_8_0.png" src="../../../_images/EBL_8_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="n">z_range</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">y_fr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">z_range</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
@@ -575,7 +581,7 @@
 <span class="n">t</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\nu=</span><span class="si">%1.1E</span><span class="s1"> Hz$&#39;</span><span class="o">%</span><span class="k">nu</span>)
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_8_0.png" src="../../../_images/EBL_8_0.png" />
+<img alt="../../../_images/EBL_9_0.png" src="../../../_images/EBL_9_0.png" />
 <section id="combine-a-jet-model-with-the-ebl-model">
 <h2>Combine a Jet model with the EBL model<a class="headerlink" href="#combine-a-jet-model-with-the-ebl-model" title="Permalink to this headline">¶</a></h2>
 <p>To  apply the EBL model to a Jet model we need to define a composite model, read the section <a class="reference internal" href="../composite_model/Composite_model.html#composite-models"><span class="std std-ref">Composite Models and depending pars</span></a>  for more information regarding the composite models.</p>
@@ -763,7 +769,7 @@ and that’s it!</p>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_max</span><span class="o">=</span><span class="mf">1E-12</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_31_0.png" src="../../../_images/EBL_31_0.png" />
+<img alt="../../../_images/EBL_32_0.png" src="../../../_images/EBL_32_0.png" />
 <p>if you want to remove the link from the parameter</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">composite_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">reset_dependencies</span><span class="p">()</span>
 </pre></div>
@@ -863,7 +869,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 ================================================================================</pre>
 <pre class="literal-block">/Users/orion/anaconda3/envs/jetset/lib/python3.8/site-packages/astropy/table/table.py:1187: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use <cite>arr[tuple(seq)]</cite> instead of <cite>arr[seq]</cite>. In the future this will be interpreted as an array index, <cite>arr[np.array(seq)]</cite>, which will result either in an error or a different result.
   newcol = col[<a href="#id8"><span class="problematic" id="id9">slice_</span></a>]</pre>
-<img alt="../../../_images/EBL_40_2.png" src="../../../_images/EBL_40_2.png" />
+<img alt="../../../_images/EBL_41_2.png" src="../../../_images/EBL_41_2.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.sed_shaper</span> <span class="kn">import</span>  <span class="n">SEDShape</span>
 <span class="n">my_shape</span><span class="o">=</span><span class="n">SEDShape</span><span class="p">(</span><span class="n">sed_data</span><span class="p">)</span>
 <span class="n">my_shape</span><span class="o">.</span><span class="n">eval_indices</span><span class="p">(</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -875,7 +881,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 
 <strong>* evaluating spectral indices for data *</strong>
 ================================================================================</pre>
-<img alt="../../../_images/EBL_41_1.png" src="../../../_images/EBL_41_1.png" />
+<img alt="../../../_images/EBL_42_1.png" src="../../../_images/EBL_42_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="p">,</span><span class="n">best_fit</span><span class="o">=</span><span class="n">my_shape</span><span class="o">.</span><span class="n">sync_fit</span><span class="p">(</span><span class="n">check_host_gal_template</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                   <span class="n">Ep_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                   <span class="n">minimizer</span><span class="o">=</span><span class="s1">&#39;lsb&#39;</span><span class="p">,</span>
@@ -1230,7 +1236,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="o">================================================================================</span>
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_43_9.png" src="../../../_images/EBL_43_9.png" />
+<img alt="../../../_images/EBL_44_9.png" src="../../../_images/EBL_44_9.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.obs_constrain</span> <span class="kn">import</span> <span class="n">ObsConstrain</span>
 <span class="kn">from</span> <span class="nn">jetset.model_manager</span> <span class="kn">import</span>  <span class="n">FitModel</span>
 <span class="n">sed_obspar</span><span class="o">=</span><span class="n">ObsConstrain</span><span class="p">(</span><span class="n">beaming</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
@@ -1320,7 +1326,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f912144a850</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_45_2.png" src="../../../_images/EBL_45_2.png" />
+<img alt="../../../_images/EBL_46_2.png" src="../../../_images/EBL_46_2.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.template_2Dmodel</span> <span class="kn">import</span> <span class="n">EBLAbsorptionTemplate</span>
 <span class="n">ebl_franceschini</span><span class="o">=</span><span class="n">EBLAbsorptionTemplate</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s1">&#39;Franceschini_2008&#39;</span><span class="p">)</span>
 <span class="n">composite_model</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">ebl_franceschini</span><span class="p">)</span>
@@ -1553,7 +1559,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotSED</span> <span class="n">at</span> <span class="mh">0x7f91211a72b0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_49_1.png" src="../../../_images/EBL_49_1.png" />
+<img alt="../../../_images/EBL_50_1.png" src="../../../_images/EBL_50_1.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.minimizer</span> <span class="kn">import</span> <span class="n">ModelMinimizer</span>
 <span class="kn">from</span> <span class="nn">jetset.model_manager</span> <span class="kn">import</span>  <span class="n">FitModel</span>
 <span class="kn">from</span> <span class="nn">jetset.jet_model</span> <span class="kn">import</span> <span class="n">Jet</span>
@@ -1747,7 +1753,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <span class="n">p</span><span class="o">=</span><span class="n">composite_model</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/EBL_51_0.png" src="../../../_images/EBL_51_0.png" />
+<img alt="../../../_images/EBL_52_0.png" src="../../../_images/EBL_52_0.png" />
 </section>
 </section>
 

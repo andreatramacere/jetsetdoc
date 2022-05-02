@@ -428,10 +428,24 @@
           
           
             <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../new_release.html">what's new in jetset 1.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">user guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user_guide.html">user guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../model_basic.html">model basic features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_advanced.html">model advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_and_phenomenology.html">data and phenomenology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../model_fitting.html">model fitting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../temp_ev.html">temporal evolution</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Temp_Ev_one_zone_only_cooling.html"> Temporal evolution, one zone, only cooling *New (v1.2.0)*</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Temporal evolution, two zones,  cooling+acc *New (v1.2.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Temp_Ev_two_zones_acc_and_cooling_adb_exp.html"> Temporal evolution, two zones,  cooling+acc+adiabatic expansion *New (v1.2.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hadronic_pp_jet/hadornic_validate_temp_ev.html"> Temporal evolution, validation of the hadronic pp secondaries evolution *New (v1.2.0)*</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html">plugins</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">code documentation (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../references.html">bibliography</a></li>
 </ul>
@@ -470,6 +484,10 @@
 <span id="temp-ev-two-zone-cooling-acc"></span><h1>Temporal evolution, two zones, cooling+acc<a class="headerlink" href="#temporal-evolution-two-zones-cooling-acc" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jetset</span>
@@ -729,7 +747,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotTempEvDiagram</span> <span class="n">at</span> <span class="mh">0x7fc02fcf5790</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_15_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_15_1.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_16_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_16_1.png" />
 <p><strong>we do not want to evolve the particle in the ``jet_rad``, so we set
 ``only_injection=True``, and we set ``do_injection=True`` to injet the
 particle defined by ``q_inj``</strong></p>
@@ -785,7 +803,7 @@ the acceleration region.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-18</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_21_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_21_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_22_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_22_0.png" />
 <p>Particle spectrum in the acceleration region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_tempev_emitters</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;acc&#39;</span><span class="p">,</span><span class="n">loglog</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">energy_unit</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="nb">pow</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">temp_ev</span><span class="o">.</span><span class="n">gamma_eq_t_A</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
@@ -793,19 +811,19 @@ the acceleration region.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">x_max</span><span class="o">=</span><span class="mf">1E7</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-30</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_23_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_23_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_24_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_24_0.png" />
 <p>SEDs in the acceleration region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_tempev_model</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_cached</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-18</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_25_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_25_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_26_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_26_0.png" />
 <p>SEDs in the acceleration region</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_tempev_model</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;acc&#39;</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_cached</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-18</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E7</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_27_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_27_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_28_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_28_0.png" />
 <p>We generate a lightcurve in the range nu1=2.4E22 Hz, nu2=7.2E25 Hz,
 without the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lg</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">make_lc</span><span class="p">(</span><span class="n">nu1</span><span class="o">=</span><span class="mf">2.4E22</span><span class="p">,</span><span class="n">nu2</span><span class="o">=</span><span class="mf">7.2E25</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="n">eval_cross_time</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">delta_t_out</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">use_cached</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">)</span>
@@ -847,7 +865,7 @@ without the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_31_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_31_1.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_32_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_32_1.png" />
 <p>We generate a lightcurve in the range nu1=2.4E22 Hz, nu2=7.2E25 Hz, with
 the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lg_cross</span><span class="o">=</span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">make_lc</span><span class="p">(</span><span class="n">nu1</span><span class="o">=</span><span class="mf">2.4E22</span><span class="p">,</span><span class="n">nu2</span><span class="o">=</span><span class="mf">7.2E25</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span><span class="n">eval_cross_time</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">delta_t_out</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">use_cached</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">,</span><span class="n">cross_time_slices</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -863,7 +881,7 @@ the effect of the light crossing time, in the observer frame</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_34_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_34_1.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_35_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_35_1.png" />
 <p>We can save the model and reuse it later for plotting lightcurcves,
 SEDs, and electron distributions</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;two_zone_rad_acc.pkl&#39;</span><span class="p">)</span>
@@ -1033,7 +1051,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">=</span><span class="n">temp_ev_acc_1</span><span class="o">.</span><span class="n">plot_tempev_model</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">,</span><span class="n">sed_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_cached</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_39_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_39_0.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_40_0.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_40_0.png" />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lx</span><span class="o">=</span><span class="n">temp_ev_acc_1</span><span class="o">.</span><span class="n">rad_region</span><span class="o">.</span><span class="n">make_lc</span><span class="p">(</span><span class="n">nu1</span><span class="o">=</span><span class="mf">1E17</span><span class="p">,</span><span class="n">nu2</span><span class="o">=</span><span class="mf">1E18</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="n">eval_cross_time</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">delta_t_out</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">use_cached</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">frame</span><span class="o">=</span><span class="s1">&#39;obs&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lx</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span><span class="n">lx</span><span class="p">[</span><span class="s1">&#39;flux&#39;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time (</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="k">lg</span>[&#39;time&#39;].unit)
@@ -1043,7 +1061,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_40_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_40_1.png" />
+<img alt="../../../_images/Temp_Ev_two_zones_acc_and_cooling_41_1.png" src="../../../_images/Temp_Ev_two_zones_acc_and_cooling_41_1.png" />
 </section>
 
 
