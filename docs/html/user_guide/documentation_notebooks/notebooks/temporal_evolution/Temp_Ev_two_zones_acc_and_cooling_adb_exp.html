@@ -658,7 +658,7 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested on jetset&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.2.2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="n">on</span> <span class="n">jetset</span> <span class="mf">1.3.0</span><span class="n">rc9</span>
 </pre></div>
 </div>
 <p>In this tutorial I show how to perform a full acc+radiative+adiabatic expansion simulation. To have full understanding of the analysis presented in this tutorial, it is advised to read the paper Tramacere et al (2022) <a class="reference internal" href="../../../../references.html#tramacere2022" id="id1"><span>[Tramacere2022]</span></a>.</p>
@@ -668,6 +668,10 @@ region under the effect of radiative plus adiabatic cooling</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jetset.jet_timedep</span> <span class="kn">import</span> <span class="n">JetTimeEvol</span>
 
 <span class="n">temp_ev_acc</span><span class="o">=</span><span class="n">JetTimeEvol</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;two_zone_rad_acc.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">===&gt;</span> <span class="n">setting</span> <span class="n">C</span> <span class="n">threads</span> <span class="n">to</span> <span class="mi">12</span>
+<span class="o">===&gt;</span> <span class="n">setting</span> <span class="n">C</span> <span class="n">threads</span> <span class="n">to</span> <span class="mi">12</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
@@ -683,7 +687,7 @@ region under the effect of radiative plus adiabatic cooling</p>
 </pre></div>
 </div>
 <i>Table length=29</i>
-<table id="table140664999319968-223370" class="table-striped table-bordered table-condensed">
+<table id="table4603005872-569995" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
 <tr><td>delta t</td><td>time</td><td>5.000000e+01</td><td>s</td><td>0.00029979245799999996</td><td>R/c</td><td>False</td></tr>
 <tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
@@ -737,14 +741,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140664999319968-223370').dataTable()");
+    console.log("$('#table4603005872-569995').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140664999319968-223370').dataTable({
+    $('#table4603005872-569995').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -758,7 +762,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=30</i>
-<table id="table140665002109824-418325" class="table-striped table-bordered table-condensed">
+<table id="table4602829056-946452" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>1.000000e+06</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -813,14 +817,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140665002109824-418325').dataTable()");
+    console.log("$('#table4602829056-946452').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140665002109824-418325').dataTable({
+    $('#table4602829056-946452').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -833,7 +837,7 @@ the next version of the documentation</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_acc</span><span class="o">.</span><span class="n">plot_time_profile</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotTempEvDiagram</span> <span class="n">at</span> <span class="mh">0x7fef1f7baf10</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotTempEvDiagram</span> <span class="n">at</span> <span class="mh">0x11259a4d0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_11_1.png" src="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_11_1.png" />
@@ -861,7 +865,7 @@ without the effect of the light crossing time, in the observer frame</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;flux (</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="k">lg</span>[&#39;flux&#39;].unit)
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (s cm2))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_18_1.png" src="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_18_1.png" />
@@ -877,7 +881,7 @@ the effect of the light crossing time, in the observer frame</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;flux (</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="k">lg</span>[&#39;flux&#39;].unit)
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (cm2 s))&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;flux (erg / (s cm2))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_21_1.png" src="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_21_1.png" />
@@ -915,6 +919,10 @@ the effect of the light crossing time, in the observer frame</p>
 adiabatic expansion</p>
 <p>the following two functions define an estimate of the total extent of
 the simulation to follow the expansion</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>if you use a <code class="docutils literal notranslate"><span class="pre">jet</span></code> model with <code class="docutils literal notranslate"><span class="pre">R</span></code> depending (i.e. you used <a class="reference internal" href="../../../../api/jetset.jet_model.JetBase.html#jetset.jet_model.JetBase.make_conical_jet" title="jetset.jet_model.JetBase.make_conical_jet"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JetBase.make_conical_jet()</span></code></a>) to perform a temporal evolution (in the <a class="reference internal" href="../../../../api/jetset.jet_timedep.JetTimeEvol.html#jetset.jet_timedep.JetTimeEvol" title="jetset.jet_timedep.JetTimeEvol"><code class="xref py py-class docutils literal notranslate"><span class="pre">JetTimeEvol</span></code></a> class), the dependencies on <code class="docutils literal notranslate"><span class="pre">R</span></code> will be removed, and to have <code class="docutils literal notranslate"><span class="pre">R</span></code> dependent on the position across the jet axis, use the parameter <code class="docutils literal notranslate"><span class="pre">beta_exp_R</span></code> in the <a class="reference internal" href="../../../../api/jetset.jet_timedep.JetTimeEvol.html#jetset.jet_timedep.JetTimeEvol" title="jetset.jet_timedep.JetTimeEvol"><code class="xref py py-class docutils literal notranslate"><span class="pre">JetTimeEvol</span></code></a> instead. In the next release a more flexible and direct approach will be provided.</p>
+</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">delta_t_est</span><span class="p">(</span><span class="n">t_exp</span><span class="p">,</span><span class="n">R0</span><span class="p">,</span><span class="n">beta_exp</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">t_exp</span><span class="o">+</span><span class="n">R0</span><span class="o">/</span><span class="p">(</span><span class="n">beta_exp</span><span class="o">*</span><span class="mf">3E10</span><span class="p">)</span>
 
@@ -955,6 +963,12 @@ the <code class="docutils literal notranslate"><span class="pre">temp_ev_acc</sp
 <span class="n">temp_ev_expansion</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">gamma_grid_size</span><span class="o">.</span><span class="n">val</span><span class="o">=</span><span class="mi">1500</span>
 </pre></div>
 </div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">===&gt;</span> <span class="n">setting</span> <span class="n">C</span> <span class="n">threads</span> <span class="n">to</span> <span class="mi">12</span>
+<span class="o">===&gt;</span> <span class="n">setting</span> <span class="n">C</span> <span class="n">threads</span> <span class="n">to</span> <span class="mi">12</span>
+<span class="o">===&gt;</span> <span class="n">setting</span> <span class="n">C</span> <span class="n">threads</span> <span class="n">to</span> <span class="mi">12</span>
+<span class="o">===&gt;</span> <span class="n">setting</span> <span class="n">C</span> <span class="n">threads</span> <span class="n">to</span> <span class="mi">12</span>
+</pre></div>
+</div>
 <p>we set to <code class="docutils literal notranslate"><span class="pre">'on'</span></code> the region expansion, and we set the relevant
 paramters</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_expansion</span><span class="o">.</span><span class="n">region_expansion</span><span class="o">=</span><span class="s1">&#39;on&#39;</span>
@@ -977,7 +991,7 @@ paramters</p>
 </pre></div>
 </div>
 <i>Table length=12</i>
-<table id="table140664695788304-842103" class="table-striped table-bordered table-condensed">
+<table id="table4514274832-38200" class="table-striped table-bordered table-condensed">
 <thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
 <tr><td>delta t</td><td>time</td><td>1.000008e+03</td><td>s</td><td>0.005995894232556255</td><td>R/c</td><td>False</td></tr>
 <tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
@@ -1014,14 +1028,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140664695788304-842103').dataTable()");
+    console.log("$('#table4514274832-38200').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140664695788304-842103').dataTable({
+    $('#table4514274832-38200').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1035,7 +1049,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=17</i>
-<table id="table140665001468928-836938" class="table-striped table-bordered table-condensed">
+<table id="table4514275984-516874" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>1.611112e+07</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1077,14 +1091,14 @@ require.config({paths: {
     datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table140665001468928-836938').dataTable()");
+    console.log("$('#table4514275984-516874').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table140665001468928-836938').dataTable({
+    $('#table4514275984-516874').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1095,18 +1109,14 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </script><div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_expansion</span><span class="o">.</span><span class="n">plot_time_profile</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotTempEvDiagram</span> <span class="n">at</span> <span class="mh">0x7fef0d4593a0</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">jetset</span><span class="o">.</span><span class="n">plot_sedfit</span><span class="o">.</span><span class="n">PlotTempEvDiagram</span> <span class="n">at</span> <span class="mh">0x15156bf40</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<img alt="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_37_1.png" src="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_37_1.png" />
-<p><strong>we set ``do_injection=False`` because we want only to evolve the
-particle already injected and evolved in the radiative region of the
-``temp_ev_acc`` model</strong></p>
-<p>setting <code class="docutils literal notranslate"><span class="pre">cache_SEDs_rad=True</span></code> will generate and cache all the SED at
-any time of the <code class="docutils literal notranslate"><span class="pre">NUM_SET</span></code>. <strong>This will increase the computational time
-during the run. Anyhow, will speed up the computation of SEDs and light
-curves. Moreover, these SEDs will be saved in the model, and will be
-read if once you will load the model in the future</strong>.</p>
+<img alt="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_38_1.png" src="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_38_1.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>we set <code class="docutils literal notranslate"><span class="pre">do_injection=False</span></code> because we want only to evolve the particle already injected and evolved in the radiative region of the <code class="docutils literal notranslate"><span class="pre">temp_ev_acc</span></code> model. Setting <code class="docutils literal notranslate"><span class="pre">cache_SEDs_rad=True</span></code> will generate and cache all the SED at any time of the <code class="docutils literal notranslate"><span class="pre">NUM_SET</span></code>. <strong>This will increase the computational time during the run. Anyhow, will speed up the computation of SEDs and light curves. Moreover, these SEDs will be saved in the model, and will be read if once you will load the model in the future</strong>.</p>
+</div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_ev_expansion</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cache_SEDs_rad</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">do_injection</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1150,7 +1160,7 @@ adiabatic expansion simulations, for both the radio and gamma</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x7feee3d7a2e0</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x10d0dfb80</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_44_1.png" src="../../../../_images/Temp_Ev_two_zones_acc_and_cooling_adb_exp_44_1.png" />

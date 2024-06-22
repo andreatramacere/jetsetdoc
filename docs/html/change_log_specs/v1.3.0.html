@@ -755,11 +755,16 @@ since will not increase the speed performance.</p>
 </section>
 <section id="ec-emission">
 <h3>EC emission<a class="headerlink" href="#ec-emission" title="Link to this heading">#</a></h3>
-<ul class="simple">
+<ul>
 <li><p>Improved EC computation for large angles for anisotropic external fields</p></li>
 <li><p>Added convenience methods for conical jet and EC fields:</p>
 <ul>
-<li><p>method <a class="reference internal" href="../api/jetset.jet_model.JetBase.html#jetset.jet_model.JetBase.make_conical_jet" title="jetset.jet_model.JetBase.make_conical_jet"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JetBase.make_conical_jet()</span></code></a> class will set parameters dependencies to have conical jet constraining the blob radius</p></li>
+<li><p>method <a class="reference internal" href="../api/jetset.jet_model.JetBase.html#jetset.jet_model.JetBase.make_conical_jet" title="jetset.jet_model.JetBase.make_conical_jet"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JetBase.make_conical_jet()</span></code></a> class will set parameters dependencies to have conical jet constraining the blob radius</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>if you use a <code class="docutils literal notranslate"><span class="pre">jet</span></code> model with <code class="docutils literal notranslate"><span class="pre">R</span></code> depending (i.e. you used <a class="reference internal" href="../api/jetset.jet_model.JetBase.html#jetset.jet_model.JetBase.make_conical_jet" title="jetset.jet_model.JetBase.make_conical_jet"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JetBase.make_conical_jet()</span></code></a>) to perform a temporal evolution (in the <a class="reference internal" href="../api/jetset.jet_timedep.JetTimeEvol.html#jetset.jet_timedep.JetTimeEvol" title="jetset.jet_timedep.JetTimeEvol"><code class="xref py py-class docutils literal notranslate"><span class="pre">JetTimeEvol</span></code></a> class), the dependencies on <code class="docutils literal notranslate"><span class="pre">R</span></code> will be removed, and to have <code class="docutils literal notranslate"><span class="pre">R</span></code> dependent on the position across the jet axis, use the parameter <code class="docutils literal notranslate"><span class="pre">beta_exp_R</span></code> in the <a class="reference internal" href="../api/jetset.jet_timedep.JetTimeEvol.html#jetset.jet_timedep.JetTimeEvol" title="jetset.jet_timedep.JetTimeEvol"><code class="xref py py-class docutils literal notranslate"><span class="pre">JetTimeEvol</span></code></a> instead. In the next release a more flexible and direct approach will be provided.</p>
+</div>
+</li>
 <li><p>method <a class="reference internal" href="../api/jetset.jet_model.JetBase.html#jetset.jet_model.JetBase.set_EC_dependencies" title="jetset.jet_model.JetBase.set_EC_dependencies"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JetBase.set_EC_dependencies()</span></code></a> class will set parameters dependencies to have scaling relations between BLR and DT radius and disk luminosity</p></li>
 </ul>
 </li>
