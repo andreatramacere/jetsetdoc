@@ -1,7 +1,0 @@
-<map id="inheritance99b47697b7" name="inheritance99b47697b7">
-<area shape="rect" id="node1" title="Support combining model expressions and caching results." alt="" coords="256,4,344,23"/>
-<area shape="rect" id="node2" title="The base class for Sherpa models." alt="" coords="166,4,220,23"/>
-<area shape="rect" id="node3" href="jetset.sherpa_plugin.JetsetSherpaModel.html#jetset.sherpa_plugin.JetsetSherpaModel" target="_top" title="authomatic sherpa model generator" alt="" coords="661,4,764,23"/>
-<area shape="rect" id="node4" title="Allow 1D models to be regridded." alt="" coords="515,4,625,23"/>
-<area shape="rect" id="node5" title="Prevents attribute deletion and setting of new attributes after" alt="" coords="4,4,130,23"/>
-</map>
