@@ -1,0 +1,8 @@
+<map id="inheritance5d6e991d97" name="inheritance5d6e991d97">
+<area shape="rect" id="node1" href="jetset.jet_emitters.ArrayDistribution.html#jetset.jet_emitters.ArrayDistribution" target="_top" title="Pair of emitter&#45;energy and density arrays used for tabulated spectra." alt="" coords="29,81,148,108"/>
+<area shape="rect" id="node2" href="jetset.jet_emitters.BaseEmittersDistribution.html#jetset.jet_emitters.BaseEmittersDistribution" target="_top" title="Base implementation for emitter distribution parameterizations." alt="" coords="5,31,172,57"/>
+<area shape="rect" id="node4" href="jetset.jet_emitters.EmittersDistribution.html#jetset.jet_emitters.EmittersDistribution" target="_top" title="Jet&#45;coupled emitter distribution for electrons or protons." alt="" coords="227,5,363,32"/>
+<area shape="rect" id="node6" href="jetset.jet_emitters.InjEmittersDistribution.html#jetset.jet_emitters.InjEmittersDistribution" target="_top" title="Injection emitter distribution used in time/equilibrium calculations." alt="" coords="220,56,370,83"/>
+<area shape="rect" id="node3" href="jetset.jet_emitters.EmittersArrayDistribution.html#jetset.jet_emitters.EmittersArrayDistribution" target="_top" title="Emitter distribution defined by user&#45;provided tabulated arrays." alt="" coords="425,5,592,32"/>
+<area shape="rect" id="node5" href="jetset.jet_emitters.InjEmittersArrayDistribution.html#jetset.jet_emitters.InjEmittersArrayDistribution" target="_top" title="Array&#45;based injection distribution ``Q(gamma)`` implementation." alt="" coords="418,56,599,83"/>
+</map>

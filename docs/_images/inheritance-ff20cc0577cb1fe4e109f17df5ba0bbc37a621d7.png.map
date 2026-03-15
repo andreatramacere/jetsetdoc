@@ -1,0 +1,7 @@
+<map id="inheritancea1f143bf72" name="inheritancea1f143bf72">
+<area shape="rect" id="node1" href="jetset.jet_model.GalacticBeamed.html#jetset.jet_model.GalacticBeamed" target="_top" title="Beamed galactic&#45;source specialization of :class:`Jet`." alt="" coords="365,5,483,32"/>
+<area shape="rect" id="node3" href="jetset.jet_model.GalacticUnbeamed.html#jetset.jet_model.GalacticUnbeamed" target="_top" title="Unbeamed galactic&#45;source specialization of :class:`GalacticBeamed`." alt="" coords="531,5,663,32"/>
+<area shape="rect" id="node2" href="jetset.jet_model.Jet.html#jetset.jet_model.Jet" target="_top" title="Concrete jet model for leptonic or hadronic emitter populations." alt="" coords="245,5,317,32"/>
+<area shape="rect" id="node4" href="jetset.jet_model.JetBase.html#jetset.jet_model.JetBase" target="_top" title="Base jet model wrapping the jetkernel backend." alt="" coords="125,5,197,32"/>
+<area shape="rect" id="node5" href="jetset.base_model.Model.html#jetset.base_model.Model" target="_top" title="Base class for analytical and numerical SED models." alt="" coords="5,5,77,32"/>
+</map>
