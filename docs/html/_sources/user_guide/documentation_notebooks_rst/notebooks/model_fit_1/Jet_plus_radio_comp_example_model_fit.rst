@@ -1062,6 +1062,8 @@ computational time is even longer:
    contour_migrad=model_minimizer_minuit.minimizer.mncontour('r','s')
    contour_plot_migrad=model_minimizer_minuit.minimizer.draw_mncontour('r','s')
 
+.. _model_fitting_1_mcmc:
+
 MCMC sampling
 -------------
 
@@ -1505,4 +1507,3 @@ Save and reuse MCMC
 
 
 .. image:: Jet_plus_radio_comp_example_model_fit_files/Jet_plus_radio_comp_example_model_fit_97_1.png
-

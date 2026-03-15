@@ -165,6 +165,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="change_log_specs/v1.4.0.html">what's new in JetSeT v1.4.0?</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="changelog.html">changelog</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="change_log_specs/v1.4.0.html"> Version 1.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="change_log_specs/v1.3.0.html"> Version 1.3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="change_log_specs/v1.2.2.html"> Version 1.2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="change_log_specs/v1.2.1.html"> Version 1.2.1</a></li>
@@ -186,6 +187,7 @@
 <li class="toctree-l3"><a class="reference internal" href="user_guide/documentation_notebooks_rst/notebooks/composite_model/Composite_model.html"> composite models  *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user_guide/documentation_notebooks_rst/notebooks/jet_radio_component/Jet_example_radio_component.html"> composite models: a jet plus analytical extend radio component  *New (v1.4.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user_guide/documentation_notebooks_rst/notebooks/composite_model/Composite_model_two_zone.html"> composite models: a two-zone jet  *New (v1.3.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user_guide/documentation_notebooks_rst/notebooks/internal_abs/int_abs.html"> internal absorption for EC fields New (v1.4.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user_guide/documentation_notebooks_rst/notebooks/depending_pars/depending_pars.html"> dependent parameters  *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user_guide/documentation_notebooks_rst/notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 
@@ -645,7 +647,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-binaries-from-github">Install binaries from GitHub</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-jetset-from-source">Install the JetSeT from source</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-code">Download the code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-source-using-the-install-sh-script">Installation from source using the <cite>install.sh</cite> script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-source-using-the-install-sh-script-recommended">Installation from source using the <cite>install.sh</cite> script (recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-source-without-using-the-install-sh-script">Installation from source without using the <cite>install.sh</cite> script</a></li>
 </ul>
 </li>
 </ul>
@@ -757,8 +760,8 @@ pip<span class="w"> </span>install<span class="w"> </span>ipython<span class="w"
 </li>
 </ul>
 </section>
-<section id="installation-from-source-using-the-install-sh-script">
-<h3>Installation from source using the <cite>install.sh</cite> script<a class="headerlink" href="#installation-from-source-using-the-install-sh-script" title="Link to this heading">#</a></h3>
+<section id="installation-from-source-using-the-install-sh-script-recommended">
+<h3>Installation from source using the <cite>install.sh</cite> script (recommended)<a class="headerlink" href="#installation-from-source-using-the-install-sh-script-recommended" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>run on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh
@@ -784,6 +787,23 @@ pytest<span class="w"> </span>--disable-warnings<span class="w">  </span>--pyarg
 <p class="admonition-title">Important</p>
 <p>if pip or conda fails to install swig, you can try one of the following alternative <a class="reference internal" href="swig.html#swig"><span class="std std-ref">Swig installation</span></a></p>
 </div>
+</section>
+<section id="installation-from-source-without-using-the-install-sh-script">
+<h3>Installation from source without using the <cite>install.sh</cite> script<a class="headerlink" href="#installation-from-source-without-using-the-install-sh-script" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>install the dependencies:</p>
+<ul class="simple">
+<li><p>for pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+</ul>
+<p>OR</p>
+<ul class="simple">
+<li><p>for conda: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">astropy</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">--file</span> <span class="pre">requirements.txt</span></code></p></li>
+</ul>
+</li>
+<li><p>install the code:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+</li>
+</ul>
 </section>
 </section>
 </section>
@@ -841,7 +861,8 @@ pytest<span class="w"> </span>--disable-warnings<span class="w">  </span>--pyarg
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-binaries-from-github">Install binaries from GitHub</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-jetset-from-source">Install the JetSeT from source</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-code">Download the code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-source-using-the-install-sh-script">Installation from source using the <cite>install.sh</cite> script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-source-using-the-install-sh-script-recommended">Installation from source using the <cite>install.sh</cite> script (recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-source-without-using-the-install-sh-script">Installation from source without using the <cite>install.sh</cite> script</a></li>
 </ul>
 </li>
 </ul>

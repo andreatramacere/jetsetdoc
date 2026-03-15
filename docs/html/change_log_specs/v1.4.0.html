@@ -164,7 +164,8 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../install.html">installation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">what's new in JetSeT v1.4.0?</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../changelog.html">changelog</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../changelog.html">changelog</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"> Version 1.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.3.0.html"> Version 1.3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.2.2.html"> Version 1.2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.2.1.html"> Version 1.2.1</a></li>
@@ -186,6 +187,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/composite_model/Composite_model.html"> composite models  *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/jet_radio_component/Jet_example_radio_component.html"> composite models: a jet plus analytical extend radio component  *New (v1.4.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/composite_model/Composite_model_two_zone.html"> composite models: a two-zone jet  *New (v1.3.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/internal_abs/int_abs.html"> internal absorption for EC fields New (v1.4.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/depending_pars/depending_pars.html"> dependent parameters  *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/custom_emitters_distr/custom_emitters.html">Custom emitters distribution</a></li>
 
@@ -641,12 +643,16 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-features">New features</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mcmc-functionalities">MCMC functionalities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radio-component-in-composite-models">Radio component in composite models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leptonic-equilibrium">Leptonic equilibrium</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-handling">data handling</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ec-emission">EC emission</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improved-functionalities">Improved functionalities</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-fixing">bug fixing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-code-base">C code base</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">installation</a></li>
 </ul>
             </nav>
         </div>
@@ -665,27 +671,63 @@
 <section id="mcmc-functionalities">
 <h3>MCMC functionalities<a class="headerlink" href="#mcmc-functionalities" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>mcmc can now return and plot the mcmc best-fit model according to the log-like</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#NOTE: plot_mcmc_best_fit_model=True, now gets the pars corresponding to the max of the log-like</span>
+<li><p>mcmc can now return and plot the mcmc best-fit model according to the maximum of the log-like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># NOTE: plot_mcmc_best_fit_model=True gets the parameters corresponding to the max log-like</span>
 <span class="n">p</span><span class="o">=</span><span class="n">mcmc</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">sed_data</span><span class="o">=</span><span class="n">sed_data</span><span class="p">,</span><span class="n">fit_range</span><span class="o">=</span><span class="p">[</span><span class="mf">1E11</span><span class="p">,</span> <span class="mf">2E27</span><span class="p">],</span><span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">quantiles</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span><span class="p">],</span><span class="n">plot_mcmc_best_fit_model</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">setlim</span><span class="p">(</span><span class="n">y_min</span><span class="o">=</span><span class="mf">1E-14</span><span class="p">,</span><span class="n">x_min</span><span class="o">=</span><span class="mf">1E6</span><span class="p">,</span><span class="n">x_max</span><span class="o">=</span><span class="mf">2E28</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
-</ul>
-<p>the mcmc best fit model can be easily accessed:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span><span class="o">.</span><span class="n">reset_to_mcmc_best_fit</span><span class="p">()</span>
+<li><p>the mcmc best-fit model can be easily restored:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mcmc</span><span class="o">.</span><span class="n">reset_to_mcmc_best_fit</span><span class="p">()</span>
 </pre></div>
 </div>
-</div></blockquote>
-<ul>
+</li>
 <li><p><a class="reference internal" href="../api/jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler.set_bounds" title="jetset.mcmc.McmcSampler.set_bounds"><code class="xref py py-meth docutils literal notranslate"><span class="pre">McmcSampler.set_bounds()</span></code></a> method can preserve or not fit boundaries</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#NOTE: preserve_fit_range=True preserves the model fit range for each parameter used in the MCMC</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># NOTE: preserve_fit_range=True preserves the model fit range for each parameter used in the MCMC</span>
 <span class="n">mcmc</span><span class="o">.</span><span class="n">set_bounds</span><span class="p">(</span><span class="n">bound</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span><span class="n">bound_rel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">preserve_fit_range</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
+<li><p>A complete example is available in <a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/model_fit_1/Jet_plus_radio_comp_example_model_fit.html#model-fitting-1-mcmc"><span class="std std-ref">the MCMC section of model fitting 1</span></a></p></li>
+</ul>
+</section>
+<section id="radio-component-in-composite-models">
+<h3>Radio component in composite models<a class="headerlink" href="#radio-component-in-composite-models" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Added a new analytical radio component, <a class="reference internal" href="../api/jetset.jet_radio_component.RadioSpectrum.html#jetset.jet_radio_component.RadioSpectrum" title="jetset.jet_radio_component.RadioSpectrum"><code class="xref py py-class docutils literal notranslate"><span class="pre">RadioSpectrum</span></code></a>, for extended jet radio emission
+with self-absorption turnover and high-frequency cutoff. See <a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/jet_radio_component/Jet_example_radio_component.html#jet-radio-component"><span class="std std-ref">Jet Radio Component: RadioSpectrum</span></a></p></li>
+<li><p><a class="reference internal" href="../api/jetset.jet_radio_component.RadioSpectrum.html#jetset.jet_radio_component.RadioSpectrum" title="jetset.jet_radio_component.RadioSpectrum"><code class="xref py py-class docutils literal notranslate"><span class="pre">RadioSpectrum</span></code></a> can be combined with a jet model in <a class="reference internal" href="../api/jetset.model_manager.FitModel.html#jetset.model_manager.FitModel" title="jetset.model_manager.FitModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">FitModel</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">jetset.jet_radio_component</span><span class="w"> </span><span class="kn">import</span> <span class="n">RadioSpectrum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">jetset.model_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">FitModel</span>
+
+<span class="n">fit_model</span> <span class="o">=</span> <span class="n">FitModel</span><span class="p">(</span><span class="n">jet</span><span class="o">=</span><span class="n">prefit_jet</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;SSC-best-fit-lsb&#39;</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">fit_model</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">RadioSpectrum</span><span class="p">())</span>
+<span class="n">fit_model</span><span class="o">.</span><span class="n">composite_expr</span> <span class="o">=</span> <span class="s1">&#39;(jet_leptonic+radio_spectrum)&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>A complete fitting workflow (SSC + extended radio component, minuit and MCMC) is available in <a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/model_fit_1/Jet_plus_radio_comp_example_model_fit.html#model-fitting-1"><span class="std std-ref">Model fitting 1: Only SSC and extended radio jet</span></a></p></li>
+</ul>
+</section>
+<section id="leptonic-equilibrium">
+<h3>Leptonic equilibrium<a class="headerlink" href="#leptonic-equilibrium" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Added support for leptonic equilibrium jet models using injected emitters distributions.
+See <a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/jet_leptonic_equilibrium/Jet_example_leptonic_eq.html#jet-leptonic-equilibrium"><span class="std std-ref">Leptonic equilibrium</span></a></p></li>
+<li><p>The model can be created by passing an <code class="xref py py-class docutils literal notranslate"><span class="pre">InjEmittersFactory</span></code> distribution to <a class="reference internal" href="../api/jetset.jet_model.Jet.html#jetset.jet_model.Jet" title="jetset.jet_model.Jet"><code class="xref py py-class docutils literal notranslate"><span class="pre">Jet</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">jetset.jet_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Jet</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">jetset.jet_emitters_factory</span><span class="w"> </span><span class="kn">import</span> <span class="n">InjEmittersFactory</span>
+
+<span class="n">q_inj</span> <span class="o">=</span> <span class="n">InjEmittersFactory</span><span class="p">()</span><span class="o">.</span><span class="n">create_inj_emitters</span><span class="p">(</span><span class="s1">&#39;pl&#39;</span><span class="p">)</span>
+<span class="n">my_jet</span> <span class="o">=</span> <span class="n">Jet</span><span class="p">(</span><span class="n">emitters_distribution</span><span class="o">=</span><span class="n">q_inj</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Validation against the Fokker-Planck time-dependent solution in <a class="reference internal" href="../api/jetset.jet_timedep.JetTimeEvol.html#jetset.jet_timedep.JetTimeEvol" title="jetset.jet_timedep.JetTimeEvol"><code class="xref py py-class docutils literal notranslate"><span class="pre">JetTimeEvol</span></code></a>:
+<a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/jet_leptonic_equilibrium/leptonic_validate_temp_ev.html#leptonic-equilibrium-jet-validation-guide"><span class="std std-ref">Validation of the leptonic equilibrium against the Fokker-Plank equation solution</span></a></p></li>
+<li><p>End-to-end model fitting workflow with MCMC for leptonic equilibrium models:
+<a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/model_fit_4/Jet_example_model_fit_leptonic_eq.html#model-fitting-4"><span class="std std-ref">Model fitting 1: Leptonic equilibrim</span></a></p></li>
 </ul>
 </section>
 <section id="data-handling">
@@ -697,18 +739,79 @@
 </section>
 <section id="ec-emission">
 <h3>EC emission<a class="headerlink" href="#ec-emission" title="Link to this heading">#</a></h3>
-<ul class="simple">
+<ul>
 <li><p>added pair production absorption for Dusty Torus and Broad Line Region</p></li>
+<li><p>internal absorption can be enabled for EC components (DT/BLR) and used in fitting workflows.
+See <a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/internal_abs/int_abs.html#int-abs-guide"><span class="std std-ref">Internal absorption</span></a> and <span class="xref std std-ref">model_fitting_EC</span></p></li>
+<li><p>optional <code class="docutils literal notranslate"><span class="pre">use_R_H_profile_extrapolation</span></code> in internal absorption setup to speed up evaluations:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jetset_model</span><span class="o">.</span><span class="n">enable_internal_absorption</span><span class="p">(</span><span class="s1">&#39;DT&#39;</span><span class="p">,</span> <span class="n">use_R_H_profile_extrapolation</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
 </ul>
 </section>
 <section id="improved-functionalities">
 <h3>Improved functionalities<a class="headerlink" href="#improved-functionalities" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>added new user-guide fitting notebooks for v1.4.0:</p>
+<ul>
+<li><p><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/model_fit_1/Jet_plus_radio_comp_example_model_fit.html#model-fitting-1"><span class="std std-ref">Model fitting 1: Only SSC and extended radio jet</span></a> (SSC + extended radio component)</p></li>
+<li><p><span class="xref std std-ref">model_fitting_EC</span> (EC model fitting, with optional internal absorption)</p></li>
+<li><p><a class="reference internal" href="../user_guide/documentation_notebooks_rst/notebooks/model_fit_4/Jet_example_model_fit_leptonic_eq.html#model-fitting-4"><span class="std std-ref">Model fitting 1: Leptonic equilibrim</span></a> (leptonic equilibrium model fitting)</p></li>
+</ul>
+</li>
+</ul>
 </section>
 </section>
 <section id="bug-fixing">
 <h2>bug fixing<a class="headerlink" href="#bug-fixing" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>bug fixed</p></li>
+<li><p>minor bug fixes</p></li>
+<li><p>fixed some typo in variable names</p></li>
+</ul>
+</section>
+<section id="c-code-base">
+<h2>C code base<a class="headerlink" href="#c-code-base" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Substantial refactoring of the C code, dividing the blob structure in several sub-structures, with hierarchy.</p></li>
+</ul>
+</section>
+<section id="installation">
+<h2>installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Added source installation via <code class="docutils literal notranslate"><span class="pre">./install.sh</span></code>.</p></li>
+<li><p>Detects if you are in a conda/mamba/micromamba evn or a pip evn, and install JetSeT from source, together with the dependencies</p></li>
+<li><p>When run inside an active conda/mamba environment, <code class="docutils literal notranslate"><span class="pre">./install.sh</span></code> syncs JetSeT constraints
+from <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> into <code class="docutils literal notranslate"><span class="pre">$CONDA_PREFIX/conda-meta/pinned</span></code>. This pins JetSeT
+requirements in that environment and helps prevent later conda/mamba installs of other packages
+from overriding them. For pip virtual env, the problem</p></li>
+<li><p>This script is recommended when binaries are not available for your Python/platform, or for developers and advanced users.</p></li>
+<li><p>Run the script from the project root to install dependencies, compile extensions, and install JetSeT:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh
+</pre></div>
+</div>
+</li>
+<li><p>If you want to skip the installation of dependencies</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh<span class="w"> </span>-skip-dep
+</pre></div>
+</div>
+</li>
+<li><p>If you want to experiment with different requirements (do it on your own risk):</p>
+<ul class="simple">
+<li><p>edit the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> accordingly and:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh
+</pre></div>
+</div>
+</li>
+<li><p>Verify the installation with, optional (not within the code repo dir):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import jetset; print(jetset.__version__)&quot;</span>
+pytest<span class="w"> </span>--disable-warnings<span class="w"> </span>--pyargs<span class="w"> </span>-vvv<span class="w"> </span>jetset.tests.test_users::TestUser
+</pre></div>
+</div>
+</li>
+<li><p>Full source-install requirements and troubleshooting are documented in <a class="reference internal" href="../install.html#install-file"><span class="std std-ref">Installation</span></a>
+(including SWIG notes in <a class="reference internal" href="../swig.html#swig"><span class="std std-ref">Swig installation</span></a>).</p></li>
 </ul>
 </section>
 </section>
@@ -762,12 +865,16 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-features">New features</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mcmc-functionalities">MCMC functionalities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radio-component-in-composite-models">Radio component in composite models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leptonic-equilibrium">Leptonic equilibrium</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-handling">data handling</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ec-emission">EC emission</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improved-functionalities">Improved functionalities</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-fixing">bug fixing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-code-base">C code base</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">installation</a></li>
 </ul>
   </nav></div>
 
