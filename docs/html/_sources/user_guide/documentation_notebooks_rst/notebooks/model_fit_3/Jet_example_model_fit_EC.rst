@@ -1352,4 +1352,3 @@ Save and reuse MCMC
 
 .. image:: Jet_example_model_fit_EC_files/Jet_example_model_fit_EC_72_0.png
 
-
