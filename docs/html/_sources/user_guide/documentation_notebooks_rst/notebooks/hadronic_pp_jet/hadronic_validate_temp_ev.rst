@@ -28,18 +28,12 @@ Jet pp
 
 .. parsed-literal::
 
-    tested with 1.3.0
+    tested with 1.4.0rc3
 
 
 .. code:: ipython3
 
     j=Jet(emitters_distribution='plc',verbose=False,emitters_type='protons')
-
-
-.. parsed-literal::
-
-    ===> setting C threads to 14
-
 
 .. code:: ipython3
 
@@ -77,6 +71,12 @@ Jet pp
     U N(p) p>1 TeV=9.999992e-01 erg/cm-3
 
 
+.. parsed-literal::
+
+    /var/folders/rs/w64c54l549x1jl7cp3m6x_q00000gn/T/ipykernel_9953/170936355.py:8: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+      print('U N(p) p>1 TeV=%e erg/cm-3'%(jetkernel.MPC2*np.trapz(j.emitters_distribution.n_gamma_p[m]*j.emitters_distribution.gamma_p[m],j.emitters_distribution.gamma_p[m])))
+
+
 .. code:: ipython3
 
     j.energetic_report(verbose=False)
@@ -87,16 +87,24 @@ Jet pp
     j.emitters_distribution.plot()
 
 
+.. parsed-literal::
+
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/plot_sedfit.py:1235: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      self.fig.tight_layout()
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/jet_emitters.py:633: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      p.fig.tight_layout()
+
+
 
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotPdistr at 0x169e94050>
+    <jetset.plot_sedfit.PlotPdistr at 0x15aece810>
 
 
 
 
-.. image:: hadronic_validate_temp_ev_files/hadronic_validate_temp_ev_10_1.png
+.. image:: hadronic_validate_temp_ev_files/hadronic_validate_temp_ev_10_2.png
 
 
 .. code:: ipython3
@@ -107,12 +115,6 @@ Jet pp
 
     from jetset.jet_model import Jet
     j=Jet.load_model('hadronic.pkl')
-
-
-.. parsed-literal::
-
-    ===> setting C threads to 14
-
 
 setting up the JetTimeEvol model
 --------------------------------
@@ -135,11 +137,16 @@ setting up the JetTimeEvol model
     q_inj.parameters
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=3</i>
-    <table id="table6111005264-787269" class="table-striped table-bordered table-condensed">
+    <table id="table5818703392-251548" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.836150e+07</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -167,14 +174,14 @@ setting up the JetTimeEvol model
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table6111005264-787269').dataTable()");
+        console.log("$('#table5818703392-251548').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table6111005264-787269').dataTable({
+        $('#table5818703392-251548').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -197,6 +204,7 @@ setting up the JetTimeEvol model
 .. code:: ipython3
 
     %matplotlib inline
+    q_inj.update()
     p=q_inj.plot()
     p.ax.plot(gamma_sec_inj, n_gamma_sec_inj,'.',ms=1.5)
     
@@ -207,7 +215,7 @@ setting up the JetTimeEvol model
 
 .. parsed-literal::
 
-    [<matplotlib.lines.Line2D at 0x173ac8610>]
+    [<matplotlib.lines.Line2D at 0x15eecc620>]
 
 
 
@@ -225,13 +233,7 @@ setting up the JetTimeEvol model
 
 .. parsed-literal::
 
-    ===> setting C threads to 14
-    ===> setting C threads to 14
-
-
-.. parsed-literal::
-
-    /Users/orion/miniforge3/envs/jetset1.3.0/lib/python3.11/site-packages/jetset/model_manager.py:158: UserWarning: no cosmology defined, using FlatLambdaCDM(name="Planck13", H0=67.77 km / (Mpc s), Om0=0.30712, Tcmb0=2.7255 K, Neff=3.046, m_nu=[0.   0.   0.06] eV, Ob0=0.048252)
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/model_manager.py:259: UserWarning: no cosmology defined, using FlatLambdaCDM(name="Planck13", H0=67.77 km / (Mpc s), Om0=0.30712, Tcmb0=2.7255 K, Neff=3.046, m_nu=[0.   0.   0.06] eV, Ob0=0.048252)
       warnings.warn(m)
 
 
@@ -289,11 +291,16 @@ we use the acc region with escape time equal to radiative region
     --------------------------------------------------------------------------------
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table6284360080-36098" class="table-striped table-bordered table-condensed">
+    <table id="table5888251072-974724" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
     <tr><td>delta t</td><td>time</td><td>2.500000e+03</td><td>s</td><td>7.494811449999999e-05</td><td>R/c</td><td>False</td></tr>
     <tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
@@ -330,14 +337,14 @@ we use the acc region with escape time equal to radiative region
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table6284360080-36098').dataTable()");
+        console.log("$('#table5888251072-974724').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table6284360080-36098').dataTable({
+        $('#table5888251072-974724').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -357,11 +364,16 @@ we use the acc region with escape time equal to radiative region
     --------------------------------------------------------------------------------
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=17</i>
-    <table id="table6235657936-703144" class="table-striped table-bordered table-condensed">
+    <table id="table5887550928-413770" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>5.000000e+09</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.100000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -403,14 +415,14 @@ we use the acc region with escape time equal to radiative region
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table6235657936-703144').dataTable()");
+        console.log("$('#table5887550928-413770').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table6235657936-703144').dataTable({
+        $('#table5887550928-413770').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -514,7 +526,7 @@ acceleration region
 
 .. parsed-literal::
 
-    [<matplotlib.lines.Line2D at 0x16c68cbd0>]
+    [<matplotlib.lines.Line2D at 0x15f7954c0>]
 
 
 

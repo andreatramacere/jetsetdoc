@@ -1,0 +1,4 @@
+<map id="inheritance6354c31beb" name="inheritance6354c31beb">
+<area shape="rect" id="node1" href="jetset.mcmc.McmcSampler.html#jetset.mcmc.McmcSampler" target="_top" title="Run and manage ``emcee`` sampling for a fitted JetSeT model." alt="" coords="5,5,111,32"/>
+<area shape="rect" id="node2" href="jetset.mcmc_ultranest.UltraNestSampler.html#jetset.mcmc_ultranest.UltraNestSampler" target="_top" title="UltraNest backend that reuses most of ``McmcSampler`` post&#45;processing." alt="" coords="159,5,284,32"/>
+</map>

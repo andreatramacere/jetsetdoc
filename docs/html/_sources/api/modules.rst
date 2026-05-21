@@ -29,6 +29,8 @@ In the following the package modules are listed.
    loglog_poly_model    <loglog_poly_model.rst>
    mathkernel_helper    <mathkernel_helper.rst>
    mcmc    <mcmc.rst>
+   mcmc_parameters    <mcmc_parameters.rst>
+   mcmc_ultranest    <mcmc_ultranest.rst>
    minimizer    <minimizer.rst>
    model_manager    <model_manager.rst>
    model_parameters    <model_parameters.rst>

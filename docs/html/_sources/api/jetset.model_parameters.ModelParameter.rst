@@ -34,6 +34,7 @@ ModelParameter
       ~ModelParameter.get_description
       ~ModelParameter.get_fit_initial_value
       ~ModelParameter.identity_func
+      ~ModelParameter.make_log
       ~ModelParameter.reset_dependencies
       ~ModelParameter.set
       ~ModelParameter.set_fit_initial_value
@@ -65,6 +66,7 @@ ModelParameter
    .. automethod:: get_description
    .. automethod:: get_fit_initial_value
    .. automethod:: identity_func
+   .. automethod:: make_log
    .. automethod:: reset_dependencies
    .. automethod:: set
    .. automethod:: set_fit_initial_value

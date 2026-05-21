@@ -11,7 +11,7 @@ Implement recurrent nova with using the Galactic class
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 This is a preliminary documentation for an example showing a fully user
@@ -64,7 +64,7 @@ In the following we reproduce the results published in the MAGIC
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotSED at 0x16f61b4d0>
+    <jetset.plot_sedfit.PlotSED at 0x13e37a780>
 
 
 
@@ -241,8 +241,8 @@ setting up an expanding shell
 
 .. raw:: html
 
-    <i>Table length=20</i>
-    <table id="table13335864064-385499" class="table-striped table-bordered table-condensed">
+    <i>Table length=22</i>
+    <table id="table6062078768-876170" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
     <tr><td>BulkLorentzFactor</td><td>jet-bulk-factor</td><td></td><td>1.000000e+00</td></tr>
     <tr><td>U_e</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>2.897863e+00</td></tr>
@@ -253,6 +253,7 @@ setting up an expanding shell
     <tr><td>U_Disk</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_BLR</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_DT</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_CMB</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_Star</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>3.539616e-02</td></tr>
     <tr><td>U_seed_tot</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>4.069699e-02</td></tr>
@@ -261,6 +262,7 @@ setting up an expanding shell
     <tr><td>L_EC_Disk</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_BLR</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_DT</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_Corona</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_CMB</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_Star</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>1.568987e+36</td></tr>
     <tr><td>L_pp_gamma</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>1.962508e+36</td></tr>
@@ -284,17 +286,17 @@ setting up an expanding shell
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13335864064-385499').dataTable()");
+        console.log("$('#table6062078768-876170').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13335864064-385499').dataTable({
+        $('#table6062078768-876170').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -315,7 +317,7 @@ setting up an expanding shell
 .. raw:: html
 
     <i>Table length=20</i>
-    <table id="table13016233216-622461" class="table-striped table-bordered table-condensed">
+    <table id="table6009338048-539139" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>T_esc_e_secondaries</td><td>escape_time</td><td>R / c</td><td>8.640000e+04</td><td>1.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -357,17 +359,17 @@ setting up an expanding shell
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13016233216-622461').dataTable()");
+        console.log("$('#table6009338048-539139').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13016233216-622461').dataTable({
+        $('#table6009338048-539139').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -412,8 +414,16 @@ do accurate IC cooling with KN suppression)**
     p.setlim(y_min=1E-20)
 
 
+.. parsed-literal::
 
-.. image:: galactic_nova_files/galactic_nova_18_0.png
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/plot_sedfit.py:1235: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      self.fig.tight_layout()
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/jet_emitters.py:633: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      p.fig.tight_layout()
+
+
+
+.. image:: galactic_nova_files/galactic_nova_18_1.png
 
 
 .. code:: ipython3
@@ -452,8 +462,8 @@ do accurate IC cooling with KN suppression)**
 
 .. raw:: html
 
-    <i>Table length=20</i>
-    <table id="table13356153888-394222" class="table-striped table-bordered table-condensed">
+    <i>Table length=22</i>
+    <table id="table6060351056-460827" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
     <tr><td>BulkLorentzFactor</td><td>jet-bulk-factor</td><td></td><td>1.000000e+00</td></tr>
     <tr><td>U_e</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>2.897863e+00</td></tr>
@@ -464,6 +474,7 @@ do accurate IC cooling with KN suppression)**
     <tr><td>U_Disk</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_BLR</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_DT</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_CMB</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_Star</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>3.539616e-02</td></tr>
     <tr><td>U_seed_tot</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>4.069699e-02</td></tr>
@@ -472,6 +483,7 @@ do accurate IC cooling with KN suppression)**
     <tr><td>L_EC_Disk</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_BLR</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_DT</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_Corona</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_CMB</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_Star</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>1.568987e+36</td></tr>
     <tr><td>L_pp_gamma</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>1.962508e+36</td></tr>
@@ -495,17 +507,17 @@ do accurate IC cooling with KN suppression)**
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13356153888-394222').dataTable()");
+        console.log("$('#table6060351056-460827').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13356153888-394222').dataTable({
+        $('#table6060351056-460827').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -526,7 +538,7 @@ do accurate IC cooling with KN suppression)**
 .. raw:: html
 
     <i>Table length=22</i>
-    <table id="table13355577184-328317" class="table-striped table-bordered table-condensed">
+    <table id="table6059020304-84473" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -547,7 +559,7 @@ do accurate IC cooling with KN suppression)**
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>DL_cm</td><td>distance</td><td>cm</td><td>7.559910e+21</td><td>0.000000e+00</td><td>3.085678e+24</td><td>False</td><td>False</td></tr>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>v_sh(M)</td><td>user_defined</td><td>km / s</td><td>4.500000e+03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>t(M)</td><td>user_defined</td><td>d</td><td>3.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-    <tr><td>galactic_unbeamed_hadronic_pp</td><td>*M_ej(D,v_sh)</td><td>user_defined</td><td>solMass</td><td>2.483528e-07</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>galactic_unbeamed_hadronic_pp</td><td>*M_ej(D,v_sh)</td><td>user_defined</td><td>Msun</td><td>2.483528e-07</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>NH_pp_ratio(M)</td><td>user_defined</td><td></td><td>3.000000e-05</td><td>0.000000e+00</td><td>1.000000e+03</td><td>False</td><td>False</td></tr>
     <tr><td>galactic_unbeamed_hadronic_pp</td><td>E_k(M)</td><td>user_defined</td><td>erg</td><td>5.000000e+43</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
@@ -570,17 +582,17 @@ do accurate IC cooling with KN suppression)**
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13355577184-328317').dataTable()");
+        console.log("$('#table6059020304-84473').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13355577184-328317').dataTable({
+        $('#table6059020304-84473').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],

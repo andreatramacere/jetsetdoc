@@ -24,7 +24,7 @@ A validation of the integral solution for the :math:`e^{\pm}` equilibrium used f
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 To get an hadronic jet with ``pp`` interaction, we set the
@@ -48,16 +48,24 @@ equilibrium solution.
     j.emitters_distribution.plot()
 
 
+.. parsed-literal::
+
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/plot_sedfit.py:1235: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      self.fig.tight_layout()
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/jet_emitters.py:633: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      p.fig.tight_layout()
+
+
 
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotPdistr at 0x16ff0c530>
+    <jetset.plot_sedfit.PlotPdistr at 0x13a817050>
 
 
 
 
-.. image:: hadronic_files/hadronic_10_1.png
+.. image:: hadronic_files/hadronic_10_2.png
 
 
 Changing a parameter will update the eq. solution for the plot of the
@@ -74,7 +82,7 @@ emitters.
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotPdistr at 0x317ac14f0>
+    <jetset.plot_sedfit.PlotPdistr at 0x13a9b7020>
 
 
 
@@ -151,7 +159,7 @@ emitters.
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13285944704-907774" class="table-striped table-bordered table-condensed">
+    <table id="table5285518496-642994" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_hadronic_pp</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_hadronic_pp</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -185,17 +193,17 @@ emitters.
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13285944704-907774').dataTable()");
+        console.log("$('#table5285518496-642994').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13285944704-907774').dataTable({
+        $('#table5285518496-642994').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -231,8 +239,16 @@ emitters.
     p.setlim(y_min=1E-40)
 
 
+.. parsed-literal::
 
-.. image:: hadronic_files/hadronic_15_0.png
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/plot_sedfit.py:1235: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      self.fig.tight_layout()
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/jet_emitters.py:633: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      p.fig.tight_layout()
+
+
+
+.. image:: hadronic_files/hadronic_15_1.png
 
 
 .. code:: ipython3
@@ -345,7 +361,7 @@ Jet pp Consistency with Kelner 2006
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table6073412272-787008" class="table-striped table-bordered table-condensed">
+    <table id="table5286564768-594852" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_hadronic_pp</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+18</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_hadronic_pp</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -379,17 +395,17 @@ Jet pp Consistency with Kelner 2006
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table6073412272-787008').dataTable()");
+        console.log("$('#table5286564768-594852').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table6073412272-787008').dataTable({
+        $('#table5286564768-594852').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -419,12 +435,122 @@ Jet pp Consistency with Kelner 2006
 
 .. code:: ipython3
 
+    j.energetic_report()
+
+
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
+
+.. raw:: html
+
+    <i>Table length=44</i>
+    <table id="table5286773008-120195" class="table-striped table-bordered table-condensed">
+    <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
+    <tr><td>BulkLorentzFactor</td><td>jet-bulk-factor</td><td></td><td>1.000000e+01</td></tr>
+    <tr><td>U_e</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>8.737136e-11</td></tr>
+    <tr><td>U_B</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>3.978874e-02</td></tr>
+    <tr><td>U_p</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>2.106392e+00</td></tr>
+    <tr><td>U_p_target</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.503276e-03</td></tr>
+    <tr><td>U_Synch</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.559198e-09</td></tr>
+    <tr><td>U_Synch_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>1.559198e-05</td></tr>
+    <tr><td>U_Disk</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_BLR</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_DT</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_CMB</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Star</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Disk_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_BLR_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_DT_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_CMB_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Star_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_seed_tot</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.559198e-09</td></tr>
+    <tr><td>L_Sync_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>5.873972e+38</td></tr>
+    <tr><td>L_SSC_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>1.468220e+31</td></tr>
+    <tr><td>L_EC_Disk_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_BLR_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_DT_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_Corona_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_CMB_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_Star_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_pp_gamma_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>1.475118e+39</td></tr>
+    <tr><td>jet_L_Sync</td><td>jet Lum.</td><td>erg / s</td><td>1.461132e+40</td></tr>
+    <tr><td>jet_L_SSC</td><td>jet Lum.</td><td>erg / s</td><td>3.652151e+32</td></tr>
+    <tr><td>jet_L_EC_Disk</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_EC_BLR</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_EC_DT</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_EC_Corona</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_EC_Star</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_EC_CMB</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_pp_gamma</td><td>jet Lum.</td><td>erg / s</td><td>3.669309e+40</td></tr>
+    <tr><td>jet_L_rad</td><td>jet Lum.</td><td>erg / s</td><td>5.130441e+40</td></tr>
+    <tr><td>jet_L_kin</td><td>jet Lum.</td><td>erg / s</td><td>1.973910e+49</td></tr>
+    <tr><td>jet_L_tot</td><td>jet Lum.</td><td>erg / s</td><td>2.011196e+49</td></tr>
+    <tr><td>jet_L_e</td><td>jet Lum.</td><td>erg / s</td><td>8.187612e+38</td></tr>
+    <tr><td>jet_L_B</td><td>jet Lum.</td><td>erg / s</td><td>3.728622e+47</td></tr>
+    <tr><td>jet_L_p</td><td>jet Lum.</td><td>erg / s</td><td>1.973910e+49</td></tr>
+    </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+    .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+    display: inline-block; margin-right: 1em; }
+    .paginate_button { margin-right: 5px; }
+    </style>
+    <script>
+    
+    var astropy_sort_num = function(a, b) {
+        var a_num = parseFloat(a);
+        var b_num = parseFloat(b);
+    
+        if (isNaN(a_num) && isNaN(b_num))
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        else if (!isNaN(a_num) && !isNaN(b_num))
+            return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+        else
+            return isNaN(a_num) ? -1 : 1;
+    }
+    
+    require.config({paths: {
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+    }});
+    require(["datatables"], function(){
+        console.log("$('#table5286773008-120195').dataTable()");
+    
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "optionalnum-asc": astropy_sort_num,
+        "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+    });
+    
+        $('#table5286773008-120195').dataTable({
+            order: [],
+            pageLength: 100,
+            lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+            pagingType: "full_numbers",
+            columnDefs: [{targets: [3], type: "optionalnum"}]
+        });
+    });
+    </script>
+
+
+
+.. code:: ipython3
+
     %matplotlib inline
     p=j.emitters_distribution.plot()
 
 
+.. parsed-literal::
 
-.. image:: hadronic_files/hadronic_22_0.png
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/plot_sedfit.py:1235: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      self.fig.tight_layout()
+    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/jet_emitters.py:633: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+      p.fig.tight_layout()
+
+
+
+.. image:: hadronic_files/hadronic_23_1.png
 
 
 .. code:: ipython3
@@ -452,7 +578,7 @@ Jet pp Consistency with Kelner 2006
 
 
 
-.. image:: hadronic_files/hadronic_23_0.png
+.. image:: hadronic_files/hadronic_24_0.png
 
 
 .. code:: ipython3
@@ -501,12 +627,12 @@ Jet pp Consistency with Kelner 2006
 
 .. parsed-literal::
 
-    <matplotlib.lines.Line2D at 0x31a459970>
+    <matplotlib.lines.Line2D at 0x13b8ffda0>
 
 
 
 
-.. image:: hadronic_files/hadronic_24_1.png
+.. image:: hadronic_files/hadronic_25_1.png
 
 
 .. code:: ipython3
@@ -549,7 +675,7 @@ Jet pp Consistency with Kelner 2006
 
 
 
-.. image:: hadronic_files/hadronic_25_1.png
+.. image:: hadronic_files/hadronic_26_1.png
 
 
 .. include:: /references.rst

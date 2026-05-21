@@ -9,7 +9,7 @@ Phenomenological model constraining: SSC theory
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 .. code:: ipython3
@@ -130,7 +130,7 @@ This section is based on the work presented in
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13447158608-872603" class="table-striped table-bordered table-condensed">
+    <table id="table13069653232-466701" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -164,17 +164,17 @@ This section is based on the work presented in
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13447158608-872603').dataTable()");
+        console.log("$('#table13069653232-466701').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13447158608-872603').dataTable({
+        $('#table13069653232-466701').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -217,7 +217,7 @@ This section is based on the work presented in
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x321fc0320>
+    <matplotlib.legend.Legend at 0x30c0cf8c0>
 
 
 
@@ -236,7 +236,7 @@ This section is based on the work presented in
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x321baf7a0>
+    <matplotlib.legend.Legend at 0x308b4fb00>
 
 
 
@@ -374,7 +374,7 @@ Synchrotron trend for :math:`\gamma_{min}`
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x321aaeed0>
+    <matplotlib.legend.Legend at 0x3089163c0>
 
 
 
@@ -489,7 +489,7 @@ Synchrotron trend for the low-energy spectral slope
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x323d96570>
+    <matplotlib.legend.Legend at 0x30b2da4e0>
 
 
 
@@ -760,7 +760,7 @@ The IC redistribution function
 Transition from TH to KN regime for the IC emission: changing the curvature in the high-enegy branch of the emitters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: ../slides/jetset_slides/jetset_slides.018.png
+.. figure:: ../../slides/jetset_slides/jetset_slides.018.png
    :alt: image.png
 
    image.png
@@ -852,7 +852,7 @@ the curvature of the electron distribution (r)
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x320678560>
+    <matplotlib.legend.Legend at 0x31779e3c0>
 
 
 
@@ -936,7 +936,7 @@ Transition from TH to KN regime for the IC emission: changing the turnover energ
 
 .. parsed-literal::
 
-    <matplotlib.collections.PathCollection at 0x321a14410>
+    <matplotlib.collections.PathCollection at 0x329536ab0>
 
 
 
@@ -963,7 +963,7 @@ Transition from TH to KN regime for the IC emission: changing the turnover energ
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x3239b0da0>
+    <matplotlib.legend.Legend at 0x30b04e150>
 
 
 
@@ -993,7 +993,7 @@ Transition from TH to KN regime for the IC emission: changing the turnover energ
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x323936d80>
+    <matplotlib.legend.Legend at 0x329a61c40>
 
 
 

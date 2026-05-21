@@ -29,7 +29,7 @@ In this notebook we show:
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 .. code:: ipython3
@@ -66,7 +66,7 @@ Create the radio component and inspect parameters
 .. raw:: html
 
     <i>Table length=4</i>
-    <table id="table6151132736-81411" class="table-striped table-bordered table-condensed">
+    <table id="table4372976784-424113" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>alpha_radio</td><td>spectral-slope</td><td></td><td>0.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>nu_ssa</td><td>turn-over freq</td><td>Hz</td><td>1.000000e+09</td><td>1.000000e+06</td><td>1.000000e+12</td><td>False</td><td>False</td></tr>
@@ -92,17 +92,17 @@ Create the radio component and inspect parameters
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table6151132736-81411').dataTable()");
+        console.log("$('#table4372976784-424113').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table6151132736-81411').dataTable({
+        $('#table4372976784-424113').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -123,7 +123,7 @@ Create the radio component and inspect parameters
 .. raw:: html
 
     <i>Table length=4</i>
-    <table id="table5487959104-711895" class="table-striped table-bordered table-condensed">
+    <table id="table4987368944-507145" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>alpha_radio</td><td>spectral-slope</td><td></td><td>0.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>nu_ssa</td><td>turn-over freq</td><td>Hz</td><td>1.000000e+09</td><td>1.000000e+06</td><td>1.000000e+12</td><td>False</td><td>False</td></tr>
@@ -149,17 +149,17 @@ Create the radio component and inspect parameters
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table5487959104-711895').dataTable()");
+        console.log("$('#table4987368944-507145').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table5487959104-711895').dataTable({
+        $('#table4987368944-507145').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -214,7 +214,7 @@ Evaluate and plot the standalone spectrum
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotSED at 0x177608620>
+    <jetset.plot_sedfit.PlotSED at 0x12fc39e80>
 
 
 
@@ -232,7 +232,7 @@ Evaluate and plot the standalone spectrum
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotSED at 0x1779b8680>
+    <jetset.plot_sedfit.PlotSED at 0x13f89b620>
 
 
 
@@ -250,7 +250,7 @@ Evaluate and plot the standalone spectrum
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotSED at 0x305381280>
+    <jetset.plot_sedfit.PlotSED at 0x13fe15a60>
 
 
 
@@ -268,7 +268,7 @@ Evaluate and plot the standalone spectrum
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotSED at 0x305af4380>
+    <jetset.plot_sedfit.PlotSED at 0x13fb3c080>
 
 
 
@@ -332,7 +332,7 @@ Evaluate and plot the standalone spectrum
 .. raw:: html
 
     <i>Table length=15</i>
-    <table id="table13288329904-41028" class="table-striped table-bordered table-condensed">
+    <table id="table13256090176-399843" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -369,17 +369,17 @@ Evaluate and plot the standalone spectrum
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13288329904-41028').dataTable()");
+        console.log("$('#table13256090176-399843').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13288329904-41028').dataTable({
+        $('#table13256090176-399843').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -410,7 +410,7 @@ Evaluate and plot the standalone spectrum
 .. raw:: html
 
     <i>Table length=15</i>
-    <table id="table13291876768-792240" class="table-striped table-bordered table-condensed">
+    <table id="table13255418576-507059" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -447,17 +447,17 @@ Evaluate and plot the standalone spectrum
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13291876768-792240').dataTable()");
+        console.log("$('#table13255418576-507059').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13291876768-792240').dataTable({
+        $('#table13255418576-507059').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -470,5 +470,5 @@ Evaluate and plot the standalone spectrum
 
 
 .. note::
-    You can fit this composite model with :class:`.ModelMinimizer` or :class:`.McmcSampler` using the same workflow shown in the model-fitting notebooks :ref:`model_fitting_1`
+    You can fit this composite model with :class:`.ModelMinimizer` or :class:`.McmcSampler` using the same workflow shown in the model-fitting notebooks :ref:`model_fitting_ssc_plus_radio_comp`
 

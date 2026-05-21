@@ -10,8 +10,8 @@ McmcSampler
 
    .. autosummary::
 
-      ~McmcSampler.labels
-      ~McmcSampler.par_table
+      ~McmcSampler.best_fit_par_table
+      ~McmcSampler.sampler_parameters
 
    .. rubric:: Methods Summary
 
@@ -31,14 +31,13 @@ McmcSampler
       ~McmcSampler.run_sampler
       ~McmcSampler.save
       ~McmcSampler.set_bounds
-      ~McmcSampler.set_labels
       ~McmcSampler.set_plot_label
-      ~McmcSampler.show_pars
+      ~McmcSampler.tune_burnin
 
    .. rubric:: Attributes Documentation
 
-   .. autoattribute:: labels
-   .. autoattribute:: par_table
+   .. autoattribute:: best_fit_par_table
+   .. autoattribute:: sampler_parameters
 
    .. rubric:: Methods Documentation
 
@@ -56,6 +55,5 @@ McmcSampler
    .. automethod:: run_sampler
    .. automethod:: save
    .. automethod:: set_bounds
-   .. automethod:: set_labels
    .. automethod:: set_plot_label
-   .. automethod:: show_pars
+   .. automethod:: tune_burnin

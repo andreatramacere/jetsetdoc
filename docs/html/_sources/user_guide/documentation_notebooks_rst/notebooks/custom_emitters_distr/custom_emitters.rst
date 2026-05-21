@@ -16,7 +16,7 @@ Custom emitters distribution
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 The user can build custom emitters distributions using the :class:`.EmittersDistribution` class. The following examples show how to implement it
@@ -102,7 +102,7 @@ parameters can be easily set
 .. raw:: html
 
     <i>Table length=6</i>
-    <table id="table13673425440-244441" class="table-striped table-bordered table-condensed">
+    <table id="table5402938256-978343" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -130,17 +130,17 @@ parameters can be easily set
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13673425440-244441').dataTable()");
+        console.log("$('#table5402938256-978343').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13673425440-244441').dataTable({
+        $('#table5402938256-978343').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -154,48 +154,12 @@ parameters can be easily set
 
 .. code:: ipython3
 
+    n_e_super_exp.update()
     p=n_e_super_exp.plot()
 
 
-::
 
-
-    ---------------------------------------------------------------------------
-
-    AttributeError                            Traceback (most recent call last)
-
-    Cell In[10], line 1
-    ----> 1 p=n_e_super_exp.plot()
-
-
-    File ~/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/jet_emitters.py:574, in BaseEmittersDistribution.plot(self, p, y_min, y_max, x_min, x_max, energy_unit, label, loglog)
-        572     p = PlotPdistr(loglog=loglog)
-        573 m=getattr(p,'plot_distr')
-    --> 574 self._plot(m,p,y_min=y_min,y_max=y_max,x_min=x_min,x_max=x_max,energy_unit=energy_unit,label=label,loglog=loglog)
-        575 return p
-
-
-    File ~/miniforge3/envs/jetset/lib/python3.12/site-packages/jetset/jet_emitters.py:468, in BaseEmittersDistribution._plot(self, m, p, y_min, y_max, x_min, x_max, energy_unit, label, loglog)
-        466 if label is None:
-        467     label = 'electrons'
-    --> 468 m(self.gamma_e,
-        469              self.n_gamma_e,
-        470              y_min=y_min,
-        471              y_max=y_max,
-        472              x_min=x_min,
-        473              x_max=x_max,
-        474              particle='electrons',
-        475              energy_unit=energy_unit,
-        476              label=label)
-        477 if getattr(self, '_primaries_done', False) is True:
-        478     if self.gamma_cooling_eq is not None:
-
-
-    AttributeError: 'EmittersDistribution' object has no attribute 'gamma_e'
-
-
-
-.. image:: custom_emitters_files/custom_emitters_18_1.png
+.. image:: custom_emitters_files/custom_emitters_18_0.png
 
 
 .. code:: ipython3
@@ -215,7 +179,7 @@ here we define a bkn power-law
     def distr_func_bkn(gamma_break,gamma,s1,s2):
         return np.power(gamma,-s1)*(1.+(gamma/gamma_break))**(-(s2-s1))
     
-    n_e_bkn=EmittersDistribution('bkn',spectral_type='bkn')
+    n_e_bkn=EmittersDistribution('my_bkn',spectral_type='bkn')
     n_e_bkn.add_par('gamma_break',par_type='turn-over-energy',val=1E3,vmin=1., vmax=None, unit='lorentz-factor')
     n_e_bkn.add_par('s1',par_type='LE_spectral_slope',val=2.5,vmin=-10., vmax=10, unit='')
     n_e_bkn.add_par('s2',par_type='HE_spectral_slope',val=3.2,vmin=-10., vmax=10, unit='')
@@ -223,14 +187,20 @@ here we define a bkn power-law
     n_e_bkn.parameters.show_pars()
     n_e_bkn.parameters.s1.val=2.0
     n_e_bkn.parameters.s2.val=3.5
+    n_e_bkn.update()
     p=n_e_bkn.plot()
+
+
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
 
 
 
 .. raw:: html
 
     <i>Table length=6</i>
-    <table id="table5506864464-237644" class="table-striped table-bordered table-condensed">
+    <table id="table5407252912-980043" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -261,14 +231,14 @@ here we define a bkn power-law
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table5506864464-237644').dataTable()");
+        console.log("$('#table5407252912-980043').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table5506864464-237644').dataTable({
+        $('#table5407252912-980043').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -281,7 +251,7 @@ here we define a bkn power-law
 
 
 
-.. image:: custom_emitters_files/custom_emitters_21_1.png
+.. image:: custom_emitters_files/custom_emitters_21_2.png
 
 
 Passing the custom distribution to the Jet class
@@ -296,12 +266,6 @@ Passing the custom distribution to the Jet class at instantiation time
 
     from jetset.jet_model import Jet
     my_jet=Jet(electron_distribution=n_e_bkn)
-
-
-.. parsed-literal::
-
-    ===> setting C threads to 14
-
 
 .. note:: now the ``n_e_bkn`` will be deep copied, so changes applied to the one passed to the model will not affect the original one
 
@@ -325,7 +289,7 @@ Passing the custom distribution to the Jet class at instantiation time
     geometry: spherical  
     
     electrons distribution:
-     type: bkn  
+     type: my_bkn  
      gamma energy grid size:  201
      gmin grid : 2.000000e+00
      gmax grid : 1.000000e+06
@@ -357,11 +321,16 @@ Passing the custom distribution to the Jet class at instantiation time
     --------------------------------------------------------------------------------
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13160247888-304886" class="table-striped table-bordered table-condensed">
+    <table id="table5670848656-876104" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -398,14 +367,14 @@ Passing the custom distribution to the Jet class at instantiation time
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13160247888-304886').dataTable()");
+        console.log("$('#table5670848656-876104').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13160247888-304886').dataTable({
+        $('#table5670848656-876104').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -422,7 +391,7 @@ Passing the custom distribution to the Jet class at instantiation time
     --------------------------------------------------------------------------------
 
 
-Since as default, the ``Nomralization`` is false, let’s check the actual
+Since by default, the ``Nomralization`` is false, let’s check the actual
 number density of particles and conpare it to the parameter ``N``
 
 .. code:: ipython3
@@ -477,7 +446,7 @@ keep all the parameters unchanged, including N
     geometry: spherical  
     
     electrons distribution:
-     type: bkn  
+     type: my_bkn  
      gamma energy grid size:  201
      gmin grid : 2.000000e+00
      gmax grid : 1.000000e+06
@@ -509,11 +478,16 @@ keep all the parameters unchanged, including N
     --------------------------------------------------------------------------------
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13162661520-410086" class="table-striped table-bordered table-condensed">
+    <table id="table5417015808-640090" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -550,14 +524,14 @@ keep all the parameters unchanged, including N
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13162661520-410086').dataTable()");
+        console.log("$('#table5417015808-640090').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13162661520-410086').dataTable({
+        $('#table5417015808-640090').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -601,31 +575,305 @@ to the parameter N
 .. image:: custom_emitters_files/custom_emitters_38_0.png
 
 
+.. code:: ipython3
+
+    my_jet.save_model('jet.pkl')
+
+.. code:: ipython3
+
+    my_jet_l=Jet.load_model('jet.pkl')
+
+.. code:: ipython3
+
+    my_jet_l.parameters
+
+
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
+
+.. raw:: html
+
+    <i>Table length=12</i>
+    <table id="table5751592416-616698" class="table-striped table-bordered table-condensed">
+    <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+    <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.000000e+04</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gamma_break</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+03</td><td>1.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s1</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s2</td><td>HE_spectral_slope</td><td></td><td>3.500000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>NH_cold_to_rel_e</td><td>cold_p_to_rel_e_ratio</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td></td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+    .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+    display: inline-block; margin-right: 1em; }
+    .paginate_button { margin-right: 5px; }
+    </style>
+    <script>
+    
+    var astropy_sort_num = function(a, b) {
+        var a_num = parseFloat(a);
+        var b_num = parseFloat(b);
+    
+        if (isNaN(a_num) && isNaN(b_num))
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        else if (!isNaN(a_num) && !isNaN(b_num))
+            return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+        else
+            return isNaN(a_num) ? -1 : 1;
+    }
+    
+    require.config({paths: {
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+    }});
+    require(["datatables"], function(){
+        console.log("$('#table5751592416-616698').dataTable()");
+    
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "optionalnum-asc": astropy_sort_num,
+        "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+    });
+    
+        $('#table5751592416-616698').dataTable({
+            order: [],
+            pageLength: 100,
+            lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+            pagingType: "full_numbers",
+            columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+        });
+    });
+    </script>
+
+
+
+
+
+.. parsed-literal::
+
+    None
+
+
+
+.. code:: ipython3
+
+    my_jet.parameters
+
+
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
+
+.. raw:: html
+
+    <i>Table length=12</i>
+    <table id="table5417015808-424184" class="table-striped table-bordered table-condensed">
+    <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+    <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>NH_cold_to_rel_e</td><td>cold_p_to_rel_e_ratio</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td></td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.000000e+04</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gamma_break</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+03</td><td>1.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s1</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s2</td><td>HE_spectral_slope</td><td></td><td>3.500000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+    </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+    .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+    display: inline-block; margin-right: 1em; }
+    .paginate_button { margin-right: 5px; }
+    </style>
+    <script>
+    
+    var astropy_sort_num = function(a, b) {
+        var a_num = parseFloat(a);
+        var b_num = parseFloat(b);
+    
+        if (isNaN(a_num) && isNaN(b_num))
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        else if (!isNaN(a_num) && !isNaN(b_num))
+            return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+        else
+            return isNaN(a_num) ? -1 : 1;
+    }
+    
+    require.config({paths: {
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+    }});
+    require(["datatables"], function(){
+        console.log("$('#table5417015808-424184').dataTable()");
+    
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "optionalnum-asc": astropy_sort_num,
+        "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+    });
+    
+        $('#table5417015808-424184').dataTable({
+            order: [],
+            pageLength: 100,
+            lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+            pagingType: "full_numbers",
+            columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+        });
+    });
+    </script>
+
+
+
+
+
+.. parsed-literal::
+
+    None
+
+
+
+.. code:: ipython3
+
+    my_jet.make_dependent_par(par='s2',depends_on=['s1'],par_expr='s1+1')
+
+
+
+.. parsed-literal::
+
+    adding par: s1 to  s2
+    ==> par s2 is depending on ['s1'] according to expr:   s2 =
+    s1+1
+
+
+.. code:: ipython3
+
+    my_jet.save_model('jet_1.pkl')
+
+.. code:: ipython3
+
+    my_jet_l_1=Jet.load_model('jet_1.pkl')
+
+.. code:: ipython3
+
+    my_jet_l_1.parameters
+
+
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
+
+.. raw:: html
+
+    <i>Table length=12</i>
+    <table id="table5749115312-175320" class="table-striped table-bordered table-condensed">
+    <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
+    <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.000000e+04</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gamma_break</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+03</td><td>1.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s1(M)</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>*s2(D,s1)</td><td>HE_spectral_slope</td><td></td><td>3.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>True</td></tr>
+    <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>NH_cold_to_rel_e</td><td>cold_p_to_rel_e_ratio</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td></td><td>1.000000e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
+    .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
+    display: inline-block; margin-right: 1em; }
+    .paginate_button { margin-right: 5px; }
+    </style>
+    <script>
+    
+    var astropy_sort_num = function(a, b) {
+        var a_num = parseFloat(a);
+        var b_num = parseFloat(b);
+    
+        if (isNaN(a_num) && isNaN(b_num))
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        else if (!isNaN(a_num) && !isNaN(b_num))
+            return ((a_num < b_num) ? -1 : ((a_num > b_num) ? 1 : 0));
+        else
+            return isNaN(a_num) ? -1 : 1;
+    }
+    
+    require.config({paths: {
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
+    }});
+    require(["datatables"], function(){
+        console.log("$('#table5749115312-175320').dataTable()");
+    
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "optionalnum-asc": astropy_sort_num,
+        "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
+    });
+    
+        $('#table5749115312-175320').dataTable({
+            order: [],
+            pageLength: 100,
+            lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
+            pagingType: "full_numbers",
+            columnDefs: [{targets: [4, 5, 6], type: "optionalnum"}]
+        });
+    });
+    </script>
+
+
+
+
+
+.. parsed-literal::
+
+    None
+
+
+
+.. code:: ipython3
+
+    my_jet_l_1.emitters_distribution.parameters.s2.par_expr
+
+
+
+
+.. parsed-literal::
+
+    's1+1'
+
+
+
 Passing the custom distribution to an already existing Jet object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: ipython3
 
     from jetset.jet_model import Jet
-    import copy
     my_jet=Jet(electron_distribution='lppl')
-
-
-.. parsed-literal::
-
-    ===> setting C threads to 14
-
 
 .. code:: ipython3
 
     my_jet.emitters_distribution.parameters
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=6</i>
-    <table id="table13167302992-626877" class="table-striped table-bordered table-condensed">
+    <table id="table5416096384-317419" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -656,14 +904,14 @@ Passing the custom distribution to an already existing Jet object
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13167302992-626877').dataTable()");
+        console.log("$('#table5416096384-317419').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13167302992-626877').dataTable({
+        $('#table5416096384-317419').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -692,12 +940,12 @@ Passing the custom distribution to an already existing Jet object
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotPdistr at 0x310c9f310>
+    <jetset.plot_sedfit.PlotPdistr at 0x1534d5370>
 
 
 
 
-.. image:: custom_emitters_files/custom_emitters_42_1.png
+.. image:: custom_emitters_files/custom_emitters_51_1.png
 
 
 Now we update the ``emitters_distribution`` member with our custom
@@ -705,19 +953,24 @@ distribution
 
 .. code:: ipython3
 
-    my_jet.emitters_distribution=n_e_bkn
-    my_jet.Norm_distr = True
+    my_jet.set_emitters_distribution(n_e_bkn)
+
 
 .. code:: ipython3
 
     my_jet.emitters_distribution.parameters
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=6</i>
-    <table id="table13213368784-605281" class="table-striped table-bordered table-condensed">
+    <table id="table5748298656-914703" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -748,14 +1001,14 @@ distribution
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13213368784-605281').dataTable()");
+        console.log("$('#table5748298656-914703').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13213368784-605281').dataTable({
+        $('#table5748298656-914703').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -784,12 +1037,12 @@ distribution
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotPdistr at 0x31397ef90>
+    <jetset.plot_sedfit.PlotPdistr at 0x142d68680>
 
 
 
 
-.. image:: custom_emitters_files/custom_emitters_46_1.png
+.. image:: custom_emitters_files/custom_emitters_55_1.png
 
 
 Building a distribution from an external array
@@ -816,16 +1069,26 @@ Here we just build two arrays, but you can pass any ``n_gamma`` and
     
     N2 = np.trapz(n_distr._array_n_gamma, n_distr._array_gamma)
 
+
+.. parsed-literal::
+
+    /var/folders/rs/w64c54l549x1jl7cp3m6x_q00000gn/T/ipykernel_11802/299626304.py:10: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+      N1 = np.trapz(n_gamma, gamma)
+    /var/folders/rs/w64c54l549x1jl7cp3m6x_q00000gn/T/ipykernel_11802/299626304.py:14: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+      N2 = np.trapz(n_distr._array_n_gamma, n_distr._array_gamma)
+
+
 ``N1`` and ``N2`` are used only for the purpose of checking, you can
 skip them
 
 .. code:: ipython3
 
+    n_distr.update()
     p=n_distr.plot()
 
 
 
-.. image:: custom_emitters_files/custom_emitters_51_0.png
+.. image:: custom_emitters_files/custom_emitters_60_0.png
 
 
 .. code:: ipython3
@@ -836,7 +1099,6 @@ skip them
 
 .. parsed-literal::
 
-    ===> setting C threads to 14
     
     --------------------------------------------------------------------------------
     model description: 
@@ -878,11 +1140,16 @@ skip them
     --------------------------------------------------------------------------------
 
 
+.. parsed-literal::
+
+    WARNING: AstropyDeprecationWarning: 'classic' backend for show_in_notebook() is deprecated as of 6.1. Instead, use the supported backend 'ipydatagrid'. [astropy.table.table]
+
+
 
 .. raw:: html
 
     <i>Table length=9</i>
-    <table id="table13169623568-544215" class="table-striped table-bordered table-condensed">
+    <table id="table5692634848-978031" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -916,14 +1183,14 @@ skip them
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13169623568-544215').dataTable()");
+        console.log("$('#table5692634848-978031').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13169623568-544215').dataTable({
+        $('#table5692634848-978031').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -952,6 +1219,13 @@ you can also skip the next cell, it is just to check
     np.testing.assert_allclose(N1, my_jet.emitters_distribution.eval_N(), rtol=1E-2)
 
 
+
+.. parsed-literal::
+
+    /var/folders/rs/w64c54l549x1jl7cp3m6x_q00000gn/T/ipykernel_11802/3899814808.py:1: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+      N3 = np.trapz(my_jet.emitters_distribution.n_gamma_e, my_jet.emitters_distribution.gamma_e)
+
+
 ``N`` will act as a scaling factor for the array when normalization is
 set to ``False``
 
@@ -963,7 +1237,7 @@ set to ``False``
 
 .. parsed-literal::
 
-    this is the actual number of emitters dendisty 999.56 this the scaling factor 1000000000.0
+    this is the actual number of emitters dendisty 0.00 this the scaling factor 1000000000.0
 
 
 .. code:: ipython3
@@ -973,7 +1247,7 @@ set to ``False``
 
 
 
-.. image:: custom_emitters_files/custom_emitters_57_0.png
+.. image:: custom_emitters_files/custom_emitters_66_0.png
 
 
 you can still normalize the distribution
@@ -987,7 +1261,7 @@ you can still normalize the distribution
 
 .. parsed-literal::
 
-    this is the actaul number of emitters dendisty 2000.00 this the scaling factor 2000
+    this is the actaul number of emitters dendisty 999.56 this the scaling factor 2000
 
 
 .. code:: ipython3
@@ -997,19 +1271,13 @@ you can still normalize the distribution
 
 
 
-.. image:: custom_emitters_files/custom_emitters_60_0.png
+.. image:: custom_emitters_files/custom_emitters_69_0.png
 
 
 .. code:: ipython3
 
     my_jet.save_model('test_jet_custom_emitters_array.pkl')
     new_jet = Jet.load_model('test_jet_custom_emitters_array.pkl')
-
-
-
-.. parsed-literal::
-
-    ===> setting C threads to 14
 
 
 .. code:: ipython3
@@ -1019,5 +1287,5 @@ you can still normalize the distribution
 
 
 
-.. image:: custom_emitters_files/custom_emitters_62_0.png
+.. image:: custom_emitters_files/custom_emitters_71_0.png
 

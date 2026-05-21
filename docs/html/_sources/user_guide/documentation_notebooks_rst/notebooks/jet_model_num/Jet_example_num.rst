@@ -11,7 +11,7 @@ Numerical setup
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 Changing the grid size for the electron distribution
@@ -76,7 +76,7 @@ Changing the grid size for the electron distribution
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13568682720-597001" class="table-striped table-bordered table-condensed">
+    <table id="table5494246336-494119" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -110,17 +110,17 @@ Changing the grid size for the electron distribution
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13568682720-597001').dataTable()");
+        console.log("$('#table5494246336-494119').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13568682720-597001').dataTable({
+        $('#table5494246336-494119').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -242,7 +242,7 @@ Changing the grid size for the IC process spectra
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13569385792-680093" class="table-striped table-bordered table-condensed">
+    <table id="table5968992624-568202" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -276,17 +276,17 @@ Changing the grid size for the IC process spectra
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13569385792-680093').dataTable()");
+        console.log("$('#table5968992624-568202').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13569385792-680093').dataTable({
+        $('#table5968992624-568202').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -394,7 +394,7 @@ Changing the grid size for the seed photons
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13604243696-111059" class="table-striped table-bordered table-condensed">
+    <table id="table5490423856-787963" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -428,17 +428,17 @@ Changing the grid size for the seed photons
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13604243696-111059').dataTable()");
+        console.log("$('#table5490423856-787963').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13604243696-111059').dataTable({
+        $('#table5490423856-787963').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -541,7 +541,7 @@ and this value can be changed using the method :meth:`.Jet.set_seed_nu_size`. In
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13594578480-438879" class="table-striped table-bordered table-condensed">
+    <table id="table5992925328-238369" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>test</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>test</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -575,17 +575,17 @@ and this value can be changed using the method :meth:`.Jet.set_seed_nu_size`. In
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13594578480-438879').dataTable()");
+        console.log("$('#table5992925328-238369').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13594578480-438879').dataTable({
+        $('#table5992925328-238369').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -659,4 +659,59 @@ and this value can be changed using the method :meth:`.Jet.set_seed_nu_size`. In
 
 
 .. image:: Jet_example_num_files/Jet_example_num_30_0.png
+
+
+Tuning the C threads number
+---------------------------
+
+The code below shows how to profile the computational time in terms of
+the number of C threads. The default value used by jetset, that is
+setting the number of C thread equal to the number of cores in the
+machine, is already providing the best performance.
+
+.. code:: ipython3
+
+    import matplotlib.pylab as plt
+    import time
+    import numpy as np
+    import multiprocessing
+    th_arr=[1,2,4,8,14,16,32]
+    t_ev=[]
+    
+    #number of cores on the machine 
+    #this might change on clusters or docker, please be aware of!
+    N_cores=multiprocessing.cpu_count()
+    
+    th_arr=np.arange(1,N_cores+4,2,dtype=np.int32)
+    my_jet=Jet()
+    for th in th_arr:
+        t_spent=0
+        N=500
+        my_jet.set_num_c_threads(int(th),verbose=False)
+    
+        t_start=time.perf_counter()
+        for i in range(N):   
+            my_jet.eval()
+        t_spent=(time.perf_counter() -t_start)
+        t_ms=t_spent/N*1000
+        t_ev.append(t_ms)
+    plt.plot(th_arr,t_ev,label='actual time in ms')
+    plt.plot(th_arr,t_ev[0]/np.array(th_arr),label='expected scaling (1/(Num of threads))')
+    plt.xlabel('Num. of Threads')
+    plt.ylabel('Evaluation time in ms')
+    plt.axvline(N_cores,ls='--',label=f'Num. of cores on this machine: {N_cores}')
+    plt.axhline(t_ev[-1], ls='-.', label=f'asymp. limit {t_ev[-1]:.2f} ms')
+    plt.legend()
+
+
+
+
+.. parsed-literal::
+
+    <matplotlib.legend.Legend at 0x163c8d070>
+
+
+
+
+.. image:: Jet_example_num_files/Jet_example_num_33_1.png
 

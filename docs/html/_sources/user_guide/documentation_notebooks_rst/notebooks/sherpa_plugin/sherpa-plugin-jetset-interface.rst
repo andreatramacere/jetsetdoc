@@ -15,7 +15,7 @@ install Sherpa: https://sherpa.readthedocs.io/en/latest/install.html
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 .. code:: ipython3
@@ -151,14 +151,14 @@ sed shaper
 .. raw:: html
 
     <i>Table length=6</i>
-    <table id="table13285491728-936507" class="table-striped table-bordered table-condensed">
+    <table id="table5996701136-798541" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
-    <tr><td>LogCubic</td><td>b</td><td>-5.589204e-02</td><td>-5.589204e-02</td><td>6.234447e-03</td><td>--</td><td>-5.237376e-02</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
-    <tr><td>LogCubic</td><td>c</td><td>-3.292704e-04</td><td>-3.292704e-04</td><td>8.967926e-04</td><td>--</td><td>7.639964e-03</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
-    <tr><td>LogCubic</td><td>Ep</td><td>1.698160e+01</td><td>1.698160e+01</td><td>8.582826e-02</td><td>--</td><td>1.556163e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
-    <tr><td>LogCubic</td><td>Sp</td><td>-1.030620e+01</td><td>-1.030620e+01</td><td>1.607947e-02</td><td>--</td><td>-1.019011e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
-    <tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>-9.972939e+00</td><td>-9.972939e+00</td><td>3.177493e-02</td><td>--</td><td>-1.019011e+01</td><td>-1.219011e+01</td><td>-8.190114e+00</td><td>False</td></tr>
-    <tr><td>host_galaxy</td><td>nu_scale</td><td>-2.290459e-03</td><td>-2.290459e-03</td><td>1.811351e-03</td><td>--</td><td>0.000000e+00</td><td>-2.908697e-03</td><td>2.908697e-03</td><td>False</td></tr>
+    <tr><td>LogCubic</td><td>b</td><td>-5.589204e-02</td><td>-5.589204e-02</td><td>6.234641e-03</td><td>--</td><td>-5.237376e-02</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+    <tr><td>LogCubic</td><td>c</td><td>-3.292704e-04</td><td>-3.292704e-04</td><td>8.968206e-04</td><td>--</td><td>7.639964e-03</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+    <tr><td>LogCubic</td><td>Ep</td><td>1.698160e+01</td><td>1.698160e+01</td><td>8.583094e-02</td><td>--</td><td>1.556163e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+    <tr><td>LogCubic</td><td>Sp</td><td>-1.030620e+01</td><td>-1.030620e+01</td><td>1.607997e-02</td><td>--</td><td>-1.019011e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+    <tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>-9.972939e+00</td><td>-9.972939e+00</td><td>3.177593e-02</td><td>--</td><td>-1.019011e+01</td><td>-1.219011e+01</td><td>-8.190114e+00</td><td>False</td></tr>
+    <tr><td>host_galaxy</td><td>nu_scale</td><td>-2.290459e-03</td><td>-2.290459e-03</td><td>1.811408e-03</td><td>--</td><td>0.000000e+00</td><td>-2.908697e-03</td><td>2.908697e-03</td><td>False</td></tr>
     </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
     .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
     display: inline-block; margin-right: 1em; }
@@ -179,17 +179,17 @@ sed shaper
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13285491728-936507').dataTable()");
+        console.log("$('#table5996701136-798541').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13285491728-936507').dataTable({
+        $('#table5996701136-798541').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -203,7 +203,7 @@ sed shaper
 
 .. parsed-literal::
 
-    ---> sync       nu_p=+1.698160e+01 (err=+8.582826e-02)  nuFnu_p=-1.030620e+01 (err=+1.607947e-02) curv.=-5.589204e-02 (err=+6.234447e-03)
+    ---> sync       nu_p=+1.698160e+01 (err=+8.583094e-02)  nuFnu_p=-1.030620e+01 (err=+1.607997e-02) curv.=-5.589204e-02 (err=+6.234641e-03)
     ================================================================================
     
 
@@ -230,7 +230,7 @@ sed shaper
 .. raw:: html
 
     <i>Table length=4</i>
-    <table id="table13282026864-170548" class="table-striped table-bordered table-condensed">
+    <table id="table5951552592-437715" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
     <tr><td>LogCubic</td><td>b</td><td>-1.627265e-01</td><td>-1.627265e-01</td><td>2.483991e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
     <tr><td>LogCubic</td><td>c</td><td>-4.569970e-02</td><td>-4.569970e-02</td><td>1.984551e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -256,17 +256,17 @@ sed shaper
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13282026864-170548').dataTable()");
+        console.log("$('#table5951552592-437715').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13282026864-170548').dataTable({
+        $('#table5951552592-437715').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -330,7 +330,7 @@ ore least-square bound, as shown below
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13460737584-291954" class="table-striped table-bordered table-condensed">
+    <table id="table13426382928-385317" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.216622e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -340,7 +340,7 @@ ore least-square bound, as shown below
     <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.360000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.703917e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>2.121873e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.583988e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.583991e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>6.673207e+03</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.251647e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>2.794602e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
@@ -364,17 +364,17 @@ ore least-square bound, as shown below
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13460737584-291954').dataTable()");
+        console.log("$('#table13426382928-385317').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13460737584-291954').dataTable({
+        $('#table13426382928-385317').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -433,7 +433,7 @@ Model fitting with Sherpa
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotSED at 0x13583a750>
+    <jetset.plot_sedfit.PlotSED at 0x1632253d0>
 
 
 
@@ -479,7 +479,7 @@ Model fitting with Sherpa
 .. parsed-literal::
 
     jetset model name R renamed to  R_sh due to sherpa internal naming convention
-    - best chisq=1.39904e+01
+    - best chisq=1.39839e+01
     
     -------------------------------------------------------------------------
     Fit report
@@ -491,21 +491,21 @@ Model fitting with Sherpa
 .. raw:: html
 
     <i>Table length=16</i>
-    <table id="table13460995968-926042" class="table-striped table-bordered table-condensed">
+    <table id="table13436320464-92150" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
-    <tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>nuFnu-scale</td><td>erg / (s cm2)</td><td>-9.967750e+00</td><td>-2.000000e+01</td><td>2.000000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>nuFnu-scale</td><td>erg / (s cm2)</td><td>-9.967888e+00</td><td>-2.000000e+01</td><td>2.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>host_galaxy</td><td>nu_scale</td><td>nu-scale</td><td>Hz</td><td>-2.290459e-03</td><td>-2.000000e+00</td><td>2.000000e+00</td><td>False</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.850763e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.938561e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>6.150849e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>2.581035e+03</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.195949e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>1.773625e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.666152e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.794248e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.941690e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>6.214331e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>2.340413e+03</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.182704e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>1.770089e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>1.665370e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.158370e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.161425e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>NH_cold_to_rel_e</td><td>cold_p_to_rel_e_ratio</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td></td><td>4.369859e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td></td><td>4.364947e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>z_cosm(M)</td><td>redshift</td><td></td><td>3.360000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>Franceschini_2008</td><td>scale_factor</td><td>scale_factor</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>Franceschini_2008</td><td>z_cosm(L,jet_leptonic)</td><td>redshift</td><td></td><td>--</td><td>--</td><td>--</td><td>False</td><td>True</td></tr>
@@ -529,17 +529,17 @@ Model fitting with Sherpa
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13460995968-926042').dataTable()");
+        console.log("$('#table13436320464-92150').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13460995968-926042').dataTable({
+        $('#table13436320464-92150').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -555,7 +555,7 @@ Model fitting with Sherpa
 
     
     converged=True
-    calls=365
+    calls=374
     mesg=
 
 
@@ -650,13 +650,13 @@ Model fitting with Sherpa
         font-size: large;
         padding: 1em;
     }
-    </style><div class="sherpa-text-fallback">&lt;Fit results instance&gt;</div><div hidden class="sherpa"><details open><summary>Fit parameters</summary><table class="fit"><thead><tr><th>Parameter</th><th>Best-fit value</th><th>Approximate error</th></tr></thead><tbody><tr><td>EBL corrected.nuFnu_p_host</td><td>    -9.96775</td><td>&#177;    0.0308451</td></tr><tr><td>EBL corrected.gmin</td><td>     285.076</td><td>&#177;      135.655</td></tr><tr><td>EBL corrected.gmax</td><td> 1.93856e+06</td><td>&#177;            0</td></tr><tr><td>EBL corrected.N</td><td>     6.15085</td><td>&#177;      2.28928</td></tr><tr><td>EBL corrected.gamma0_log_parab</td><td>     2581.04</td><td>&#177;            0</td></tr><tr><td>EBL corrected.s</td><td>     2.19595</td><td>&#177;     0.105538</td></tr><tr><td>EBL corrected.r</td><td>    0.177363</td><td>&#177;    0.0322156</td></tr><tr><td>EBL corrected.R_sh</td><td> 1.66615e+16</td><td>&#177;            0</td></tr><tr><td>EBL corrected.B</td><td>   0.0115837</td><td>&#177;   0.00276367</td></tr><tr><td>EBL corrected.beam_obj</td><td>     43.6986</td><td>&#177;      6.26993</td></tr></tbody></table></details><details><summary>Summary (10)</summary><div class="datavals"><div class="dataname">Method</div><div class="dataval">levmar</div><div class="dataname">Statistic</div><div class="dataval">chi2</div><div class="dataname">Final statistic</div><div class="dataval">13.9904</div><div class="dataname">Number of evaluations</div><div class="dataval">361</div><div class="dataname">Reduced statistic</div><div class="dataval">0.66621</div><div class="dataname">Probability (Q-value)</div><div class="dataval">0.870011</div><div class="dataname">Initial statistic</div><div class="dataval">147.741</div><div class="dataname">&#916; statistic</div><div class="dataval">133.75</div><div class="dataname">Number of data points</div><div class="dataval">31</div><div class="dataname">Degrees of freedom</div><div class="dataval">21</div></div></details></div>
+    </style><div class="sherpa-text-fallback">&lt;Fit results instance&gt;</div><div hidden class="sherpa"><details open><summary>Fit parameters</summary><table class="fit"><thead><tr><th>Parameter</th><th>Best-fit value</th><th>Approximate error</th></tr></thead><tbody><tr><td>EBL corrected.nuFnu_p_host</td><td>    -9.96789</td><td>&#177;    0.0315974</td></tr><tr><td>EBL corrected.gmin</td><td>     279.425</td><td>&#177;      214.103</td></tr><tr><td>EBL corrected.gmax</td><td> 1.94169e+06</td><td>&#177;            0</td></tr><tr><td>EBL corrected.N</td><td>     6.21433</td><td>&#177;      3.78388</td></tr><tr><td>EBL corrected.gamma0_log_parab</td><td>     2340.41</td><td>&#177;            0</td></tr><tr><td>EBL corrected.s</td><td>      2.1827</td><td>&#177;     0.159093</td></tr><tr><td>EBL corrected.r</td><td>    0.177009</td><td>&#177;     0.048761</td></tr><tr><td>EBL corrected.R_sh</td><td> 1.66537e+16</td><td>&#177;            0</td></tr><tr><td>EBL corrected.B</td><td>   0.0116143</td><td>&#177;   0.00482729</td></tr><tr><td>EBL corrected.beam_obj</td><td>     43.6495</td><td>&#177;      10.6151</td></tr></tbody></table></details><details><summary>Summary (10)</summary><div class="datavals"><div class="dataname">Method</div><div class="dataval">levmar</div><div class="dataname">Statistic</div><div class="dataval">chi2</div><div class="dataname">Final statistic</div><div class="dataval">13.9839</div><div class="dataname">Number of evaluations</div><div class="dataval">370</div><div class="dataname">Reduced statistic</div><div class="dataval">0.665899</div><div class="dataname">Probability (Q-value)</div><div class="dataval">0.870291</div><div class="dataname">Initial statistic</div><div class="dataval">147.741</div><div class="dataname">&#916; statistic</div><div class="dataval">133.757</div><div class="dataname">Number of data points</div><div class="dataval">31</div><div class="dataname">Degrees of freedom</div><div class="dataval">21</div></div></details></div>
 
 
 .. parsed-literal::
 
     dof=21
-    chisq=13.990405, chisq/red=0.666210 null hypothesis sig=0.870011
+    chisq=13.983884, chisq/red=0.665899 null hypothesis sig=0.870291
     
     best fit pars
 
@@ -665,21 +665,21 @@ Model fitting with Sherpa
 .. raw:: html
 
     <i>Table length=16</i>
-    <table id="table13281718448-109745" class="table-striped table-bordered table-condensed">
+    <table id="table13429931520-437219" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
-    <tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>-9.967750e+00</td><td>-9.967750e+00</td><td>3.084511e-02</td><td>--</td><td>-9.972939e+00</td><td>-1.219011e+01</td><td>-8.190114e+00</td><td>False</td></tr>
+    <tr><td>host_galaxy</td><td>nuFnu_p_host</td><td>-9.967888e+00</td><td>-9.967888e+00</td><td>3.159744e-02</td><td>--</td><td>-9.972939e+00</td><td>-1.219011e+01</td><td>-8.190114e+00</td><td>False</td></tr>
     <tr><td>host_galaxy</td><td>nu_scale</td><td>-2.290459e-03</td><td>--</td><td>--</td><td>--</td><td>-2.290459e-03</td><td>-2.908697e-03</td><td>2.908697e-03</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>gmin</td><td>2.850763e+02</td><td>2.850763e+02</td><td>1.356548e+02</td><td>--</td><td>4.703917e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>gmax</td><td>1.938561e+06</td><td>1.938561e+06</td><td>0.000000e+00</td><td>--</td><td>2.121873e+06</td><td>1.000000e+05</td><td>1.000000e+07</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>N</td><td>6.150849e+00</td><td>6.150849e+00</td><td>2.289278e+00</td><td>--</td><td>5.583988e+00</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>2.581035e+03</td><td>2.581035e+03</td><td>0.000000e+00</td><td>--</td><td>6.673207e+03</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>s</td><td>2.195949e+00</td><td>2.195949e+00</td><td>1.055377e-01</td><td>--</td><td>2.251647e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>r</td><td>1.773625e-01</td><td>1.773625e-01</td><td>3.221555e-02</td><td>--</td><td>2.794602e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>R</td><td>1.666152e+16</td><td>1.666152e+16</td><td>0.000000e+00</td><td>--</td><td>1.216622e+16</td><td>3.162278e+15</td><td>3.162278e+17</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmin</td><td>2.794248e+02</td><td>2.794248e+02</td><td>2.141028e+02</td><td>--</td><td>4.703917e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmax</td><td>1.941690e+06</td><td>1.941690e+06</td><td>0.000000e+00</td><td>--</td><td>2.121873e+06</td><td>1.000000e+05</td><td>1.000000e+07</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>6.214331e+00</td><td>6.214331e+00</td><td>3.783882e+00</td><td>--</td><td>5.583991e+00</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>2.340413e+03</td><td>2.340413e+03</td><td>0.000000e+00</td><td>--</td><td>6.673207e+03</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s</td><td>2.182704e+00</td><td>2.182704e+00</td><td>1.590927e-01</td><td>--</td><td>2.251647e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>r</td><td>1.770089e-01</td><td>1.770089e-01</td><td>4.876099e-02</td><td>--</td><td>2.794602e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>R</td><td>1.665370e+16</td><td>1.665370e+16</td><td>0.000000e+00</td><td>--</td><td>1.216622e+16</td><td>3.162278e+15</td><td>3.162278e+17</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>1.000000e+17</td><td>--</td><td>--</td><td>--</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>B</td><td>1.158370e-02</td><td>1.158370e-02</td><td>2.763668e-03</td><td>--</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>B</td><td>1.161425e-02</td><td>1.161425e-02</td><td>4.827287e-03</td><td>--</td><td>5.050000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>NH_cold_to_rel_e</td><td>1.000000e+00</td><td>--</td><td>--</td><td>--</td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>beam_obj</td><td>4.369859e+01</td><td>4.369859e+01</td><td>6.269930e+00</td><td>--</td><td>2.500000e+01</td><td>5.000000e+00</td><td>5.000000e+01</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>beam_obj</td><td>4.364947e+01</td><td>4.364947e+01</td><td>1.061505e+01</td><td>--</td><td>2.500000e+01</td><td>5.000000e+00</td><td>5.000000e+01</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>z_cosm(M)</td><td>3.360000e-02</td><td>--</td><td>--</td><td>--</td><td>3.360000e-02</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
     <tr><td>Franceschini_2008</td><td>scale_factor</td><td>1.000000e+00</td><td>--</td><td>--</td><td>--</td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
     <tr><td>Franceschini_2008</td><td>z_cosm(L,jet_leptonic)</td><td>3.360000e-02</td><td>--</td><td>--</td><td>--</td><td>--</td><td>0.000000e+00</td><td>--</td><td>True</td></tr>
@@ -703,17 +703,17 @@ Model fitting with Sherpa
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13281718448-109745').dataTable()");
+        console.log("$('#table13429931520-437219').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13281718448-109745').dataTable({
+        $('#table13429931520-437219').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -751,14 +751,6 @@ https://sherpa.readthedocs.io/en/latest/fit/index.html
 
     model_minimizer_lsb.minimizer.sherpa_fitter.est_errors()
 
-
-
-.. parsed-literal::
-
-    WARNING: hard minimum hit for parameter EBL corrected.gmax
-    WARNING: hard maximum hit for parameter EBL corrected.gmax
-    WARNING: hard minimum hit for parameter EBL corrected.B
-    WARNING: hard maximum hit for parameter EBL corrected.B
 
 
 
@@ -853,7 +845,7 @@ https://sherpa.readthedocs.io/en/latest/fit/index.html
         font-size: large;
         padding: 1em;
     }
-    </style><div class="sherpa-text-fallback">&lt;covariance results instance&gt;</div><div hidden class="sherpa"><details open><summary>covariance 1&#963; (68.2689%) bounds</summary><table><thead><tr><th>Parameter</th><th>Best-fit value</th><th>Lower Bound</th><th>Upper Bound</th></tr></thead><tbody><tr><td>EBL corrected.nuFnu_p_host</td><td>    -9.96775</td><td>  -0.0306989</td><td>   0.0306989</td></tr><tr><td>EBL corrected.gmin</td><td>     285.076</td><td>    -29.8952</td><td>     29.8952</td></tr><tr><td>EBL corrected.gmax</td><td> 1.93856e+06</td><td>-----</td><td>-----</td></tr><tr><td>EBL corrected.N</td><td>     6.15085</td><td>    -2.27219</td><td>     2.27219</td></tr><tr><td>EBL corrected.gamma0_log_parab</td><td>     2581.04</td><td>    -663.942</td><td>     663.942</td></tr><tr><td>EBL corrected.s</td><td>     2.19595</td><td>  -0.0280905</td><td>   0.0280905</td></tr><tr><td>EBL corrected.r</td><td>    0.177363</td><td>   -0.018658</td><td>    0.018658</td></tr><tr><td>EBL corrected.R_sh</td><td> 1.66615e+16</td><td>-5.22449e+15</td><td> 5.22449e+15</td></tr><tr><td>EBL corrected.B</td><td>   0.0115837</td><td>-----</td><td>-----</td></tr><tr><td>EBL corrected.beam_obj</td><td>     43.6986</td><td>    -6.99752</td><td>     6.99752</td></tr></tbody></table></details><details><summary>Summary (2)</summary><div class="datavals"><div class="dataname">Fitting Method</div><div class="dataval">levmar</div><div class="dataname">Statistic</div><div class="dataval">chi2</div></div></details></div>
+    </style><div class="sherpa-text-fallback">&lt;covariance results instance&gt;</div><div hidden class="sherpa"><details open><summary>covariance 1&#963; (68.2689%) bounds</summary><table><thead><tr><th>Parameter</th><th>Best-fit value</th><th>Lower Bound</th><th>Upper Bound</th></tr></thead><tbody><tr><td>EBL corrected.nuFnu_p_host</td><td>    -9.96789</td><td>  -0.0305658</td><td>   0.0305658</td></tr><tr><td>EBL corrected.gmin</td><td>     279.425</td><td>    -30.8224</td><td>     30.8224</td></tr><tr><td>EBL corrected.gmax</td><td> 1.94169e+06</td><td>    -3747.88</td><td>     3747.88</td></tr><tr><td>EBL corrected.N</td><td>     6.21433</td><td>    -2.45689</td><td>     2.45689</td></tr><tr><td>EBL corrected.gamma0_log_parab</td><td>     2340.41</td><td>    -540.898</td><td>     540.898</td></tr><tr><td>EBL corrected.s</td><td>      2.1827</td><td>  -0.0301012</td><td>   0.0301012</td></tr><tr><td>EBL corrected.r</td><td>    0.177009</td><td>  -0.0181166</td><td>   0.0181166</td></tr><tr><td>EBL corrected.R_sh</td><td> 1.66537e+16</td><td>-5.48328e+15</td><td> 5.48328e+15</td></tr><tr><td>EBL corrected.B</td><td>   0.0116143</td><td>-0.000915756</td><td> 0.000915756</td></tr><tr><td>EBL corrected.beam_obj</td><td>     43.6495</td><td>     -8.7653</td><td>      8.7653</td></tr></tbody></table></details><details><summary>Summary (2)</summary><div class="datavals"><div class="dataname">Fitting Method</div><div class="dataval">levmar</div><div class="dataname">Statistic</div><div class="dataval">chi2</div></div></details></div>
 
 
 
@@ -866,15 +858,7 @@ https://sherpa.readthedocs.io/en/latest/fit/index.html
     iproj.plot()
 
 
-.. parsed-literal::
 
-    WARNING: hard minimum hit for parameter EBL corrected.gmax
-    WARNING: hard maximum hit for parameter EBL corrected.gmax
-    WARNING: hard minimum hit for parameter EBL corrected.B
-    WARNING: hard maximum hit for parameter EBL corrected.B
-
-
-
-.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_31_1.png
+.. image:: sherpa-plugin-jetset-interface_files/sherpa-plugin-jetset-interface_31_0.png
 
 

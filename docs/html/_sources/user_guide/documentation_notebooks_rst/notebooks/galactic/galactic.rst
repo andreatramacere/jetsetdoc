@@ -10,9 +10,9 @@ Tow models have been added to handle galactic objects:
 The redshift will be set 0, and not used, and a new parameter, ``DL_cm``
 will be used in place.
 
-The only difference, is that the ``GalacticBeamed`` has beaming set as
+The only difference, is that the ``GalacticBeamed`` has beaming set by
 default to 10 and set free, whilst ``GalacticUnbeamed`` has beaming set
-as default to 1 and frozen
+by default to 1 and frozen
 
 .. code:: ipython3
 
@@ -30,7 +30,7 @@ as default to 1 and frozen
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 Galactic Unbeamed leptonic example
@@ -112,7 +112,7 @@ proper thermal external field will be provided in the next version. The
 .. raw:: html
 
     <i>Table length=10</i>
-    <table id="table13582765136-627533" class="table-striped table-bordered table-condensed">
+    <table id="table6171918112-596509" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>pwn</td><td>R</td><td>region_size</td><td>cm</td><td>6.171355e+18</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>pwn</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-04</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -144,17 +144,17 @@ proper thermal external field will be provided in the next version. The
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13582765136-627533').dataTable()");
+        console.log("$('#table6171918112-596509').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13582765136-627533').dataTable({
+        $('#table6171918112-596509').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -244,7 +244,7 @@ proper thermal external field will be provided in the next version. The
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13608946096-915514" class="table-striped table-bordered table-condensed">
+    <table id="table13306051280-450765" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>pwn</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.000000e+05</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>pwn</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>8.000000e+09</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -278,17 +278,17 @@ proper thermal external field will be provided in the next version. The
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13608946096-915514').dataTable()");
+        console.log("$('#table13306051280-450765').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13608946096-915514').dataTable({
+        $('#table13306051280-450765').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -326,8 +326,8 @@ proper thermal external field will be provided in the next version. The
 
 .. raw:: html
 
-    <i>Table length=19</i>
-    <table id="table13586066672-511938" class="table-striped table-bordered table-condensed">
+    <i>Table length=21</i>
+    <table id="table13328856704-541684" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
     <tr><td>BulkLorentzFactor</td><td>jet-bulk-factor</td><td></td><td>1.000000e+00</td></tr>
     <tr><td>U_e</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>7.480812e-09</td></tr>
@@ -337,6 +337,7 @@ proper thermal external field will be provided in the next version. The
     <tr><td>U_Disk</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_BLR</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_DT</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_CMB</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>4.185297e-13</td></tr>
     <tr><td>U_Star</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_seed_tot</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>1.512730e-11</td></tr>
@@ -345,6 +346,7 @@ proper thermal external field will be provided in the next version. The
     <tr><td>L_EC_Disk</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_BLR</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_DT</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_Corona</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_CMB</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>2.139695e+35</td></tr>
     <tr><td>L_EC_Star</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>NH_cold_to_rel_e</td><td>cold_p_to_rel_e_ratio</td><td></td><td>1.000000e+00</td></tr>
@@ -368,17 +370,17 @@ proper thermal external field will be provided in the next version. The
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13586066672-511938').dataTable()");
+        console.log("$('#table13328856704-541684').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13586066672-511938').dataTable({
+        $('#table13328856704-541684').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -466,7 +468,7 @@ This is an example for a galactic unbeamed hadronic (pp) object
 .. raw:: html
 
     <i>Table length=10</i>
-    <table id="table13585841904-155232" class="table-striped table-bordered table-condensed">
+    <table id="table13329054560-885439" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>gal_hadronic_unbeamed</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+18</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>gal_hadronic_unbeamed</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-03</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -498,17 +500,17 @@ This is an example for a galactic unbeamed hadronic (pp) object
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13585841904-155232').dataTable()");
+        console.log("$('#table13329054560-885439').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13585841904-155232').dataTable({
+        $('#table13329054560-885439').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -549,8 +551,8 @@ This is an example for a galactic unbeamed hadronic (pp) object
 
 .. raw:: html
 
-    <i>Table length=20</i>
-    <table id="table13585380848-763929" class="table-striped table-bordered table-condensed">
+    <i>Table length=22</i>
+    <table id="table13327617152-82889" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
     <tr><td>BulkLorentzFactor</td><td>jet-bulk-factor</td><td></td><td>1.000000e+00</td></tr>
     <tr><td>U_e</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>3.408013e-08</td></tr>
@@ -561,6 +563,7 @@ This is an example for a galactic unbeamed hadronic (pp) object
     <tr><td>U_Disk</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_BLR</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_DT</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_CMB</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_Star</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_seed_tot</td><td>Energy dens.  rest. frame</td><td>erg / cm3</td><td>1.108748e-10</td></tr>
@@ -569,6 +572,7 @@ This is an example for a galactic unbeamed hadronic (pp) object
     <tr><td>L_EC_Disk</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_BLR</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_DT</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_Corona</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_CMB</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_Star</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_pp_gamma</td><td>Lum.  rest. frame.</td><td>erg / s</td><td>1.220405e+40</td></tr>
@@ -592,17 +596,17 @@ This is an example for a galactic unbeamed hadronic (pp) object
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13585380848-763929').dataTable()");
+        console.log("$('#table13327617152-82889').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13585380848-763929').dataTable({
+        $('#table13327617152-82889').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -694,7 +698,7 @@ Galactic Beamed hadronic pp example
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13592185840-985482" class="table-striped table-bordered table-condensed">
+    <table id="table13329363264-763941" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>gal_hadronic_beamed</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+18</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>gal_hadronic_beamed</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -728,17 +732,17 @@ Galactic Beamed hadronic pp example
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13592185840-985482').dataTable()");
+        console.log("$('#table13329363264-763941').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13592185840-985482').dataTable({
+        $('#table13329363264-763941').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -780,8 +784,8 @@ Galactic Beamed hadronic pp example
 
 .. raw:: html
 
-    <i>Table length=40</i>
-    <table id="table13643051904-843031" class="table-striped table-bordered table-condensed">
+    <i>Table length=44</i>
+    <table id="table13274768608-333334" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>type</th><th>units</th><th>val</th></tr></thead>
     <tr><td>BulkLorentzFactor</td><td>jet-bulk-factor</td><td></td><td>1.000000e+01</td></tr>
     <tr><td>U_e</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>3.408013e-08</td></tr>
@@ -793,11 +797,13 @@ Galactic Beamed hadronic pp example
     <tr><td>U_Disk</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_BLR</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_DT</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_CMB</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_Star</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_Disk_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_BLR_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_DT_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
+    <tr><td>U_Corona_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_CMB_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_Star_DRF</td><td>Energy dens. disk rest. frame</td><td>erg / cm3</td><td>0.000000e+00</td></tr>
     <tr><td>U_seed_tot</td><td>Energy dens. blob rest. frame</td><td>erg / cm3</td><td>1.108748e-10</td></tr>
@@ -806,6 +812,7 @@ Galactic Beamed hadronic pp example
     <tr><td>L_EC_Disk_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_BLR_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_DT_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>L_EC_Corona_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_CMB_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_EC_Star_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>L_pp_gamma_rf</td><td>Lum. blob rest. frame.</td><td>erg / s</td><td>1.220405e+40</td></tr>
@@ -813,8 +820,9 @@ Galactic Beamed hadronic pp example
     <tr><td>jet_L_SSC</td><td>jet Lum.</td><td>erg / s</td><td>5.606665e+35</td></tr>
     <tr><td>jet_L_EC_Disk</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>jet_L_EC_BLR</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
-    <tr><td>jet_L_EC_Star</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>jet_L_EC_DT</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_EC_Corona</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
+    <tr><td>jet_L_EC_Star</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>jet_L_EC_CMB</td><td>jet Lum.</td><td>erg / s</td><td>0.000000e+00</td></tr>
     <tr><td>jet_L_pp_gamma</td><td>jet Lum.</td><td>erg / s</td><td>3.035720e+41</td></tr>
     <tr><td>jet_L_rad</td><td>jet Lum.</td><td>erg / s</td><td>3.046115e+41</td></tr>
@@ -843,17 +851,17 @@ Galactic Beamed hadronic pp example
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13643051904-843031').dataTable()");
+        console.log("$('#table13274768608-333334').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13643051904-843031').dataTable({
+        $('#table13274768608-333334').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],

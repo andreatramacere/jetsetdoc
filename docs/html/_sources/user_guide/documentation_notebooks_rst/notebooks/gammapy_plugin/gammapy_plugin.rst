@@ -1,7 +1,7 @@
 .. warning::
     
     
-    **Tested against Gammapy version 1.2, please, take into account that might break if Gammapy changes interface**
+    **Tested against Gammapy version 2.*, please, take into account that might break if Gammapy changes interface**
 
 .. _gammapy_plugin:
 
@@ -16,7 +16,7 @@ Example to use the Gamma-py plugin with the JeSeT interface
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 In this tutorial we show how to import a jetset model into Gamma-py, and
@@ -61,7 +61,7 @@ Importing a jetset model into gammapy
 .. raw:: html
 
     <i>Table length=11</i>
-    <table id="table4398238800-477232" class="table-striped table-bordered table-condensed">
+    <table id="table5350919392-331143" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -94,17 +94,17 @@ Importing a jetset model into gammapy
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table4398238800-477232').dataTable()");
+        console.log("$('#table5350919392-331143').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table4398238800-477232').dataTable({
+        $('#table5350919392-331143').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -135,7 +135,7 @@ Importing a jetset model into gammapy
 .. raw:: html
 
     <div><i>Table length=11</i>
-    <table id="table13711655040" class="table-striped table-bordered table-condensed">
+    <table id="table5538873568" class="table-striped table-bordered table-condensed">
     <thead><tr><th>type</th><th>name</th><th>value</th><th>unit</th><th>error</th><th>min</th><th>max</th><th>frozen</th><th>link</th><th>prior</th></tr></thead>
     <thead><tr><th>str1</th><th>str16</th><th>float64</th><th>str4</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str1</th><th>str1</th></tr></thead>
     <tr><td></td><td>gmin</td><td>2.0000e+00</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>False</td><td></td><td></td></tr>
@@ -173,7 +173,7 @@ let’s verify that parameters are updated
 .. raw:: html
 
     <div><i>Table length=11</i>
-    <table id="table13711353632" class="table-striped table-bordered table-condensed">
+    <table id="table5539033216" class="table-striped table-bordered table-condensed">
     <thead><tr><th>type</th><th>name</th><th>value</th><th>unit</th><th>error</th><th>min</th><th>max</th><th>frozen</th><th>link</th><th>prior</th></tr></thead>
     <thead><tr><th>str1</th><th>str16</th><th>float64</th><th>str4</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str1</th><th>str1</th></tr></thead>
     <tr><td></td><td>gmin</td><td>2.0000e+00</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>False</td><td></td><td></td></tr>
@@ -215,7 +215,7 @@ plotting with jetset
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotSED at 0x3314eb800>
+    <jetset.plot_sedfit.PlotSED at 0x14a6d0530>
 
 
 
@@ -274,12 +274,6 @@ Model fitting with gammapy
 
     /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:115: RuntimeWarning: overflow encountered in power
       phi_prime = -np.sum(suf ** 2 / denom**3) / p_norm
-    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:154: RuntimeWarning: invalid value encountered in scalar divide
-      ratio = phi / phi_prime
-    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:398: RuntimeWarning: invalid value encountered in cast
-      return min_step, np.equal(steps, min_step) * np.sign(s).astype(int)
-    /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:115: RuntimeWarning: overflow encountered in power
-      phi_prime = -np.sum(suf ** 2 / denom**3) / p_norm
     /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:154: RuntimeWarning: divide by zero encountered in scalar divide
       ratio = phi / phi_prime
     /Users/orion/miniforge3/envs/jetset/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py:166: RuntimeWarning: divide by zero encountered in scalar divide
@@ -326,7 +320,7 @@ Model fitting with gammapy
 .. raw:: html
 
     <i>Table length=4</i>
-    <table id="table13766257280-402160" class="table-striped table-bordered table-condensed">
+    <table id="table6305950000-613760" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
     <tr><td>LogCubic</td><td>b</td><td>-1.686248e-01</td><td>-1.686248e-01</td><td>4.358721e-03</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
     <tr><td>LogCubic</td><td>c</td><td>-1.240705e-02</td><td>-1.240705e-02</td><td>6.505551e-04</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
@@ -352,17 +346,17 @@ Model fitting with gammapy
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13766257280-402160').dataTable()");
+        console.log("$('#table6305950000-613760').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13766257280-402160').dataTable({
+        $('#table6305950000-613760').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -408,12 +402,12 @@ Model fitting with gammapy
 .. raw:: html
 
     <i>Table length=4</i>
-    <table id="table13768344688-843125" class="table-striped table-bordered table-condensed">
+    <table id="table5537988288-598091" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>val</th><th>bestfit val</th><th>err +</th><th>err -</th><th>start val</th><th>fit range min</th><th>fit range max</th><th>frozen</th></tr></thead>
     <tr><td>LogCubic</td><td>b</td><td>-2.164748e-01</td><td>-2.164748e-01</td><td>3.075789e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
     <tr><td>LogCubic</td><td>c</td><td>-5.765602e-02</td><td>-5.765602e-02</td><td>1.496974e-02</td><td>--</td><td>-1.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td></tr>
-    <tr><td>LogCubic</td><td>Ep</td><td>2.527374e+01</td><td>2.527374e+01</td><td>8.298538e-02</td><td>--</td><td>2.529191e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
-    <tr><td>LogCubic</td><td>Sp</td><td>-1.013481e+01</td><td>-1.013481e+01</td><td>2.786107e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
+    <tr><td>LogCubic</td><td>Ep</td><td>2.527374e+01</td><td>2.527374e+01</td><td>8.298539e-02</td><td>--</td><td>2.529191e+01</td><td>0.000000e+00</td><td>3.000000e+01</td><td>False</td></tr>
+    <tr><td>LogCubic</td><td>Sp</td><td>-1.013481e+01</td><td>-1.013481e+01</td><td>2.786108e-02</td><td>--</td><td>-1.000000e+01</td><td>-3.000000e+01</td><td>0.000000e+00</td><td>False</td></tr>
     </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
     .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
     display: inline-block; margin-right: 1em; }
@@ -434,17 +428,17 @@ Model fitting with gammapy
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13768344688-843125').dataTable()");
+        console.log("$('#table5537988288-598091').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13768344688-843125').dataTable({
+        $('#table5537988288-598091').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -458,7 +452,7 @@ Model fitting with gammapy
 
 .. parsed-literal::
 
-    ---> IC         nu_p=+2.527374e+01 (err=+8.298538e-02)  nuFnu_p=-1.013481e+01 (err=+2.786107e-02) curv.=-2.164748e-01 (err=+3.075789e-02)
+    ---> IC         nu_p=+2.527374e+01 (err=+8.298539e-02)  nuFnu_p=-1.013481e+01 (err=+2.786108e-02) curv.=-2.164748e-01 (err=+3.075789e-02)
     ================================================================================
     
 
@@ -502,7 +496,7 @@ Model fitting with gammapy
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13782874880-349642" class="table-striped table-bordered table-condensed">
+    <table id="table5565355104-826548" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.578073e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -512,7 +506,7 @@ Model fitting with gammapy
     <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>1.364411e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.746653e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.746654e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.534742e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.171300e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>8.431239e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
@@ -536,17 +530,17 @@ Model fitting with gammapy
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13782874880-349642').dataTable()");
+        console.log("$('#table5565355104-826548').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13782874880-349642').dataTable({
+        $('#table5565355104-826548').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -615,7 +609,7 @@ automatically update the gammapy min/max parameters attributes
 .. raw:: html
 
     <div><i>Table length=12</i>
-    <table id="table13739531376" class="table-striped table-bordered table-condensed">
+    <table id="table13439111280" class="table-striped table-bordered table-condensed">
     <thead><tr><th>type</th><th>name</th><th>value</th><th>unit</th><th>error</th><th>min</th><th>max</th><th>frozen</th><th>link</th><th>prior</th></tr></thead>
     <thead><tr><th>str1</th><th>str16</th><th>float64</th><th>str4</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str1</th><th>str1</th></tr></thead>
     <tr><td></td><td>gmin</td><td>4.6975e+02</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>True</td><td></td><td></td></tr>
@@ -741,7 +735,7 @@ we build the SkyModel, and we degrade the pre-fit model quality
         gamma0_log_parab              :  35347.416   +/-    0.00             
         s                             :      2.171   +/-    0.00             
         r                             :      0.500   +/-    0.00             
-        R                     (frozen): 35780727301057516.000      cm          
+        R                     (frozen): 35780725834042224.000      cm          
         R_H                   (frozen): 100000000000000000.000       cm          
         B                             :      0.051   +/-    0.00 gauss       
         NH_cold_to_rel_e      (frozen):      1.000                   
@@ -821,7 +815,7 @@ setting gammapy Datasets and Fit classes, and running the fit
     	method     : scipy
     	success    : True
     	message    : Optimization terminated successfully.
-    	nfev       : 838
+    	nfev       : 833
     	total stat : 40.50
     
     
@@ -837,20 +831,20 @@ setting gammapy Datasets and Fit classes, and running the fit
 .. raw:: html
 
     <div><i>Table length=12</i>
-    <table id="table13779418768" class="table-striped table-bordered table-condensed">
+    <table id="table13440660688" class="table-striped table-bordered table-condensed">
     <thead><tr><th>type</th><th>name</th><th>value</th><th>unit</th><th>error</th><th>min</th><th>max</th><th>frozen</th><th>link</th><th>prior</th></tr></thead>
     <thead><tr><th>str1</th><th>str16</th><th>float64</th><th>str4</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str1</th><th>str1</th></tr></thead>
     <tr><td></td><td>gmin</td><td>4.6975e+02</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>1.000e+09</td><td>True</td><td></td><td></td></tr>
-    <tr><td></td><td>gmax</td><td>8.9839e+05</td><td></td><td>0.000e+00</td><td>1.000e+05</td><td>1.000e+07</td><td>False</td><td></td><td></td></tr>
-    <tr><td></td><td>N</td><td>5.2610e-01</td><td>cm-3</td><td>0.000e+00</td><td>1.000e-03</td><td>1.000e+01</td><td>False</td><td></td><td></td></tr>
-    <tr><td></td><td>gamma0_log_parab</td><td>3.4405e+04</td><td></td><td>0.000e+00</td><td>1.000e+03</td><td>1.000e+05</td><td>False</td><td></td><td></td></tr>
-    <tr><td></td><td>s</td><td>2.0559e+00</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>3.000e+00</td><td>False</td><td></td><td></td></tr>
-    <tr><td></td><td>r</td><td>8.0992e-01</td><td></td><td>0.000e+00</td><td>0.000e+00</td><td>5.000e+00</td><td>False</td><td></td><td></td></tr>
+    <tr><td></td><td>gmax</td><td>8.9833e+05</td><td></td><td>0.000e+00</td><td>1.000e+05</td><td>1.000e+07</td><td>False</td><td></td><td></td></tr>
+    <tr><td></td><td>N</td><td>5.2520e-01</td><td>cm-3</td><td>0.000e+00</td><td>1.000e-03</td><td>1.000e+01</td><td>False</td><td></td><td></td></tr>
+    <tr><td></td><td>gamma0_log_parab</td><td>3.4387e+04</td><td></td><td>0.000e+00</td><td>1.000e+03</td><td>1.000e+05</td><td>False</td><td></td><td></td></tr>
+    <tr><td></td><td>s</td><td>2.0554e+00</td><td></td><td>0.000e+00</td><td>1.000e+00</td><td>3.000e+00</td><td>False</td><td></td><td></td></tr>
+    <tr><td></td><td>r</td><td>8.1017e-01</td><td></td><td>0.000e+00</td><td>0.000e+00</td><td>5.000e+00</td><td>False</td><td></td><td></td></tr>
     <tr><td></td><td>R</td><td>3.5781e+16</td><td>cm</td><td>0.000e+00</td><td>1.000e+03</td><td>1.000e+30</td><td>True</td><td></td><td></td></tr>
     <tr><td></td><td>R_H</td><td>1.0000e+17</td><td>cm</td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>True</td><td></td><td></td></tr>
-    <tr><td></td><td>B</td><td>6.8142e-02</td><td>G</td><td>0.000e+00</td><td>1.000e-04</td><td>1.000e+00</td><td>False</td><td></td><td></td></tr>
+    <tr><td></td><td>B</td><td>6.8164e-02</td><td>G</td><td>0.000e+00</td><td>1.000e-04</td><td>1.000e+00</td><td>False</td><td></td><td></td></tr>
     <tr><td></td><td>NH_cold_to_rel_e</td><td>1.0000e+00</td><td></td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>True</td><td></td><td></td></tr>
-    <tr><td></td><td>beam_obj</td><td>1.9138e+01</td><td></td><td>0.000e+00</td><td>5.000e+00</td><td>5.000e+01</td><td>False</td><td></td><td></td></tr>
+    <tr><td></td><td>beam_obj</td><td>1.9136e+01</td><td></td><td>0.000e+00</td><td>5.000e+00</td><td>5.000e+01</td><td>False</td><td></td><td></td></tr>
     <tr><td></td><td>z_cosm</td><td>3.0800e-02</td><td></td><td>0.000e+00</td><td>0.000e+00</td><td>nan</td><td>True</td><td></td><td></td></tr>
     </table></div>
 
@@ -870,19 +864,19 @@ setting gammapy Datasets and Fit classes, and running the fit
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table13771430208-781268" class="table-striped table-bordered table-condensed">
+    <table id="table13442254704-225837" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_leptonic</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>4.697542e+02</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>8.983946e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.261017e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.440529e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.055942e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
-    <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>8.099165e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>8.983310e+05</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>5.252035e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.438677e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.055430e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>r</td><td>spectral_curvature</td><td></td><td>8.101657e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>R</td><td>region_size</td><td>cm</td><td>3.578073e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
     <tr><td>jet_leptonic</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>6.814163e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>6.816436e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>NH_cold_to_rel_e</td><td>cold_p_to_rel_e_ratio</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-    <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td></td><td>1.913780e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
+    <tr><td>jet_leptonic</td><td>beam_obj</td><td>beaming</td><td></td><td>1.913643e+01</td><td>1.000000e-04</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>jet_leptonic</td><td>z_cosm</td><td>redshift</td><td></td><td>3.080000e-02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     </table><style>table.dataTable {clear: both; width: auto !important; margin: 0 !important;}
     .dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate{
@@ -904,17 +898,17 @@ setting gammapy Datasets and Fit classes, and running the fit
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13771430208-781268').dataTable()");
+        console.log("$('#table13442254704-225837').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13771430208-781268').dataTable({
+        $('#table13442254704-225837').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -972,7 +966,7 @@ consider storing the plot within a list in the fit loop
 
 .. parsed-literal::
 
-    4.13 ms ± 16.8 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+    1.63 ms ± 6.95 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 
 
 .. code:: ipython3
@@ -982,6 +976,6 @@ consider storing the plot within a list in the fit loop
 
 .. parsed-literal::
 
-    4.49 ms ± 84.7 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+    2.07 ms ± 56.6 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 
 

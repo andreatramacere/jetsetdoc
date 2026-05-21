@@ -32,7 +32,7 @@ This is the class to use for model fitting and in general in Jetset
 
 .. parsed-literal::
 
-    tested with 1.4.0rc0
+    tested with 1.4.0rc3
 
 
 .. code:: ipython3
@@ -75,7 +75,7 @@ we can easily access the astropy table
 .. raw:: html
 
     <div><i>Table length=10</i>
-    <table id="table5100986080" class="table-striped table-bordered table-condensed">
+    <table id="table4617330544" class="table-striped table-bordered table-condensed">
     <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>dataset</th></tr></thead>
     <thead><tr><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
     <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -204,7 +204,7 @@ As you can see there are three 3 files. We use in this example the file for Mrk 
 .. raw:: html
 
     <div><i>Table length=110</i>
-    <table id="table4566188112" class="table-striped table-bordered table-condensed">
+    <table id="table4607897824" class="table-striped table-bordered table-condensed">
     <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>dataset</th></tr></thead>
     <thead><tr><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
     <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str13</th></tr></thead>
@@ -296,7 +296,7 @@ the data can be loaded from the saved table
 .. raw:: html
 
     <div><i>Table length=110</i>
-    <table id="table13056638464" class="table-striped table-bordered table-condensed">
+    <table id="table4760338304" class="table-striped table-bordered table-condensed">
     <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>dataset</th></tr></thead>
     <thead><tr><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
     <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str13</th></tr></thead>
@@ -368,7 +368,7 @@ of course, this method applies if you have a generic 2-dim numpy array.
 .. raw:: html
 
     <div><i>Table length=20</i>
-    <table id="table5100985888" class="table-striped table-bordered table-condensed">
+    <table id="table4586070160" class="table-striped table-bordered table-condensed">
     <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>dataset</th></tr></thead>
     <thead><tr><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
     <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
@@ -409,63 +409,75 @@ target the ``x`` column, and another named ``freq err`` associated to
 
    data=Data.from_file(data_table='your-file',import_dictionary={'freq':'x','freq err':'dx'})
 
-Importing from the ASI ssdc sedtool to Data object
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accessing data using ``ssdc-sedbuilder`` package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To import data from a data file downloaded from the asi ssdc sedtool:
-https://tools.ssdc.asi.it/SED/
+``sedbuilder`` implements a Python interface to the ASI Space Science
+Data Center’s SED Builder REST API:
+https://github.com/peppedilillo/sedbuilder
 
-we can use the importing tool in the :class:`jetset.data_loader.Data`. We just need to have the file downloaded from the asi ssdc sedtool, and to know the redshift of the object, the scale we selected (lin-lin, or log-log).
-Assume that we downloaded the data for Mrk421, in observed fluxes and linear scale, and the data are saved in the file 'MRK421_asdc.txt', we only have to do:
+Install the ``sedbuilder`` package:
 
-.. code:: ipython3
+- ``pip install ssdc-sedbuilder``
 
-    from jetset.data_loader import Data
-    data=Data.from_asdc(asdc_sed_file='MRK421_asdc.txt',obj_name='Mrk421',restframe='obs',data_scale='lin-lin',z=0.038)
+or
 
-
-.. note::
-   starting from version 1.1.0 ``src`` to ``obs`` transformation is available
+- ``conda install ssdc-sedbuilder``
 
 .. code:: ipython3
 
-    data.table
+    from sedbuilder import get_data
+    response = get_data(name="mrk 421")
+    table=response.to_jetset(z=0.031)
+
+.. code:: ipython3
+
+    table
 
 
 
 
 .. raw:: html
 
-    <div><i>Table length=3550</i>
-    <table id="table13067884576" class="table-striped table-bordered table-condensed">
+    <div><i>Table length=2301</i>
+    <table id="table4691111872" class="table-striped table-bordered table-condensed">
     <thead><tr><th>x</th><th>dx</th><th>y</th><th>dy</th><th>T_start</th><th>T_stop</th><th>UL</th><th>dataset</th></tr></thead>
-    <thead><tr><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th>MJD</th><th>MJD</th><th></th><th></th></tr></thead>
-    <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bytes16</th></tr></thead>
-    <tr><td>1.395e+17</td><td>2.077e+16</td><td>1.3665e-10</td><td>7.8618e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>1.883e+17</td><td>2.805e+16</td><td>1.3231e-10</td><td>5.2986e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>2.542e+17</td><td>3.786e+16</td><td>1.2801e-10</td><td>4.5958e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>3.432e+17</td><td>5.111e+16</td><td>1.1696e-10</td><td>4.4475e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>4.633e+17</td><td>6.901e+16</td><td>1.0488e-10</td><td>2.8152e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>6.255e+17</td><td>9.316e+16</td><td>8.8421e-11</td><td>2.2462e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>8.444e+17</td><td>1.258e+17</td><td>7.2995e-11</td><td>2.3614e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>1.14e+18</td><td>1.698e+17</td><td>5.7982e-11</td><td>2.5232e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
-    <tr><td>1.539e+18</td><td>2.292e+17</td><td>4.52e-11</td><td>2.9633e-12</td><td>50569.13745</td><td>50569.61257</td><td>False</td><td>0.0</td></tr>
+    <thead><tr><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th></th><th></th><th></th><th></th></tr></thead>
+    <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>str37</th></tr></thead>
+    <tr><td>8460000000.0</td><td>0.0</td><td>5.343335955180994e-14</td><td>3.3840001528216023e-17</td><td>47941.5</td><td>47941.5</td><td>False</td><td>CLASSSCAT</td></tr>
+    <tr><td>8400000000.0</td><td>0.0</td><td>5.305440000000001e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>CRATES</td></tr>
+    <tr><td>408000000.0</td><td>0.0</td><td>4.6920000000000005e-15</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>DIXON</td></tr>
+    <tr><td>2700000000.0</td><td>0.0</td><td>2.0790000000000002e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>DIXON</td></tr>
+    <tr><td>10700000000.0</td><td>0.0</td><td>8.453000000000001e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>DIXON</td></tr>
+    <tr><td>5000000000.0</td><td>0.0</td><td>3.6250000000000003e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>DIXON</td></tr>
+    <tr><td>1400000000.0</td><td>0.0</td><td>5.063800000000001e-16</td><td>2.31e-18</td><td>49078.5</td><td>49443.5</td><td>False</td><td>FIRST</td></tr>
+    <tr><td>1400000000.0</td><td>0.0</td><td>1.68e-17</td><td>2.296e-18</td><td>49078.5</td><td>49443.5</td><td>False</td><td>FIRST</td></tr>
+    <tr><td>1400000000.0</td><td>0.0</td><td>8.033060000000001e-15</td><td>2.31e-18</td><td>49078.5</td><td>49443.5</td><td>False</td><td>FIRST</td></tr>
     <tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-    <tr><td>1400000000.0</td><td>0.0</td><td>5.0638e-16</td><td>2.31e-18</td><td>49078.5</td><td>49443.5</td><td>False</td><td>0.0</td></tr>
-    <tr><td>1400000000.0</td><td>0.0</td><td>1.68e-17</td><td>2.296e-18</td><td>49078.5</td><td>49443.5</td><td>False</td><td>0.0</td></tr>
-    <tr><td>1400000000.0</td><td>0.0</td><td>8.0331e-15</td><td>2.31e-18</td><td>49078.5</td><td>49443.5</td><td>False</td><td>0.0</td></tr>
-    <tr><td>408000000.0</td><td>0.0</td><td>4.692e-15</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
-    <tr><td>2700000000.0</td><td>0.0</td><td>2.079e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
-    <tr><td>10700000000.0</td><td>0.0</td><td>8.453e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
-    <tr><td>5000000000.0</td><td>0.0</td><td>3.625e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
-    <tr><td>8460000000.0</td><td>0.0</td><td>5.3433e-14</td><td>3.384e-17</td><td>47941.5</td><td>47941.5</td><td>False</td><td>0.0</td></tr>
-    <tr><td>8400000000.0</td><td>0.0</td><td>5.3054e-14</td><td>0.0</td><td>0.0</td><td>0.0</td><td>False</td><td>0.0</td></tr>
+    <tr><td>7.259e+18</td><td>1.596e+17</td><td>2.2956499548532072e-11</td><td>4.106659890618092e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>7.59e+18</td><td>1.717e+17</td><td>2.3767399506824383e-11</td><td>4.4121399242480486e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>7.972e+18</td><td>2.104e+17</td><td>2.1282900788954784e-11</td><td>4.093410072708581e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>8.412e+18</td><td>2.297e+17</td><td>2.0382499507642926e-11</td><td>4.279750165370189e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>8.85e+18</td><td>2.079e+17</td><td>2.1472200753547277e-11</td><td>4.999570202279813e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>9.271e+18</td><td>2.128e+17</td><td>2.877669977308095e-11</td><td>6.012189877890872e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>9.764e+18</td><td>2.805e+17</td><td>1.6630200688760866e-11</td><td>5.1087901270507885e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>1.034e+19</td><td>2.95e+17</td><td>1.9805700482433686e-11</td><td>5.911409816511393e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
+    <tr><td>1.089e+19</td><td>2.587e+17</td><td>2.7871600860596146e-11</td><td>7.707450129512683e-12</td><td>57839.910497685</td><td>57840.639699074</td><td>False</td><td>NuBlazar</td></tr>
     </table></div>
 
 
 
 .. note::
-   When importing data from the ``src`` frame, the Data constructor will not convert units, but will assume that input units are erg/s. If this is not the case an error message will be displayed
+
+   The query from SSDC typically returns a large amount of data, so it is up to you to
+   filter the table according to your scientific requirements.
+   Typically, you will define a boolean filter (`msk`) and then pass the filtered table to
+   :class:`jetset.data_loader.ObsData`:
+
+   .. code-block:: python
+      from jetset.data_loader import ObsData
+      mks=.... #here you define the boolean filter
+      sed_data = ObsData(data_table=data[msk])
 
 Building the SED the ObsData object
 -----------------------------------
@@ -500,7 +512,7 @@ and after elimination of duplicated entries, and upper limits
 .. raw:: html
 
     <div><i>Table length=110</i>
-    <table id="table6426076144" class="table-striped table-bordered table-condensed">
+    <table id="table4694423456" class="table-striped table-bordered table-condensed">
     <thead><tr><th>nu_data</th><th>dnu_data</th><th>nuFnu_data</th><th>dnuFnu_data</th><th>nu_data_log</th><th>dnu_data_log</th><th>nuFnu_data_log</th><th>dnuFnu_data_log</th><th>dnuFnu_fake</th><th>dnuFnu_fake_log</th><th>UL</th><th>zero_error</th><th>T_start</th><th>T_stop</th><th>dataset</th></tr></thead>
     <thead><tr><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th>Hz</th><th>Hz</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th>erg / (s cm2)</th><th></th><th></th><th></th><th>MJD</th><th>MJD</th><th></th></tr></thead>
     <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>bool</th><th>bool</th><th>float64</th><th>float64</th><th>str13</th></tr></thead>
@@ -557,7 +569,7 @@ We can now plot our SED using the :class:`BlazarSEDFit.plot_sedfit.Plot` class
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_60_0.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_57_0.png
 
 
 or you can create the object to plot on the fly in this way
@@ -569,7 +581,7 @@ or you can create the object to plot on the fly in this way
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_62_0.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_59_0.png
 
 
 you can rescale your plot
@@ -581,7 +593,7 @@ you can rescale your plot
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_64_0.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_61_0.png
 
 
 plotting in the ``src`` restframe
@@ -593,7 +605,7 @@ plotting in the ``src`` restframe
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_66_0.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_63_0.png
 
 
 **to have interactive plot in jupyter**
@@ -644,7 +656,7 @@ this is not a problem for the fit process, you might want to rebin
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_70_1.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_67_1.png
 
 
 Handling errors and systematics
@@ -670,7 +682,7 @@ For these reasons the package offer the possibility to add systematics
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_72_0.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_69_0.png
 
 
 with this command we add 20% systematics for data between :math:`10^{6}<\nu<10^{29}` Hz
@@ -704,7 +716,7 @@ we use ``show_dataset=True`` to have the legend of all the datasets
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_78_0.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_75_0.png
 
 
 .. code:: ipython3
@@ -750,7 +762,7 @@ method. Please not with ``exclude=True`` we exclude dataset in
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_81_1.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_78_1.png
 
 
 we can pass more datasets, comma separated
@@ -778,7 +790,7 @@ we can pass more datasets, comma separated
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_83_1.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_80_1.png
 
 
 we can also use ``filter_data_set`` to exclude *only* the datasets in
@@ -808,7 +820,7 @@ we can also use ``filter_data_set`` to exclude *only* the datasets in
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_85_1.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_82_1.png
 
 
 we can revert ``sed_data`` to the original state with the
@@ -834,7 +846,7 @@ we can revert ``sed_data`` to the original state with the
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_88_1.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_85_1.png
 
 
 Saving sed_data and loading
@@ -856,5 +868,5 @@ you can save and relaod you sed_data
 
 
 
-.. image:: Jet_example_load_data_files/Jet_example_load_data_93_0.png
+.. image:: Jet_example_load_data_files/Jet_example_load_data_90_0.png
 

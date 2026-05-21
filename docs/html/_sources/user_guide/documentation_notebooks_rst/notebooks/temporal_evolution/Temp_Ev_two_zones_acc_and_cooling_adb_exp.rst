@@ -22,7 +22,7 @@ Temporal evolution, two zones, cooling+acc+adb exp
 
 .. parsed-literal::
 
-    tested on jetset 1.3.0rc9
+    tested on jetset 1.4.0rc3
 
 
 In this tutorial I show how to perform a full acc+radiative+adiabatic expansion simulation. To have full understanding of the analysis presented in this tutorial, it is advised to read the paper Tramacere et al (2022) [Tramacere2022]_.
@@ -36,13 +36,6 @@ region under the effect of radiative plus adiabatic cooling
     from jetset.jet_timedep import JetTimeEvol
     
     temp_ev_acc=JetTimeEvol.load_model('two_zone_rad_acc.pkl')
-
-
-.. parsed-literal::
-
-    ===> setting C threads to 12
-    ===> setting C threads to 12
-
 
 .. code:: ipython3
 
@@ -64,7 +57,7 @@ region under the effect of radiative plus adiabatic cooling
 .. raw:: html
 
     <i>Table length=29</i>
-    <table id="table5843391328-34805" class="table-striped table-bordered table-condensed">
+    <table id="table5732436736-550756" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
     <tr><td>delta t</td><td>time</td><td>5.000000e+01</td><td>s</td><td>0.00029979245799999996</td><td>R/c</td><td>False</td></tr>
     <tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
@@ -118,14 +111,14 @@ region under the effect of radiative plus adiabatic cooling
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table5843391328-34805').dataTable()");
+        console.log("$('#table5732436736-550756').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table5843391328-34805').dataTable({
+        $('#table5732436736-550756').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -149,7 +142,7 @@ region under the effect of radiative plus adiabatic cooling
 .. raw:: html
 
     <i>Table length=30</i>
-    <table id="table4656283552-422754" class="table-striped table-bordered table-condensed">
+    <table id="table5732115152-43533" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>1.000000e+06</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -204,14 +197,14 @@ region under the effect of radiative plus adiabatic cooling
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table4656283552-422754').dataTable()");
+        console.log("$('#table5732115152-43533').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table4656283552-422754').dataTable({
+        $('#table5732115152-43533').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -235,7 +228,7 @@ the next version of the documentation
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotTempEvDiagram at 0x15c47e470>
+    <jetset.plot_sedfit.PlotTempEvDiagram at 0x155abbec0>
 
 
 
@@ -443,15 +436,6 @@ we build the ``temp_ev_expansion`` expansion model
     
 
 
-
-.. parsed-literal::
-
-    ===> setting C threads to 12
-    ===> setting C threads to 12
-    ===> setting C threads to 12
-    ===> setting C threads to 12
-
-
 we set to ``'on'`` the region expansion, and we set the relevant
 paramters
 
@@ -483,7 +467,7 @@ paramters
 .. raw:: html
 
     <i>Table length=12</i>
-    <table id="table4644797984-533631" class="table-striped table-bordered table-condensed">
+    <table id="table13528168976-103250" class="table-striped table-bordered table-condensed">
     <thead><tr><th>name</th><th>par type</th><th>val</th><th>units</th><th>val*</th><th>units*</th><th>log</th></tr></thead>
     <tr><td>delta t</td><td>time</td><td>1.000008e+03</td><td>s</td><td>0.005995894232556255</td><td>R/c</td><td>False</td></tr>
     <tr><td>log. sampling</td><td>time</td><td>0.000000e+00</td><td></td><td>None</td><td></td><td>False</td></tr>
@@ -520,14 +504,14 @@ paramters
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table4644797984-533631').dataTable()");
+        console.log("$('#table13528168976-103250').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table4644797984-533631').dataTable({
+        $('#table13528168976-103250').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -551,7 +535,7 @@ paramters
 .. raw:: html
 
     <i>Table length=17</i>
-    <table id="table4644797744-559145" class="table-striped table-bordered table-condensed">
+    <table id="table5733966304-229826" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>jet_time_ev</td><td>duration</td><td>time_grid</td><td>s</td><td>1.611112e+07</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>jet_time_ev</td><td>gmin_grid</td><td>gamma_grid</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -593,14 +577,14 @@ paramters
         datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table4644797744-559145').dataTable()");
+        console.log("$('#table5733966304-229826').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table4644797744-559145').dataTable({
+        $('#table5733966304-229826').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -621,7 +605,7 @@ paramters
 
 .. parsed-literal::
 
-    <jetset.plot_sedfit.PlotTempEvDiagram at 0x15c8fba00>
+    <jetset.plot_sedfit.PlotTempEvDiagram at 0x17dcd33e0>
 
 
 
@@ -698,7 +682,7 @@ adiabatic expansion simulations, for both the radio and gamma
 
 .. parsed-literal::
 
-    <matplotlib.legend.Legend at 0x15f10c4c0>
+    <matplotlib.legend.Legend at 0x3407461b0>
 
 
 
@@ -744,7 +728,7 @@ we notice the two peaks in the radio lightcurves, due to transition of the SSA f
         if t[0][0]>=temp_ev_expansion.parameters.t_jet_exp.val and skip_label is False:
             label='expansion'
             skip_label=True
-        p.add_model_plot(model=s,label=label,color=c,density=False,auto_label=False)
+        p.add_model_plot(model=s,label=label,color=c,auto_label=False)
     
     p.setlim(y_min=1E-18,x_min=1E7)
     

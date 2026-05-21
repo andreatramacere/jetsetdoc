@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>External Compton &#8212; jetset  documentation</title>
+    <title>`External Compton &lt;#toc0_&gt;`__ &#8212; jetset  documentation</title>
   
   
   
@@ -50,11 +50,11 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/documentation_notebooks_rst/notebooks/jet_model_phys_EC/Jet_example_phys_EC';</script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Synchrotron Polarization For Leptons" href="../synchrotron_polarization/Jet_example_synch_pol.html" />
+    <link rel="next" title="Example for using a Corona within the EC scenario" href="Jet_exmple_corona.html" />
     <link rel="prev" title="Physical setup" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.4.0rc0" />
+  <meta name="docsearch:version" content="1.4.0rc3" />
   </head>
   
   
@@ -172,9 +172,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../user_guide.html">user guide</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../model_basic.html">model basic features  *New (v1.3.0)*</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../model_basic.html">model basic features  *New (v1.4.0)*</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html"> jet model physical setup 1 (basic features and SSC) -  *New (v1.3.0)*</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#"> jet model physical setup 2 (EC and Equipartition) -  *New (v1.3.0)*</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"> jet model physical setup 2 (EC and Equipartition) -  *New (v1.4.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Jet_exmple_corona.html"> jet model physical setup 3 (EC Corona) -  *New (v1.4.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../internal_abs/int_abs.html"> Internal abs - *New (v1.4.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../synchrotron_polarization/Jet_example_synch_pol.html"> jet leptonic synchrotron polarization -  *New (v1.3.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jet_model_num/Jet_example_num.html"> jet model numerical setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hadronic_pp_jet/hadronic.html"> jet hadronic pp model</a></li>
@@ -183,7 +185,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../cosmology/Jet_example_cosmo.html"> change cosmology model - *New (v1.3.0)*</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_advanced.html">model advanced features   *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_advanced.html">model advanced features   *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../composite_model/Composite_model.html"> composite models  *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jet_radio_component/Jet_example_radio_component.html"> composite models: a jet plus analytical extend radio component  *New (v1.4.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../composite_model/Composite_model_two_zone.html"> composite models: a two-zone jet  *New (v1.3.0)*</a></li>
@@ -201,19 +203,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../phen_constr/Jet_example_phenom_constr.html"> phenomenological model constraining: application</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_fitting.html">model fitting  *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../model_fitting_intro.html"> caveats and introduction on model fitting and minimizers  *New (v1.3.0)*</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../model_fitting_examples.html"> model fitting examples  *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_1/Jet_plus_radio_comp_example_model_fit.html"> 1: SSC model fit with extended radio plugin, minuit contours, and MCMC for Mrk 421 *New (v1.4.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_2/Jet_example_model_fit_wiht_gal_template.html"> 2: SSC (jet+galaxy template) model fit and MCMC for Mrk 501 *New (v1.3.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_3/Jet_example_model_fit_EC.html"> 3: SSC and EC fit for 3C 454.3, with internal absorption *New (v1.4.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_4/Jet_example_model_fit_leptonic_eq.html"> 4: Leptonic equilibrim for Mrk 421 fit, and MCMC *New (v1.4.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html"> 5: Mrk 521 SSC+EBL with Sherpa minimizer and jetset model  *New (v1.3.0)*</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_fitting.html">model fitting  *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../model_fitting_intro.html"> caveats and introduction on model fitting and minimizers  *New (v1.4.0)*</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../model_fitting_examples.html"> model fitting examples  *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_SSC_and_composite_model/Jet_plus_radio_comp_example_model_fit.html"> 1: SSC model fit with extended radio plugin, minuit contours, and MCMC for Mrk 421 *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_with_gal_template/Jet_example_model_fit_wiht_gal_template.html"> 2: SSC (jet+galaxy template) model fit and MCMC for Mrk 501 *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_EC/Jet_example_model_fit_EC.html"> 3: SSC and EC fit for 3C 454.3, with internal absorption *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_leptonic_eq/Jet_example_model_fit_leptonic_eq.html"> 4: Leptonic equilibrium for Mrk 421 fit, and MCMC *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html"> 5: Mrk 521 SSC+EBL with Sherpa minimizer and jetset model  *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_with_ultranest/Jet_example_model_fit_only_ultranest_plain.html"> 6: Ultranest example, no pre-fit stage, SSC molel for Mrk 421  *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_with_ultranest/Jet_example_model_fit_only_ultranest_plain_and_openmpi.html"> 7: Ultranest example with  Open MPI, no pre-fit stage, SSC molel for Mrk 421  *New (v1.4.0)*</a></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../temp_ev.html">temporal evolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../temp_ev.html">temporal evolution *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html"> Temporal evolution, one zone, only cooling *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html"> Temporal evolution, two zones,  cooling+acc *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html"> Temporal evolution, two zones,  cooling+acc+adiabatic expansion *New (v1.2.0)*</a></li>
@@ -221,8 +225,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../jet_leptonic_equilibrium/leptonic_validate_temp_ev.html"> Temporal evolution, validation of the leptonic equilibrim *New (v1.5.0)*</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../plugins.html">plugins  *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../plugins.html">plugins  *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html"> Example to use the sherpa plugin with the Sherpa interface *New (v1.3.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html"> Example to use the Sherpa minimizer plugin with a JeSeT model *New (v1.3.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html"> Example to use the Gamma-py plugin with the JeSeT interface *New (v1.3.0)*</a></li>
 </ul>
 </details></li>
@@ -345,6 +350,20 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/mcmc.html">mcmc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc.McmcSampler.html">McmcSampler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/mcmc_parameters.html">mcmc_parameters</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.get_mcmc_bound_max.html">get_mcmc_bound_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.get_mcmc_bound_min.html">get_mcmc_bound_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.sci_if_large.html">sci_if_large</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.set_mcmc_bound_max.html">set_mcmc_bound_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.set_mcmc_bound_min.html">set_mcmc_bound_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.McmcCompositeModelParameterArray.html">McmcCompositeModelParameterArray</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/mcmc_ultranest.html">mcmc_ultranest</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_ultranest.run_open_mpi.html">run_open_mpi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_ultranest.UltraNestSampler.html">UltraNestSampler</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/minimizer.html">minimizer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -631,7 +650,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>External Compton</h1>
+    <h1>`External Compton <#toc0_>`__</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -641,15 +660,15 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broad-line-region">Broad Line Region</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-disk-type">change Disk type</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusty-torus">Dusty Torus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-absorption">Internal absorption</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-blr-and-dt-radius-as-a-function-of-the-disk-luminosity">setting the BLR and DT radius as a function of the disk luminosity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-external-field-transformation">Changing the external field transformation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#external-photon-field-energy-density-along-the-jet">External photon field energy density along the jet</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ic-against-the-cmb">IC against the CMB</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition">Equipartition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broad-line-region">`Broad Line Region &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-disk-type">`change Disk type &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusty-torus">`Dusty Torus &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-absorption">`Internal absorption &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-blr-and-dt-radius-as-a-function-of-the-disk-luminosity">`setting the BLR and DT radius as a function of the disk luminosity &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-external-field-transformation">`Changing the external field transformation &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#external-photon-field-energy-density-along-the-jet">`External photon field energy density along the jet &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ic-against-the-cmb">`IC against the CMB &lt;#toc0_&gt;`__</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition">`Equipartition &lt;#toc0_&gt;`__</a></li>
 </ul>
 </li>
 </ul>
@@ -664,16 +683,16 @@
                 <article class="bd-article">
                   
   <section id="external-compton">
-<span id="jet-physical-guide-ec"></span><h1>External Compton<a class="headerlink" href="#external-compton" title="Link to this heading">#</a></h1>
+<span id="jet-physical-guide-ec"></span><h1><a href="#id9"><span class="problematic" id="id10">`External Compton &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#external-compton" title="Link to this heading">#</a></h1>
 <p>The external Compton implementation  gives you the possibility to use a double approach</p>
 <ul class="simple">
-<li><p>transformation of the external  fields to the blob rest frame Dermer and Schlickeiser (2002) <a class="reference internal" href="../../../../references.html#id2" id="id1"><span>[Dermer2002]</span></a>, Dermer and Menon (2009) <a class="reference internal" href="../../../../references.html#dermermenon2009" id="id2"><span>[DermerMenon2009]</span></a></p></li>
+<li><p>transformation of the external  fields to the blob rest frame Dermer and Schlickeiser (2002) <a class="reference internal" href="../hadronic_pp_jet/hadronic.html#id4" id="id1"><span>[Dermer2002]</span></a>, Dermer and Menon (2009) <a class="reference internal" href="../hadronic_pp_jet/hadronic.html#dermermenon2009" id="id2"><span>[DermerMenon2009]</span></a></p></li>
 <li><p>transformation of the electron emitting distribution from the blob restframe to
-disk/BH restframe Dermer(1995) <a class="reference internal" href="../../../../references.html#dermer95" id="id3"><span>[Dermer95]</span></a> and Georganopoulos, Kirk, and Mastichiadis (2001) <a class="reference internal" href="../../../../references.html#gkm01" id="id4"><span>[GKM01]</span></a>, Dermer and Menon (2009) <a class="reference internal" href="../../../../references.html#dermermenon2009" id="id5"><span>[DermerMenon2009]</span></a></p></li>
+disk/BH restframe Dermer(1995) <a class="reference internal" href="../hadronic_pp_jet/hadronic.html#dermer95" id="id3"><span>[Dermer95]</span></a> and Georganopoulos, Kirk, and Mastichiadis (2001) <a class="reference internal" href="../hadronic_pp_jet/hadronic.html#gkm01" id="id4"><span>[GKM01]</span></a>, Dermer and Menon (2009) <a class="reference internal" href="../hadronic_pp_jet/hadronic.html#dermermenon2009" id="id5"><span>[DermerMenon2009]</span></a></p></li>
 </ul>
 <p>The implemented external radiative fields are</p>
 <ul class="simple">
-<li><p>Broad Line Region radiative field using the approach of Donea &amp; Protheroe (2003) <a class="reference internal" href="../../../../references.html#donea2003" id="id6"><span>[Donea2003]</span></a></p></li>
+<li><p>Broad Line Region radiative field using the approach of Donea &amp; Protheroe (2003) <a class="reference internal" href="../hadronic_pp_jet/hadronic.html#donea2003" id="id6"><span>[Donea2003]</span></a></p></li>
 <li><p>Dusty torus implemented as a uniform BB field within <cite>R_DT</cite></p></li>
 <li><p>accretion disk (mono-energetic, single-temperature BB or a multi-temperature BB)</p></li>
 <li><p>Cosmic Microwave Background (CMB)</p></li>
@@ -686,12 +705,12 @@ disk/BH restframe Dermer(1995) <a class="reference internal" href="../../../../r
 </figcaption>
 </figure>
 <section id="broad-line-region">
-<h2>Broad Line Region<a class="headerlink" href="#broad-line-region" title="Link to this heading">#</a></h2>
+<h2><a href="#id11"><span class="problematic" id="id12">`Broad Line Region &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#broad-line-region" title="Link to this heading">#</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">jetset</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tested with&#39;</span><span class="p">,</span><span class="n">jetset</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="k">with</span> <span class="mf">1.4.0</span><span class="n">rc0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tested</span> <span class="k">with</span> <span class="mf">1.4.0</span><span class="n">rc3</span>
 </pre></div>
 </div>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -764,7 +783,7 @@ black body <code class="docutils literal notranslate"><span class="pre">BB</span
 </pre></div>
 </div>
 <i>Table length=18</i>
-<table id="table6431110448-264982" class="table-striped table-bordered table-condensed">
+<table id="table6085585920-191973" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -804,17 +823,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6431110448-264982').dataTable()");
+    console.log("$('#table6085585920-191973').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6431110448-264982').dataTable({
+    $('#table6085585920-191973').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -827,7 +846,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </div>
 </section>
 <section id="change-disk-type">
-<h2>change Disk type<a class="headerlink" href="#change-disk-type" title="Link to this heading">#</a></h2>
+<h2><a href="#id13"><span class="problematic" id="id14">`change Disk type &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#change-disk-type" title="Link to this heading">#</a></h2>
 <p>the disk type can be set as a more realistic multi temperature black
 body (MultiBB). In this case the <code class="docutils literal notranslate"><span class="pre">show_model</span></code> method provides physical
 parameters regarding the multi temperature black body accretion disk:</p>
@@ -915,7 +934,7 @@ parameters regarding the multi temperature black body accretion disk:</p>
 </pre></div>
 </div>
 <i>Table length=21</i>
-<table id="table6433680384-615653" class="table-striped table-bordered table-condensed">
+<table id="table6083382736-831869" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -958,17 +977,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6433680384-615653').dataTable()");
+    console.log("$('#table6083382736-831869').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6433680384-615653').dataTable({
+    $('#table6083382736-831869').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -990,7 +1009,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <img alt="../../../../_images/Jet_example_phys_EC_16_0.png" src="../../../../_images/Jet_example_phys_EC_16_0.png" />
 </section>
 <section id="dusty-torus">
-<h2>Dusty Torus<a class="headerlink" href="#dusty-torus" title="Link to this heading">#</a></h2>
+<h2><a href="#id15"><span class="problematic" id="id16">`Dusty Torus &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#dusty-torus" title="Link to this heading">#</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">add_EC_component</span><span class="p">(</span><span class="s1">&#39;DT&#39;</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">show_model</span><span class="p">()</span>
 </pre></div>
@@ -1056,7 +1075,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=24</i>
-<table id="table6433316480-472670" class="table-striped table-bordered table-condensed">
+<table id="table6057606272-706416" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+16</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
@@ -1102,17 +1121,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6433316480-472670').dataTable()");
+    console.log("$('#table6057606272-706416').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6433316480-472670').dataTable({
+    $('#table6057606272-706416').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1147,11 +1166,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <img alt="../../../../_images/Jet_example_phys_EC_24_0.png" src="../../../../_images/Jet_example_phys_EC_24_0.png" />
 </section>
 <section id="internal-absorption">
-<h2>Internal absorption<a class="headerlink" href="#internal-absorption" title="Link to this heading">#</a></h2>
+<h2><a href="#id17"><span class="problematic" id="id18">`Internal absorption &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#internal-absorption" title="Link to this heading">#</a></h2>
 <p>If you want to add internal absorption (pair production), please, read this tutorial <a class="reference internal" href="../internal_abs/int_abs.html#int-abs-guide"><span class="std std-ref">Internal absorption</span></a>.</p>
 </section>
 <section id="setting-the-blr-and-dt-radius-as-a-function-of-the-disk-luminosity">
-<h2>setting the BLR and DT radius as a function of the disk luminosity<a class="headerlink" href="#setting-the-blr-and-dt-radius-as-a-function-of-the-disk-luminosity" title="Link to this heading">#</a></h2>
+<h2><a href="#id19"><span class="problematic" id="id20">`setting the BLR and DT radius as a function of the disk luminosity &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#setting-the-blr-and-dt-radius-as-a-function-of-the-disk-luminosity" title="Link to this heading">#</a></h2>
 <p>Using the depending parameters (see <a class="reference internal" href="../depending_pars/depending_pars.html#dep-pars"><span class="std std-ref">Depending parameters</span></a>, for more details) we can set the BLR and DT radius, as a function of the disk luminosity</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#kaspi+ 2007:https://iopscience.iop.org/article/10.1086/512094/pdf</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">make_dependent_par</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="s1">&#39;R_BLR_in&#39;</span><span class="p">,</span> <span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;L_Disk&#39;</span><span class="p">],</span> <span class="n">par_expr</span><span class="o">=</span><span class="s1">&#39;1E17*(L_Disk/1E46)**0.5&#39;</span><span class="p">)</span>
@@ -1183,7 +1202,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=24</i>
-<table id="table6425876416-421057" class="table-striped table-bordered table-condensed">
+<table id="table6137750608-272710" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>5.000000e+04</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1229,17 +1248,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6425876416-421057').dataTable()");
+    console.log("$('#table6137750608-272710').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6425876416-421057').dataTable({
+    $('#table6137750608-272710').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1285,7 +1304,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=25</i>
-<table id="table6425876416-609130" class="table-striped table-bordered table-condensed">
+<table id="table6409719296-364521" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>5.000000e+04</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1332,17 +1351,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6425876416-609130').dataTable()");
+    console.log("$('#table6409719296-364521').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6425876416-609130').dataTable({
+    $('#table6409719296-364521').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1371,7 +1390,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=25</i>
-<table id="table6425876416-222354" class="table-striped table-bordered table-condensed">
+<table id="table6409818464-519548" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>EC_example</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>2.000000e+00</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>5.000000e+04</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
@@ -1380,8 +1399,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>EC_example</td><td>p</td><td>LE_spectral_slope</td><td></td><td>1.500000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>p_1</td><td>HE_spectral_slope</td><td></td><td>3.200000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>tau_BLR</td><td>BLR</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
-<tr><td>EC_example</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>7.071068e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>EC_example</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>7.778175e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>EC_example</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>2.121320e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>EC_example</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>2.333452e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>EC_example</td><td>R_inner_Sw</td><td>Disk</td><td>Sw. radii*</td><td>3.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>R_ext_Sw</td><td>Disk</td><td>Sw. radii*</td><td>5.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>EC_example</td><td>accr_eff</td><td>Disk</td><td></td><td>8.000000e-02</td><td>6.000000e-02</td><td>1.000000e-01</td><td>False</td><td>False</td></tr>
@@ -1418,17 +1437,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6425876416-222354').dataTable()");
+    console.log("$('#table6409818464-519548').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6425876416-222354').dataTable({
+    $('#table6409818464-519548').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1447,7 +1466,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <img alt="../../../../_images/Jet_example_phys_EC_39_0.png" src="../../../../_images/Jet_example_phys_EC_39_0.png" />
 </section>
 <section id="changing-the-external-field-transformation">
-<h2>Changing the external field transformation<a class="headerlink" href="#changing-the-external-field-transformation" title="Link to this heading">#</a></h2>
+<h2><a href="#id21"><span class="problematic" id="id22">`Changing the external field transformation &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#changing-the-external-field-transformation" title="Link to this heading">#</a></h2>
 <p>Default method, is the transformation of the external photon field from
 the disk/BH frame to the relativistic blob</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">.</span><span class="n">set_external_field_transf</span><span class="p">(</span><span class="s1">&#39;blob&#39;</span><span class="p">)</span>
@@ -1462,11 +1481,11 @@ frame.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Anyhow,  the <code class="docutils literal notranslate"><span class="pre">disk</span></code> transformation is riogorously valid only for isotropic external fields, such as the CMB, or the BLR and Dusty torus seed photons within the  DT radius and BLR radius, respectively. Beyond the isotropic region, the code will reproduce the expected beaming pattern as in Fig 13 of Finke (2106) <a class="reference internal" href="../../../../references.html#finke2016" id="id7"><span>[Finke2016]</span></a>, but the spectral shape might be slightly different.</p>
+<p>Anyhow,  the <code class="docutils literal notranslate"><span class="pre">disk</span></code> transformation is riogorously valid only for isotropic external fields, such as the CMB, or the BLR and Dusty torus seed photons within the  DT radius and BLR radius, respectively. Beyond the isotropic region, the code will reproduce the expected beaming pattern as in Fig 13 of Finke (2106) <a class="reference internal" href="../hadronic_pp_jet/hadronic.html#finke2016" id="id7"><span>[Finke2016]</span></a>, but the spectral shape might be slightly different.</p>
 </div>
 </section>
 <section id="external-photon-field-energy-density-along-the-jet">
-<h2>External photon field energy density along the jet<a class="headerlink" href="#external-photon-field-energy-density-along-the-jet" title="Link to this heading">#</a></h2>
+<h2><a href="#id23"><span class="problematic" id="id24">`External photon field energy density along the jet &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#external-photon-field-energy-density-along-the-jet" title="Link to this heading">#</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">iso_field_transf</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">BulckFactor</span><span class="p">):</span>
     <span class="n">beta</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">BulckFactor</span><span class="o">*</span><span class="n">BulckFactor</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">L</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">*</span><span class="n">R</span><span class="o">*</span><span class="mf">3E10</span><span class="p">)</span><span class="o">*</span><span class="n">BulckFactor</span><span class="o">*</span><span class="n">BulckFactor</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="p">((</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
@@ -1516,7 +1535,7 @@ frame.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x17f7a1670</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x1685f6690</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../../_images/Jet_example_phys_EC_49_1.png" src="../../../../_images/Jet_example_phys_EC_49_1.png" />
@@ -1570,13 +1589,13 @@ frame.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x318c0bbc0</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span> <span class="n">at</span> <span class="mh">0x17ddb8680</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <img alt="../../../../_images/Jet_example_phys_EC_50_1.png" src="../../../../_images/Jet_example_phys_EC_50_1.png" />
 </section>
 <section id="ic-against-the-cmb">
-<h2>IC against the CMB<a class="headerlink" href="#ic-against-the-cmb" title="Link to this heading">#</a></h2>
+<h2><a href="#id25"><span class="problematic" id="id26">`IC against the CMB &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#ic-against-the-cmb" title="Link to this heading">#</a></h2>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_jet</span><span class="o">=</span><span class="n">Jet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test_equipartition&#39;</span><span class="p">,</span><span class="n">electron_distribution</span><span class="o">=</span><span class="s1">&#39;lppl&#39;</span><span class="p">,</span><span class="n">beaming_expr</span><span class="o">=</span><span class="s1">&#39;bulk_theta&#39;</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span><span class="mf">1E21</span><span class="p">)</span>
 <span class="n">my_jet</span><span class="o">.</span><span class="n">set_par</span><span class="p">(</span><span class="s1">&#39;z_cosm&#39;</span><span class="p">,</span><span class="n">val</span><span class="o">=</span> <span class="mf">0.651</span><span class="p">)</span>
@@ -1619,7 +1638,7 @@ isotropic external field.</p>
 </div>
 <img alt="../../../../_images/Jet_example_phys_EC_54_0.png" src="../../../../_images/Jet_example_phys_EC_54_0.png" />
 <section id="equipartition">
-<h3>Equipartition<a class="headerlink" href="#equipartition" title="Link to this heading">#</a></h3>
+<h3><a href="#id27"><span class="problematic" id="id28">`Equipartition &lt;#toc0_&gt;`__</span></a><a class="headerlink" href="#equipartition" title="Link to this heading">#</a></h3>
 <p>It is also possible to set our jet at the equipartition, that is
 achieved not using analytical approximation, but by numerically finding
 the equipartition value over a grid. We have to provide the value of the
@@ -1639,26 +1658,26 @@ points (<code class="docutils literal notranslate"><span class="pre">N_pts</span
 </pre></div>
 </div>
 <img alt="../../../../_images/Jet_example_phys_EC_57_1.png" src="../../../../_images/Jet_example_phys_EC_57_1.png" />
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setting</span> <span class="n">B</span> <span class="n">to</span>  <span class="mf">0.0001389495494373139</span>
-<span class="n">setting</span> <span class="n">N</span> <span class="n">to</span>  <span class="mf">9.160733610838053e-06</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setting</span> <span class="n">B</span> <span class="n">to</span>  <span class="mf">1e-09</span>
+<span class="n">setting</span> <span class="n">N</span> <span class="n">to</span>  <span class="mf">9103138457.10416</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="p">:</span> <span class="n">AstropyDeprecationWarning</span><span class="p">:</span> <span class="s1">&#39;classic&#39;</span> <span class="n">backend</span> <span class="k">for</span> <span class="n">show_in_notebook</span><span class="p">()</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="k">as</span> <span class="n">of</span> <span class="mf">6.1</span><span class="o">.</span> <span class="n">Instead</span><span class="p">,</span> <span class="n">use</span> <span class="n">the</span> <span class="n">supported</span> <span class="n">backend</span> <span class="s1">&#39;ipydatagrid&#39;</span><span class="o">.</span> <span class="p">[</span><span class="n">astropy</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">table</span><span class="p">]</span>
 </pre></div>
 </div>
 <i>Table length=13</i>
-<table id="table6441642864-980414" class="table-striped table-bordered table-condensed">
+<table id="table6060140752-994136" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>test_equipartition</td><td>R</td><td>region_size</td><td>cm</td><td>1.000000e+21</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>R_H</td><td>region_position</td><td>cm</td><td>1.000000e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>test_equipartition</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.389495e-04</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>test_equipartition</td><td>B</td><td>magnetic_field</td><td>gauss</td><td>1.000000e-09</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>NH_cold_to_rel_e</td><td>cold_p_to_rel_e_ratio</td><td></td><td>1.000000e+00</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>test_equipartition</td><td>theta</td><td>jet-viewing-angle</td><td>deg</td><td>1.200000e+01</td><td>0.000000e+00</td><td>9.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>BulkFactor</td><td>jet-bulk-factor</td><td>lorentz-factor*</td><td>3.500000e+00</td><td>1.000000e+00</td><td>1.000000e+05</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>z_cosm</td><td>redshift</td><td></td><td>6.510000e-01</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>gmin</td><td>low-energy-cut-off</td><td>lorentz-factor*</td><td>5.000000e+01</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>gmax</td><td>high-energy-cut-off</td><td>lorentz-factor*</td><td>3.000000e+06</td><td>1.000000e+00</td><td>1.000000e+15</td><td>False</td><td>False</td></tr>
-<tr><td>test_equipartition</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.160734e-06</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
+<tr><td>test_equipartition</td><td>N</td><td>emitters_density</td><td>1 / cm3</td><td>9.103138e+09</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>gamma0_log_parab</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>3.500000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>s</td><td>LE_spectral_slope</td><td></td><td>2.580000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>test_equipartition</td><td>r</td><td>spectral_curvature</td><td></td><td>4.200000e-01</td><td>-1.500000e+01</td><td>1.500000e+01</td><td>False</td><td>False</td></tr>
@@ -1682,17 +1701,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6441642864-980414').dataTable()");
+    console.log("$('#table6060140752-994136').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6441642864-980414').dataTable({
+    $('#table6060140752-994136').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1730,11 +1749,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
       </div>
     </a>
     <a class="right-next"
-       href="../synchrotron_polarization/Jet_example_synch_pol.html"
+       href="Jet_exmple_corona.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Synchrotron Polarization For Leptons</p>
+        <p class="prev-next-title">Example for using a Corona within the EC scenario</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1756,15 +1775,15 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broad-line-region">Broad Line Region</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-disk-type">change Disk type</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusty-torus">Dusty Torus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-absorption">Internal absorption</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-blr-and-dt-radius-as-a-function-of-the-disk-luminosity">setting the BLR and DT radius as a function of the disk luminosity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-external-field-transformation">Changing the external field transformation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#external-photon-field-energy-density-along-the-jet">External photon field energy density along the jet</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ic-against-the-cmb">IC against the CMB</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition">Equipartition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broad-line-region">`Broad Line Region &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-disk-type">`change Disk type &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusty-torus">`Dusty Torus &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-absorption">`Internal absorption &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-blr-and-dt-radius-as-a-function-of-the-disk-luminosity">`setting the BLR and DT radius as a function of the disk luminosity &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-external-field-transformation">`Changing the external field transformation &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#external-photon-field-energy-density-along-the-jet">`External photon field energy density along the jet &lt;#toc0_&gt;`__</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ic-against-the-cmb">`IC against the CMB &lt;#toc0_&gt;`__</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition">`Equipartition &lt;#toc0_&gt;`__</a></li>
 </ul>
 </li>
 </ul>

@@ -32,6 +32,7 @@ FitModel
       ~FitModel.set
       ~FitModel.set_fit_range
       ~FitModel.set_nu_grid
+      ~FitModel.set_num_c_threads
       ~FitModel.set_par
       ~FitModel.show_model
       ~FitModel.show_model_components
@@ -58,6 +59,7 @@ FitModel
    .. automethod:: set
    .. automethod:: set_fit_range
    .. automethod:: set_nu_grid
+   .. automethod:: set_num_c_threads
    .. automethod:: set_par
    .. automethod:: show_model
    .. automethod:: show_model_components

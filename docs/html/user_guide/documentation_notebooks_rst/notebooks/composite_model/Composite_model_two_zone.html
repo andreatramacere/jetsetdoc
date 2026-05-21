@@ -50,11 +50,11 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/documentation_notebooks_rst/notebooks/composite_model/Composite_model_two_zone';</script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Internal absorption" href="../internal_abs/int_abs.html" />
+    <link rel="next" title="Depending parameters" href="../depending_pars/depending_pars.html" />
     <link rel="prev" title="Jet Radio Component: RadioSpectrum" href="../jet_radio_component/Jet_example_radio_component.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.4.0rc0" />
+  <meta name="docsearch:version" content="1.4.0rc3" />
   </head>
   
   
@@ -172,9 +172,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../user_guide.html">user guide</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_basic.html">model basic features  *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_basic.html">model basic features  *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../jet_model_phys_SSC/Jet_example_phys_SSC.html"> jet model physical setup 1 (basic features and SSC) -  *New (v1.3.0)*</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../jet_model_phys_EC/Jet_example_phys_EC.html"> jet model physical setup 2 (EC and Equipartition) -  *New (v1.3.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jet_model_phys_EC/Jet_example_phys_EC.html"> jet model physical setup 2 (EC and Equipartition) -  *New (v1.4.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../jet_model_phys_EC/Jet_exmple_corona.html"> jet model physical setup 3 (EC Corona) -  *New (v1.4.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../internal_abs/int_abs.html"> Internal abs - *New (v1.4.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../synchrotron_polarization/Jet_example_synch_pol.html"> jet leptonic synchrotron polarization -  *New (v1.3.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jet_model_num/Jet_example_num.html"> jet model numerical setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hadronic_pp_jet/hadronic.html"> jet hadronic pp model</a></li>
@@ -183,7 +185,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../cosmology/Jet_example_cosmo.html"> change cosmology model - *New (v1.3.0)*</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../model_advanced.html">model advanced features   *New (v1.3.0)*</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../model_advanced.html">model advanced features   *New (v1.4.0)*</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Composite_model.html"> composite models  *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../jet_radio_component/Jet_example_radio_component.html"> composite models: a jet plus analytical extend radio component  *New (v1.4.0)*</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#"> composite models: a two-zone jet  *New (v1.3.0)*</a></li>
@@ -201,19 +203,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../phen_constr/Jet_example_phenom_constr.html"> phenomenological model constraining: application</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_fitting.html">model fitting  *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../model_fitting_intro.html"> caveats and introduction on model fitting and minimizers  *New (v1.3.0)*</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../model_fitting_examples.html"> model fitting examples  *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_1/Jet_plus_radio_comp_example_model_fit.html"> 1: SSC model fit with extended radio plugin, minuit contours, and MCMC for Mrk 421 *New (v1.4.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_2/Jet_example_model_fit_wiht_gal_template.html"> 2: SSC (jet+galaxy template) model fit and MCMC for Mrk 501 *New (v1.3.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_3/Jet_example_model_fit_EC.html"> 3: SSC and EC fit for 3C 454.3, with internal absorption *New (v1.4.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../model_fit_4/Jet_example_model_fit_leptonic_eq.html"> 4: Leptonic equilibrim for Mrk 421 fit, and MCMC *New (v1.4.0)*</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html"> 5: Mrk 521 SSC+EBL with Sherpa minimizer and jetset model  *New (v1.3.0)*</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../model_fitting.html">model fitting  *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../model_fitting_intro.html"> caveats and introduction on model fitting and minimizers  *New (v1.4.0)*</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../model_fitting_examples.html"> model fitting examples  *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_SSC_and_composite_model/Jet_plus_radio_comp_example_model_fit.html"> 1: SSC model fit with extended radio plugin, minuit contours, and MCMC for Mrk 421 *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_with_gal_template/Jet_example_model_fit_wiht_gal_template.html"> 2: SSC (jet+galaxy template) model fit and MCMC for Mrk 501 *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_EC/Jet_example_model_fit_EC.html"> 3: SSC and EC fit for 3C 454.3, with internal absorption *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_leptonic_eq/Jet_example_model_fit_leptonic_eq.html"> 4: Leptonic equilibrium for Mrk 421 fit, and MCMC *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html"> 5: Mrk 521 SSC+EBL with Sherpa minimizer and jetset model  *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_with_ultranest/Jet_example_model_fit_only_ultranest_plain.html"> 6: Ultranest example, no pre-fit stage, SSC molel for Mrk 421  *New (v1.4.0)*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../model_fit_with_ultranest/Jet_example_model_fit_only_ultranest_plain_and_openmpi.html"> 7: Ultranest example with  Open MPI, no pre-fit stage, SSC molel for Mrk 421  *New (v1.4.0)*</a></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../temp_ev.html">temporal evolution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../temp_ev.html">temporal evolution *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_one_zone_only_cooling.html"> Temporal evolution, one zone, only cooling *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling.html"> Temporal evolution, two zones,  cooling+acc *New (v1.2.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../temporal_evolution/Temp_Ev_two_zones_acc_and_cooling_adb_exp.html"> Temporal evolution, two zones,  cooling+acc+adiabatic expansion *New (v1.2.0)*</a></li>
@@ -221,8 +225,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../jet_leptonic_equilibrium/leptonic_validate_temp_ev.html"> Temporal evolution, validation of the leptonic equilibrim *New (v1.5.0)*</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../plugins.html">plugins  *New (v1.3.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../plugins.html">plugins  *New (v1.4.0)*</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-sherpa-interface.html"> Example to use the sherpa plugin with the Sherpa interface *New (v1.3.0)*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sherpa_plugin/sherpa-plugin-jetset-interface.html"> Example to use the Sherpa minimizer plugin with a JeSeT model *New (v1.3.0)*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../gammapy_plugin/gammapy_plugin.html"> Example to use the Gamma-py plugin with the JeSeT interface *New (v1.3.0)*</a></li>
 </ul>
 </details></li>
@@ -345,6 +350,20 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/mathkernel_helper.html">mathkernel_helper</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/mcmc.html">mcmc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc.McmcSampler.html">McmcSampler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/mcmc_parameters.html">mcmc_parameters</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.get_mcmc_bound_max.html">get_mcmc_bound_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.get_mcmc_bound_min.html">get_mcmc_bound_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.sci_if_large.html">sci_if_large</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.set_mcmc_bound_max.html">set_mcmc_bound_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.set_mcmc_bound_min.html">set_mcmc_bound_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_parameters.McmcCompositeModelParameterArray.html">McmcCompositeModelParameterArray</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/mcmc_ultranest.html">mcmc_ultranest</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_ultranest.run_open_mpi.html">run_open_mpi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/jetset.mcmc_ultranest.UltraNestSampler.html">UltraNestSampler</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../../api/minimizer.html">minimizer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -767,7 +786,7 @@ In the next release, I will provide a flexible convenience method (and, hopefull
 </pre></div>
 </div>
 <i>Table length=21</i>
-<table id="table5225853632-472708" class="table-striped table-bordered table-condensed">
+<table id="table5544969952-418464" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>compact_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
 <tr><td>compact_jet</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.715026e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -782,11 +801,11 @@ In the next release, I will provide a flexible convenience method (and, hopefull
 <tr><td>compact_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>T_DT</td><td>DT</td><td>K</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>5.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>6.324555e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>compact_jet</td><td>tau_DT</td><td>DT</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>tau_BLR</td><td>BLR</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
-<tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>1.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>2.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>9.486833e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>1.043552e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>compact_jet</td><td>L_Disk(M)</td><td>Disk</td><td>erg / s</td><td>1.000000e+45</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>T_Disk</td><td>Disk</td><td>K</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>theta_open(M)</td><td>user_defined</td><td>deg</td><td>5.000000e+00</td><td>1.000000e+00</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
@@ -810,17 +829,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table5225853632-472708').dataTable()");
+    console.log("$('#table5544969952-418464').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table5225853632-472708').dataTable({
+    $('#table5544969952-418464').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -868,7 +887,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=42</i>
-<table id="table13286238896-504294" class="table-striped table-bordered table-condensed">
+<table id="table5841309568-430347" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>compact_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
 <tr><td>compact_jet</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.715026e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -883,11 +902,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>compact_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>T_DT</td><td>DT</td><td>K</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>5.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>6.324555e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>compact_jet</td><td>tau_DT</td><td>DT</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>tau_BLR</td><td>BLR</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
-<tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>1.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>2.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>9.486833e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>1.043552e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>compact_jet</td><td>L_Disk(M)</td><td>Disk</td><td>erg / s</td><td>1.000000e+45</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>T_Disk</td><td>Disk</td><td>K</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>compact_jet</td><td>theta_open(M)</td><td>user_defined</td><td>deg</td><td>5.000000e+00</td><td>1.000000e+00</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
@@ -897,11 +916,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 <tr><td>extended_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
 <tr><td>extended_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
 <tr><td>extended_jet</td><td>T_DT</td><td>DT</td><td>K</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-<tr><td>extended_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>5.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>extended_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>6.324555e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>extended_jet</td><td>tau_DT</td><td>DT</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
 <tr><td>extended_jet</td><td>tau_BLR</td><td>BLR</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
-<tr><td>extended_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>1.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-<tr><td>extended_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>2.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>extended_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>9.486833e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+<tr><td>extended_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>1.043552e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
 <tr><td>extended_jet</td><td>L_Disk(M)</td><td>Disk</td><td>erg / s</td><td>1.000000e+45</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>extended_jet</td><td>T_Disk</td><td>Disk</td><td>K</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
 <tr><td>extended_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
@@ -932,17 +951,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table13286238896-504294').dataTable()");
+    console.log("$('#table5841309568-430347').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table13286238896-504294').dataTable({
+    $('#table5841309568-430347').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -977,7 +996,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 </pre></div>
 </div>
 <i>Table length=42</i>
-<table id="table6074388208-646135" class="table-striped table-bordered table-condensed">
+<table id="table5841894192-179925" class="table-striped table-bordered table-condensed">
 <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
 <tr><td>compact_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
 <tr><td>compact_jet</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.715026e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -1041,17 +1060,17 @@ var astropy_sort_num = function(a, b) {
 }
 
 require.config({paths: {
-    datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+    datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
 }});
 require(["datatables"], function(){
-    console.log("$('#table6074388208-646135').dataTable()");
+    console.log("$('#table5841894192-179925').dataTable()");
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "optionalnum-asc": astropy_sort_num,
     "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
 });
 
-    $('#table6074388208-646135').dataTable({
+    $('#table5841894192-179925').dataTable({
         order: [],
         pageLength: 100,
         lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -1118,11 +1137,11 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
       </div>
     </a>
     <a class="right-next"
-       href="../internal_abs/int_abs.html"
+       href="../depending_pars/depending_pars.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Internal absorption</p>
+        <p class="prev-next-title">Depending parameters</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

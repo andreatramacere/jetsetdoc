@@ -136,7 +136,7 @@ Setting the two components
 .. raw:: html
 
     <i>Table length=21</i>
-    <table id="table5225853632-472708" class="table-striped table-bordered table-condensed">
+    <table id="table5544969952-418464" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>compact_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
     <tr><td>compact_jet</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.715026e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -151,11 +151,11 @@ Setting the two components
     <tr><td>compact_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>T_DT</td><td>DT</td><td>K</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-    <tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>5.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>6.324555e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>compact_jet</td><td>tau_DT</td><td>DT</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>tau_BLR</td><td>BLR</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
-    <tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>1.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-    <tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>2.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>9.486833e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>1.043552e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>compact_jet</td><td>L_Disk(M)</td><td>Disk</td><td>erg / s</td><td>1.000000e+45</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>T_Disk</td><td>Disk</td><td>K</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>theta_open(M)</td><td>user_defined</td><td>deg</td><td>5.000000e+00</td><td>1.000000e+00</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
@@ -179,17 +179,17 @@ Setting the two components
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table5225853632-472708').dataTable()");
+        console.log("$('#table5544969952-418464').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table5225853632-472708').dataTable({
+        $('#table5544969952-418464').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -262,7 +262,7 @@ We set the functional expression for the model composition
 .. raw:: html
 
     <i>Table length=42</i>
-    <table id="table13286238896-504294" class="table-striped table-bordered table-condensed">
+    <table id="table5841309568-430347" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>compact_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
     <tr><td>compact_jet</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.715026e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -277,11 +277,11 @@ We set the functional expression for the model composition
     <tr><td>compact_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>T_DT</td><td>DT</td><td>K</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-    <tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>5.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>compact_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>6.324555e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>compact_jet</td><td>tau_DT</td><td>DT</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>tau_BLR</td><td>BLR</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
-    <tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>1.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-    <tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>2.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>compact_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>9.486833e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>compact_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>1.043552e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>compact_jet</td><td>L_Disk(M)</td><td>Disk</td><td>erg / s</td><td>1.000000e+45</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>T_Disk</td><td>Disk</td><td>K</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>compact_jet</td><td>theta_open(M)</td><td>user_defined</td><td>deg</td><td>5.000000e+00</td><td>1.000000e+00</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
@@ -291,11 +291,11 @@ We set the functional expression for the model composition
     <tr><td>extended_jet</td><td>gamma_cut</td><td>turn-over-energy</td><td>lorentz-factor*</td><td>1.000000e+04</td><td>1.000000e+00</td><td>1.000000e+09</td><td>False</td><td>False</td></tr>
     <tr><td>extended_jet</td><td>p</td><td>LE_spectral_slope</td><td></td><td>2.000000e+00</td><td>-1.000000e+01</td><td>1.000000e+01</td><td>False</td><td>False</td></tr>
     <tr><td>extended_jet</td><td>T_DT</td><td>DT</td><td>K</td><td>1.000000e+02</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
-    <tr><td>extended_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>5.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>extended_jet</td><td>*R_DT(D,L_Disk)</td><td>DT</td><td>cm</td><td>6.324555e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>extended_jet</td><td>tau_DT</td><td>DT</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
     <tr><td>extended_jet</td><td>tau_BLR</td><td>BLR</td><td></td><td>1.000000e-01</td><td>0.000000e+00</td><td>1.000000e+00</td><td>False</td><td>False</td></tr>
-    <tr><td>extended_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>1.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
-    <tr><td>extended_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>2.000000e+18</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>extended_jet</td><td>*R_BLR_in(D,L_Disk)</td><td>BLR</td><td>cm</td><td>9.486833e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
+    <tr><td>extended_jet</td><td>*R_BLR_out(D,R_BLR_in)</td><td>BLR</td><td>cm</td><td>1.043552e+17</td><td>0.000000e+00</td><td>--</td><td>False</td><td>True</td></tr>
     <tr><td>extended_jet</td><td>L_Disk(M)</td><td>Disk</td><td>erg / s</td><td>1.000000e+45</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>extended_jet</td><td>T_Disk</td><td>Disk</td><td>K</td><td>1.000000e+05</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
     <tr><td>extended_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
@@ -326,17 +326,17 @@ We set the functional expression for the model composition
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table13286238896-504294').dataTable()");
+        console.log("$('#table5841309568-430347').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table13286238896-504294').dataTable({
+        $('#table5841309568-430347').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],
@@ -382,7 +382,7 @@ Linking pars in the composite model
 .. raw:: html
 
     <i>Table length=42</i>
-    <table id="table6074388208-646135" class="table-striped table-bordered table-condensed">
+    <table id="table5841894192-179925" class="table-striped table-bordered table-condensed">
     <thead><tr><th>model name</th><th>name</th><th>par type</th><th>units</th><th>val</th><th>phys. bound. min</th><th>phys. bound. max</th><th>log</th><th>frozen</th></tr></thead>
     <tr><td>compact_jet</td><td>*R(D,theta_open)</td><td>region_size</td><td>cm</td><td>5.000000e+15</td><td>1.000000e+03</td><td>1.000000e+30</td><td>False</td><td>True</td></tr>
     <tr><td>compact_jet</td><td>R_H(M)</td><td>region_position</td><td>cm</td><td>5.715026e+16</td><td>0.000000e+00</td><td>--</td><td>False</td><td>False</td></tr>
@@ -446,17 +446,17 @@ Linking pars in the composite model
     }
     
     require.config({paths: {
-        datatables: 'https://cdn.datatables.net/2.1.8/js/dataTables.min'
+        datatables: 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min'
     }});
     require(["datatables"], function(){
-        console.log("$('#table6074388208-646135').dataTable()");
+        console.log("$('#table5841894192-179925').dataTable()");
     
     jQuery.extend( jQuery.fn.dataTableExt.oSort, {
         "optionalnum-asc": astropy_sort_num,
         "optionalnum-desc": function (a,b) { return -astropy_sort_num(a, b); }
     });
     
-        $('#table6074388208-646135').dataTable({
+        $('#table5841894192-179925').dataTable({
             order: [],
             pageLength: 100,
             lengthMenu: [[10, 25, 50, 100, 500, 1000, -1], [10, 25, 50, 100, 500, 1000, 'All']],

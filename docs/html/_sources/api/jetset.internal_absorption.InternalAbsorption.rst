@@ -12,12 +12,10 @@ InternalAbsorption
 
       ~InternalAbsorption.eval
       ~InternalAbsorption.eval_tau_photons
-      ~InternalAbsorption.get_n
-      ~InternalAbsorption.sigma
+      ~InternalAbsorption.set_use_sigma_gamma_gamma_fast
 
    .. rubric:: Methods Documentation
 
    .. automethod:: eval
    .. automethod:: eval_tau_photons
-   .. automethod:: get_n
-   .. automethod:: sigma
+   .. automethod:: set_use_sigma_gamma_gamma_fast
